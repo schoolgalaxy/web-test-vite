@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #f0f2f5; /* A light gray, similar to Facebook */
+  background-color: #f8f9fa; /* A very light gray for a softer background */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
@@ -17,13 +17,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #0866ff; /* A nice blue */
+  background-color: #007bff; /* A standard, elegant blue */
   cursor: pointer;
   transition: border-color 0.25s;
   color: white;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #0056b3; /* Darker blue on hover */
 }
 button:focus,
 button:focus-visible {
@@ -46,15 +46,19 @@ ul {
 }
 
 li {
-  background-color: white;
+  background-color: #ffffff; /* White background for list items */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  margin-bottom: 8px; /* Add some space between list items */
+  border-radius: 8px; /* Rounded corners */
   padding: 8px;
 }
 
 li:hover {
-  background: #dadbf9;
+  background: #f0f0f0; /* Light gray on hover */
 }
 
 a {
-  font-weight: 800;
+  font-weight: 600; /* Slightly less bold */
   text-decoration: none;
+  color: #007bff; /* Blue for links */
 }
