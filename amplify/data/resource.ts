@@ -10,8 +10,16 @@ const schema = a.schema({
   Todo: a
     .model({
       content: a.string(),
+      owner: a.string().authorization((allow) => [
+        allow.owner("userPools").to(['read', 'delete'])
+      ])
     })
-    .authorization((allow) => [allow.owner()]),
+    .authorization((allow) => [
+      // https://docs.amplify.aws/react/build-a-backend/data/customize-authz/
+      // https://www.youtube.com/watch?v=_htSwKMdk2Y
+      // Allow anyone auth'd with an API key to read everyone's posts.
+      allow.publicApiKey().to(['read']), allow.owner()
+    ]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
@@ -19,11 +27,11 @@ export type Schema = ClientSchema<typeof schema>;
 export const data = defineData({
   schema,
   authorizationModes: {
-    defaultAuthorizationMode: "userPool",
-    // API Key is used for a.allow.public() rules
-    // apiKeyAuthorizationMode: {
-    //   expiresInDays: 180,
-    // },
+    defaultAuthorizationMode: "apiKey",
+    // API Key is used for ) rules
+    apiKeyAuthorizationMode: {
+      expiresInDays: 180,
+    },
   },
 });
 

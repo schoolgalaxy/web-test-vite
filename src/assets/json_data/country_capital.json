@@ -1,0 +1,52 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "options": ["Berlin", "Madrid", "Paris", "Rome"],
+        "answer": "Paris"
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Mars", "Jupiter", "Venus"],
+        "answer": "Mars"
+    },
+    {
+        "question": "What is the chemical symbol for water?",
+        "options": ["H2O", "O2", "CO2", "NaCl"],
+        "answer": "H2O"
+    },
+    {
+        "question": "Who wrote the play 'Romeo and Juliet'?",
+        "options": ["William Shakespeare", "Charles Dickens", "Mark Twain", "Jane Austen"],
+        "answer": "William Shakespeare"
+    },
+    {
+        "question": "Which language is primarily used for web development?",
+        "options": ["Python", "HTML", "C++", "Java"],
+        "answer": "HTML"
+    },
+    {
+        "question": "What is the largest organ in the human body?",
+        "options": ["Liver", "Heart", "Skin", "Brain"],
+        "answer": "Skin"
+    },
+    {
+        "question": "Which gas is essential for human respiration?",
+        "options": ["Carbon Dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+        "answer": "Oxygen"
+    },
+    {
+        "question": "What is the square root of 64?",
+        "options": ["6", "7", "8", "9"],
+        "answer": "8"
+    },
+    {
+        "question": "Which company developed the Android operating system?",
+        "options": ["Apple", "Google", "Microsoft", "Samsung"],
+        "answer": "Google"
+    },
+    {
+        "question": "Which continent is known as the 'Dark Continent'?",
+        "options": ["Asia", "Africa", "Europe", "South America"],
+        "answer": "Africa"
+    }
+]

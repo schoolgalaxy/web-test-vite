@@ -1,0 +1,52 @@
+[
+    {
+        "question": "What does AI stand for?",
+        "options": ["Automatic Interface", "Artificial Intelligence", "Algorithm Integration", "Advanced Internet"],
+        "answer": "Artificial Intelligence"
+    },
+    {
+        "question": "Which of the following is an example of AI?",
+        "options": ["Web browser", "Spell checker", "Calculator", "Word processor"],
+        "answer": "Spell checker"
+    },
+    {
+        "question": "What is Machine Learning?",
+        "options": ["Programming computers manually", "A way computers learn from data", "A hardware component", "A type of operating system"],
+        "answer": "A way computers learn from data"
+    },
+    {
+        "question": "Which language is widely used for developing AI applications?",
+        "options": ["Python", "HTML", "CSS", "SQL"],
+        "answer": "Python"
+    },
+    {
+        "question": "What is a dataset in AI?",
+        "options": ["A type of algorithm", "A collection of data used to train AI models", "A user interface", "A storage device"],
+        "answer": "A collection of data used to train AI models"
+    },
+    {
+        "question": "What does 'training a model' mean in AI?",
+        "options": ["Writing the code from scratch", "Feeding data to an algorithm to learn patterns", "Installing the software", "Setting up hardware for the computer"],
+        "answer": "Feeding data to an algorithm to learn patterns"
+    },
+    {
+        "question": "Which of the following is NOT a type of Machine Learning?",
+        "options": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Manual Learning"],
+        "answer": "Manual Learning"
+    },
+    {
+        "question": "What is the purpose of AI?",
+        "options": ["To replace humans completely", "To perform repetitive tasks only", "To enable machines to perform tasks that require human intelligence", "To store data efficiently"],
+        "answer": "To enable machines to perform tasks that require human intelligence"
+    },
+    {
+        "question": "Which of the following is a common application of AI?",
+        "options": ["Self-driving cars", "Desktop publishing", "Spreadsheet calculations", "File compression"],
+        "answer": "Self-driving cars"
+    },
+    {
+        "question": "What is 'Natural Language Processing' in AI?",
+        "options": ["Processing numerical data", "Converting images into text", "Enabling computers to understand and process human language", "Running complex mathematical algorithms"],
+        "answer": "Enabling computers to understand and process human language"
+    }
+]
