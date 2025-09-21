@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import McqTest from './components/McqTest';
+import LoginScreen from './components/LoginScreen';
 
 export const client = generateClient<Schema>();
 
@@ -20,6 +21,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/test/:testId" element={<McqTest />} />
+              <Route path="/login" element={<LoginScreen />} />
             </Routes>
           </div>
         </main>

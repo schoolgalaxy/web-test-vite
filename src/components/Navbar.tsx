@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { client } from '../App';
 import '../assets/css/Navbar.css';
 
 const Navbar = () => {
@@ -22,7 +21,7 @@ const Navbar = () => {
           </li>
         ) : (
           <li>
-            <button onClick={() => client.auth.signInWithRedirect()}>Sign in</button>
+            <Link to="/login">Sign in</Link>
           </li>
         )}
       </ul>
