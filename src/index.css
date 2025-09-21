@@ -1,12 +1,7 @@
 body {
   margin: 0;
-  background: linear-gradient(180deg, rgb(117, 81, 194), rgb(255, 255, 255));
-  display: flex;
+  background-color: #f0f2f5; /* A light gray, similar to Facebook */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
 }
 
 main {
@@ -22,7 +17,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #0866ff; /* A nice blue */
   cursor: pointer;
   transition: border-color 0.25s;
   color: white;
@@ -43,9 +38,9 @@ ul {
   display: flex;
   flex-direction: column;
   margin: 8px 0;
-  border: 1px solid black;
-  gap: 1px;
-  background-color: black;
+  border: none;
+  gap: 0;
+  background-color: transparent;
   border-radius: 8px;
   overflow: auto;
 }
