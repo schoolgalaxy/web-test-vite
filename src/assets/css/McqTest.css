@@ -106,3 +106,20 @@
 .score-section button:hover {
   background-color: #0056b3;
 }
+/* Back button styling */
+.back-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  align-self: flex-start; /* Align to the left within the container */
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}

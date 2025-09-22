@@ -5,24 +5,31 @@
   padding: 20px 0;
 }
 
-.left-pane, .right-pane {
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Left, About content */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.left-sidebar, .right-sidebar {
   background-color: #f0f8ff; /* Light background for side panes */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.left-pane ul {
+.left-sidebar ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.left-pane li {
+.left-sidebar li {
   margin-bottom: 10px;
 }
 
-.left-pane a {
+.left-sidebar a {
   text-decoration: none;
   color: #0056b3;
   font-weight: 600;
@@ -30,7 +37,7 @@
   transition: color 0.2s ease-in-out;
 }
 
-.left-pane a:hover {
+.left-sidebar a:hover {
   color: #007bff;
 }
 

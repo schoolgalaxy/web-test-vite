@@ -1,16 +1,17 @@
+import React from 'react';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
-import CenterSection from './CenterSection';
+import McqTest from './mcq/McqTest';
 import '../assets/css/Home.css'; // Import the new Home CSS
 
-const Home = () => {
+const TestLayout: React.FC = () => {
   return (
     <div className="home-layout">
       <LeftSidebar />
-      <CenterSection />
+      <McqTest />
       <RightSidebar />
     </div>
   );
 };
 
-export default Home;
+export default TestLayout;

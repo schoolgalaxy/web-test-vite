@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import mcqData1 from '../assets/json_data/ai_10_beginners.json';
-import mcqData2 from '../assets/json_data/ai_20_beginners.json';
-import mcqData3 from '../assets/json_data/country_capital.json';
-import '../assets/css/McqTest.css';
+import { useParams, useNavigate } from 'react-router-dom';
+import mcqData1 from '../../assets/json_data/ai_10_beginners.json';
+import mcqData2 from '../../assets/json_data/ai_20_beginners.json';
+import mcqData3 from '../../assets/json_data/country_capital.json';
+import '../../assets/css/McqTest.css';
 
 const McqTest = () => {
   const { testId } = useParams();
+  const navigate = useNavigate();
   let mcqData;
   if (testId === 'ai_10_beginners') {
     mcqData = mcqData1;
@@ -51,6 +52,7 @@ const McqTest = () => {
 
   return (
     <div className="mcq-test-container">
+      <button onClick={() => navigate('/')} className="back-button">Back</button>
       {showScore ? (
         <div className="score-section">
           <p>You scored {score} out of {mcqData.length}</p>
@@ -65,7 +67,7 @@ const McqTest = () => {
             <div className="question-text">{mcqData[currentQuestion].question}</div>
           </div>
           <div className="answer-options">
-            {mcqData[currentQuestion].options.map((option, index) => {
+            {mcqData[currentQuestion].options.map((option: string, index: number) => {
               const isSelected = selectedAnswer === option;
               const isCorrectOption = option === mcqData[currentQuestion].answer;
               let buttonClass = "answer-button";

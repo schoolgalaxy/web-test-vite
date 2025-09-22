@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import '../assets/css/Navbar.css';
+import reactLogo from '../assets/react.svg';
 
 const Navbar = () => {
   const { user, signOut } = useAuthenticator();
@@ -9,8 +10,8 @@ const Navbar = () => {
     <nav className="navbar">
       <ul>
         <li className="navbar-brand">
-          <img src="/src/assets/react.svg" alt="Prep Platform Logo" className="navbar-logo" />
-          <Link to="/">Prep Platform</Link>
+          <img src={reactLogo} alt="Galaxy Logo" className="navbar-logo" />
+          <Link to="/">Prep Galaxy</Link>
         </li>
         <li>
           <Link to="/">Home</Link>

@@ -5,7 +5,7 @@ import type { Schema } from '../amplify/data/resource';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import McqTest from './components/McqTest';
+import TestLayout from './components/TestLayout';
 import LoginScreen from './components/LoginScreen';
 
 export const client = generateClient<Schema>();
@@ -20,7 +20,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/test/:testId" element={<McqTest />} />
+              <Route path="/test/:testId" element={<TestLayout />} />
               <Route path="/login" element={<LoginScreen />} />
             </Routes>
           </div>
