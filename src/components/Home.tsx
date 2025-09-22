@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import McqList from './McqList';
 import Banner from './Banner';
 import '../assets/css/Home.css'; // Import the new Home CSS
-import About from './About';
 
 const Home = () => {
   return (
