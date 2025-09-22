@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: #f8f9fa; /* A very light gray for a softer background */
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Open Sans', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 main {

@@ -1,6 +1,10 @@
 .mcq-list-container ul {
-  list-style: none;
+  list-style: none; /* Ensure no list-style is applied */
   padding: 0;
+}
+
+.mcq-list-container li {
+  list-style: none; /* Ensure no list-style is applied to list items */
 }
 
 .mcq-list-container li {

@@ -19,12 +19,30 @@
   padding: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  width: 100%;
 }
 
 .navbar li {
   margin-right: 1rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem; /* Slightly larger font for the brand */
+  font-weight: 700; /* Bolder font for the brand */
+  color: #000000; /* Ensure brand text is black */
+}
+
+.navbar-logo {
+  height: 30px; /* Adjust logo size as needed */
+  margin-right: 0.5rem; /* Space between logo and text */
+}
+
+.navbar-auth {
+  margin-left: auto;
 }
 
 .navbar a, .navbar button {

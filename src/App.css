@@ -47,3 +47,37 @@
   margin: 0 auto;
   padding: 0 1.5rem; /* Slightly more padding */
 }
+
+
+.hero-section {
+  background-color: #e9f7fe; /* Light blue background */
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero-section h1 {
+  color: #0056b3; /* Darker blue for heading */
+  margin-bottom: 15px;
+  font-size: 2.8em; /* Larger heading */
+}
+
+.hero-section p {
+  color: #333;
+  font-size: 1.3em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mcq-list-section {
+  padding: 20px 0;
+}
+
+.mcq-list-section h2 {
+  color: #0056b3;
+  margin-bottom: 25px;
+  font-size: 2em;
+  text-align: center;
+}

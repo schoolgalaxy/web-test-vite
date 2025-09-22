@@ -8,18 +8,19 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <ul>
+        <li className="navbar-brand">
+          <img src="/src/assets/react.svg" alt="Prep Platform Logo" className="navbar-logo" />
+          <Link to="/">Prep Platform</Link>
+        </li>
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
         {user ? (
-          <li>
+          <li className="navbar-auth">
             <button onClick={signOut}>Sign out</button>
           </li>
         ) : (
-          <li>
+          <li className="navbar-auth">
             <Link to="/login">Sign in</Link>
           </li>
         )}
