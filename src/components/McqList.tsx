@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/Banner.css';
+import '../assets/css/McqList.css';
 
 const mcqTests = [
   { id: 'ai_10_beginners', name: 'AI for Beginners (10 Questions)' },

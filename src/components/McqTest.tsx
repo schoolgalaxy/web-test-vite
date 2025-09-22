@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import mcqData1 from '../assets/json_data/ai_10_beginners.json';
 import mcqData2 from '../assets/json_data/ai_20_beginners.json';
 import mcqData3 from '../assets/json_data/country_capital.json';
+import '../assets/css/McqTest.css';
 
 const McqTest = () => {
   const { testId } = useParams();
@@ -18,46 +19,80 @@ const McqTest = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [isCorrectAnswer, setIsCorrectAnswer] = useState<boolean | null>(null);
+  const [answered, setAnswered] = useState(false);
 
-  const handleAnswerOptionClick = (isCorrect: boolean) => {
-    if (isCorrect) {
+  const handleAnswerOptionClick = (option: string) => {
+    if (answered) return; // Prevent multiple selections
+
+    setSelectedAnswer(option);
+    setAnswered(true);
+
+    const correct = option === mcqData[currentQuestion].answer;
+    setIsCorrectAnswer(correct);
+
+    if (correct) {
       setScore(score + 1);
     }
 
-    const nextQuestion = currentQuestion + 1;
-    if (nextQuestion < mcqData.length) {
-      setCurrentQuestion(nextQuestion);
-    } else {
-      setShowScore(true);
-    }
+    setTimeout(() => {
+      const nextQuestion = currentQuestion + 1;
+      if (nextQuestion < mcqData.length) {
+        setCurrentQuestion(nextQuestion);
+        setSelectedAnswer(null);
+        setIsCorrectAnswer(null);
+        setAnswered(false);
+      } else {
+        setShowScore(true);
+      }
+    }, 1500); // 1.5 seconds delay for feedback
   };
 
   return (
-    <div>
+    <div className="mcq-test-container">
       {showScore ? (
-        <div>
-          You scored {score} out of {mcqData.length}
+        <div className="score-section">
+          <p>You scored {score} out of {mcqData.length}</p>
+          <button onClick={() => window.location.reload()}>Restart Quiz</button>
         </div>
       ) : (
         <>
-          <div>
-            <div>
+          <div className="question-section">
+            <div className="question-count">
               <span>Question {currentQuestion + 1}</span>/{mcqData.length}
             </div>
-            <div>{mcqData[currentQuestion].question}</div>
+            <div className="question-text">{mcqData[currentQuestion].question}</div>
           </div>
-          <div>
-            {mcqData[currentQuestion].options.map((option) => (
-              <button
-                onClick={() =>
-                  handleAnswerOptionClick(
-                    option === mcqData[currentQuestion].answer
-                  )
+          <div className="answer-options">
+            {mcqData[currentQuestion].options.map((option, index) => {
+              const isSelected = selectedAnswer === option;
+              const isCorrectOption = option === mcqData[currentQuestion].answer;
+              let buttonClass = "answer-button";
+
+              if (answered) {
+                if (isSelected && isCorrectAnswer) {
+                  buttonClass += " correct";
+                } else if (isSelected && !isCorrectAnswer) {
+                  buttonClass += " incorrect";
+                } else if (isCorrectOption) {
+                  buttonClass += " correct"; // Show correct answer even if not selected
                 }
-              >
-                {option}
-              </button>
-            ))}
+              } else if (isSelected) {
+                buttonClass += " selected";
+              }
+
+              return (
+                <button
+                  key={index}
+                  className={buttonClass}
+                  onClick={() => handleAnswerOptionClick(option)}
+                  disabled={answered}
+                >
+                  {option}
+                </button>
+              );
+            })}
           </div>
         </>
       )}

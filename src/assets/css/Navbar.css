@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #ffffff; /* White background for a clean look */
+  background-color: #8ebdec; /* Sky blue background */
   padding: 0 1rem;
   box-sizing: border-box;
   position: fixed;
@@ -28,9 +28,9 @@
 }
 
 .navbar a, .navbar button {
-  color: #333333; /* Darker text for better contrast on white */
+  color: #000000; /* Black text for better contrast on sky blue */
   text-decoration: none;
-  background: none;
+  background-color: transparent; /* Ensure no white background */
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -41,10 +41,10 @@
 }
 
 .navbar a:hover, .navbar button:hover {
-  background-color: #e0e0e0; /* Light gray on hover */
+  background-color: #8dc9dd; /* Lighter sky blue on hover */
 }
 
 .navbar a.active, .navbar button.active {
   background-color: #007bff; /* Highlight active link */
-  color: white;
+  color: #77a6d8;
 }

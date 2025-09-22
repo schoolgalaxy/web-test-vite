@@ -3,7 +3,7 @@ import McqList from './McqList';
 
 const Home = () => {
   return (
-    <div>
+    <div className="mcq-list-container">
       <McqList />
     </div>
   );
