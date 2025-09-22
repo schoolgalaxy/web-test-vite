@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import mcqData1 from '../assets/json_data/ai_10_beginners.json';
 import mcqData2 from '../assets/json_data/ai_20_beginners.json';
