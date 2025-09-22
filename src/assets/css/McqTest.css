@@ -123,3 +123,43 @@
 .back-button:hover {
   background-color: #5a6268;
 }
+
+/* Feedback section styling */
+.feedback-section {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-section p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.feedback-correct {
+  color: #28a745;
+}
+
+.feedback-incorrect {
+  color: #dc3545;
+}
+
+/* Next Question Button Styling */
+.next-question-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.next-question-button:hover {
+  background-color: #0056b3;
+}

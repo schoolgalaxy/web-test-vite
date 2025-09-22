@@ -25,29 +25,34 @@ const McqTest = () => {
   const [answered, setAnswered] = useState(false);
 
   const handleAnswerOptionClick = (option: string) => {
-    if (answered) return; // Prevent multiple selections
+    // Allow re-selection if the previous answer was incorrect
+    if (selectedAnswer === option && !isCorrectAnswer) {
+      // If the user clicks the same incorrect answer again, do nothing
+      return;
+    }
 
     setSelectedAnswer(option);
-    setAnswered(true);
-
     const correct = option === mcqData[currentQuestion].answer;
     setIsCorrectAnswer(correct);
 
     if (correct) {
       setScore(score + 1);
+      setAnswered(true); // Only set answered to true if the answer is correct
+    } else {
+      setAnswered(false); // Keep answered false to allow re-attempts
     }
+  };
 
-    setTimeout(() => {
-      const nextQuestion = currentQuestion + 1;
-      if (nextQuestion < mcqData.length) {
-        setCurrentQuestion(nextQuestion);
-        setSelectedAnswer(null);
-        setIsCorrectAnswer(null);
-        setAnswered(false);
-      } else {
-        setShowScore(true);
-      }
-    }, 1500); // 1.5 seconds delay for feedback
+  const handleNextQuestion = () => {
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < mcqData.length) {
+      setCurrentQuestion(nextQuestion);
+      setSelectedAnswer(null);
+      setIsCorrectAnswer(null);
+      setAnswered(false); // Reset answered state for the next question
+    } else {
+      setShowScore(true);
+    }
   };
 
   return (
@@ -55,8 +60,9 @@ const McqTest = () => {
       <button onClick={() => navigate('/')} className="back-button">Back</button>
       {showScore ? (
         <div className="score-section">
+          <h2>Congratulations! You've completed the quiz.</h2>
           <p>You scored {score} out of {mcqData.length}</p>
-          <button onClick={() => window.location.reload()}>Restart Quiz</button>
+          <button onClick={() => window.location.reload()}>Take Another Quiz</button>
         </div>
       ) : (
         <>
@@ -69,19 +75,14 @@ const McqTest = () => {
           <div className="answer-options">
             {mcqData[currentQuestion].options.map((option: string, index: number) => {
               const isSelected = selectedAnswer === option;
-              const isCorrectOption = option === mcqData[currentQuestion].answer;
               let buttonClass = "answer-button";
 
-              if (answered) {
-                if (isSelected && isCorrectAnswer) {
+              if (isSelected) {
+                if (isCorrectAnswer === true) {
                   buttonClass += " correct";
-                } else if (isSelected && !isCorrectAnswer) {
+                } else if (isCorrectAnswer === false) {
                   buttonClass += " incorrect";
-                } else if (isCorrectOption) {
-                  buttonClass += " correct"; // Show correct answer even if not selected
                 }
-              } else if (isSelected) {
-                buttonClass += " selected";
               }
 
               return (
@@ -89,13 +90,27 @@ const McqTest = () => {
                   key={index}
                   className={buttonClass}
                   onClick={() => handleAnswerOptionClick(option)}
-                  disabled={answered}
+                  disabled={answered} // Disable all options once the correct answer is found
                 >
                   {option}
                 </button>
               );
             })}
           </div>
+          {selectedAnswer !== null && ( // Show feedback if an answer is selected
+            <div className="feedback-section">
+              {isCorrectAnswer ? (
+                <>
+                  <p className="feedback-correct">Correct!</p>
+                  <button onClick={handleNextQuestion} className="next-question-button">
+                    Next Question
+                  </button>
+                </>
+              ) : (
+                <p className="feedback-incorrect">Incorrect. Please try again.</p>
+              )}
+            </div>
+          )}
         </>
       )}
     </div>
