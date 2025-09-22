@@ -15,7 +15,7 @@ function App() {
     <Authenticator.Provider>
       <Router>
         <Navbar />
-        <main style={{ paddingTop: '72px' }}>
+        <main style={{ paddingTop: '2px' }}>
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
