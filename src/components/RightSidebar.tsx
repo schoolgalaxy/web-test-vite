@@ -7,7 +7,6 @@ const RightSidebar: React.FC = () => {
       <h3>Fun Activities</h3>
         <div className="ad-content">
           <p>Learn about animals with interactive quizzes!</p>
-          <img src="/src/assets/react.svg" alt="Animal Quiz Ad" />
         </div>
         <div className="ad-content">
           <p>Improve your math skills with engaging games!</p>

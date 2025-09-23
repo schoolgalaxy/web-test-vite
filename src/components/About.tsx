@@ -21,7 +21,7 @@ const About = () => {
         <h2 style={{ color: '#333', marginTop: '30px' }}>Contact Us</h2>
         <p style={{ fontSize: '1.1em', lineHeight: '1.6', color: '#555' }}>
           Have questions or feedback? We'd love to hear from you!
-          Please reach out to us at <a href="mailto:schoolgalaxy40@gmail.com" style={{ color: '#007bff', textDecoration: 'none' }}>info@example.com</a>.
+          Please reach out to us at <a href="mailto:schoolgalaxy40@gmail.com" style={{ color: '#007bff', textDecoration: 'none' }}>schoolgalaxy40@gmail.com</a>.
         </p>
       </div>
     </div>

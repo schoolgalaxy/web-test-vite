@@ -20,6 +20,14 @@ const schema = a.schema({
       // Allow anyone auth'd with an API key to read everyone's posts.
       allow.publicApiKey().to(['read']), allow.owner()
     ]),
+  Feedback: a
+    .model({
+      subject: a.string().required(),
+      email: a.string(),
+      message: a.string().required(),
+      timestamp: a.datetime().required(),
+    })
+    .authorization((allow) => [allow.publicApiKey().to(["create"])]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
