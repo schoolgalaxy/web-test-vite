@@ -8,7 +8,7 @@ const LeftSidebar: React.FC = () => {
       <h4>Categories</h4>
       <ul>
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/home">Home</Link></li>
           {/* <li><Link to="/class-1-5">Class 1-5</Link></li>
           <li><Link to="/class-5-9">Class 5-9</Link></li> */}
           <li><Link to="/feedback">feedback</Link></li>
