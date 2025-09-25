@@ -3,7 +3,7 @@
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.26.1",
     "@aws-sdk/client-ses": "^3.894.0",
-    "aws-cdk-lib": "^2.216.0"
+    "aws-cdk-lib": "^2.217.0"
   },
   "devDependencies": {
     "@types/node": "^20.19.17"
