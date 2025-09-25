@@ -1,0 +1,57 @@
+{
+  "title": "The Migratory Arctic Tern",
+  "description": "The Arctic Tern is a seabird that migrates an incredible distance, experiencing two summers a year by flying between the Arctic and Antarctica.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/2748222727984830291_0",
+  "questions": [
+    {
+      "question": "Approximately how many miles does an Arctic Tern travel during its annual migration?",
+      "options": [
+        "5,000 miles",
+        "10,000 miles",
+        "25,000 miles",
+        "49,000 miles or more"
+      ],
+      "correct_answer": "49,000 miles or more"
+    },
+    {
+      "question": "Which of the following is a key adaptation that allows the Arctic Tern to survive its long migration?",
+      "options": [
+        "It stores up a massive amount of fat",
+        "It has a third set of wings that can extend for extra flight",
+        "It can sleep while flying",
+        "Its feathers are made of a special material that doesn't get wet"
+      ],
+      "correct_answer": "It can sleep while flying"
+    },
+    {
+      "question": "What is the primary food source for the Arctic Tern during its travels?",
+      "options": [
+        "Berries and seeds",
+        "Fish and small crustaceans",
+        "Insects",
+        "Small rodents"
+      ],
+      "correct_answer": "Fish and small crustaceans"
+    },
+    {
+      "question": "The Arctic Tern lives for an exceptionally long time. What is its approximate lifespan?",
+      "options": [
+        "1-5 years",
+        "10 years",
+        "15-20 years",
+        "Up to 30 years or more"
+      ],
+      "correct_answer": "Up to 30 years or more"
+    },
+    {
+      "question": "Where does the Arctic Tern breed?",
+      "options": [
+        "Antarctica",
+        "Africa",
+        "The Arctic and subarctic regions",
+        "South America"
+      ],
+      "correct_answer": "The Arctic and subarctic regions"
+    }
+  ]
+}

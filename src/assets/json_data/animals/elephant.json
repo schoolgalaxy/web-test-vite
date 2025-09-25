@@ -1,0 +1,57 @@
+{
+  "title": "The Gentle Giant Elephant",
+  "description": "Elephants are the largest land animals, known for their large ears, long trunks, and tusks. They are highly intelligent, social animals that live in complex family structures.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/20",
+  "questions": [
+    {
+      "question": "What is the primary purpose of an elephant's trunk?",
+      "options": [
+        "Breathing and smelling",
+        "Picking up objects and food",
+        "Drinking water",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question": "What are an elephant's tusks made of?",
+      "options": [
+        "Bone",
+        "Ivory",
+        "Calcium",
+        "Keratin"
+      ],
+      "correct_answer": "Ivory"
+    },
+    {
+      "question": "Which of the following is NOT true about an elephant's ears?",
+      "options": [
+        "They are used for communication",
+        "They are used to regulate body temperature",
+        "They are a sign of the elephant's age",
+        "They can cool the elephant down"
+      ],
+      "correct_answer": "They are a sign of the elephant's age"
+    },
+    {
+      "question": "How long is an elephant's gestation period?",
+      "options": [
+        "6 months",
+        "12 months",
+        "18 months",
+        "22 months"
+      ],
+      "correct_answer": "22 months"
+    },
+    {
+      "question": "What is the collective noun for a group of elephants?",
+      "options": [
+        "A herd",
+        "A pod",
+        "A pride",
+        "A colony"
+      ],
+      "correct_answer": "A herd"
+    }
+  ]
+}

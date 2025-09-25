@@ -1,0 +1,57 @@
+{
+  "title": "The Busy Honeybee",
+  "description": "Honeybees are flying insects known for their ability to produce honey and wax. They live in highly organized colonies and play a vital role in pollination.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/19",
+  "questions": [
+    {
+      "question": "What is the primary role of a worker bee?",
+      "options": [
+        "Laying eggs",
+        "Producing honey",
+        "Collecting nectar and pollen",
+        "Defending the hive"
+      ],
+      "correct_answer": "Collecting nectar and pollen"
+    },
+    {
+      "question": "How do honeybees communicate the location of food to other bees?",
+      "options": [
+        "A series of whistles",
+        "A waggle dance",
+        "By leaving a scent trail",
+        "By buzzing in a specific pattern"
+      ],
+      "correct_answer": "A waggle dance"
+    },
+    {
+      "question": "What is the purpose of the honeybee's stinger?",
+      "options": [
+        "To collect pollen",
+        "To defend the hive, which results in the bee's death",
+        "To kill predators and then live on",
+        "To build the honeycomb"
+      ],
+      "correct_answer": "To defend the hive, which results in the bee's death"
+    },
+    {
+      "question": "What is the function of the queen bee in a colony?",
+      "options": [
+        "She is the primary honey producer",
+        "She is the only one who collects pollen",
+        "She lays all the eggs in the colony",
+        "She builds the entire hive"
+      ],
+      "correct_answer": "She lays all the eggs in the colony"
+    },
+    {
+      "question": "What is the lifespan of a worker honeybee during the summer?",
+      "options": [
+        "Approximately 6 weeks",
+        "3 to 4 months",
+        "6 months",
+        "1 year"
+      ],
+      "correct_answer": "Approximately 6 weeks"
+    }
+  ]
+}

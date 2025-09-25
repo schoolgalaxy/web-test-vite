@@ -1,0 +1,57 @@
+{
+  "title": "The Arctic Polar Bear",
+  "description": "Polar bears are large carnivores found in the Arctic. They are well-adapted to life in a cold climate with thick fur and a layer of blubber for insulation.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/18",
+  "questions": [
+    {
+      "question": "What is the primary food source for a polar bear?",
+      "options": [
+        "Fish",
+        "Seals and other marine mammals",
+        "Penguins",
+        "Vegetation"
+      ],
+      "correct_answer": "Seals and other marine mammals"
+    },
+    {
+      "question": "How does a polar bear's skin color help it survive?",
+      "options": [
+        "Its black skin absorbs sunlight and helps it stay warm",
+        "Its white skin helps it camouflage in the snow",
+        "Its skin changes color with the seasons",
+        "It helps them attract a mate"
+      ],
+      "correct_answer": "Its black skin absorbs sunlight and helps it stay warm"
+    },
+    {
+      "question": "What is a polar bear's scientific name?",
+      "options": [
+        "Ursus maritimus",
+        "Ursus arctos",
+        "Ursus horribilis",
+        "Ursus americanus"
+      ],
+      "correct_answer": "Ursus maritimus"
+    },
+    {
+      "question": "Which of these is a unique adaptation of a polar bear?",
+      "options": [
+        "They can sleep underwater",
+        "They can go for months without food",
+        "They have partially webbed feet for swimming",
+        "They can hibernate"
+      ],
+      "correct_answer": "They have partially webbed feet for swimming"
+    },
+    {
+      "question": "What is the collective noun for a group of polar bears?",
+      "options": [
+        "A clan",
+        "A congregation",
+        "A pack",
+        "They are typically solitary"
+      ],
+      "correct_answer": "They are typically solitary"
+    }
+  ]
+}

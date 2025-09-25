@@ -1,0 +1,57 @@
+{
+  "title": "The Bald Eagle",
+  "description": "The Bald Eagle is a bird of prey found in North America. It is the national bird and national animal of the United States and is known for its distinctive white head and tail.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/13847844605963287661",
+  "questions": [
+    {
+      "question": "What is the Bald Eagle's primary food source?",
+      "options": [
+        "Small mammals",
+        "Fish",
+        "Insects",
+        "Snakes"
+      ],
+      "correct_answer": "Fish"
+    },
+    {
+      "question": "A group of eagles is known by what collective noun?",
+      "options": [
+        "A murder",
+        "A flock",
+        "A convocation",
+        "A parliament"
+      ],
+      "correct_answer": "A convocation"
+    },
+    {
+      "question": "How do Bald Eagles typically build their nests?",
+      "options": [
+        "They dig burrows in the ground",
+        "They build them in caves",
+        "They build large, stick nests at the top of tall trees or on cliffs",
+        "They build them in abandoned buildings"
+      ],
+      "correct_answer": "They build large, stick nests at the top of tall trees or on cliffs"
+    },
+    {
+      "question": "Why is the Bald Eagle called 'bald'?",
+      "options": [
+        "It loses its feathers as it ages",
+        "The term 'bald' once meant 'white-headed'",
+        "It has no feathers on its head",
+        "Its head is a pale color"
+      ],
+      "correct_answer": "The term 'bald' once meant 'white-headed'"
+    },
+    {
+      "question": "At what age do Bald Eagles typically acquire their white head and tail feathers?",
+      "options": [
+        "At birth",
+        "Around 1 year old",
+        "Around 4-5 years old",
+        "After 10 years old"
+      ],
+      "correct_answer": "Around 4-5 years old"
+    }
+  ]
+}

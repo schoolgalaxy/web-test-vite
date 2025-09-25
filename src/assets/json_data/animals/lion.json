@@ -1,0 +1,57 @@
+{
+  "title": "The Mighty Lion",
+  "description": "Lions are large cats known for their majestic manes (in males) and powerful roar. They are social animals that live in groups called prides, which are found primarily in Africa and India.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/17",
+  "questions": [
+    {
+      "question": "What is the collective noun for a group of lions?",
+      "options": [
+        "A herd",
+        "A pack",
+        "A pride",
+        "A flock"
+      ],
+      "correct_answer": "A pride"
+    },
+    {
+      "question": "Which of the following is true about a male lion's mane?",
+      "options": [
+        "It is used for swimming",
+        "It helps them camouflage",
+        "It is used to attract a mate",
+        "It is a sign of aggression"
+      ],
+      "correct_answer": "It is used to attract a mate"
+    },
+    {
+      "question": "What is the primary role of a lioness within a pride?",
+      "options": [
+        "Defending the territory",
+        "Raising the cubs",
+        "Hunting for food",
+        "All of the above"
+      ],
+      "correct_answer": "Hunting for food"
+    },
+    {
+      "question": "How fast can a lion run in a short burst?",
+      "options": [
+        "20 mph",
+        "30 mph",
+        "50 mph",
+        "80 mph"
+      ],
+      "correct_answer": "50 mph"
+    },
+    {
+      "question": "A lion's roar can be heard from how far away?",
+      "options": [
+        "1 mile",
+        "3 miles",
+        "5 miles",
+        "5 to 8 miles"
+      ],
+      "correct_answer": "5 to 8 miles"
+    }
+  ]
+}

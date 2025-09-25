@@ -1,0 +1,57 @@
+{
+  "title": "The Fabulous Flamingo",
+  "description": "Flamingos are known for their vibrant pink or reddish feathers, long legs, and an S-shaped neck. Their unique filter-feeding beaks are perfectly adapted for their diet.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/13364951010376781216",
+  "questions": [
+    {
+      "question": "What is the main reason a flamingo is pink?",
+      "options": [
+        "It is genetically determined",
+        "It is a result of their diet of algae and crustaceans",
+        "It is for camouflage",
+        "It is a form of protection"
+      ],
+      "correct_answer": "It is a result of their diet of algae and crustaceans"
+    },
+    {
+      "question": "Why do flamingos often stand on one leg?",
+      "options": [
+        "To rest their leg muscles",
+        "To regulate their body temperature",
+        "To scare off predators",
+        "To impress a mate"
+      ],
+      "correct_answer": "To regulate their body temperature"
+    },
+    {
+      "question": "What is the collective noun for a group of flamingos?",
+      "options": [
+        "A swarm",
+        "A flamboyance",
+        "A parliament",
+        "A flock"
+      ],
+      "correct_answer": "A flamboyance"
+    },
+    {
+      "question": "How does a flamingo's beak work?",
+      "options": [
+        "It acts like a straw to suck up water",
+        "It opens and closes like a pair of scissors",
+        "It filters out mud and water, leaving food behind",
+        "It has sharp edges for cutting food"
+      ],
+      "correct_answer": "It filters out mud and water, leaving food behind"
+    },
+    {
+      "question": "A flamingo chick is born with what color feathers?",
+      "options": [
+        "Pink",
+        "Gray or white",
+        "Yellow",
+        "Red"
+      ],
+      "correct_answer": "Gray or white"
+    }
+  ]
+}

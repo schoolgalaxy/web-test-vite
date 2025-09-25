@@ -1,0 +1,57 @@
+{
+  "title": "The Antarctic Emperor Penguin",
+  "description": "The Emperor Penguin is the tallest and heaviest of all living penguin species. It breeds in the coldest environment of any bird and is an incredible deep-water diver.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/13748551393709131265_0",
+  "questions": [
+    {
+      "question": "Where do Emperor Penguins live and breed?",
+      "options": [
+        "The Arctic",
+        "The Galapagos Islands",
+        "Antarctica",
+        "The coast of South Africa"
+      ],
+      "correct_answer": "Antarctica"
+    },
+    {
+      "question": "How deep can an Emperor Penguin dive in search of food?",
+      "options": [
+        "100 meters",
+        "250 meters",
+        "Over 500 meters",
+        "1000 meters"
+      ],
+      "correct_answer": "Over 500 meters"
+    },
+    {
+      "question": "What unique behavior do male Emperor Penguins perform during the harsh winter?",
+      "options": [
+        "They huddle together to stay warm and incubate their eggs",
+        "They migrate to warmer climates",
+        "They hunt for the females",
+        "They build elaborate nests"
+      ],
+      "correct_answer": "They huddle together to stay warm and incubate their eggs"
+    },
+    {
+      "question": "Emperor penguins have a thick layer of fat called blubber. What is its purpose?",
+      "options": [
+        "To attract mates",
+        "To help them float in the water",
+        "To keep them warm and store energy",
+        "To help them digest fish"
+      ],
+      "correct_answer": "To keep them warm and store energy"
+    },
+    {
+      "question": "Unlike many other birds, Emperor Penguins do not build a nest. Where do they incubate their egg?",
+      "options": [
+        "In a burrow",
+        "On the ground in a sheltered spot",
+        "On their feet under a special fold of skin",
+        "Inside a snow cave"
+      ],
+      "correct_answer": "On their feet under a special fold of skin"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "The Leaping Kangaroo",
+  "description": "Kangaroos are marsupials native to Australia, known for their powerful hind legs used for jumping. They carry their young, called joeys, in a pouch.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/6",
+  "questions": [
+    {
+      "question": "What is the collective noun for a group of kangaroos?",
+      "options": [
+        "A pod",
+        "A mob",
+        "A colony",
+        "A herd"
+      ],
+      "correct_answer": "A mob"
+    },
+    {
+      "question": "A baby kangaroo is called a what?",
+      "options": [
+        "Pup",
+        "Cub",
+        "Joey",
+        "Calf"
+      ],
+      "correct_answer": "Joey"
+    },
+    {
+      "question": "How do kangaroos move at high speeds?",
+      "options": [
+        "Running on all fours",
+        "Using their tails for propulsion",
+        "Hopping on their hind legs",
+        "Rolling"
+      ],
+      "correct_answer": "Hopping on their hind legs"
+    },
+    {
+      "question": "Kangaroos are native to which continent?",
+      "options": [
+        "North America",
+        "Africa",
+        "South America",
+        "Australia"
+      ],
+      "correct_answer": "Australia"
+    },
+    {
+      "question": "A kangaroo's powerful tail is primarily used for what?",
+      "options": [
+        "A fifth limb for balance",
+        "Digging burrows",
+        "Holding food",
+        "As a weapon for defense"
+      ],
+      "correct_answer": "A fifth limb for balance"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "The Flightless Ostrich",
+  "description": "The Ostrich is the largest and heaviest living bird. Native to Africa, it is also known for laying the largest eggs of any land animal.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/1021272612270033525_0",
+  "questions": [
+    {
+      "question": "What is the average speed of a running ostrich?",
+      "options": [
+        "15 mph",
+        "25 mph",
+        "45 mph",
+        "60 mph"
+      ],
+      "correct_answer": "45 mph"
+    },
+    {
+      "question": "What is a unique characteristic of an ostrich's eye?",
+      "options": [
+        "It can see in the dark",
+        "It is bigger than its brain",
+        "It changes color with the seasons",
+        "It has three eyelids"
+      ],
+      "correct_answer": "It is bigger than its brain"
+    },
+    {
+      "question": "What is the weight of an average ostrich egg?",
+      "options": [
+        "1-2 pounds",
+        "3 pounds",
+        "5 pounds",
+        "Over 3 pounds"
+      ],
+      "correct_answer": "Over 3 pounds"
+    },
+    {
+      "question": "True or false: An ostrich buries its head in the sand when it is scared.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "False"
+    },
+    {
+      "question": "Ostriches have a unique digestive system that allows them to swallow which of the following to help grind food?",
+      "options": [
+        "Sand",
+        "Twigs",
+        "Small stones and pebbles",
+        "Large leaves"
+      ],
+      "correct_answer": "Small stones and pebbles"
+    }
+  ]
+}

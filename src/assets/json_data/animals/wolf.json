@@ -1,0 +1,57 @@
+{
+  "title": "The Majestic Gray Wolf",
+  "description": "The Gray Wolf is a canid known for its powerful howl and a complex social structure. They live and hunt in packs and are apex predators in their ecosystems.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/6",
+  "questions": [
+    {
+      "question": "What is the collective noun for a group of wolves?",
+      "options": [
+        "A pack",
+        "A pride",
+        "A herd",
+        "A family"
+      ],
+      "correct_answer": "A pack"
+    },
+    {
+      "question": "What is the primary purpose of a wolf's howl?",
+      "options": [
+        "To attract a mate",
+        "To communicate with their pack",
+        "To scare off predators",
+        "To mark their territory"
+      ],
+      "correct_answer": "To communicate with their pack"
+    },
+    {
+      "question": "Which of these is the most common prey for a gray wolf?",
+      "options": [
+        "Rabbits and squirrels",
+        "Deer and elk",
+        "Fish",
+        "Small birds"
+      ],
+      "correct_answer": "Deer and elk"
+    },
+    {
+      "question": "How do wolves establish a social hierarchy in their pack?",
+      "options": [
+        "By fighting for dominance",
+        "By sharing food equally",
+        "By respecting a single dominant pair",
+        "By leaving the pack when they get older"
+      ],
+      "correct_answer": "By respecting a single dominant pair"
+    },
+    {
+      "question": "What is a unique characteristic of a wolf's sense of smell?",
+      "options": [
+        "It is 100 times stronger than a human's",
+        "It is 500 times stronger than a human's",
+        "It is 1,000 times stronger than a human's",
+        "It is 10,000 times stronger than a human's"
+      ],
+      "correct_answer": "It is 100 times stronger than a human's"
+    }
+  ]
+}

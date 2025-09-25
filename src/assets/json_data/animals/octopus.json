@@ -1,0 +1,57 @@
+{
+  "title": "The Intelligent Octopus",
+  "description": "Octopuses are cephalopods known for their high intelligence, eight arms, and remarkable ability to change color and texture for camouflage.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/23",
+  "questions": [
+    {
+      "question": "What is unique about an octopus's blood?",
+      "options": [
+        "It is clear",
+        "It is green",
+        "It is blue",
+        "It is black"
+      ],
+      "correct_answer": "It is blue"
+    },
+    {
+      "question": "How many hearts does an octopus have?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": "3"
+    },
+    {
+      "question": "Which of these is a form of defense for an octopus?",
+      "options": [
+        "Injecting venom",
+        "Shooting ink",
+        "Hiding in its shell",
+        "Playing dead"
+      ],
+      "correct_answer": "Shooting ink"
+    },
+    {
+      "question": "What is the primary way an octopus moves?",
+      "options": [
+        "By crawling on its arms",
+        "By jet propulsion",
+        "By swimming with its fins",
+        "By using its tentacles to pull itself"
+      ],
+      "correct_answer": "By jet propulsion"
+    },
+    {
+      "question": "What is the collective noun for a group of octopuses?",
+      "options": [
+        "A herd",
+        "A pod",
+        "A knot",
+        "A flock"
+      ],
+      "correct_answer": "A knot"
+    }
+  ]
+}

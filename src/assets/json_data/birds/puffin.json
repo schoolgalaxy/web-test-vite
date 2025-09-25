@@ -1,0 +1,57 @@
+{
+  "title": "The Puffin",
+  "description": "Puffins are seabirds known for their brightly colored beaks during the breeding season. They are often called 'sea parrots' because of their appearance and are excellent swimmers and divers.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/729177119972583842",
+  "questions": [
+    {
+      "question": "What is the primary food source for puffins?",
+      "options": [
+        "Seeds",
+        "Fish",
+        "Insects",
+        "Worms"
+      ],
+      "correct_answer": "Fish"
+    },
+    {
+      "question": "Which of these is a unique characteristic of a puffin's beak?",
+      "options": [
+        "It changes color with the seasons",
+        "It is filled with tiny teeth",
+        "It can extend to twice its length",
+        "It is used to dig burrows"
+      ],
+      "correct_answer": "It changes color with the seasons"
+    },
+    {
+      "question": "What is the collective noun for a group of puffins?",
+      "options": [
+        "A colony",
+        "A flock",
+        "A parliament",
+        "A murder"
+      ],
+      "correct_answer": "A colony"
+    },
+    {
+      "question": "Which of the following describes the nesting behavior of puffins?",
+      "options": [
+        "They build nests in trees",
+        "They build nests on cliff ledges",
+        "They dig burrows in the ground to nest",
+        "They build nests out of twigs and leaves"
+      ],
+      "correct_answer": "They dig burrows in the ground to nest"
+    },
+    {
+      "question": "What is the primary reason for a puffin's awkward walk on land?",
+      "options": [
+        "Their legs are too short",
+        "Their feet are placed far back on their bodies",
+        "Their wings are too large",
+        "They have heavy bones"
+      ],
+      "correct_answer": "Their feet are placed far back on their bodies"
+    }
+  ]
+}

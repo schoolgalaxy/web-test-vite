@@ -1,0 +1,57 @@
+{
+  "title": "The Playful Dolphin",
+  "description": "Dolphins are highly intelligent marine mammals known for their playful behavior and social nature. They communicate using a variety of clicks, whistles, and other sounds.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/22",
+  "questions": [
+    {
+      "question": "What is a dolphin's primary method of communication and navigation?",
+      "options": [
+        "Echolocation",
+        "Whistling",
+        "Fin-slapping",
+        "Body language"
+      ],
+      "correct_answer": "Echolocation"
+    },
+    {
+      "question": "How do dolphins sleep?",
+      "options": [
+        "They close their eyes and sink to the bottom",
+        "They lie on their side and breathe slowly",
+        "They rest one half of their brain at a time",
+        "They don't sleep"
+      ],
+      "correct_answer": "They rest one half of their brain at a time"
+    },
+    {
+      "question": "What is the collective noun for a group of dolphins?",
+      "options": [
+        "A pod",
+        "A school",
+        "A herd",
+        "A mob"
+      ],
+      "correct_answer": "A pod"
+    },
+    {
+      "question": "What is the largest species of dolphin?",
+      "options": [
+        "Bottlenose dolphin",
+        "Orca (Killer Whale)",
+        "Dusky dolphin",
+        "Common dolphin"
+      ],
+      "correct_answer": "Orca (Killer Whale)"
+    },
+    {
+      "question": "How do dolphins breathe?",
+      "options": [
+        "Through gills",
+        "Through a blowhole on top of their head",
+        "Through their mouths",
+        "They don't need to breathe"
+      ],
+      "correct_answer": "Through a blowhole on top of their head"
+    }
+  ]
+}

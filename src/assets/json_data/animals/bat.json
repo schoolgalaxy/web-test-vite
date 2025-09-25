@@ -1,0 +1,57 @@
+{
+  "title": "The Mysterious Bat",
+  "description": "Bats are the only mammals capable of sustained flight. They are nocturnal and use echolocation to navigate and hunt in the dark.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/21",
+  "questions": [
+    {
+      "question": "What is the primary purpose of a bat's echolocation?",
+      "options": [
+        "To find a mate",
+        "To communicate with other bats",
+        "To navigate and locate prey in the dark",
+        "To signal danger"
+      ],
+      "correct_answer": "To navigate and locate prey in the dark"
+    },
+    {
+      "question": "Which of these is a common misconception about bats?",
+      "options": [
+        "They are rodents",
+        "They are blind",
+        "They are birds",
+        "They are all blood-suckers"
+      ],
+      "correct_answer": "They are blind"
+    },
+    {
+      "question": "A bat's wing is actually an elongated version of what?",
+      "options": [
+        "Its fingers",
+        "Its ribs",
+        "Its toes",
+        "Its shoulder blades"
+      ],
+      "correct_answer": "Its fingers"
+    },
+    {
+      "question": "What is the collective noun for a group of bats?",
+      "options": [
+        "A murder",
+        "A flock",
+        "A colony",
+        "A parliament"
+      ],
+      "correct_answer": "A colony"
+    },
+    {
+      "question": "Which of the following describes a bat's diet?",
+      "options": [
+        "All bats eat insects",
+        "All bats are carnivores",
+        "All bats eat fruit",
+        "Their diet varies and includes fruit, insects, fish, and blood"
+      ],
+      "correct_answer": "Their diet varies and includes fruit, insects, fish, and blood"
+    }
+  ]
+}

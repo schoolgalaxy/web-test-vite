@@ -1,15 +1,11 @@
-import LeftSidebar from './LeftSidebar';
-import RightSidebar from './RightSidebar';
-import CenterSection from './CenterSection';
-import '../assets/css/Home.css'; // Import the new Home CSS
+import React from 'react';
+import McqList from './mcq/McqList';
+import Banner from './Banner';
+import '../assets/css/Home.css'; // Assuming Home.css will contain styles for center section
 
 const Home = () => {
   return (
-    <div className="home-layout">
-      <LeftSidebar />
-      <CenterSection />
-      <RightSidebar />
-    </div>
+    <McqList />
   );
 };
 

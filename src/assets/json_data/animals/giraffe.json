@@ -1,0 +1,57 @@
+{
+  "title": "The Towering Giraffe",
+  "description": "Giraffes are the tallest mammals on Earth, known for their extremely long necks and legs, and distinct coat patterns. They are native to Africa.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/6",
+  "questions": [
+    {
+      "question": "How do giraffes typically get their drinking water?",
+      "options": [
+        "They drink from rivers and lakes like most animals",
+        "They absorb it from the leaves and plants they eat",
+        "They get it from underground sources",
+        "They store it in their humps"
+      ],
+      "correct_answer": "They absorb it from the leaves and plants they eat"
+    },
+    {
+      "question": "What is the collective noun for a group of giraffes?",
+      "options": [
+        "A tower",
+        "A pride",
+        "A mob",
+        "A herd"
+      ],
+      "correct_answer": "A tower"
+    },
+    {
+      "question": "What is the primary purpose of a giraffe's neck?",
+      "options": [
+        "For reaching high-up food sources",
+        "For fighting with other giraffes",
+        "For attracting mates",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question": "How do giraffes give birth?",
+      "options": [
+        "They lie down on the ground",
+        "They give birth standing up",
+        "They give birth in water",
+        "They go to a specific nesting ground"
+      ],
+      "correct_answer": "They give birth standing up"
+    },
+    {
+      "question": "What is a unique characteristic of a giraffe's tongue?",
+      "options": [
+        "It is black or purple",
+        "It is forked",
+        "It is prehensile and can grasp objects",
+        "It is covered in venom"
+      ],
+      "correct_answer": "It is black or purple"
+    }
+  ]
+}

@@ -19,14 +19,26 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+.left-sidebar h4 {
+  text-align: right;
+  padding-top:20px;
+  padding-right:40px;
+}
+
 .left-sidebar ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-align: right;
+  padding-right: 20px; /* Added padding to the right */
 }
 
 .left-sidebar li {
   margin-bottom: 10px;
+}
+
+.left-sidebar h4 {
+  color: #004080; /* Darker blue for the Categories title */
 }
 
 .left-sidebar a {

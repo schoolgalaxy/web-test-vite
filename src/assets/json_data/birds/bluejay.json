@@ -1,0 +1,57 @@
+{
+  "title": "The Intelligent Blue Jay",
+  "description": "The Blue Jay is a crested, blue, black, and white bird native to eastern North America. It is known for its intelligence, complex social systems, and loud calls.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/15242016275294071999_0",
+  "questions": [
+    {
+      "question": "What is a unique behavior of Blue Jays regarding their nests?",
+      "options": [
+        "They build them in water",
+        "They only nest on the ground",
+        "They steal nesting materials from other birds",
+        "They can lay eggs in another bird's nest"
+      ],
+      "correct_answer": "They steal nesting materials from other birds"
+    },
+    {
+      "question": "The Blue Jay is a member of which bird family?",
+      "options": [
+        "Finch",
+        "Wren",
+        "Crow",
+        "Sparrow"
+      ],
+      "correct_answer": "Crow"
+    },
+    {
+      "question": "What is the primary food source of Blue Jays?",
+      "options": [
+        "Nectar",
+        "Insects, nuts, and seeds",
+        "Fish",
+        "Frogs"
+      ],
+      "correct_answer": "Insects, nuts, and seeds"
+    },
+    {
+      "question": "What is a special ability of the Blue Jay's call?",
+      "options": [
+        "It can mimic the sound of a rattlesnake",
+        "It can mimic the human voice",
+        "It can sing elaborate songs",
+        "It can change pitch to trick predators"
+      ],
+      "correct_answer": "It can mimic the sound of a rattlesnake"
+    },
+    {
+      "question": "Which of these is a unique characteristic of a Blue Jay's feathers?",
+      "options": [
+        "They glow in the dark",
+        "They are not actually blue",
+        "They change color with the seasons",
+        "They can be used as a source of dye"
+      ],
+      "correct_answer": "They are not actually blue"
+    }
+  ]
+}

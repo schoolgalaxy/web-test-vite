@@ -1,0 +1,57 @@
+{
+  "title": "The Great Horned Owl",
+  "description": "The Great Horned Owl is a large owl native to the Americas, recognizable by the prominent tufts of feathers on its head. It's a highly adaptable and powerful nocturnal predator.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/2070051187428807759",
+  "questions": [
+    {
+      "question": "What is the primary call of a Great Horned Owl commonly described as?",
+      "options": [
+        "A screech",
+        "A hoot",
+        "A caw",
+        "A trill"
+      ],
+      "correct_answer": "A hoot"
+    },
+    {
+      "question": "The Great Horned Owl is a master of silent flight. What allows it to fly so quietly?",
+      "options": [
+        "A special membrane on its wings",
+        "Soft, comb-like serrations on the edges of its feathers",
+        "Its feathers are made of a special type of lightweight material",
+        "It flies at very low altitudes"
+      ],
+      "correct_answer": "Soft, comb-like serrations on the edges of its feathers"
+    },
+    {
+      "question": "Which of these is a common prey for a Great Horned Owl?",
+      "options": [
+        "Small fish",
+        "Squirrels and rabbits",
+        "Large birds of prey",
+        "Insects only"
+      ],
+      "correct_answer": "Squirrels and rabbits"
+    },
+    {
+      "question": "Why are the ear tufts of the Great Horned Owl not actually its ears?",
+      "options": [
+        "They are for camouflage",
+        "They are for hearing",
+        "They are just decorative",
+        "They are used for sensing movement"
+      ],
+      "correct_answer": "They are for camouflage"
+    },
+    {
+      "question": "What is the collective noun for a group of owls?",
+      "options": [
+        "A flock",
+        "A parliament",
+        "A horde",
+        "A group"
+      ],
+      "correct_answer": "A parliament"
+    }
+  ]
+}
