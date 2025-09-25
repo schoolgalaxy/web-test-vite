@@ -1,4 +1,4 @@
-.feedback-form-container {
+.feedback-form-content {
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
@@ -8,7 +8,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-.feedback-form-container h2 {
+.feedback-form-content h2 {
   text-align: center;
   color: #333;
   margin-bottom: 25px;

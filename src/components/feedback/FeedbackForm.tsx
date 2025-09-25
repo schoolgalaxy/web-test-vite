@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { generateClient } from "aws-amplify/api";
-import type { Schema } from '../../amplify/data/resource';
+import type { Schema } from '../../../amplify/data/resource';
 import { useMemo } from 'react';
 
-import './css/FeedbackForm.css'; // Assuming a CSS file for styling
+import './FeedbackForm.css'; // Assuming a CSS file for styling
 
 interface FeedbackFormData {
   subject: string;
@@ -84,55 +84,57 @@ const FeedbackForm: React.FC = () => {
   };
 
   return (
-    <div className="feedback-form-container">
-      <h2>Feedback Form</h2>
-      {submitMessage && (
-        <div className={`submit-message ${submitMessage.includes('successfully') ? 'success' : 'error'}`}>
-          {submitMessage}
-        </div>
-      )}
-      <form onSubmit={handleSubmit} className="feedback-form">
-        <div className="form-group">
-          <label htmlFor="subject">Subject:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-          />
-          {errors.subject && <span className="error-message">{errors.subject}</span>}
-        </div>
+    <div className="middle-pane">
+      <div className="feedback-form-content">
+        <h2>Feedback Form</h2>
+        {submitMessage && (
+          <div className={`submit-message ${submitMessage.includes('successfully') ? 'success' : 'error'}`}>
+            {submitMessage}
+          </div>
+        )}
+        <form onSubmit={handleSubmit} className="feedback-form">
+          <div className="form-group">
+            <label htmlFor="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
+            {errors.subject && <span className="error-message">{errors.subject}</span>}
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          {errors.email && <span className="error-message">{errors.email}</span>}
-        </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            {errors.email && <span className="error-message">{errors.email}</span>}
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows={5}
-            required
-          ></textarea>
-          {errors.message && <span className="error-message">{errors.message}</span>}
-        </div>
+          <div className="form-group">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows={5}
+              required
+            ></textarea>
+            {errors.message && <span className="error-message">{errors.message}</span>}
+          </div>
 
-        <button type="submit">Submit Feedback</button>
-      </form>
+          <button type="submit">Submit Feedback</button>
+        </form>
+      </div>
     </div>
   );
 };

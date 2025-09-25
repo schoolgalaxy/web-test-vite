@@ -4,7 +4,7 @@ import Explore from './Explore';
 import About from './About';
 import TestLayout from './TestLayout';
 import LoginScreen from './LoginScreen';
-import FeedbackForm from './FeedbackForm';
+import FeedbackLayout from './feedback/FeedbackLayout';
 
 export const AppRoutes = () => {
   return (
@@ -15,7 +15,7 @@ export const AppRoutes = () => {
       <Route path="/about" element={<About />} />
       <Route path="/test/:testId" element={<TestLayout />} />
       <Route path="/login" element={<LoginScreen />} />
-      <Route path="/feedback" element={<FeedbackForm />} />
+      <Route path="/feedback" element={<FeedbackLayout />} />
     </Routes>
   );
 };
