@@ -15,7 +15,7 @@ const Navbar = () => {
           <Link to="/">Explore</Link>
         </li>
         <li className="navbar-auth">
-          <Link to="/">About</Link>
+          <Link to="/about">About</Link>
         </li>
         {user ? (
           <li>
