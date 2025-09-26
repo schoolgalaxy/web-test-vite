@@ -9,7 +9,10 @@ const Navbar = () => {
     <nav className="navbar">
       <ul>
         <li className="navbar-brand">
-          <Link to="/explore">Prep Galaxy</Link>
+          <Link to="/explore">
+            <img src="/icons/galaxy.svg" alt="Prep Galaxy" className="navbar-logo" />
+            Prep Galaxy
+          </Link>
         </li>
         <li>
           <Link to="/">Explore</Link>
