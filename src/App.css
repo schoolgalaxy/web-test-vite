@@ -1,9 +1,9 @@
 #root {
-  max-width: 1200px; /* Slightly narrower for a more focused look */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  padding-top: 76px; /* To account for the fixed navbar height (56px + some spacing) */
+  padding-top: 76px;
 }
 
 .logo {
@@ -45,7 +45,10 @@
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1.5rem; /* Slightly more padding */
+  padding: 0 1.5rem;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 

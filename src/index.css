@@ -42,6 +42,7 @@ body {
   color: var(--text-primary);
   font-family: 'Roboto', 'Open Sans', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
 }
 
 main {
