@@ -5,21 +5,24 @@
       "name": "Birds Quiz Platform",
       "description": "Explore the world of birds with our engaging quizzes!",
       "routePrefix": "/quiz/birds",
-      "category": "birds"
+      "category": "birds",
+      "icon": "/src/assets/img/bird.svg"
     },
     {
       "id": "animals",
       "name": "Animals Quiz Platform",
       "description": "Test your knowledge about various animals!",
       "routePrefix": "/quiz/animals",
-      "category": "animals"
+      "category": "animals",
+      "icon": "/src/assets/img/animal.svg"
     },
     {
       "id": "aquatic",
       "name": "Aquatic Quiz Platform",
       "description": "Dive into aquatic life quizzes!",
       "routePrefix": "/quiz/aquatic",
-      "category": "aquatic"
+      "category": "aquatic",
+      "icon": "/src/assets/img/aquatic.svg"
     }
   ]
 }
