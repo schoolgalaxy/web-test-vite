@@ -1,0 +1,18 @@
+{
+  "quizzes": [
+    {
+      "id": "birds",
+      "name": "Birds Quiz Platform",
+      "description": "Explore the world of birds with our engaging quizzes!",
+      "routePrefix": "/quiz/birds",
+      "category": "birds"
+    },
+    {
+      "id": "animals",
+      "name": "Animals Quiz Platform",
+      "description": "Test your knowledge about various animals!",
+      "routePrefix": "/quiz/animals",
+      "category": "animals"
+    }
+  ]
+}

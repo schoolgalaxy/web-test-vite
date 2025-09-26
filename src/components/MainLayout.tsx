@@ -1,17 +1,14 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
 import '../assets/css/Home.css'; // Assuming Home.css has the layout styles
 
-interface MainLayoutProps {
-  children: React.ReactNode;
-}
-
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC = () => {
   return (
     <div className="home-layout">
       <LeftSidebar />
-      {children}
+      <Outlet />
       <RightSidebar />
     </div>
   );
