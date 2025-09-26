@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+  <title>Pi Symbol</title>
+  <g fill="#4a5568">
+    <path d="M8 20h48v6H40v22h-6V26H22v22h-6V26H8z"/>
+  </g>
+</svg>

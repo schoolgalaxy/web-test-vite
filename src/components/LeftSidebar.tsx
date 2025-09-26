@@ -11,8 +11,9 @@ const LeftSidebar: React.FC = () => {
           <li><Link to="/home">Home</Link></li>
           {/* <li><Link to="/class-1-5">Class 1-5</Link></li>
           <li><Link to="/class-5-9">Class 5-9</Link></li> */}
-          <li><Link to="/birds-quiz">Birds Quiz</Link></li>
-          <li><Link to="/animals-quiz">Animals Quiz</Link></li>
+          <li><Link to="/quiz/birds">Birds Quiz</Link></li>
+          <li><Link to="/quiz/animals">Animals Quiz</Link></li>
+          <li><Link to="/quiz/aquatic">Aquatic Quiz</Link></li>
           <li><Link to="/feedback">Feedback</Link></li>
           <li><Link to="/about">About</Link></li>
         </ul>

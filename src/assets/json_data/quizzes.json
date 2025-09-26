@@ -13,6 +13,13 @@
       "description": "Test your knowledge about various animals!",
       "routePrefix": "/quiz/animals",
       "category": "animals"
+    },
+    {
+      "id": "aquatic",
+      "name": "Aquatic Quiz Platform",
+      "description": "Dive into aquatic life quizzes!",
+      "routePrefix": "/quiz/aquatic",
+      "category": "aquatic"
     }
   ]
 }
