@@ -6,6 +6,6 @@
     "aws-cdk-lib": "^2.217.0"
   },
   "devDependencies": {
-    "@types/node": "^20.19.17"
+    "@types/node": "^22.19.0"
   }
 }
