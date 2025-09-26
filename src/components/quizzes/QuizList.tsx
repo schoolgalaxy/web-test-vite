@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/McqList.css'; // Reusing MCQ list styles
+import birdImg from '/src/assets/img/bird.svg';
+import animalImg from '/src/assets/img/animal.svg';
+import aquaticImg from '/src/assets/img/aquatic.svg';
+import placeholderImg from '/src/assets/img/quiz-placeholder.svg';
 
 interface QuizMetaData {
   id: string;
@@ -51,12 +55,19 @@ const QuizList: React.FC<QuizListProps> = ({ quizCategory, title, description, r
       <h2 className="mcq-list-title">{title}</h2>
       <p>{description}</p>
       <div className="mcq-tiles-grid">
-        {quizzes.map((quiz) => (
+        {quizzes.map((quiz, index) => (
           <Link to={`${routePrefix}/${quiz.id}`} key={quiz.id} className="mcq-tile-link">
-            <div className="mcq-tile">
-              {/* {quiz.profilePic && (
-                <img src={quiz.profilePic} alt={quiz.name} className="mcq-tile-profile-pic" />
-              )} */}
+            <div className={`mcq-tile ${index % 2 === 0 ? 'left-image' : 'right-image'}`}>
+              <img
+                src={quiz.profilePic || (quizCategory === 'birds' ? birdImg : quizCategory === 'animals' ? animalImg : quizCategory === 'aquatic' ? aquaticImg : placeholderImg)}
+                alt={quiz.name}
+                className={`mcq-tile-profile-pic ${index % 2 === 0 ? 'left' : 'right'}`}
+                onError={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = quizCategory === 'birds' ? birdImg : quizCategory === 'animals' ? animalImg : quizCategory === 'aquatic' ? aquaticImg : placeholderImg;
+                }}
+              />
               <h3 className="mcq-tile-name">{quiz.name}</h3>
               <p className="mcq-tile-description">{quiz.description}</p>
             </div>

@@ -8,12 +8,10 @@
 // JSON helpers
 // ------------------------------
 
-/**
- * Eagerly imports all JSON files under a directory tree and returns a map
- * from absolute module path to parsed JSON value.
- *
- * Example pattern: '/src/assets/json_data/**/*.json'
- */
+// Eagerly imports all JSON files under a directory tree and returns a map
+// from absolute module path to parsed JSON value.
+// Example glob pattern (spaces inserted to avoid closing comment token):
+// '/src/assets/json_data/** / *.json' -> remove spaces when using
 export function loadJsonDirectoryEager<T = unknown>(
   globPattern: string
 ): Record<string, T> {
@@ -26,10 +24,8 @@ export function loadJsonDirectoryEager<T = unknown>(
   return jsonByPath;
 }
 
-/**
- * Creates a lazy JSON loader map. Each key is a module path; call the function
- * to dynamically import and receive the parsed JSON value.
- */
+// Creates a lazy JSON loader map. Each key is a module path; call the function
+// to dynamically import and receive the parsed JSON value.
 export function createLazyJsonLoader<T = unknown>(
   globPattern: string
 ): Record<string, () => Promise<T>> {
@@ -48,20 +44,17 @@ export function createLazyJsonLoader<T = unknown>(
 // Image helpers
 // ------------------------------
 
-/**
- * Eagerly resolves image URLs for given extensions and returns a map from
- * absolute module path to a public URL string suitable for <img src>.
- *
- * Example pattern: '/src/assets/**/*.{png,jpg,jpeg,svg,gif}'
- */
+// Eagerly resolves image URLs for given extensions and returns a map from
+// absolute module path to a public URL string suitable for <img src>.
+// Example glob pattern (spaces inserted to avoid closing comment token):
+// '/src/assets/** / *.{png,jpg,jpeg,svg,gif}' -> remove spaces when using
 export function loadImageUrlsEager(
   globPattern: string
 ): Record<string, string> {
-  const modules = import.meta.glob(globPattern, { eager: true, query: '?url' });
+  const modules = import.meta.glob(globPattern, { eager: true, as: 'url' }) as Record<string, string>;
   const urlByPath: Record<string, string> = {};
-  for (const [path, mod] of Object.entries(modules)) {
-    // With query: '?url', Vite returns the resolved URL as the default export
-    urlByPath[path] = (mod as any).default as string;
+  for (const [path, url] of Object.entries(modules)) {
+    urlByPath[path] = url as string;
   }
   return urlByPath;
 }
@@ -73,13 +66,10 @@ export function loadImageUrlsEager(
 export function createLazyImageUrlLoader(
   globPattern: string
 ): Record<string, () => Promise<string>> {
-  const loaders = import.meta.glob(globPattern, { query: '?url' });
+  const loaders = import.meta.glob(globPattern, { as: 'url' }) as Record<string, () => Promise<string>>;
   const wrapped: Record<string, () => Promise<string>> = {};
   for (const [path, loader] of Object.entries(loaders)) {
-    wrapped[path] = async () => {
-      const mod = await (loader as () => Promise<{ default: string }>)();
-      return mod.default;
-    };
+    wrapped[path] = async () => (await (loader as () => Promise<string>)());
   }
   return wrapped;
 }

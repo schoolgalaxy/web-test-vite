@@ -34,11 +34,9 @@
   padding: 25px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  min-height: 180px; /* Ensure consistent tile height */
+  display: block;
+  text-align: left;
+  min-height: 160px;
 }
 
 .mcq-tile:hover {
@@ -48,14 +46,36 @@
 
 .mcq-tile-name {
   color: #34495e; /* Professional heading color */
-  font-size: 1.0em;
-  margin-bottom: 10px;
-  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
 .mcq-tile-description {
   color: #7f8c8d; /* Subtler description color */
-  font-size: 0.8em;
+  font-size: 0.9em;
   line-height: 1.6;
-  flex-grow: 1; /* Allows description to take available space */
+}
+
+.mcq-tile-profile-pic {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+.mcq-tile.left-image .mcq-tile-profile-pic.left {
+  float: left;
+  margin: 0 14px 8px 0;
+}
+
+.mcq-tile.right-image .mcq-tile-profile-pic.right {
+  float: right;
+  margin: 0 0 8px 14px;
+}
+
+.mcq-tile::after {
+  content: "";
+  display: table;
+  clear: both;
 }
