@@ -19,22 +19,38 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.left-sidebar h4 {
-  text-align: right;
-  padding-top:20px;
-  padding-right:40px;
+/* Reduce right padding specifically for the left sidebar */
+.left-sidebar {
+  padding-right: 5px;
 }
 
-.left-sidebar ul {
+.left-sidebar .widget {
+  background: #ffffff;
+  border: 1px solid #c9d8ee; /* higher contrast border */
+  border-radius: 10px;
+  overflow: hidden;
+  width: 70%; /* reduce overall width */
+  margin-left: auto; /* align widget to the right within the left sidebar */
+  margin-top: 26px; /* disconnect from navbar/upper elements */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.left-sidebar .widget-header {
+  background: #eaf3ff;
+  color: #004080;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-bottom: 1px solid #c9d8ee;
+}
+
+.left-sidebar .widget-list {
   list-style-type: none;
-  padding: 0;
+  padding: 8px 8px 12px 8px;
   margin: 0;
-  text-align: right;
-  padding-right: 20px; /* Added padding to the right */
 }
 
-.left-sidebar li {
-  margin-bottom: 10px;
+.left-sidebar .widget-list li {
+  margin: 6px 8px;
 }
 
 .left-sidebar h4 {
@@ -42,20 +58,30 @@
 }
 
 .left-sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
   color: #0056b3;
   font-weight: 600;
   font-size: 0.9em;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.left-sidebar .sidebar-icon {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
 }
 
 .left-sidebar a:hover {
-  color: #007bff;
+  color: #003d80;
+  background: #f2f7ff;
 }
 
-.middle-pane {
-  /* Styles for the main content area */
-}
+
 
 .right-pane h3 {
   color: #0056b3;

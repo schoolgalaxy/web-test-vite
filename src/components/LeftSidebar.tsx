@@ -1,23 +1,59 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/Home.css'; // Assuming Home.css will contain sidebar styles
+import iconHome from '/src/assets/img/icon-home.svg';
+import iconBirds from '/src/assets/img/icon-birds.svg';
+import iconAnimals from '/src/assets/img/icon-animals.svg';
+import iconAquatic from '/src/assets/img/icon-aquatic.svg';
+import iconFeedback from '/src/assets/img/icon-feedback.svg';
+import iconAbout from '/src/assets/img/icon-about.svg';
 
 const LeftSidebar: React.FC = () => {
   return (
     <div className="left-sidebar">
-      <h4>Categories</h4>
-      <ul>
-        <ul>
-          <li><Link to="/home">Home</Link></li>
+      <div className="widget">
+        <div className="widget-header">Categories</div>
+        <ul className="widget-list">
+          <li>
+            <Link to="/home">
+              <img src={iconHome} alt="Home" className="sidebar-icon" />
+              Home
+            </Link>
+          </li>
           {/* <li><Link to="/class-1-5">Class 1-5</Link></li>
           <li><Link to="/class-5-9">Class 5-9</Link></li> */}
-          <li><Link to="/quiz/birds">Birds Quiz</Link></li>
-          <li><Link to="/quiz/animals">Animals Quiz</Link></li>
-          <li><Link to="/quiz/aquatic">Aquatic Quiz</Link></li>
-          <li><Link to="/feedback">Feedback</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li>
+            <Link to="/quiz/birds">
+              <img src={iconBirds} alt="Birds" className="sidebar-icon" />
+              Birds Quiz
+            </Link>
+          </li>
+          <li>
+            <Link to="/quiz/animals">
+              <img src={iconAnimals} alt="Animals" className="sidebar-icon" />
+              Animals Quiz
+            </Link>
+          </li>
+          <li>
+            <Link to="/quiz/aquatic">
+              <img src={iconAquatic} alt="Aquatic" className="sidebar-icon" />
+              Aquatic Quiz
+            </Link>
+          </li>
+          <li>
+            <Link to="/feedback">
+              <img src={iconFeedback} alt="Feedback" className="sidebar-icon" />
+              Feedback
+            </Link>
+          </li>
+          <li>
+            <Link to="/about">
+              <img src={iconAbout} alt="About" className="sidebar-icon" />
+              About
+            </Link>
+          </li>
         </ul>
-      </ul>
+      </div>
     </div>
   );
 };
