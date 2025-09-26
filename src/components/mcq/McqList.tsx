@@ -1,7 +1,6 @@
-import {  } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/McqList.css';
-import aiImg from '/src/assets/img/ai.svg';
+// import aiImg from '/src/assets/img/ai.svg';
 import aiBeginnerImg from '/src/assets/img/ai-beginner.svg';
 import aiAdvancedImg from '/src/assets/img/ai-advanced.svg';
 import globeImg from '/src/assets/img/globe.svg';

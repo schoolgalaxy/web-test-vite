@@ -8,7 +8,7 @@ import FeedbackLayout from './feedback/FeedbackLayout';
 import QuizList from './quizzes/QuizList';
 import QuizTest from './quizzes/QuizTest';
 import MainLayout from './MainLayout';
-import quizzesConfig from '/src/assets/json_data/quizzes.json';
+import quizzesConfig from '../assets/json_data/quizzes.json';
 
 type QuizConfig = {
   id: string;
