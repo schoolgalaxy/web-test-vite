@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/Home.css'; // Assuming Home.css will contain sidebar styles
+import '/src/assets/css/Home.css'; // Assuming Home.css will contain sidebar styles
 
 const RightSidebar: React.FC = () => {
   return (

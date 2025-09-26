@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import LeftSidebar from './LeftSidebar';
-import RightSidebar from './RightSidebar';
+import LeftSidebar from './leftsidebar/LeftSidebar';
+import RightSidebar from './rightsidebar/RightSidebar';
 import '../assets/css/Home.css'; // Assuming Home.css has the layout styles
 
 const MainLayout: React.FC = () => {

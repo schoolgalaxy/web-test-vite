@@ -1,5 +1,5 @@
-import LeftSidebar from '../LeftSidebar';
-import RightSidebar from '../RightSidebar';
+import LeftSidebar from '../leftsidebar/LeftSidebar';
+import RightSidebar from '../rightsidebar/RightSidebar';
 import FeedbackForm from './FeedbackForm';
 import '../../assets/css/Home.css'; // Re-use Home CSS for layout
 

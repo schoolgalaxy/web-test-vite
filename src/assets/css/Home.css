@@ -77,8 +77,45 @@
 }
 
 .left-sidebar a:hover {
-  color: #003d80;
-  background: #f2f7ff;
+   color: #003d80;
+   background: #f2f7ff;
+ }
+
+.login-button {
+   background: transparent;
+   color: #007bff;
+   border: 2px solid #007bff;
+   padding: 10px 20px;
+   border-radius: 6px;
+   font-weight: 500;
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+   font-size: 0.9em;
+   width: calc(100% - 20px);
+   margin: 0 10px;
+}
+
+.login-button:hover {
+   background: #007bff;
+   color: white;
+}
+
+.login-link {
+   text-decoration: none;
+}
+
+.user-info {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   padding: 8px 10px;
+}
+
+.user-email {
+   color: #0056b3;
+   font-weight: 600;
+   font-size: 0.85em;
+   margin-bottom: 4px;
 }
 
 
