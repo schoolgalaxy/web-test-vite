@@ -1,7 +1,47 @@
+:root {
+  /* Light theme colors */
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-hero: #e9f7fe;
+  --text-primary: #333333;
+  --text-secondary: #000000;
+  --text-muted: #888888;
+  --border-color: #e0e0e0;
+  --primary-blue: #007bff;
+  --primary-blue-dark: #0056b3;
+  --navbar-bg: #8ebdec;
+  --navbar-hover: #8dc9dd;
+  --navbar-text: #000000;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --link-color: #007bff;
+  --link-hover: #0056b3;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-hero: #1e3a5f;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --text-muted: #cccccc;
+  --border-color: #404040;
+  --primary-blue: #4da6ff;
+  --primary-blue-dark: #0066cc;
+  --navbar-bg: #2c5282;
+  --navbar-hover: #3d6b9d;
+  --navbar-text: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --link-color: #4da6ff;
+  --link-hover: #0066cc;
+}
+
 body {
   margin: 0;
-  background-color: #f8f9fa; /* A very light gray for a softer background */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-family: 'Roboto', 'Open Sans', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {
@@ -17,13 +57,14 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #007bff; /* A standard, elegant blue */
+  background-color: var(--primary-blue);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.3s ease;
   color: white;
 }
 button:hover {
-  border-color: #0056b3; /* Darker blue on hover */
+  border-color: var(--primary-blue-dark);
+  background-color: var(--primary-blue-dark);
 }
 button:focus,
 button:focus-visible {
@@ -46,19 +87,26 @@ button:focus-visible {
 }
 
 .mcq-list-container li {
-  background-color: #ffffff; /* White background for list items */
-  border: 1px solid #e0e0e0; /* Subtle border */
-  margin-bottom: 8px; /* Add some space between list items */
-  border-radius: 8px; /* Rounded corners */
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  margin-bottom: 8px;
+  border-radius: 8px;
   padding: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .mcq-list-container li:hover {
-  background: #f0f0f0; /* Light gray on hover */
+  background: var(--bg-primary);
+  border-color: var(--primary-blue);
 }
 
 a {
-  font-weight: 600; /* Slightly less bold */
+  font-weight: 600;
   text-decoration: none;
-  color: #007bff; /* Blue for links */
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
 }

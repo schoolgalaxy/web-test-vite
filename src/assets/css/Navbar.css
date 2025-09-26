@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #8ebdec; /* Sky blue background */
+  background-color: var(--navbar-bg);
   padding: 0 1rem;
   box-sizing: border-box;
   position: fixed;
@@ -7,10 +7,11 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Softer, more pronounced shadow */
+  box-shadow: 0 2px 8px var(--shadow-light);
   height: 56px;
   display: flex;
   align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar ul {
@@ -32,15 +33,34 @@
   display: flex;
   align-items: center;
   padding-left: 100px;
-  font-size: 1.2rem; /* Slightly larger font for the brand */
-  font-weight: 700; /* Bolder font for the brand */
-  color: #000000; /* Ensure brand text is black */
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navbar-text);
+  transition: color 0.3s ease;
 }
 
 .navbar-logo {
-  height: 30px; /* Adjust logo size as needed */
-  margin-right: 0.5rem; /* Space between logo and text */
-  border-radius: 6px; /* Rounded edges */
+  height: 30px;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+}
+
+.theme-toggle {
+  font-size: 1.2rem;
+  padding: 0.4rem 0.6rem !important;
+  min-width: auto !important;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-blue) !important;
+  color: white !important;
+  border: 2px solid transparent !important;
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-blue-dark) !important;
+  transform: scale(1.1);
 }
 
 .navbar-auth {
@@ -48,23 +68,23 @@
 }
 
 .navbar a, .navbar button {
-  color: #000000; /* Black text for better contrast on sky blue */
+  color: var(--navbar-text);
   text-decoration: none;
-  background-color: transparent; /* Ensure no white background */
+  background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.3s ease;
 }
 
 .navbar a:hover, .navbar button:hover {
-  background-color: #8dc9dd; /* Lighter sky blue on hover */
+  background-color: var(--navbar-hover);
 }
 
 .navbar a.active, .navbar button.active {
-  background-color: #007bff; /* Highlight active link */
-  color: #77a6d8;
+  background-color: var(--primary-blue);
+  color: white;
 }

@@ -50,21 +50,22 @@
 
 
 .hero-section {
-  background-color: #e9f7fe; /* Light blue background */
+  background-color: var(--bg-hero);
   padding: 40px 20px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-section h1 {
-  color: #0056b3; /* Darker blue for heading */
+  color: var(--primary-blue-dark);
   margin-bottom: 15px;
-  font-size: 2.8em; /* Larger heading */
+  font-size: 2.8em;
 }
 
 .hero-section p {
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.3em;
   line-height: 1.6;
   max-width: 700px;
@@ -76,7 +77,7 @@
 }
 
 .mcq-list-section h2 {
-  color: #0056b3;
+  color: var(--primary-blue-dark);
   margin-bottom: 25px;
   font-size: 2em;
   text-align: center;

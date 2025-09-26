@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
+import { useTheme } from '../util/ThemeContext';
 import '../assets/css/Navbar.css';
 
 const Navbar = () => {
   const { user, signOut } = useAuthenticator();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className="navbar">
@@ -17,6 +19,15 @@ const Navbar = () => {
         </li>
         <li className="navbar-auth">
           <Link to="/about">About</Link>
+        </li>
+        <li>
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle"
+            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+          >
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
         </li>
         {user ? (
           <li>
