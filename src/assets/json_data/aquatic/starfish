@@ -1,0 +1,57 @@
+{
+  "title": "The Star-Shaped Starfish",
+  "description": "Starfish, also known as sea stars, are marine invertebrates. They are known for their star-like shape, typically with five arms, and their ability to regenerate.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/14",
+  "questions": [
+    {
+      "question": "What is a unique characteristic of a starfish's digestive system?",
+      "options": [
+        "It has no digestive system",
+        "It digests its food externally, outside of its body",
+        "It can absorb nutrients through its skin",
+        "It can eat its own arms"
+      ],
+      "correct_answer": "It digests its food externally, outside of its body"
+    },
+    {
+      "question": "What is the primary way a starfish moves?",
+      "options": [
+        "By crawling on its stomach",
+        "By jet propulsion",
+        "By using thousands of tiny tube feet on its underside",
+        "By using its arms to pull itself along"
+      ],
+      "correct_answer": "By using thousands of tiny tube feet on its underside"
+    },
+    {
+      "question": "Which of these is true about a starfish's arms?",
+      "options": [
+        "If a starfish loses an arm, it will die",
+        "They can regenerate their entire body from a single arm",
+        "They have a small brain in each arm",
+        "They cannot regenerate"
+      ],
+      "correct_answer": "They can regenerate their entire body from a single arm"
+    },
+    {
+      "question": "What is the collective noun for a group of starfish?",
+      "options": [
+        "A swarm",
+        "A school",
+        "A pod",
+        "A constellation"
+      ],
+      "correct_answer": "A constellation"
+    },
+    {
+      "question": "What does a starfish's diet primarily consist of?",
+      "options": [
+        "Small fish",
+        "Shellfish like clams and oysters",
+        "Algae and plants",
+        "Jellyfish"
+      ],
+      "correct_answer": "Shellfish like clams and oysters"
+    }
+  ]
+}

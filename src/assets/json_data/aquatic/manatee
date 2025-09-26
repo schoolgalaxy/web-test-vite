@@ -1,0 +1,57 @@
+{
+  "title": "The Gentle Manatee",
+  "description": "Manatees, also known as 'sea cows', are large, slow-moving marine mammals that are herbivores. They are known for their gentle nature and are often found in warm, shallow coastal waters.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/14",
+  "questions": [
+    {
+      "question": "What is the primary food source for a manatee?",
+      "options": [
+        "Small fish and crustaceans",
+        "Seaweed and seagrass",
+        "Plankton",
+        "Jellyfish and corals"
+      ],
+      "correct_answer": "Seaweed and seagrass"
+    },
+    {
+      "question": "What is the collective noun for a group of manatees?",
+      "options": [
+        "A herd",
+        "A mob",
+        "A pod",
+        "A colony"
+      ],
+      "correct_answer": "A herd"
+    },
+    {
+      "question": "What is a unique characteristic of a manatee's locomotion?",
+      "options": [
+        "They can swim at very high speeds",
+        "They use their flippers to walk on the seafloor",
+        "They swim slowly and gracefully with their tail and flippers",
+        "They can jump out of the water"
+      ],
+      "correct_answer": "They swim slowly and gracefully with their tail and flippers"
+    },
+    {
+      "question": "What is the main threat to the survival of manatees?",
+      "options": [
+        "Predators",
+        "Pollution and habitat loss",
+        "Collisions with boats and other watercraft",
+        "Being hunted for their meat"
+      ],
+      "correct_answer": "Collisions with boats and other watercraft"
+    },
+    {
+      "question": "Which of these is a unique characteristic of a manatee's body?",
+      "options": [
+        "It has a blowhole on its back",
+        "It can survive in both freshwater and saltwater",
+        "It can regenerate its tail",
+        "It has two sets of lungs"
+      ],
+      "correct_answer": "It can survive in both freshwater and saltwater"
+    }
+  ]
+}

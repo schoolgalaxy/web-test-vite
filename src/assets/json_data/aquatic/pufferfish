@@ -1,0 +1,57 @@
+{
+  "title": "The Pufferfish",
+  "description": "Pufferfish are known for their ability to inflate into a ball to ward off predators. They contain a highly potent neurotoxin called tetrodotoxin.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/26",
+  "questions": [
+    {
+      "question": "What is the primary method a pufferfish uses to defend itself?",
+      "options": [
+        "Its venomous bite",
+        "Shooting spines",
+        "Inflating its body with water or air",
+        "Camouflaging"
+      ],
+      "correct_answer": "Inflating its body with water or air"
+    },
+    {
+      "question": "What is the main toxin found in a pufferfish?",
+      "options": [
+        "Cyanide",
+        "Tetrodotoxin",
+        "Arsenic",
+        "Botulinum"
+      ],
+      "correct_answer": "Tetrodotoxin"
+    },
+    {
+      "question": "Where are pufferfish most commonly found?",
+      "options": [
+        "The Arctic Ocean",
+        "Freshwater lakes",
+        "Tropical and subtropical ocean waters",
+        "The deep sea"
+      ],
+      "correct_answer": "Tropical and subtropical ocean waters"
+    },
+    {
+      "question": "Why is a pufferfish considered a delicacy in Japan, despite its toxicity?",
+      "options": [
+        "Only non-toxic species are consumed",
+        "The toxin can be neutralized by cooking",
+        "Chefs are specially trained to prepare it safely",
+        "The toxin is only found in its skin"
+      ],
+      "correct_answer": "Chefs are specially trained to prepare it safely"
+    },
+    {
+      "question": "What is a unique characteristic of a pufferfish's teeth?",
+      "options": [
+        "They are made of cartilage",
+        "They have no teeth at all",
+        "Their teeth are fused together to form a beak-like structure",
+        "They are filled with venom"
+      ],
+      "correct_answer": "Their teeth are fused together to form a beak-like structure"
+    }
+  ]
+}

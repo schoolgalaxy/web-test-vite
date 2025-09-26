@@ -1,0 +1,57 @@
+{
+  "title": "The Resilient Sea Turtle",
+  "description": "Sea turtles are ancient marine reptiles known for their large, teardrop-shaped shells and flippers. They migrate long distances and are found in all of the world's oceans except for the polar regions.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/31",
+  "questions": [
+    {
+      "question": "What is a major threat to sea turtles' survival?",
+      "options": [
+        "Being hunted by large birds",
+        "Pollution and habitat loss",
+        "Lack of food sources",
+        "Overpopulation"
+      ],
+      "correct_answer": "Pollution and habitat loss"
+    },
+    {
+      "question": "What is the primary diet of a Green Sea Turtle?",
+      "options": [
+        "Fish",
+        "Jellyfish",
+        "Algae and seagrass",
+        "Crustaceans"
+      ],
+      "correct_answer": "Algae and seagrass"
+    },
+    {
+      "question": "Which of these is a unique characteristic of a sea turtle's life?",
+      "options": [
+        "They can breathe underwater indefinitely",
+        "They return to the exact beach where they were born to lay their eggs",
+        "They lay their eggs in a nest on a tree",
+        "They change their gender as they age"
+      ],
+      "correct_answer": "They return to the exact beach where they were born to lay their eggs"
+    },
+    {
+      "question": "How long can a sea turtle live?",
+      "options": [
+        "10-20 years",
+        "30-40 years",
+        "50-80 years",
+        "Over 100 years"
+      ],
+      "correct_answer": "50-80 years"
+    },
+    {
+      "question": "What is the collective noun for a group of sea turtles?",
+      "options": [
+        "A bale",
+        "A pod",
+        "A flock",
+        "A shiver"
+      ],
+      "correct_answer": "A bale"
+    }
+  ]
+}

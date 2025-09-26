@@ -1,0 +1,57 @@
+{
+  "title": "The Ocean's Apex Predator",
+  "description": "Sharks are cartilaginous fish known for their powerful predatory nature, acute senses, and streamlined bodies. They have existed for hundreds of millions of years.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/25",
+  "questions": [
+    {
+      "question": "What is the collective noun for a group of sharks?",
+      "options": [
+        "A shoal",
+        "A school",
+        "A shiver",
+        "A pod"
+      ],
+      "correct_answer": "A shiver"
+    },
+    {
+      "question": "Which of these is a shark's primary sense for hunting?",
+      "options": [
+        "Sight",
+        "Hearing",
+        "Smell",
+        "Electromagnetic detection"
+      ],
+      "correct_answer": "Electromagnetic detection"
+    },
+    {
+      "question": "What is unique about a shark's skeleton?",
+      "options": [
+        "It is made of cartilage, not bone",
+        "It is made of a lightweight plastic-like material",
+        "It is segmented into many small pieces",
+        "It is completely transparent"
+      ],
+      "correct_answer": "It is made of cartilage, not bone"
+    },
+    {
+      "question": "How many rows of teeth can a shark have?",
+      "options": [
+        "One to two",
+        "Two to three",
+        "Three to five",
+        "Up to 15"
+      ],
+      "correct_answer": "Up to 15"
+    },
+    {
+      "question": "Which of the following is the largest known shark species?",
+      "options": [
+        "Tiger Shark",
+        "Great White Shark",
+        "Whale Shark",
+        "Hammerhead Shark"
+      ],
+      "correct_answer": "Whale Shark"
+    }
+  ]
+}

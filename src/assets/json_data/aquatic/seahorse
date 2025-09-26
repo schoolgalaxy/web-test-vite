@@ -1,0 +1,57 @@
+{
+  "title": "The Graceful Seahorse",
+  "description": "Seahorses are small marine fish named for their horse-like heads. They are known for their unique breeding process and a prehensile tail that they use to cling to objects.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/28",
+  "questions": [
+    {
+      "question": "What is unique about a seahorse's reproductive process?",
+      "options": [
+        "The male carries and gives birth to the young",
+        "They can change their gender at will",
+        "The female lays the eggs in a nest and the male protects them",
+        "They reproduce without a partner"
+      ],
+      "correct_answer": "The male carries and gives birth to the young"
+    },
+    {
+      "question": "What is the primary food source for seahorses?",
+      "options": [
+        "Algae and seaweed",
+        "Small fish",
+        "Tiny crustaceans and plankton",
+        "Coral"
+      ],
+      "correct_answer": "Tiny crustaceans and plankton"
+    },
+    {
+      "question": "What is the primary way a seahorse moves through the water?",
+      "options": [
+        "Using its paddle-like flippers",
+        "Using its tail for propulsion",
+        "By jet propulsion",
+        "Using a small dorsal fin that rapidly flutters"
+      ],
+      "correct_answer": "Using a small dorsal fin that rapidly flutters"
+    },
+    {
+      "question": "Which of these is a unique characteristic of a seahorse's eye?",
+      "options": [
+        "They have a single eye on their head",
+        "Their eyes are located on top of their head",
+        "They can move their eyes independently of each other",
+        "They can see in the dark"
+      ],
+      "correct_answer": "They can move their eyes independently of each other"
+    },
+    {
+      "question": "What is the collective noun for a group of seahorses?",
+      "options": [
+        "A herd",
+        "A flock",
+        "A pod",
+        "A herd"
+      ],
+      "correct_answer": "A herd"
+    }
+  ]
+}

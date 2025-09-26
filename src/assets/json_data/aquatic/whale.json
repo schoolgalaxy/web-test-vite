@@ -1,0 +1,57 @@
+{
+  "title": "The Gentle Giant of the Sea",
+  "description": "Whales are large marine mammals known for their intelligence and complex social behaviors. There are two main groups: toothed whales and baleen whales.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/30",
+  "questions": [
+    {
+      "question": "What is the largest living animal on Earth?",
+      "options": [
+        "Sperm Whale",
+        "Blue Whale",
+        "Fin Whale",
+        "Humpback Whale"
+      ],
+      "correct_answer": "Blue Whale"
+    },
+    {
+      "question": "Which of the following is a collective noun for a group of whales?",
+      "options": [
+        "A pod",
+        "A flock",
+        "A pride",
+        "A shiver"
+      ],
+      "correct_answer": "A pod"
+    },
+    {
+      "question": "How do baleen whales eat?",
+      "options": [
+        "They use their teeth to chew their food",
+        "They filter-feed using baleen plates to trap small organisms",
+        "They use their tongues to scoop up food",
+        "They are vegetarians and eat plants"
+      ],
+      "correct_answer": "They filter-feed using baleen plates to trap small organisms"
+    },
+    {
+      "question": "What is the primary purpose of a whale's blowhole?",
+      "options": [
+        "Breathing",
+        "Echolocation",
+        "Communication",
+        "Spraying water"
+      ],
+      "correct_answer": "Breathing"
+    },
+    {
+      "question": "Which whale species is known for its long, complex songs?",
+      "options": [
+        "Sperm Whale",
+        "Gray Whale",
+        "Killer Whale",
+        "Humpback Whale"
+      ],
+      "correct_answer": "Humpback Whale"
+    }
+  ]
+}

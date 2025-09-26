@@ -5,7 +5,7 @@ import '../../assets/css/McqTest.css'; // Reusing MCQ test styles
 interface Question {
   question: string;
   options: string[];
-  answer: string;
+  correct_answer: string;
 }
 
 interface QuizData {
@@ -61,7 +61,7 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
     }
 
     setSelectedAnswer(option);
-    const correct = option === quizData.questions[currentQuestionIndex].answer;
+    const correct = option.trim().toLowerCase() === quizData.questions[currentQuestionIndex].correct_answer.trim().toLowerCase();
     setIsCorrectAnswer(correct);
 
     if (correct) {

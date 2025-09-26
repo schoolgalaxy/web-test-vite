@@ -1,0 +1,57 @@
+{
+  "title": "The Colorful Clownfish",
+  "description": "Clownfish are brightly colored fish known for their symbiotic relationship with sea anemones. They are found in the warmer waters of the Indian and Pacific oceans.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/14",
+  "questions": [
+    {
+      "question": "What protects a clownfish from the stinging tentacles of a sea anemone?",
+      "options": [
+        "A hard, armored shell",
+        "A special type of scale",
+        "A slimy mucus layer on its skin",
+        "They are immune to the sting"
+      ],
+      "correct_answer": "A slimy mucus layer on its skin"
+    },
+    {
+      "question": "What is the primary benefit of the relationship between a clownfish and a sea anemone?",
+      "options": [
+        "The clownfish provides the anemone with food",
+        "The anemone provides the clownfish with protection and food",
+        "They communicate using a special language",
+        "They attract mates for each other"
+      ],
+      "correct_answer": "The anemone provides the clownfish with protection and food"
+    },
+    {
+      "question": "Clownfish are born what gender?",
+      "options": [
+        "Male",
+        "Female",
+        "They are born without a gender",
+        "They are both male and female"
+      ],
+      "correct_answer": "Male"
+    },
+    {
+      "question": "What is the collective noun for a group of clownfish?",
+      "options": [
+        "A swarm",
+        "A school",
+        "A pod",
+        "A flock"
+      ],
+      "correct_answer": "A school"
+    },
+    {
+      "question": "In a group of clownfish, what happens if the dominant female dies?",
+      "options": [
+        "A new female joins the group",
+        "The largest male will change gender to become the new female",
+        "The group breaks apart",
+        "The group will remain without a female"
+      ],
+      "correct_answer": "The largest male will change gender to become the new female"
+    }
+  ]
+}

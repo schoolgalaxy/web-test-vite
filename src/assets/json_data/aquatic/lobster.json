@@ -1,0 +1,57 @@
+{
+  "title": "The Hard-Shelled Lobster",
+  "description": "Lobsters are large marine crustaceans with ten legs, two of which have claws. They are found on the seafloor and are known for their long lifespans.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/29",
+  "questions": [
+    {
+      "question": "How do lobsters breathe?",
+      "options": [
+        "Through lungs",
+        "Through their skin",
+        "Through gills located on their legs",
+        "Through a blowhole"
+      ],
+      "correct_answer": "Through gills located on their legs"
+    },
+    {
+      "question": "What is the collective noun for a group of lobsters?",
+      "options": [
+        "A nest",
+        "A bale",
+        "A herd",
+        "A pack"
+      ],
+      "correct_answer": "A nest"
+    },
+    {
+      "question": "A lobster's claws are used for what?",
+      "options": [
+        "Fighting and defense",
+        "Crushing and cutting prey",
+        "Grasping and walking",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question": "Which of these is true about a lobster's shell?",
+      "options": [
+        "It can regenerate if it is damaged",
+        "It is shed as the lobster grows",
+        "It is made of bone",
+        "It is soft and flexible"
+      ],
+      "correct_answer": "It is shed as the lobster grows"
+    },
+    {
+      "question": "What is unique about a lobster's brain?",
+      "options": [
+        "It has a very large brain for its size",
+        "It has two brains",
+        "It is located in its claws",
+        "It has a brain that is split in two"
+      ],
+      "correct_answer": "It has two brains"
+    }
+  ]
+}

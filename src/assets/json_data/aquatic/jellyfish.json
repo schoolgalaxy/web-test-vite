@@ -1,0 +1,57 @@
+{
+  "title": "The Ethereal Jellyfish",
+  "description": "Jellyfish are not fish but rather free-swimming marine animals with a bell-shaped body and trailing tentacles. They can be found in every ocean.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/27",
+  "questions": [
+    {
+      "question": "What is the collective noun for a group of jellyfish?",
+      "options": [
+        "A swarm",
+        "A school",
+        "A bloom",
+        "A hive"
+      ],
+      "correct_answer": "A bloom"
+    },
+    {
+      "question": "Which of the following is true about a jellyfish's body?",
+      "options": [
+        "It has a brain and a heart",
+        "It has a spine",
+        "It is 95% water",
+        "It is a plant"
+      ],
+      "correct_answer": "It is 95% water"
+    },
+    {
+      "question": "What is the primary defense of a jellyfish?",
+      "options": [
+        "Using its fins to swim away",
+        "Its sting, delivered through its tentacles",
+        "Playing dead",
+        "Changing color to camouflage"
+      ],
+      "correct_answer": "Its sting, delivered through its tentacles"
+    },
+    {
+      "question": "Which jellyfish species is considered the most venomous animal in the world?",
+      "options": [
+        "Moon Jellyfish",
+        "Lion's Mane Jellyfish",
+        "Box Jellyfish",
+        "Cannonball Jellyfish"
+      ],
+      "correct_answer": "Box Jellyfish"
+    },
+    {
+      "question": "What is a unique characteristic of a jellyfish's life cycle?",
+      "options": [
+        "They can reverse their aging process",
+        "They can hibernate for years",
+        "They live their entire lives at the bottom of the ocean",
+        "They can survive outside of water for short periods"
+      ],
+      "correct_answer": "They can reverse their aging process"
+    }
+  ]
+}
