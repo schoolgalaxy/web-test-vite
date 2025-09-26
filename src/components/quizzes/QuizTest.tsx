@@ -32,22 +32,27 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
   const [answered, setAnswered] = useState(false);
 
   useEffect(() => {
-    const fetchQuizData = async () => {
+    const loadQuizData = () => {
       try {
-        const response = await fetch(`/src/assets/json_data/${quizCategory}/${quizId}.json`);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch quiz data for ${quizCategory}/${quizId}`);
+        const modules = import.meta.glob('/src/assets/json_data/**/*.json', { eager: true });
+        const targetPathSuffix = `/${quizCategory}/${quizId}.json`;
+        const matchKey = Object.keys(modules).find((key) => key.endsWith(targetPathSuffix));
+
+        if (!matchKey) {
+          throw new Error(`Quiz data not found for ${quizCategory}/${quizId}`);
         }
-        const data: QuizData = await response.json();
+
+        const module: any = modules[matchKey as keyof typeof modules];
+        const data: QuizData = module.default ?? module;
         setQuizData(data);
       } catch (error) {
-        console.error(`Error fetching ${quizCategory} quiz data:`, error);
-        navigate('/error'); // Navigate to an error page
+        console.error(`Error loading ${quizCategory} quiz data:`, error);
+        navigate('/error');
       }
     };
 
     if (quizId && quizCategory) {
-      fetchQuizData();
+      loadQuizData();
     }
   }, [quizId, quizCategory, navigate]);
 
