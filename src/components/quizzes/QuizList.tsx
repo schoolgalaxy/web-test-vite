@@ -7,6 +7,7 @@ import aquaticImg from '/src/assets/img/aquatic.svg';
 import placeholderImg from '/src/assets/img/quiz-placeholder.svg';
 import quizzesConfig from '../../assets/data/quizzes.json';
 import debug from '../../util/debug';
+import { loadQuizDataByCategory, extractQuizMetadata } from '../../util/assetsLoader';
 
 interface QuizMetaData {
   id: string;
@@ -40,24 +41,14 @@ const QuizList: React.FC = () => {
   useEffect(() => {
     const fetchQuizMetaData = async () => {
       try {
-        // Dynamically import all JSON files from the specified category
-        const context = import.meta.glob('/src/assets/data/**/*.json', { eager: true });
-        const quizFiles = Object.keys(context).filter(path => path.includes(`/${quizCategory}/`));
-
-        const allMetaData = quizFiles.map((file) => {
-          const module: any = context[file];
-          const data = module.default;
-          const id = file.split('/').pop()?.replace('.json', '') || '';
-          return {
-            id: id,
-            name: data.title,
-            description: data.description,
-            profilePic: data.profile_pic_link,
-          };
-        });
+        // Use the new asset loader with proper error handling
+        const quizData = loadQuizDataByCategory(quizCategory);
+        const allMetaData = extractQuizMetadata(quizData);
         setQuizzes(allMetaData);
       } catch (error) {
         debug.error(`Error fetching quiz metadata for ${quizCategory}:`, error);
+        // Set empty array to prevent rendering errors
+        setQuizzes([]);
       }
     };
 

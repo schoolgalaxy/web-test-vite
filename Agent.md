@@ -99,7 +99,7 @@ const jsonByPath: Record<string, unknown> = Object.fromEntries(
 // URLs resolved at build time; use eager for immediate availability
 const imageUrls = import.meta.glob('/src/assets/**/*.{png,jpg,jpeg,svg,gif}', {
   eager: true,
-  query: '?url'
+  query: 'url'
 });
 // Example usage: (imageUrls['/src/assets/react.svg'] as string)
 ```
