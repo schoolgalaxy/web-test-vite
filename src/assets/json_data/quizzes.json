@@ -1,28 +1,134 @@
 {
   "quizzes": [
     {
+      "id": "ai",
+      "name": "Artificial Intelligence Questionaries",
+      "displayName": "AI Quiz",
+      "description": "Explore the world of AI with our engaging quizzes!",
+      "route": "/quiz/ai",
+      "routePrefix": "/quiz/artificial-intelligence",
+      "category": "ai",
+      "icon": "/src/assets/img/ai.svg",
+      "iconAlt": "Artificial Intelligence",
+      "active": false,
+      "priority": 100
+    },
+    {
       "id": "birds",
-      "name": "Birds Quiz Platform",
+      "name": "Birds Questionaries",
+      "displayName": "Birds Quiz",
       "description": "Explore the world of birds with our engaging quizzes!",
+      "route": "/quiz/birds",
       "routePrefix": "/quiz/birds",
       "category": "birds",
-      "icon": "/src/assets/img/bird.svg"
+      "icon": "/src/assets/img/icon-birds.svg",
+      "iconAlt": "Birds",
+      "active": true,
+      "priority": 10
     },
     {
       "id": "animals",
-      "name": "Animals Quiz Platform",
+      "name": "Animals Questionaries",
+      "displayName": "Animals Quiz",
       "description": "Test your knowledge about various animals!",
+      "route": "/quiz/animals",
       "routePrefix": "/quiz/animals",
       "category": "animals",
-      "icon": "/src/assets/img/animal.svg"
+      "icon": "/src/assets/img/icon-animals.svg",
+      "iconAlt": "Animals",
+      "active": true,
+      "priority": 20
     },
     {
       "id": "aquatic",
-      "name": "Aquatic Quiz Platform",
+      "name": "Aquatic Questionaries",
+      "displayName": "Aquatic Quiz",
       "description": "Dive into aquatic life quizzes!",
+      "route": "/quiz/aquatic",
       "routePrefix": "/quiz/aquatic",
       "category": "aquatic",
-      "icon": "/src/assets/img/aquatic.svg"
+      "icon": "/src/assets/img/icon-aquatic.svg",
+      "iconAlt": "Aquatic",
+      "active": true,
+      "priority": 30
+    },
+    {
+      "id": "cars",
+      "name": "Cars Questionaries",
+      "displayName": "Cars Quiz",
+      "description": "Rev up your engines with our car quizzes!",
+      "route": "/quiz/cars",
+      "routePrefix": "/quiz/cars",
+      "category": "cars",
+      "icon": "/src/assets/img/icon-animals.svg",
+      "iconAlt": "Cars",
+      "active": false,
+      "priority": 999
+    },
+    {
+      "id": "movies",
+      "name": "Movies Questionaries",
+      "displayName": "Movies Quiz",
+      "description": "Test your movie knowledge with our fun quizzes!",
+      "route": "/quiz/movies",
+      "routePrefix": "/quiz/movies",
+      "category": "movies",
+      "icon": "/src/assets/img/icon-animals.svg",
+      "iconAlt": "Movies",
+      "active": false,
+      "priority": 999
+    },
+    {
+      "id": "sports",
+      "name": "Sports Quiz",
+      "displayName": "Sports Quiz",
+      "description": "Get in the game with our sports quizzes!",
+      "route": "/quiz/sports",
+      "routePrefix": "/quiz/sports",
+      "category": "sports",
+      "icon": "/src/assets/img/icon-animals.svg",
+      "iconAlt": "Sports",
+      "active": false,
+      "priority": 999
+    },
+    {
+      "id": "space",
+      "name": "Space Questionaries",
+      "displayName": "Space Quiz",
+      "description": "Test your knowledge about the cosmos!",
+      "route": "/quiz/space",
+      "routePrefix": "/quiz/space",
+      "category": "space",
+      "icon": "/src/assets/img/icon-about.svg",
+      "iconAlt": "Space",
+      "active": false,
+      "priority": 200
+    },
+    {
+      "id": "technology",
+      "name": "Technology Questionaries",
+      "displayName": "Tech Quiz",
+      "description": "Stay updated with the latest in technology!",
+      "route": "/quiz/technology",
+      "routePrefix": "/quiz/technology",
+      "category": "technology",
+      "icon": "/src/assets/img/icon-about.svg",
+      "iconAlt": "Technology",
+      "active": false,
+      "priority": 300
+    },
+    {
+      "id": "history",
+      "name": "History Questionaries",
+      "displayName": "History Quiz",
+      "description": "Travel back in time with our history quizzes!",
+      "route": "/quiz/history",
+      "routePrefix": "/quiz/history",
+      "category": "history",
+      "icon": "/src/assets/img/icon-about.svg",
+      "iconAlt": "History",
+      "active": false,
+      "priority": 400
     }
   ]
 }

@@ -1,0 +1,278 @@
+{
+  "unique_id": "ai_quiz_003_F5G7H9J2K4",
+  "title": "AI: Applications and Ethics Quiz",
+  "description": "A quiz focusing on the real-world applications of Artificial Intelligence and the ethical considerations surrounding its development.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/24",
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which of these is an example of AI in computer vision?",
+      "answerOptions": [
+        {
+          "text": "A self-driving car identifying a pedestrian on the road.",
+          "isCorrect": true,
+          "rationale": "This is a key application of computer vision, where AI processes visual input to make sense of the environment."
+        },
+        {
+          "text": "A program that translates text from one language to another.",
+          "isCorrect": false,
+          "rationale": "This is a function of Natural Language Processing (NLP)."
+        },
+        {
+          "text": "An algorithm that predicts stock market fluctuations.",
+          "isCorrect": false,
+          "rationale": "This is an example of predictive analytics, which is a broader use of machine learning."
+        },
+        {
+          "text": "A smart speaker that answers your questions.",
+          "isCorrect": false,
+          "rationale": "This uses Natural Language Processing (NLP) to understand speech."
+        }
+      ],
+      "hint": "Think about how a computer can 'see' what is happening in the world."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary ethical concern regarding 'deepfakes'?",
+      "answerOptions": [
+        {
+          "text": "They are too difficult to create and use.",
+          "isCorrect": false,
+          "rationale": "The concern is that they are becoming easier to create, not more difficult."
+        },
+        {
+          "text": "They create realistic but fake content that can be used for misinformation.",
+          "isCorrect": true,
+          "rationale": "Deepfakes can be used to create convincing videos or audio that misrepresent people or events, which can be a serious ethical problem."
+        },
+        {
+          "text": "They are a type of computer virus.",
+          "isCorrect": false,
+          "rationale": "Deepfakes are a form of AI-generated media, not a virus."
+        },
+        {
+          "text": "They only work with old video and audio files.",
+          "isCorrect": false,
+          "rationale": "Deepfake technology can be applied to both new and old media."
+        }
+      ],
+      "hint": "The term 'fake' is a major clue about the ethical issue."
+    },
+    {
+      "questionNumber": 3,
+      "question": "In the context of autonomous vehicles, what does AI primarily help with?",
+      "answerOptions": [
+        {
+          "text": "Designing the car's exterior.",
+          "isCorrect": false,
+          "rationale": "AI is primarily used for the car's decision-making and navigation, not its aesthetic design."
+        },
+        {
+          "text": "Controlling the car's radio.",
+          "isCorrect": false,
+          "rationale": "While AI can be used for in-car entertainment, this is not its primary function for self-driving."
+        },
+        {
+          "text": "Perceiving the environment and making driving decisions.",
+          "isCorrect": true,
+          "rationale": "AI systems process data from sensors like cameras and LiDAR to understand the environment and make decisions about steering, acceleration, and braking."
+        },
+        {
+          "text": "Predicting the weather.",
+          "isCorrect": false,
+          "rationale": "Weather prediction is a different field of AI and is not essential for the car's immediate operation."
+        }
+      ],
+      "hint": "Think about what the car needs to do to drive safely without a human."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is 'predictive policing'?",
+      "answerOptions": [
+        {
+          "text": "The use of AI to predict where crimes are most likely to occur.",
+          "isCorrect": true,
+          "rationale": "Predictive policing algorithms analyze historical crime data to forecast where and when future crimes may happen."
+        },
+        {
+          "text": "The use of AI to solve past crimes.",
+          "isCorrect": false,
+          "rationale": "While AI can be used in forensics, predictive policing is focused on future events."
+        },
+        {
+          "text": "Using robots to patrol the streets.",
+          "isCorrect": false,
+          "rationale": "This involves AI, but predictive policing is a data analysis technique, not a robotic application."
+        },
+        {
+          "text": "A system that automatically fines people for traffic violations.",
+          "isCorrect": false,
+          "rationale": "This is a specific application of AI, but not the broad concept of predictive policing."
+        }
+      ],
+      "hint": "The name of this concept is a combination of two words that describe its function."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of these is a potential ethical concern related to AI in healthcare?",
+      "answerOptions": [
+        {
+          "text": "AI models being too accurate in diagnosing diseases.",
+          "isCorrect": false,
+          "rationale": "High accuracy is generally a benefit, not a concern."
+        },
+        {
+          "text": "The lack of human oversight in making critical medical decisions.",
+          "isCorrect": true,
+          "rationale": "Relying on AI without human review for life-and-death decisions raises serious questions about accountability and potential errors."
+        },
+        {
+          "text": "The inability of AI to help with medical tasks.",
+          "isCorrect": false,
+          "rationale": "AI is already being used successfully in many medical applications, such as image analysis."
+        },
+        {
+          "text": "AI models being too expensive for hospitals to use.",
+          "isCorrect": false,
+          "rationale": "While cost can be a barrier, it is a business concern, not an ethical one."
+        }
+      ],
+      "hint": "Think about who is ultimately responsible for a patient's health."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is 'Natural Language Generation' (NLG)?",
+      "answerOptions": [
+        {
+          "text": "The process of a computer learning a new language.",
+          "isCorrect": false,
+          "rationale": "This is a part of language acquisition, not generation."
+        },
+        {
+          "text": "The field of AI that allows computers to 'hear' and process human speech.",
+          "isCorrect": false,
+          "rationale": "This describes speech recognition, a component of NLP."
+        },
+        {
+          "text": "The use of AI to create human-like written or spoken language from data.",
+          "isCorrect": true,
+          "rationale": "NLG systems take structured data and turn it into understandable prose, such as creating news reports or summaries."
+        },
+        {
+          "text": "The ability of an AI to translate languages.",
+          "isCorrect": false,
+          "rationale": "Translation is a task within NLP, but NLG is specifically about generating new language."
+        }
+      ],
+      "hint": "The word 'generation' is the key to this answer."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of 'facial recognition' technology?",
+      "answerOptions": [
+        {
+          "text": "To create realistic faces in video games.",
+          "isCorrect": false,
+          "rationale": "This is an application of computer graphics and generative AI, not recognition."
+        },
+        {
+          "text": "To identify and verify individuals by analyzing their faces.",
+          "isCorrect": true,
+          "rationale": "Facial recognition systems use algorithms to map and identify unique facial features for verification or identification."
+        },
+        {
+          "text": "To improve the quality of photos taken on a smartphone.",
+          "isCorrect": false,
+          "rationale": "While AI is used in smartphone cameras, facial recognition is a specific function of identification."
+        },
+        {
+          "text": "To create new faces that don't exist in reality.",
+          "isCorrect": false,
+          "rationale": "This is an example of generative AI, not recognition."
+        }
+      ],
+      "hint": "The name tells you exactly what the technology is doing."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is a 'recommender system'?",
+      "answerOptions": [
+        {
+          "text": "An AI that recommends new careers to people.",
+          "isCorrect": false,
+          "rationale": "While this could be an application, a recommender system is a broader concept."
+        },
+        {
+          "text": "A system that uses data to suggest items or content to users.",
+          "isCorrect": true,
+          "rationale": "Recommender systems are used by companies like Netflix, Amazon, and YouTube to suggest movies, products, or videos based on a user's past behavior."
+        },
+        {
+          "text": "An AI that recommends which company stock to buy.",
+          "isCorrect": false,
+          "rationale": "This is a specific application of a recommender system in finance."
+        },
+        {
+          "text": "A system that recommends the best way to solve a math problem.",
+          "isCorrect": false,
+          "rationale": "This is a specific type of problem-solving AI, not the general purpose of a recommender system."
+        }
+      ],
+      "hint": "Think about how platforms like Netflix or Amazon suggest things you might like."
+    },
+    {
+      "questionNumber": 9,
+      "question": "In AI, what is 'unsupervised learning'?",
+      "answerOptions": [
+        {
+          "text": "A type of learning that relies on positive and negative feedback.",
+          "isCorrect": false,
+          "rationale": "This is a description of reinforcement learning."
+        },
+        {
+          "text": "A type of learning that uses data that has already been labeled with correct answers.",
+          "isCorrect": false,
+          "rationale": "This is the definition of supervised learning."
+        },
+        {
+          "text": "A type of learning that finds hidden patterns and structures in unlabeled data.",
+          "isCorrect": true,
+          "rationale": "Unsupervised learning is used to cluster data or reduce its dimensionality without any prior labels or 'correct' answers."
+        },
+        {
+          "text": "A type of learning that requires a human to constantly monitor the AI.",
+          "isCorrect": false,
+          "rationale": "The term 'unsupervised' in this context refers to the lack of labeled data, not the level of human interaction."
+        }
+      ],
+      "hint": "The 'un-' prefix is a key clue to what this type of learning lacks."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the primary concern with AI being used to make decisions in the legal system?",
+      "answerOptions": [
+        {
+          "text": "AI is too slow to process legal cases.",
+          "isCorrect": false,
+          "rationale": "AI is generally much faster at processing information than humans."
+        },
+        {
+          "text": "AI might not be able to understand the nuances of the law.",
+          "isCorrect": true,
+          "rationale": "AI systems may fail to account for complex human factors, ethical dilemmas, and circumstantial details that a human judge would consider."
+        },
+        {
+          "text": "AI would be too expensive to implement in courtrooms.",
+          "isCorrect": false,
+          "rationale": "While cost is a factor, the primary concern is related to justice and fairness."
+        },
+        {
+          "text": "AI models might introduce bias into legal outcomes.",
+          "isCorrect": true,
+          "rationale": "If the training data for an AI reflects existing societal biases, the AI may perpetuate or even amplify those biases in its decisions, leading to unfair results."
+        }
+      ],
+      "hint": "Think about the fairness of the outcome when a machine is making a judgment."
+    }
+  ]
+}

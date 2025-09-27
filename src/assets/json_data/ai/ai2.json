@@ -1,0 +1,278 @@
+{
+  "unique_id": "ai_quiz_004_J5K7L9M2N4",
+  "title": "Advanced AI Concepts and Subfields",
+  "description": "A quiz that delves into more complex topics within Artificial Intelligence, including specialized models and ethical challenges.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/25",
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary function of a 'Recurrent Neural Network' (RNN) in deep learning?",
+      "answerOptions": [
+        {
+          "text": "To classify images based on their content.",
+          "isCorrect": false,
+          "rationale": "This task is typically handled by Convolutional Neural Networks (CNNs)."
+        },
+        {
+          "text": "To process sequential data like text or time series.",
+          "isCorrect": true,
+          "rationale": "RNNs are designed with a 'memory' that allows them to process sequences of data, where the output of a previous step is fed as input to the next."
+        },
+        {
+          "text": "To generate new, realistic images from scratch.",
+          "isCorrect": false,
+          "rationale": "This is a function of Generative Adversarial Networks (GANs)."
+        },
+        {
+          "text": "To make predictions about numerical values.",
+          "isCorrect": false,
+          "rationale": "While RNNs can do this, it is not their defining characteristic; they are primarily known for handling sequential data."
+        }
+      ],
+      "hint": "Think about a type of data where the order matters, like a sentence or a stock price over time."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is 'AI explainability' (XAI)?",
+      "answerOptions": [
+        {
+          "text": "The ability of an AI to explain complex topics to humans.",
+          "isCorrect": false,
+          "rationale": "While an AI can do this, XAI is specifically about the AI explaining its own decision-making process."
+        },
+        {
+          "text": "The process of making AI models more transparent and understandable to humans.",
+          "isCorrect": true,
+          "rationale": "XAI aims to address the 'black box' problem of complex AI models, allowing developers and users to understand why a model made a specific prediction or decision."
+        },
+        {
+          "text": "A method for protecting AI models from hackers.",
+          "isCorrect": false,
+          "rationale": "This is a field of AI security, not explainability."
+        },
+        {
+          "text": "A type of AI that can program other AIs.",
+          "isCorrect": false,
+          "rationale": "This describes a form of meta-learning or automated machine learning."
+        }
+      ],
+      "hint": "This concept is about a human's ability to comprehend the AI's internal workings."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is a 'reinforcement learning agent'?",
+      "answerOptions": [
+        {
+          "text": "A special type of algorithm that only works with images.",
+          "isCorrect": false,
+          "rationale": "An agent is a component of a reinforcement learning system, but it can be applied to many different types of data."
+        },
+        {
+          "text": "An entity that perceives its environment and takes actions to maximize a reward.",
+          "isCorrect": true,
+          "rationale": "The agent interacts with the environment, receives feedback in the form of rewards or penalties, and learns a policy to achieve its goal."
+        },
+        {
+          "text": "A human expert who provides feedback to an AI model.",
+          "isCorrect": false,
+          "rationale": "The feedback in reinforcement learning comes from the environment, not a human expert."
+        },
+        {
+          "text": "A type of database used to store rewards and penalties.",
+          "isCorrect": false,
+          "rationale": "This is a data storage mechanism, not the agent itself."
+        }
+      ],
+      "hint": "Think about the main actor in a reinforcement learning scenario."
+    },
+    {
+      "questionNumber": 4,
+      "question": "In the context of AI, what does 'prompt engineering' refer to?",
+      "answerOptions": [
+        {
+          "text": "A new method for building a neural network from scratch.",
+          "isCorrect": false,
+          "rationale": "Prompt engineering is a technique for interacting with an existing language model, not for building one."
+        },
+        {
+          "text": "The design of physical robots to interact with humans.",
+          "isCorrect": false,
+          "rationale": "This is a part of robotics and human-robot interaction."
+        },
+        {
+          "text": "The process of crafting effective inputs to get a desired output from a generative AI model.",
+          "isCorrect": true,
+          "rationale": "Prompt engineering is the art and science of designing prompts to maximize the effectiveness of large language models and other generative AIs."
+        },
+        {
+          "text": "A method for automatically generating code.",
+          "isCorrect": false,
+          "rationale": "While prompt engineering can be used to generate code, it is not its sole purpose."
+        }
+      ],
+      "hint": "The word 'prompt' is a key part of the answer."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is a 'large language model' (LLM)?",
+      "answerOptions": [
+        {
+          "text": "A type of AI that can only translate languages.",
+          "isCorrect": false,
+          "rationale": "While LLMs can translate, they have many other capabilities, such as summarization and content generation."
+        },
+        {
+          "text": "A type of AI that is only used to generate short answers.",
+          "isCorrect": false,
+          "rationale": "LLMs can generate long-form content, including articles and stories."
+        },
+        {
+          "text": "A neural network with a vast number of parameters, trained on massive amounts of text data.",
+          "isCorrect": true,
+          "rationale": "LLMs are a form of deep learning with a huge number of parameters, which allows them to understand and generate human language with high accuracy."
+        },
+        {
+          "text": "A chatbot that is programmed with a limited set of responses.",
+          "isCorrect": false,
+          "rationale": "LLMs are generative models that can produce new, creative responses, unlike simple rule-based chatbots."
+        }
+      ],
+      "hint": "The 'large' in the name refers to the model's size and the amount of data it was trained on."
+    },
+    {
+      "questionNumber": 6,
+      "question": "In AI, what is 'overfitting'?",
+      "answerOptions": [
+        {
+          "text": "When an AI model is trained on too little data.",
+          "isCorrect": false,
+          "rationale": "Overfitting typically happens when the model is too complex and the training data is not enough to generalize."
+        },
+        {
+          "text": "When an AI model performs well on training data but poorly on new, unseen data.",
+          "isCorrect": true,
+          "rationale": "Overfitting occurs when the model learns the training data and its noise too well, failing to generalize to new examples."
+        },
+        {
+          "text": "When an AI model is too simple to learn the relationships in the data.",
+          "isCorrect": false,
+          "rationale": "This is a description of 'underfitting'."
+        },
+        {
+          "text": "When an AI model is too large to run on a standard computer.",
+          "isCorrect": false,
+          "rationale": "This is a hardware issue, not a learning problem."
+        }
+      ],
+      "hint": "This concept is a classic problem of a model learning the 'answers' instead of the 'rules'."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the primary function of a 'Generative AI' model?",
+      "answerOptions": [
+        {
+          "text": "To classify objects in images.",
+          "isCorrect": false,
+          "rationale": "This is a function of a discriminative model, often used in computer vision."
+        },
+        {
+          "text": "To create new, original content like images, text, or music.",
+          "isCorrect": true,
+          "rationale": "Generative AI is designed to produce new data that resembles the data it was trained on."
+        },
+        {
+          "text": "To make predictions about future trends.",
+          "isCorrect": false,
+          "rationale": "This is a function of predictive analytics."
+        },
+        {
+          "text": "To understand and answer questions from users.",
+          "isCorrect": false,
+          "rationale": "This is a function of a conversational AI, which is a type of generative AI but not the primary function of generative models overall."
+        }
+      ],
+      "hint": "The word 'generative' is the key clue."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is a 'black box' problem in AI?",
+      "answerOptions": [
+        {
+          "text": "A situation where an AI model is too large to fit on a computer.",
+          "isCorrect": false,
+          "rationale": "This is a hardware issue, not a problem with the model's inner workings."
+        },
+        {
+          "text": "A situation where the inner workings and decision-making process of an AI are not easily understood.",
+          "isCorrect": true,
+          "rationale": "The 'black box' problem refers to the difficulty of explaining how a complex AI model, like a deep neural network, arrived at a certain decision."
+        },
+        {
+          "text": "A type of AI that is deliberately made to be secretive.",
+          "isCorrect": false,
+          "rationale": "The lack of transparency is often a byproduct of complexity, not a deliberate design choice."
+        },
+        {
+          "text": "A problem that can only be solved by a human.",
+          "isCorrect": false,
+          "rationale": "The black box problem is not about the AI's ability to solve problems, but about our ability to understand how it does so."
+        }
+      ],
+      "hint": "Think about a device that works, but you can't see what's happening inside."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of these is a key ethical concern regarding AI and automation in the workplace?",
+      "answerOptions": [
+        {
+          "text": "The high cost of AI implementation.",
+          "isCorrect": false,
+          "rationale": "Cost is a business concern, not a primary ethical one."
+        },
+        {
+          "text": "The potential for job displacement and economic inequality.",
+          "isCorrect": true,
+          "rationale": "As AI automates more tasks, there is a risk of a significant number of jobs being replaced, which could have major societal consequences."
+        },
+        {
+          "text": "AI's inability to work in teams with humans.",
+          "isCorrect": false,
+          "rationale": "AI is increasingly being designed to work collaboratively with humans."
+        },
+        {
+          "text": "The lack of human interest in using AI at work.",
+          "isCorrect": false,
+          "rationale": "Interest in using AI is growing rapidly across all industries."
+        }
+      ],
+      "hint": "Think about the impact of automation on people's careers."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is a 'neural network' made of?",
+      "answerOptions": [
+        {
+          "text": "A series of interconnected nodes, or 'neurons', organized in layers.",
+          "isCorrect": true,
+          "rationale": "Neural networks are composed of nodes that process and pass information through layers, mimicking the structure of a biological brain."
+        },
+        {
+          "text": "A single, massive supercomputer.",
+          "isCorrect": false,
+          "rationale": "A neural network is a computational model and can run on various types of hardware, not just a single supercomputer."
+        },
+        {
+          "text": "A network of physical wires and circuits.",
+          "isCorrect": false,
+          "rationale": "Neural networks are software-based algorithms, not a physical network of wires."
+        },
+        {
+          "text": "A database of facts and figures.",
+          "isCorrect": false,
+          "rationale": "A database is a storage system, while a neural network is a processing model that uses data."
+        }
+      ],
+      "hint": "The name of the network is your biggest clue."
+    }
+  ]
+}
