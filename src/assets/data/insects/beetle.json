@@ -1,0 +1,57 @@
+{
+  "title": "The Beetle",
+  "description": "Beetles are the largest group of insects, with over 400,000 species worldwide. They have hard wing covers called elytra and are found in nearly every habitat on Earth.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/beetle",
+  "questions": [
+    {
+      "question": "What are the hard, protective wing covers of beetles called?",
+      "options": [
+        "Membranes",
+        "Elytra",
+        "Cuticle",
+        "Carapace"
+      ],
+      "correct_answer": "Elytra"
+    },
+    {
+      "question": "Approximately what percentage of all known insect species are beetles?",
+      "options": [
+        "About 20%",
+        "About 30%",
+        "About 40%",
+        "About 50%"
+      ],
+      "correct_answer": "About 40%"
+    },
+    {
+      "question": "What is the life cycle of a beetle called?",
+      "options": [
+        "Incomplete metamorphosis",
+        "Complete metamorphosis",
+        "Direct development",
+        "Gradual metamorphosis"
+      ],
+      "correct_answer": "Complete metamorphosis"
+    },
+    {
+      "question": "Which beetle is known as the strongest animal relative to its size?",
+      "options": [
+        "Ladybug",
+        "Stag beetle",
+        "Rhinoceros beetle",
+        "Dung beetle"
+      ],
+      "correct_answer": "Dung beetle"
+    },
+    {
+      "question": "What do most adult beetles feed on?",
+      "options": [
+        "Other insects",
+        "Plant material",
+        "Decaying matter",
+        "All of the above depending on species"
+      ],
+      "correct_answer": "All of the above depending on species"
+    }
+  ]
+}

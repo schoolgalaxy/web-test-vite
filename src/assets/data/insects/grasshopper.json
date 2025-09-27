@@ -1,0 +1,57 @@
+{
+  "title": "The Grasshopper",
+  "description": "Grasshoppers are jumping insects known for their powerful hind legs, ability to produce sound through stridulation, and their importance in ecosystems as both herbivores and prey animals.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/grasshopper",
+  "questions": [
+    {
+      "question": "How do grasshoppers produce their characteristic chirping sound?",
+      "options": [
+        "By clapping their wings together",
+        "By rubbing their hind legs against their wings",
+        "By rubbing their wings together (stridulation)",
+        "By vibrating their antennae"
+      ],
+      "correct_answer": "By rubbing their wings together (stridulation)"
+    },
+    {
+      "question": "What type of mouthparts do grasshoppers have?",
+      "options": [
+        "Piercing-sucking mouthparts",
+        "Sponging mouthparts",
+        "Chewing mouthparts",
+        "Siphoning mouthparts"
+      ],
+      "correct_answer": "Chewing mouthparts"
+    },
+    {
+      "question": "How far can some grasshopper species jump?",
+      "options": [
+        "Up to 10 times their body length",
+        "Up to 20 times their body length",
+        "Up to 50 times their body length",
+        "Up to 100 times their body length"
+      ],
+      "correct_answer": "Up to 20 times their body length"
+    },
+    {
+      "question": "During which stage of their life cycle do grasshoppers cause the most agricultural damage?",
+      "options": [
+        "Egg stage",
+        "Nymph stage",
+        "Adult stage",
+        "All stages equally"
+      ],
+      "correct_answer": "Nymph stage"
+    },
+    {
+      "question": "What is the purpose of grasshoppers' powerful hind legs?",
+      "options": [
+        "For swimming",
+        "For flying",
+        "For jumping and escaping predators",
+        "For digging"
+      ],
+      "correct_answer": "For jumping and escaping predators"
+    }
+  ]
+}

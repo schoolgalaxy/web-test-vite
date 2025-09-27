@@ -1,0 +1,57 @@
+{
+  "title": "The Praying Mantis",
+  "description": "Praying mantises are predatory insects known for their triangular head, raptorial forelegs used for catching prey, and their distinctive 'praying' posture.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/praying_mantis",
+  "questions": [
+    {
+      "question": "What is the primary diet of a praying mantis?",
+      "options": [
+        "Plant material",
+        "Nectar",
+        "Other insects and small animals",
+        "Decaying matter"
+      ],
+      "correct_answer": "Other insects and small animals"
+    },
+    {
+      "question": "Why is the praying mantis's head triangular and flexible?",
+      "options": [
+        "For camouflage",
+        "To see in all directions without moving",
+        "To hear better",
+        "For better aerodynamics"
+      ],
+      "correct_answer": "To see in all directions without moving"
+    },
+    {
+      "question": "What are the specialized front legs of a praying mantis called?",
+      "options": [
+        "Grasping legs",
+        "Raptorial legs",
+        "Prehensile legs",
+        "Manipulative legs"
+      ],
+      "correct_answer": "Raptorial legs"
+    },
+    {
+      "question": "How does a praying mantis catch its prey?",
+      "options": [
+        "By spinning webs",
+        "By flying into them",
+        "By waiting motionless and striking suddenly",
+        "By chasing them actively"
+      ],
+      "correct_answer": "By waiting motionless and striking suddenly"
+    },
+    {
+      "question": "What happens to female praying mantises after mating?",
+      "options": [
+        "They live harmoniously with males",
+        "Males leave to find new territories",
+        "Females sometimes eat the males",
+        "They form long-term pair bonds"
+      ],
+      "correct_answer": "Females sometimes eat the males"
+    }
+  ]
+}

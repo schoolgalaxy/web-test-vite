@@ -1,0 +1,57 @@
+{
+  "title": "The Ant",
+  "description": "Ants are social insects that live in colonies and are known for their highly organized societies, strength relative to their size, and complex communication systems.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/ant",
+  "questions": [
+    {
+      "question": "How much weight can an ant typically carry relative to its own body weight?",
+      "options": [
+        "5 times its body weight",
+        "10 times its body weight",
+        "20-50 times its body weight",
+        "100 times its body weight"
+      ],
+      "correct_answer": "20-50 times its body weight"
+    },
+    {
+      "question": "What type of social structure do ant colonies have?",
+      "options": [
+        "Monarchy",
+        "Democracy",
+        "Caste system with queen, workers, and soldiers",
+        "Nuclear family structure"
+      ],
+      "correct_answer": "Caste system with queen, workers, and soldiers"
+    },
+    {
+      "question": "How do ants communicate with each other?",
+      "options": [
+        "Through vocal sounds",
+        "Through pheromones and touch",
+        "Through visual signals",
+        "Through electrical signals"
+      ],
+      "correct_answer": "Through pheromones and touch"
+    },
+    {
+      "question": "What is the primary role of the queen ant in the colony?",
+      "options": [
+        "Foraging for food",
+        "Defending the colony",
+        "Laying eggs to produce more ants",
+        "Building and maintaining the nest"
+      ],
+      "correct_answer": "Laying eggs to produce more ants"
+    },
+    {
+      "question": "How long can some ant species live?",
+      "options": [
+        "A few weeks",
+        "Several months",
+        "Up to 1 year",
+        "Queen ants can live up to 30 years"
+      ],
+      "correct_answer": "Queen ants can live up to 30 years"
+    }
+  ]
+}

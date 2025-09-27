@@ -1,0 +1,57 @@
+{
+  "title": "The Mosquito",
+  "description": "Mosquitoes are flying insects known for their role as vectors of diseases and their blood-feeding habits in females. Only female mosquitoes bite and require blood for egg development.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/mosquito",
+  "questions": [
+    {
+      "question": "Which gender of mosquito typically bites humans and animals?",
+      "options": [
+        "Both males and females",
+        "Only males",
+        "Only females",
+        "Neither gender bites"
+      ],
+      "correct_answer": "Only females"
+    },
+    {
+      "question": "What do male mosquitoes primarily feed on?",
+      "options": [
+        "Blood",
+        "Nectar and plant juices",
+        "Other insects",
+        "Decaying matter"
+      ],
+      "correct_answer": "Nectar and plant juices"
+    },
+    {
+      "question": "How many species of mosquitoes exist worldwide?",
+      "options": [
+        "About 500 species",
+        "About 1,000 species",
+        "About 2,500 species",
+        "About 3,500 species"
+      ],
+      "correct_answer": "About 3,500 species"
+    },
+    {
+      "question": "Why do mosquitoes breed in standing water?",
+      "options": [
+        "They drink the water",
+        "Their larvae develop in water",
+        "They hide from predators in water",
+        "Water provides them camouflage"
+      ],
+      "correct_answer": "Their larvae develop in water"
+    },
+    {
+      "question": "What sense do mosquitoes use to find their hosts?",
+      "options": [
+        "Sight only",
+        "Smell and heat detection",
+        "Sound detection",
+        "Touch and vibration"
+      ],
+      "correct_answer": "Smell and heat detection"
+    }
+  ]
+}

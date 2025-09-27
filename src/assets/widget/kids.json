@@ -39,6 +39,19 @@
       "iconAlt": "Aquatic",
       "active": true,
       "priority": 30
+    },
+    {
+      "id": "insects",
+      "name": "Insects Questionaries",
+      "displayName": "Insects Quiz",
+      "description": "Learn about fascinating insects with our quizzes!",
+      "route": "/quiz/insects",
+      "routePrefix": "/quiz/insects",
+      "category": "insects",
+      "icon": "/src/assets/img/icon-insects.svg",
+      "iconAlt": "Insects",
+      "active": true,
+      "priority": 40
     }
   ]
 }

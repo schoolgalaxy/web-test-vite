@@ -1,0 +1,57 @@
+{
+  "title": "The Cockroach",
+  "description": "Cockroaches are ancient insects known for their adaptability and resilience. They have been around for over 300 million years and can survive in extreme conditions.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/cockroach",
+  "questions": [
+    {
+      "question": "How long can cockroaches survive without their heads?",
+      "options": [
+        "A few hours",
+        "A few days",
+        "About a week",
+        "About a month"
+      ],
+      "correct_answer": "About a week"
+    },
+    {
+      "question": "What allows cockroaches to survive in extreme conditions?",
+      "options": [
+        "Their ability to hibernate",
+        "Their slow metabolism",
+        "Their ability to hold their breath for long periods",
+        "Their resistance to radiation"
+      ],
+      "correct_answer": "Their ability to hold their breath for long periods"
+    },
+    {
+      "question": "How many species of cockroaches exist worldwide?",
+      "options": [
+        "About 500 species",
+        "About 1,000 species",
+        "About 2,500 species",
+        "About 4,000 species"
+      ],
+      "correct_answer": "About 4,000 species"
+    },
+    {
+      "question": "What do cockroaches primarily feed on?",
+      "options": [
+        "Wood and paper",
+        "Almost anything organic",
+        "Other insects",
+        "Plant leaves only"
+      ],
+      "correct_answer": "Almost anything organic"
+    },
+    {
+      "question": "Why are cockroaches considered one of the most adaptable insects?",
+      "options": [
+        "They can fly long distances",
+        "They can survive nuclear radiation",
+        "They reproduce very quickly",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    }
+  ]
+}

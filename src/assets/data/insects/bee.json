@@ -1,0 +1,57 @@
+{
+  "title": "The Honey Bee",
+  "description": "Honey bees are social insects that live in colonies and are famous for their production of honey and beeswax. They play a crucial role in pollination and agriculture worldwide.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/honey_bee",
+  "questions": [
+    {
+      "question": "How many eyes does a honey bee have?",
+      "options": [
+        "2 compound eyes",
+        "5 eyes total (2 compound, 3 simple)",
+        "8 eyes total",
+        "10 eyes total"
+      ],
+      "correct_answer": "5 eyes total (2 compound, 3 simple)"
+    },
+    {
+      "question": "What is the primary purpose of the honey bee's 'waggle dance'?",
+      "options": [
+        "To attract a mate",
+        "To communicate the location of food sources",
+        "To establish territory",
+        "To warn of danger"
+      ],
+      "correct_answer": "To communicate the location of food sources"
+    },
+    {
+      "question": "Which type of bee is responsible for laying eggs in a honey bee colony?",
+      "options": [
+        "Worker bees",
+        "Drone bees",
+        "The queen bee",
+        "Soldier bees"
+      ],
+      "correct_answer": "The queen bee"
+    },
+    {
+      "question": "How far can a honey bee fly from the hive to forage?",
+      "options": [
+        "Up to 1 mile",
+        "Up to 3 miles",
+        "Up to 5 miles",
+        "Up to 8 miles"
+      ],
+      "correct_answer": "Up to 5 miles"
+    },
+    {
+      "question": "What substance do honey bees produce to feed their young?",
+      "options": [
+        "Propolis",
+        "Pollen",
+        "Royal jelly",
+        "Beeswax"
+      ],
+      "correct_answer": "Royal jelly"
+    }
+  ]
+}

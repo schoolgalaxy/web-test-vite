@@ -1,0 +1,57 @@
+{
+  "title": "The Monarch Butterfly",
+  "description": "The Monarch Butterfly is a well-known North American butterfly famous for its distinctive orange and black wings and its incredible long-distance migration patterns.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/monarch_butterfly",
+  "questions": [
+    {
+      "question": "How far can Monarch Butterflies migrate during their annual journey?",
+      "options": [
+        "Up to 100 miles",
+        "Up to 500 miles",
+        "Up to 2,000 miles",
+        "Up to 5,000 miles"
+      ],
+      "correct_answer": "Up to 2,000 miles"
+    },
+    {
+      "question": "How many generations of Monarch Butterflies are there in a single year?",
+      "options": [
+        "2 generations",
+        "3 generations",
+        "4 generations",
+        "5 generations"
+      ],
+      "correct_answer": "4 generations"
+    },
+    {
+      "question": "What is the primary food source for adult Monarch Butterflies?",
+      "options": [
+        "Nectar from flowers",
+        "Tree sap",
+        "Rotten fruit",
+        "Small insects"
+      ],
+      "correct_answer": "Nectar from flowers"
+    },
+    {
+      "question": "Which plant do Monarch Butterfly caterpillars exclusively feed on?",
+      "options": [
+        "Oak leaves",
+        "Maple leaves",
+        "Milkweed plants",
+        "Daisy flowers"
+      ],
+      "correct_answer": "Milkweed plants"
+    },
+    {
+      "question": "How long do adult Monarch Butterflies typically live?",
+      "options": [
+        "2-3 days",
+        "1-2 weeks",
+        "2-6 weeks",
+        "3-4 months"
+      ],
+      "correct_answer": "2-6 weeks"
+    }
+  ]
+}

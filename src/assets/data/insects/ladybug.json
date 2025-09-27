@@ -1,0 +1,57 @@
+{
+  "title": "The Ladybug",
+  "description": "Ladybugs, also known as ladybirds or lady beetles, are small, colorful beetles that are beneficial insects in gardens and agriculture, known for their role in controlling pest populations.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/ladybug",
+  "questions": [
+    {
+      "question": "What is the primary diet of ladybugs?",
+      "options": [
+        "Plant leaves",
+        "Aphids and other small insects",
+        "Nectar from flowers",
+        "Small vertebrates"
+      ],
+      "correct_answer": "Aphids and other small insects"
+    },
+    {
+      "question": "How many spots does a typical seven-spotted ladybug have?",
+      "options": [
+        "3 spots",
+        "5 spots",
+        "7 spots",
+        "9 spots"
+      ],
+      "correct_answer": "7 spots"
+    },
+    {
+      "question": "Why do ladybugs release a foul-smelling fluid when threatened?",
+      "options": [
+        "To attract mates",
+        "To deter predators",
+        "To mark territory",
+        "To communicate with other ladybugs"
+      ],
+      "correct_answer": "To deter predators"
+    },
+    {
+      "question": "During winter, where do many ladybugs hibernate?",
+      "options": [
+        "Underground",
+        "In trees",
+        "In large groups under rocks or logs",
+        "In water"
+      ],
+      "correct_answer": "In large groups under rocks or logs"
+    },
+    {
+      "question": "How do ladybug larvae differ from adults in appearance?",
+      "options": [
+        "They look exactly like tiny adults",
+        "They are long, dark, and alligator-like",
+        "They are brightly colored like butterflies",
+        "They are transparent"
+      ],
+      "correct_answer": "They are long, dark, and alligator-like"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "The Dragonfly",
+  "description": "Dragonflies are ancient insects known for their exceptional flying abilities, large compound eyes, and predatory behavior. They have been around for over 300 million years.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/dragonfly",
+  "questions": [
+    {
+      "question": "How many wings does a dragonfly have?",
+      "options": [
+        "2 wings",
+        "4 wings",
+        "6 wings",
+        "8 wings"
+      ],
+      "correct_answer": "4 wings"
+    },
+    {
+      "question": "What is the success rate of a dragonfly's hunting attempts?",
+      "options": [
+        "About 30%",
+        "About 50%",
+        "About 80%",
+        "About 95%"
+      ],
+      "correct_answer": "About 95%"
+    },
+    {
+      "question": "How do dragonflies differ from damselflies?",
+      "options": [
+        "Dragonflies are smaller",
+        "Dragonflies hold their wings open at rest",
+        "Dragonflies have shorter abdomens",
+        "Dragonflies cannot fly backwards"
+      ],
+      "correct_answer": "Dragonflies hold their wings open at rest"
+    },
+    {
+      "question": "What is unique about dragonfly flight?",
+      "options": [
+        "They can hover in place",
+        "They can fly backwards",
+        "They can change direction instantly",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "question": "How many lenses can be found in each of a dragonfly's compound eyes?",
+      "options": [
+        "About 100 lenses",
+        "About 1,000 lenses",
+        "About 10,000 lenses",
+        "About 30,000 lenses"
+      ],
+      "correct_answer": "About 30,000 lenses"
+    }
+  ]
+}
