@@ -101,8 +101,8 @@
       "category": "sports",
       "icon": "/src/assets/img/icon-animals.svg",
       "iconAlt": "Sports",
-      "active": false,
-      "priority": 999
+      "active": true,
+      "priority": 10
     },
     {
       "id": "space",

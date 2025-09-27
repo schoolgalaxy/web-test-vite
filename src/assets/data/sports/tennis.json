@@ -1,0 +1,120 @@
+{
+  "unique_id": "tennis_quiz",
+  "title": "Tennis Fundamentals",
+  "description": "Tennis is a racket sport played individually or in pairs. Test your knowledge about Grand Slams, famous players, and tennis terminology.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/tennis",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many Grand Slam tournaments are there in professional tennis?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "4"
+    },
+    {
+      "qnum": 2,
+      "question": "What are the four Grand Slam tournaments called?",
+      "options": [
+        "Australian Open, French Open, Wimbledon, US Open",
+        "Australian Open, French Open, British Open, US Open",
+        "Australian Open, Roland Garros, Wimbledon, US Open",
+        "Aussie Open, French Open, Wimbledon, US Open"
+      ],
+      "correct_answer": "Australian Open, French Open, Wimbledon, US Open"
+    },
+    {
+      "qnum": 3,
+      "question": "Which surface is used at Wimbledon?",
+      "options": [
+        "Clay",
+        "Hard court",
+        "Grass",
+        "Carpet"
+      ],
+      "correct_answer": "Grass"
+    },
+    {
+      "qnum": 4,
+      "question": "How many sets must a player win to win a men's Grand Slam final?",
+      "options": [
+        "2 out of 3",
+        "3 out of 5",
+        "4 out of 7",
+        "5 out of 9"
+      ],
+      "correct_answer": "3 out of 5"
+    },
+    {
+      "qnum": 5,
+      "question": "What is the term for a score of zero in tennis?",
+      "options": [
+        "Nil",
+        "Zero",
+        "Nothing",
+        "Love"
+      ],
+      "correct_answer": "Love"
+    },
+    {
+      "qnum": 6,
+      "question": "Which player has won the most Grand Slam singles titles in the Open Era?",
+      "options": [
+        "Roger Federer",
+        "Rafael Nadal",
+        "Novak Djokovic",
+        "Pete Sampras"
+      ],
+      "correct_answer": "Novak Djokovic"
+    },
+    {
+      "qnum": 7,
+      "question": "What is the term for winning the ball on the first shot after the serve?",
+      "options": [
+        "Return",
+        "Ace",
+        "Winner",
+        "Service winner"
+      ],
+      "correct_answer": "Ace"
+    },
+    {
+      "qnum": 8,
+      "question": "Which tournament is played on red clay courts?",
+      "options": [
+        "Australian Open",
+        "Wimbledon",
+        "French Open",
+        "US Open"
+      ],
+      "correct_answer": "French Open"
+    },
+    {
+      "qnum": 9,
+      "question": "What is the maximum number of sets in a women's Grand Slam final?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "correct_answer": "3"
+    },
+    {
+      "qnum": 10,
+      "question": "Which player is known as the 'King of Clay'?",
+      "options": [
+        "Roger Federer",
+        "Novak Djokovic",
+        "Rafael Nadal",
+        "Andy Murray"
+      ],
+      "correct_answer": "Rafael Nadal"
+    }
+  ]
+}

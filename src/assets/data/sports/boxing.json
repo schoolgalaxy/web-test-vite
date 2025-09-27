@@ -1,0 +1,120 @@
+{
+  "unique_id": "boxing_quiz",
+  "title": "Boxing Fundamentals",
+  "description": "Boxing is a combat sport where two opponents fight using their fists. Test your knowledge about weight classes, famous fighters, and boxing history.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/boxing",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many weight classes are there in professional boxing?",
+      "options": [
+        "10",
+        "12",
+        "15",
+        "17"
+      ],
+      "correct_answer": "17"
+    },
+    {
+      "qnum": 2,
+      "question": "How many rounds are in a standard professional boxing match?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
+      "correct_answer": "12"
+    },
+    {
+      "qnum": 3,
+      "question": "What is the heaviest weight class in boxing?",
+      "options": [
+        "Cruiserweight",
+        "Heavyweight",
+        "Super heavyweight",
+        "Unlimited"
+      ],
+      "correct_answer": "Heavyweight"
+    },
+    {
+      "qnum": 4,
+      "question": "Which boxer is known as 'The Greatest'?",
+      "options": [
+        "Joe Frazier",
+        "George Foreman",
+        "Mike Tyson",
+        "Muhammad Ali"
+      ],
+      "correct_answer": "Muhammad Ali"
+    },
+    {
+      "qnum": 5,
+      "question": "What is the term for a knockout in boxing?",
+      "options": [
+        "Technical knockout",
+        "Knockout",
+        "Both A and B",
+        "Stoppage"
+      ],
+      "correct_answer": "Both A and B"
+    },
+    {
+      "qnum": 6,
+      "question": "Which governing body sanctions world championship boxing?",
+      "options": [
+        "WBC",
+        "WBA",
+        "IBF",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "qnum": 7,
+      "question": "What is the area where boxers fight called?",
+      "options": [
+        "Arena",
+        "Ring",
+        "Square",
+        "Platform"
+      ],
+      "correct_answer": "Ring"
+    },
+    {
+      "qnum": 8,
+      "question": "Which punch is considered the most powerful in boxing?",
+      "options": [
+        "Jab",
+        "Cross",
+        "Hook",
+        "Uppercut"
+      ],
+      "correct_answer": "Cross"
+    },
+    {
+      "qnum": 9,
+      "question": "What is the term for when a boxer is saved by the bell?",
+      "options": [
+        "Bell save",
+        "Round saver",
+        "Standing eight count",
+        "Technical draw"
+      ],
+      "correct_answer": "Standing eight count"
+    },
+    {
+      "qnum": 10,
+      "question": "Which boxer was known for his 'rope-a-dope' technique?",
+      "options": [
+        "Joe Frazier",
+        "George Foreman",
+        "Muhammad Ali",
+        "Mike Tyson"
+      ],
+      "correct_answer": "Muhammad Ali"
+    }
+  ]
+}

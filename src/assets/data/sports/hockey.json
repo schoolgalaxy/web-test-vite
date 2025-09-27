@@ -1,0 +1,120 @@
+{
+  "unique_id": "hockey_quiz",
+  "title": "Hockey Fundamentals",
+  "description": "Hockey is a fast-paced sport played on ice or field with sticks and a puck/ball. Test your knowledge about NHL, rules, and hockey history.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/hockey",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many players are on the ice for each team in ice hockey?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": "6"
+    },
+    {
+      "qnum": 2,
+      "question": "How many periods are in a standard hockey game?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "3"
+    },
+    {
+      "qnum": 3,
+      "question": "How long is each period in professional ice hockey?",
+      "options": [
+        "15 minutes",
+        "20 minutes",
+        "25 minutes",
+        "30 minutes"
+      ],
+      "correct_answer": "20 minutes"
+    },
+    {
+      "qnum": 4,
+      "question": "Which team has won the most Stanley Cup championships?",
+      "options": [
+        "Boston Bruins",
+        "Detroit Red Wings",
+        "Toronto Maple Leafs",
+        "Montreal Canadiens"
+      ],
+      "correct_answer": "Montreal Canadiens"
+    },
+    {
+      "qnum": 5,
+      "question": "What is the term for a player who can play both forward and defense positions?",
+      "options": [
+        "Utility player",
+        "Swing player",
+        "Forward-defense",
+        "Rover"
+      ],
+      "correct_answer": "Rover"
+    },
+    {
+      "qnum": 6,
+      "question": "Which player serves as the last line of defense in hockey?",
+      "options": [
+        "Forward",
+        "Defenseman",
+        "Winger",
+        "Goaltender"
+      ],
+      "correct_answer": "Goaltender"
+    },
+    {
+      "qnum": 7,
+      "question": "What is the penalty for breaking the rules in hockey called?",
+      "options": [
+        "Free play",
+        "Penalty shot",
+        "Power play",
+        "Penalty"
+      ],
+      "correct_answer": "Penalty"
+    },
+    {
+      "qnum": 8,
+      "question": "Which trophy is awarded to the NHL playoff champion?",
+      "options": [
+        "Presidents' Trophy",
+        "Prince of Wales Trophy",
+        "Clarence S. Campbell Bowl",
+        "Stanley Cup"
+      ],
+      "correct_answer": "Stanley Cup"
+    },
+    {
+      "qnum": 9,
+      "question": "What is the term for scoring three goals in a single game?",
+      "options": [
+        "Triple",
+        "Hat trick",
+        "Three-bagger",
+        "Trifecta"
+      ],
+      "correct_answer": "Hat trick"
+    },
+    {
+      "qnum": 10,
+      "question": "Which position is responsible for taking face-offs and setting up plays?",
+      "options": [
+        "Center",
+        "Winger",
+        "Defenseman",
+        "Goaltender"
+      ],
+      "correct_answer": "Center"
+    }
+  ]
+}

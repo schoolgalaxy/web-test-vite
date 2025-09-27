@@ -63,7 +63,7 @@
       "category": "sports",
       "icon": "/src/assets/img/icon-animals.svg",
       "iconAlt": "Sports",
-      "active": false,
+      "active": true,
       "priority": 999
     },
     {

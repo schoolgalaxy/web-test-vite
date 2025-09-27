@@ -1,0 +1,120 @@
+{
+  "unique_id": "cricket_quiz",
+  "title": "Cricket Fundamentals",
+  "description": "Cricket is a bat-and-ball game played between two teams. Test your knowledge about formats, rules, and famous cricket moments.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/cricket",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many players are there in a cricket team on the field?",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correct_answer": "11"
+    },
+    {
+      "qnum": 2,
+      "question": "What are the three main formats of international cricket?",
+      "options": [
+        "Test, ODI, T10",
+        "Test, ODI, T20",
+        "Test, First Class, T20",
+        "Test, Limited Overs, T20"
+      ],
+      "correct_answer": "Test, ODI, T20"
+    },
+    {
+      "qnum": 3,
+      "question": "How many runs is a boundary worth in cricket?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "6"
+      ],
+      "correct_answer": "4"
+    },
+    {
+      "qnum": 4,
+      "question": "Which country has won the most Cricket World Cups?",
+      "options": [
+        "India",
+        "West Indies",
+        "Pakistan",
+        "Australia"
+      ],
+      "correct_answer": "Australia"
+    },
+    {
+      "qnum": 5,
+      "question": "What is the term for getting three batsmen out with consecutive deliveries?",
+      "options": [
+        "Double hat-trick",
+        "Hat-trick",
+        "Triple wicket",
+        "Perfect over"
+      ],
+      "correct_answer": "Hat-trick"
+    },
+    {
+      "qnum": 6,
+      "question": "How many balls are bowled in a standard over?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correct_answer": "6"
+    },
+    {
+      "qnum": 7,
+      "question": "Which player has scored the most runs in international cricket?",
+      "options": [
+        "Ricky Ponting",
+        "Kumar Sangakkara",
+        "Sachin Tendulkar",
+        "Jacques Kallis"
+      ],
+      "correct_answer": "Sachin Tendulkar"
+    },
+    {
+      "qnum": 8,
+      "question": "What is the maximum number of overs in a One Day International (ODI) match?",
+      "options": [
+        "20",
+        "50",
+        "60",
+        "100"
+      ],
+      "correct_answer": "50"
+    },
+    {
+      "qnum": 9,
+      "question": "Which fielding position is behind the batsman?",
+      "options": [
+        "Mid-off",
+        "Wicket-keeper",
+        "Gully",
+        "Silly point"
+      ],
+      "correct_answer": "Wicket-keeper"
+    },
+    {
+      "qnum": 10,
+      "question": "What is the term for a score of zero by a batsman?",
+      "options": [
+        "Nil",
+        "Duck",
+        "Goose egg",
+        "Nothing"
+      ],
+      "correct_answer": "Duck"
+    }
+  ]
+}

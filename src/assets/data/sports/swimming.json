@@ -1,0 +1,120 @@
+{
+  "unique_id": "swimming_quiz",
+  "title": "Swimming Fundamentals",
+  "description": "Swimming is both a competitive sport and recreational activity. Test your knowledge about strokes, Olympic events, and swimming history.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/swimming",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many strokes are recognized in competitive swimming?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "4"
+    },
+    {
+      "qnum": 2,
+      "question": "Which stroke is known as the 'fastest' swimming stroke?",
+      "options": [
+        "Breaststroke",
+        "Butterfly",
+        "Backstroke",
+        "Freestyle"
+      ],
+      "correct_answer": "Freestyle"
+    },
+    {
+      "qnum": 3,
+      "question": "What is the standard length of an Olympic swimming pool?",
+      "options": [
+        "25 meters",
+        "50 meters",
+        "75 meters",
+        "100 meters"
+      ],
+      "correct_answer": "50 meters"
+    },
+    {
+      "qnum": 4,
+      "question": "Which swimmer has won the most Olympic gold medals?",
+      "options": [
+        "Mark Spitz",
+        "Ian Thorpe",
+        "Ryan Lochte",
+        "Michael Phelps"
+      ],
+      "correct_answer": "Michael Phelps"
+    },
+    {
+      "qnum": 5,
+      "question": "In which stroke must swimmers keep their face in the water?",
+      "options": [
+        "Freestyle",
+        "Breaststroke",
+        "Butterfly",
+        "Backstroke"
+      ],
+      "correct_answer": "Breaststroke"
+    },
+    {
+      "qnum": 6,
+      "question": "What is the term for the starting dive in swimming races?",
+      "options": [
+        "Jump",
+        "Leap",
+        "Plunge",
+        "Dive"
+      ],
+      "correct_answer": "Dive"
+    },
+    {
+      "qnum": 7,
+      "question": "Which stroke requires swimmers to perform a dolphin-like kick?",
+      "options": [
+        "Breaststroke",
+        "Butterfly",
+        "Backstroke",
+        "Freestyle"
+      ],
+      "correct_answer": "Butterfly"
+    },
+    {
+      "qnum": 8,
+      "question": "What is the shortest Olympic swimming distance for individual events?",
+      "options": [
+        "50 meters",
+        "100 meters",
+        "200 meters",
+        "400 meters"
+      ],
+      "correct_answer": "50 meters"
+    },
+    {
+      "qnum": 9,
+      "question": "Which swimming event combines all four strokes?",
+      "options": [
+        "Freestyle relay",
+        "Medley relay",
+        "Individual medley",
+        "Mixed relay"
+      ],
+      "correct_answer": "Individual medley"
+    },
+    {
+      "qnum": 10,
+      "question": "In backstroke, swimmers must stay on their back except when?",
+      "options": [
+        "Turning",
+        "Starting",
+        "Finishing",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    }
+  ]
+}

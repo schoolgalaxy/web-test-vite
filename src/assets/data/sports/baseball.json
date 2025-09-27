@@ -1,0 +1,120 @@
+{
+  "unique_id": "baseball_quiz",
+  "title": "Baseball Fundamentals",
+  "description": "Baseball is America's pastime, a bat-and-ball sport played between two teams. Test your knowledge about MLB, rules, and baseball history.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/baseball",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many players are on the field for each team in baseball?",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correct_answer": "9"
+    },
+    {
+      "qnum": 2,
+      "question": "How many innings are in a standard baseball game?",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correct_answer": "9"
+    },
+    {
+      "qnum": 3,
+      "question": "How many strikes does it take to strike out a batter?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "3"
+    },
+    {
+      "qnum": 4,
+      "question": "Which team has won the most World Series championships?",
+      "options": [
+        "Los Angeles Dodgers",
+        "Boston Red Sox",
+        "San Francisco Giants",
+        "New York Yankees"
+      ],
+      "correct_answer": "New York Yankees"
+    },
+    {
+      "qnum": 5,
+      "question": "What is the term for a pitch that is outside the strike zone and not swung at by the batter?",
+      "options": [
+        "Strike",
+        "Ball",
+        "Hit",
+        "Out"
+      ],
+      "correct_answer": "Ball"
+    },
+    {
+      "qnum": 6,
+      "question": "Which player holds the record for the most home runs in a single season?",
+      "options": [
+        "Babe Ruth",
+        "Hank Aaron",
+        "Barry Bonds",
+        "Mark McGwire"
+      ],
+      "correct_answer": "Barry Bonds"
+    },
+    {
+      "qnum": 7,
+      "question": "What is the defensive player behind home plate called?",
+      "options": [
+        "Pitcher",
+        "Catcher",
+        "Umpire",
+        "Shortstop"
+      ],
+      "correct_answer": "Catcher"
+    },
+    {
+      "qnum": 8,
+      "question": "How many bases are there on a baseball field?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "4"
+    },
+    {
+      "qnum": 9,
+      "question": "What is the term for when a batter hits the ball over the outfield fence?",
+      "options": [
+        "Single",
+        "Double",
+        "Triple",
+        "Home run"
+      ],
+      "correct_answer": "Home run"
+    },
+    {
+      "qnum": 10,
+      "question": "Which position is considered the most demanding, requiring quick reflexes and a strong arm?",
+      "options": [
+        "First base",
+        "Second base",
+        "Shortstop",
+        "Third base"
+      ],
+      "correct_answer": "Shortstop"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "unique_id": "volleyball_quiz",
+  "title": "Volleyball Fundamentals",
+  "description": "Volleyball is a team sport where two teams compete to ground the ball on the opponent's court. Test your knowledge about rules, positions, and volleyball history.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/volleyball",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many players are on the court for each team in volleyball?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": "6"
+    },
+    {
+      "qnum": 2,
+      "question": "How many sets are in a standard volleyball match?",
+      "options": [
+        "3 out of 5",
+        "4 out of 7",
+        "5 out of 9",
+        "Best of 5"
+      ],
+      "correct_answer": "3 out of 5"
+    },
+    {
+      "qnum": 3,
+      "question": "What is the maximum number of hits allowed per side before the ball must go over the net?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "3"
+    },
+    {
+      "qnum": 4,
+      "question": "Which position is responsible for directing the team's offense?",
+      "options": [
+        "Libero",
+        "Setter",
+        "Outside hitter",
+        "Middle blocker"
+      ],
+      "correct_answer": "Setter"
+    },
+    {
+      "qnum": 5,
+      "question": "What is the term for serving the ball and scoring a point without the receiving team touching it?",
+      "options": [
+        "Ace",
+        "Kill",
+        "Spike",
+        "Block"
+      ],
+      "correct_answer": "Ace"
+    },
+    {
+      "qnum": 6,
+      "question": "How many points must a team win by to win a set?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": "2"
+    },
+    {
+      "qnum": 7,
+      "question": "Which player wears a different colored jersey and plays a defensive specialist role?",
+      "options": [
+        "Setter",
+        "Libero",
+        "Captain",
+        "Outside hitter"
+      ],
+      "correct_answer": "Libero"
+    },
+    {
+      "qnum": 8,
+      "question": "What is the term for jumping and striking the ball downward over the net?",
+      "options": [
+        "Bump",
+        "Set",
+        "Spike",
+        "Serve"
+      ],
+      "correct_answer": "Spike"
+    },
+    {
+      "qnum": 9,
+      "question": "Which international volleyball tournament is held every four years?",
+      "options": [
+        "World Cup",
+        "Olympic Games",
+        "World Championship",
+        "All of the above"
+      ],
+      "correct_answer": "All of the above"
+    },
+    {
+      "qnum": 10,
+      "question": "What is the height of the volleyball net for men's competition?",
+      "options": [
+        "2.24 meters",
+        "2.43 meters",
+        "2.50 meters",
+        "2.60 meters"
+      ],
+      "correct_answer": "2.43 meters"
+    }
+  ]
+}

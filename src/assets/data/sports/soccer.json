@@ -1,0 +1,120 @@
+{
+  "unique_id": "soccer_quiz",
+  "title": "Soccer Fundamentals",
+  "description": "Soccer, also known as football, is the world's most popular sport. Test your knowledge about the rules, famous players, and history of this beautiful game.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/soccer",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many players are on the field for each team in a standard soccer match?",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "correct_answer": "11"
+    },
+    {
+      "qnum": 2,
+      "question": "What is the duration of a standard professional soccer match?",
+      "options": [
+        "60 minutes",
+        "80 minutes",
+        "90 minutes",
+        "120 minutes"
+      ],
+      "correct_answer": "90 minutes"
+    },
+    {
+      "qnum": 3,
+      "question": "Which country has won the most FIFA World Cup titles?",
+      "options": [
+        "Germany",
+        "Argentina",
+        "Italy",
+        "Brazil"
+      ],
+      "correct_answer": "Brazil"
+    },
+    {
+      "qnum": 4,
+      "question": "What is the term for restarting play after the ball has gone out of bounds over the sideline?",
+      "options": [
+        "Corner kick",
+        "Goal kick",
+        "Throw-in",
+        "Free kick"
+      ],
+      "correct_answer": "Throw-in"
+    },
+    {
+      "qnum": 5,
+      "question": "Which player has scored the most goals in FIFA World Cup history?",
+      "options": [
+        "Pele",
+        "Diego Maradona",
+        "Miroslav Klose",
+        "Ronaldo"
+      ],
+      "correct_answer": "Miroslav Klose"
+    },
+    {
+      "qnum": 6,
+      "question": "What is the maximum number of substitutions allowed in a professional soccer match?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "Unlimited"
+      ],
+      "correct_answer": "5"
+    },
+    {
+      "qnum": 7,
+      "question": "Which position is responsible for preventing the opposing team from scoring?",
+      "options": [
+        "Forward",
+        "Midfielder",
+        "Defender",
+        "Goalkeeper"
+      ],
+      "correct_answer": "Defender"
+    },
+    {
+      "qnum": 8,
+      "question": "What does the term 'offside' mean in soccer?",
+      "options": [
+        "When a player touches the ball with their hands",
+        "When a player is in the opponent's half without the ball",
+        "When a player is nearer to the opponent's goal line than both the ball and the second-last opponent",
+        "When a player kicks the ball out of bounds"
+      ],
+      "correct_answer": "When a player is nearer to the opponent's goal line than both the ball and the second-last opponent"
+    },
+    {
+      "qnum": 9,
+      "question": "Which tournament is considered the most prestigious club competition in European soccer?",
+      "options": [
+        "Europa League",
+        "Champions League",
+        "Europa Conference League",
+        "Super Cup"
+      ],
+      "correct_answer": "Champions League"
+    },
+    {
+      "qnum": 10,
+      "question": "What is the term for the playing area in soccer?",
+      "options": [
+        "Court",
+        "Field",
+        "Pitch",
+        "Arena"
+      ],
+      "correct_answer": "Pitch"
+    }
+  ]
+}

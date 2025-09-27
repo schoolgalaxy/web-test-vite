@@ -1,0 +1,120 @@
+{
+  "unique_id": "basketball_quiz",
+  "title": "Basketball Fundamentals",
+  "description": "Basketball is a fast-paced team sport played on a rectangular court. Test your knowledge about NBA, rules, famous players, and basketball history.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/basketball",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many players are on the court for each team in a basketball game?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": "5"
+    },
+    {
+      "qnum": 2,
+      "question": "How long is a standard NBA game?",
+      "options": [
+        "40 minutes",
+        "44 minutes",
+        "48 minutes",
+        "52 minutes"
+      ],
+      "correct_answer": "48 minutes"
+    },
+    {
+      "qnum": 3,
+      "question": "Which player is widely considered the greatest basketball player of all time?",
+      "options": [
+        "Kobe Bryant",
+        "LeBron James",
+        "Michael Jordan",
+        "Magic Johnson"
+      ],
+      "correct_answer": "Michael Jordan"
+    },
+    {
+      "qnum": 4,
+      "question": "What is the term for scoring 3 points with one shot?",
+      "options": [
+        "Slam dunk",
+        "Three-pointer",
+        "Free throw",
+        "Layup"
+      ],
+      "correct_answer": "Three-pointer"
+    },
+    {
+      "qnum": 5,
+      "question": "How many points is a free throw worth?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": "1"
+    },
+    {
+      "qnum": 6,
+      "question": "Which team has won the most NBA championships?",
+      "options": [
+        "Los Angeles Lakers",
+        "Boston Celtics",
+        "Chicago Bulls",
+        "Golden State Warriors"
+      ],
+      "correct_answer": "Los Angeles Lakers"
+    },
+    {
+      "qnum": 7,
+      "question": "What is the violation called when a player takes too many steps without dribbling?",
+      "options": [
+        "Traveling",
+        "Double dribble",
+        "Carrying",
+        "Palming"
+      ],
+      "correct_answer": "Traveling"
+    },
+    {
+      "qnum": 8,
+      "question": "Which position typically handles the ball and directs the team's offense?",
+      "options": [
+        "Center",
+        "Power forward",
+        "Point guard",
+        "Shooting guard"
+      ],
+      "correct_answer": "Point guard"
+    },
+    {
+      "qnum": 9,
+      "question": "What is the term for a shot attempt that misses everything?",
+      "options": [
+        "Swish",
+        "Brick",
+        "Air ball",
+        "Bank shot"
+      ],
+      "correct_answer": "Air ball"
+    },
+    {
+      "qnum": 10,
+      "question": "Which college basketball tournament is considered 'March Madness'?",
+      "options": [
+        "NIT",
+        "NCAA Tournament",
+        "Big East Tournament",
+        "ACC Tournament"
+      ],
+      "correct_answer": "NCAA Tournament"
+    }
+  ]
+}

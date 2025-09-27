@@ -1,0 +1,120 @@
+{
+  "unique_id": "rugby_quiz",
+  "title": "Rugby Fundamentals",
+  "description": "Rugby is a contact team sport with two main codes: rugby union and rugby league. Test your knowledge about rules, positions, and rugby tournaments.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/rugby",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many players are on the field for each team in rugby union?",
+      "options": [
+        "11",
+        "13",
+        "15",
+        "17"
+      ],
+      "correct_answer": "15"
+    },
+    {
+      "qnum": 2,
+      "question": "How long is a standard rugby union match?",
+      "options": [
+        "60 minutes",
+        "70 minutes",
+        "80 minutes",
+        "90 minutes"
+      ],
+      "correct_answer": "80 minutes"
+    },
+    {
+      "qnum": 3,
+      "question": "What is the shape of a rugby ball?",
+      "options": [
+        "Round",
+        "Oval",
+        "Egg-shaped",
+        "Prolate spheroid"
+      ],
+      "correct_answer": "Prolate spheroid"
+    },
+    {
+      "qnum": 4,
+      "question": "Which tournament is the most prestigious in rugby union?",
+      "options": [
+        "Six Nations Championship",
+        "Rugby World Cup",
+        "British & Irish Lions tour",
+        "Tri Nations"
+      ],
+      "correct_answer": "Rugby World Cup"
+    },
+    {
+      "qnum": 5,
+      "question": "How many points is a try worth in rugby union?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct_answer": "5"
+    },
+    {
+      "qnum": 6,
+      "question": "Which country has won the most Rugby World Cups?",
+      "options": [
+        "Australia",
+        "England",
+        "South Africa",
+        "New Zealand"
+      ],
+      "correct_answer": "New Zealand"
+    },
+    {
+      "qnum": 7,
+      "question": "What is the term for restarting play after a minor infringement?",
+      "options": [
+        "Free kick",
+        "Penalty kick",
+        "Drop kick",
+        "Scrum"
+      ],
+      "correct_answer": "Penalty kick"
+    },
+    {
+      "qnum": 8,
+      "question": "Which position wears the number 10 jersey and is usually the goal kicker?",
+      "options": [
+        "Scrum-half",
+        "Fly-half",
+        "Center",
+        "Fullback"
+      ],
+      "correct_answer": "Fly-half"
+    },
+    {
+      "qnum": 9,
+      "question": "What is the maximum number of points a conversion kick can earn?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "correct_answer": "2"
+    },
+    {
+      "qnum": 10,
+      "question": "Which New Zealand team performs the famous haka before matches?",
+      "options": [
+        "Crusaders",
+        "Blues",
+        "All Blacks",
+        "Highlanders"
+      ],
+      "correct_answer": "All Blacks"
+    }
+  ]
+}

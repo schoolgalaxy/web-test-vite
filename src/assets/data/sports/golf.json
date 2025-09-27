@@ -1,0 +1,120 @@
+{
+  "unique_id": "golf_quiz",
+  "title": "Golf Fundamentals",
+  "description": "Golf is a club-and-ball sport played on a course with the objective of hitting balls into holes. Test your knowledge about majors, equipment, and golf terminology.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/golf",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "How many major championships are there in professional golf?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "4"
+    },
+    {
+      "qnum": 2,
+      "question": "What are the four major golf tournaments?",
+      "options": [
+        "Masters, US Open, British Open, PGA Championship",
+        "Masters, US Open, French Open, PGA Championship",
+        "Masters, US Open, British Open, European Championship",
+        "Masters, US Open, British Open, World Championship"
+      ],
+      "correct_answer": "Masters, US Open, British Open, PGA Championship"
+    },
+    {
+      "qnum": 3,
+      "question": "What is the term for one stroke under par on a hole?",
+      "options": [
+        "Eagle",
+        "Birdie",
+        "Par",
+        "Bogey"
+      ],
+      "correct_answer": "Birdie"
+    },
+    {
+      "qnum": 4,
+      "question": "Which golfer has won the most major championships?",
+      "options": [
+        "Tiger Woods",
+        "Phil Mickelson",
+        "Rory McIlroy",
+        "Jack Nicklaus"
+      ],
+      "correct_answer": "Jack Nicklaus"
+    },
+    {
+      "qnum": 5,
+      "question": "What is the standard number of clubs allowed in a golfer's bag?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correct_answer": "14"
+    },
+    {
+      "qnum": 6,
+      "question": "What is the first shot on a hole called?",
+      "options": [
+        "Drive",
+        "Approach",
+        "Putt",
+        "Chip"
+      ],
+      "correct_answer": "Drive"
+    },
+    {
+      "qnum": 7,
+      "question": "Which major tournament is played at Augusta National?",
+      "options": [
+        "US Open",
+        "British Open",
+        "PGA Championship",
+        "Masters Tournament"
+      ],
+      "correct_answer": "Masters Tournament"
+    },
+    {
+      "qnum": 8,
+      "question": "What is the term for completing a hole in two strokes under par?",
+      "options": [
+        "Eagle",
+        "Albatross",
+        "Birdie",
+        "Double eagle"
+      ],
+      "correct_answer": "Albatross"
+    },
+    {
+      "qnum": 9,
+      "question": "What is the area of short grass surrounding the hole called?",
+      "options": [
+        "Fairway",
+        "Rough",
+        "Green",
+        "Tee box"
+      ],
+      "correct_answer": "Green"
+    },
+    {
+      "qnum": 10,
+      "question": "Which golfer is known as 'The Golden Bear'?",
+      "options": [
+        "Arnold Palmer",
+        "Gary Player",
+        "Jack Nicklaus",
+        "Lee Trevino"
+      ],
+      "correct_answer": "Jack Nicklaus"
+    }
+  ]
+}

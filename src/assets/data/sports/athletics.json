@@ -1,0 +1,120 @@
+{
+  "unique_id": "athletics_quiz",
+  "title": "Athletics (Track & Field) Fundamentals",
+  "description": "Athletics, also known as track and field, encompasses running, jumping, and throwing events. Test your knowledge about Olympic events and athletics history.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/athletics",
+  "type": "MCQ_QUIZ",
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "What is the standard distance of a marathon race?",
+      "options": [
+        "20 miles",
+        "25 miles",
+        "26.2 miles",
+        "30 miles"
+      ],
+      "correct_answer": "26.2 miles"
+    },
+    {
+      "qnum": 2,
+      "question": "Which event involves jumping over hurdles?",
+      "options": [
+        "High jump",
+        "Long jump",
+        "Hurdles",
+        "Pole vault"
+      ],
+      "correct_answer": "Hurdles"
+    },
+    {
+      "qnum": 3,
+      "question": "What is the most common track distance for sprint races in the Olympics?",
+      "options": [
+        "50 meters",
+        "100 meters",
+        "150 meters",
+        "200 meters"
+      ],
+      "correct_answer": "100 meters"
+    },
+    {
+      "qnum": 4,
+      "question": "Which athlete is known as the 'fastest man alive'?",
+      "options": [
+        "Carl Lewis",
+        "Jesse Owens",
+        "Usain Bolt",
+        "Maurice Greene"
+      ],
+      "correct_answer": "Usain Bolt"
+    },
+    {
+      "qnum": 5,
+      "question": "In which event do athletes throw a heavy metal ball?",
+      "options": [
+        "Discus",
+        "Hammer throw",
+        "Shot put",
+        "Javelin"
+      ],
+      "correct_answer": "Shot put"
+    },
+    {
+      "qnum": 6,
+      "question": "What is the term for the curved path that hammer throwers run before releasing?",
+      "options": [
+        "Circle",
+        "Orbit",
+        "Rotation",
+        "Spiral"
+      ],
+      "correct_answer": "Circle"
+    },
+    {
+      "qnum": 7,
+      "question": "Which jumping event requires athletes to use a long flexible pole?",
+      "options": [
+        "High jump",
+        "Long jump",
+        "Triple jump",
+        "Pole vault"
+      ],
+      "correct_answer": "Pole vault"
+    },
+    {
+      "qnum": 8,
+      "question": "What is the standard distance for the men's 1500 meters race?",
+      "options": [
+        "1 mile",
+        "1.2 miles",
+        "1.5 miles",
+        "2 miles"
+      ],
+      "correct_answer": "1.5 miles"
+    },
+    {
+      "qnum": 9,
+      "question": "Which relay race involves four runners each covering 100 meters?",
+      "options": [
+        "4x100 meters",
+        "4x200 meters",
+        "4x400 meters",
+        "4x800 meters"
+      ],
+      "correct_answer": "4x100 meters"
+    },
+    {
+      "qnum": 10,
+      "question": "In long jump, what is the takeoff board called?",
+      "options": [
+        "Jump board",
+        "Takeoff board",
+        "Launch pad",
+        "Spring board"
+      ],
+      "correct_answer": "Takeoff board"
+    }
+  ]
+}
