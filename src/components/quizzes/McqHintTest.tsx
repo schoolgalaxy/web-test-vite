@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../../assets/css/McqTest.css'; // Reusing MCQ test styles
+import debug from '../../util/debug';
 
 interface AnswerOption {
   text: string;
@@ -63,7 +64,7 @@ const McqHintTest: React.FC<McqHintTestProps> = ({ quizCategory, routePrefix }) 
 
         setQuizData(data);
       } catch (error) {
-        console.error(`Error loading ${quizCategory} quiz data:`, error);
+        debug.error(`Error loading ${quizCategory} quiz data:`, error);
         navigate('/error');
       }
     };

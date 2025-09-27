@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import QuizTest from './QuizTest';
 import McqHintTest from './McqHintTest';
 import quizzesConfig from '../../assets/json_data/quizzes.json';
+import debug from '../../util/debug';
 
 type QuizConfig = {
   id: string;
@@ -14,7 +15,7 @@ type QuizConfig = {
 
 const QuizRoute: React.FC = () => {
   const { category, quizId } = useParams<{ category: string; quizId: string }>();
-  console.log('QuizRoute rendered with:', { category, quizId });
+  debug.log('QuizRoute rendered with:', { category, quizId });
   const cfg = (quizzesConfig as { quizzes: QuizConfig[] }).quizzes.find(q => q.category === category);
   const [quizType, setQuizType] = useState<string | null>(null);
 
@@ -24,23 +25,23 @@ const QuizRoute: React.FC = () => {
         try {
           const modules = import.meta.glob('/src/assets/json_data/**/*.json', { eager: true });
           const targetPathSuffix = `/${category}/${quizId}.json`;
-          console.log('Looking for quiz:', category, quizId);
-          console.log('Target path suffix:', targetPathSuffix);
+          debug.log('Looking for quiz:', category, quizId);
+          debug.log('Target path suffix:', targetPathSuffix);
 
           const matchKey = Object.keys(modules).find((key) => key.endsWith(targetPathSuffix));
-          console.log('Available paths:', Object.keys(modules).filter(k => k.includes(category)));
-          console.log('Match key found:', matchKey);
+          debug.log('Available paths:', Object.keys(modules).filter(k => k.includes(category)));
+          debug.log('Match key found:', matchKey);
 
           if (matchKey) {
             const module: any = modules[matchKey as keyof typeof modules];
             const data = module.default ?? module;
-            console.log('Quiz data type:', data.type);
+            debug.log('Quiz data type:', data.type);
             setQuizType(data.type);
           } else {
-            console.log('No match found for:', targetPathSuffix);
+            debug.log('No match found for:', targetPathSuffix);
           }
         } catch (error) {
-          console.error('Error checking quiz type:', error);
+          debug.error('Error checking quiz type:', error);
         }
       }
     };

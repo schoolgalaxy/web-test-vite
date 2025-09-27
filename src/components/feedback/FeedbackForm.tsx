@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { generateClient } from "aws-amplify/api";
 import type { Schema } from '../../../amplify/data/resource';
 import { useMemo } from 'react';
+import debug from '../../util/debug';
 
 import './FeedbackForm.css'; // Assuming a CSS file for styling
 
@@ -67,7 +68,7 @@ const FeedbackForm: React.FC = () => {
           message: formData.message,
           timestamp: new Date().toISOString(),
         });
-        console.log('Feedback created:', newFeedback);
+        debug.log('Feedback created:', newFeedback);
         setSubmitMessage('Feedback submitted successfully!');
         setFormData({
           subject: '',
@@ -75,7 +76,7 @@ const FeedbackForm: React.FC = () => {
           message: '',
         });
       } catch (error) {
-        console.error('Error submitting feedback:', error);
+        debug.error('Error submitting feedback:', error);
         setSubmitMessage('Failed to submit feedback. Please try again.');
       }
     } else {

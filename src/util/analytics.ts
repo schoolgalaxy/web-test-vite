@@ -1,3 +1,5 @@
+import debug from './debug';
+
 interface Metric {
   name: string;
   delta: number;
@@ -11,7 +13,7 @@ interface Metric {
 
 export const sendToAnalytics = (metric: Metric) => {
   const { delta, id, value, rating, entries } = metric;
-  console.log("gtag events ", delta, id, value, rating, entries );
+  debug.log("gtag events ", delta, id, value, rating, entries );
   // if (window.gtag) {
   //   window.gtag('event', metric.name, {
   //     eventCategory: 'Web Vitals',

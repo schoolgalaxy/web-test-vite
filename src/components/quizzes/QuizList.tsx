@@ -6,6 +6,7 @@ import animalImg from '/src/assets/img/animal.svg';
 import aquaticImg from '/src/assets/img/aquatic.svg';
 import placeholderImg from '/src/assets/img/quiz-placeholder.svg';
 import quizzesConfig from '../../assets/json_data/quizzes.json';
+import debug from '../../util/debug';
 
 interface QuizMetaData {
   id: string;
@@ -56,7 +57,7 @@ const QuizList: React.FC = () => {
         });
         setQuizzes(allMetaData);
       } catch (error) {
-        console.error(`Error fetching quiz metadata for ${quizCategory}:`, error);
+        debug.error(`Error fetching quiz metadata for ${quizCategory}:`, error);
       }
     };
 
