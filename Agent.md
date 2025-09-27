@@ -35,8 +35,6 @@ This document provides a concise operational context for an assistant/agent work
 - `CenterSection.tsx` / `Home.tsx` / Feature pages: Primary content region.
 - `RightSidebar.tsx`: Engagement widgets and ads placements.
 - Feature groups:
-  - Animals: `animals/AnimalQuizList.tsx`, `animals/AnimalQuizTest.tsx`
-  - Birds: `birds/BirdQuizList.tsx`, `birds/BirdQuizTest.tsx`
   - MCQ: `mcq/McqList.tsx`, `mcq/McqTest.tsx`
   - Quizzes: `quizzes/QuizList.tsx`, `quizzes/QuizTest.tsx`
   - Feedback: `feedback/FeedbackLayout.tsx`, `feedback/FeedbackForm.tsx`
