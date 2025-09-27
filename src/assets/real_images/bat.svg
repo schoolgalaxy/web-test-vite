@@ -1,0 +1,57 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bat body (darker brown) -->
+  <ellipse cx="100" cy="120" rx="25" ry="40" fill="#4a4a4a"/>
+
+  <!-- Bat head -->
+  <ellipse cx="100" cy="80" rx="20" ry="15" fill="#3a3a3a"/>
+
+  <!-- Bat ears (pointy, like real bat ears) -->
+  <polygon points="85,70 95,55 105,70" fill="#3a3a3a"/>
+  <polygon points="95,70 105,55 115,70" fill="#3a3a3a"/>
+
+  <!-- Inner ears (lighter pink) -->
+  <polygon points="87,68 93,60 97,68" fill="#ffb6c1"/>
+  <polygon points="103,68 107,60 113,68" fill="#ffb6c1"/>
+
+  <!-- Eyes (red/brown to look more realistic) -->
+  <circle cx="92" cy="75" r="3" fill="#8B0000"/>
+  <circle cx="108" cy="75" r="3" fill="#8B0000"/>
+  <circle cx="93" cy="74" r="1" fill="#ffffff"/>
+  <circle cx="109" cy="74" r="1" fill="#ffffff"/>
+
+  <!-- Nose (small triangle) -->
+  <polygon points="95,82 100,87 105,82" fill="#2a2a2a"/>
+
+  <!-- Left wing (membrane structure) -->
+  <path d="M 75 110 Q 45 90 25 120 Q 35 130 50 125 Q 65 115 75 110"
+        fill="#5a5a5a" stroke="#3a3a3a" stroke-width="1"/>
+  <!-- Wing fingers -->
+  <line x1="75" y1="110" x2="35" y2="95" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="75" y1="110" x2="30" y2="115" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="75" y1="110" x2="40" y2="130" stroke="#3a3a3a" stroke-width="1"/>
+
+  <!-- Right wing (membrane structure) -->
+  <path d="M 125 110 Q 155 90 175 120 Q 165 130 150 125 Q 135 115 125 110"
+        fill="#5a5a5a" stroke="#3a3a3a" stroke-width="1"/>
+  <!-- Wing fingers -->
+  <line x1="125" y1="110" x2="165" y2="95" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="125" y1="110" x2="170" y2="115" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="125" y1="110" x2="160" y2="130" stroke="#3a3a3a" stroke-width="1"/>
+
+  <!-- Wing membrane details -->
+  <path d="M 75 110 Q 100 100 125 110" fill="none" stroke="#3a3a3a" stroke-width="0.5"/>
+  <path d="M 75 110 Q 90 105 100 110 Q 110 105 125 110" fill="none" stroke="#3a3a3a" stroke-width="0.5"/>
+
+  <!-- Tail membrane -->
+  <path d="M 85 150 Q 100 165 115 150" fill="#5a5a5a" stroke="#3a3a3a" stroke-width="1"/>
+
+  <!-- Legs -->
+  <ellipse cx="92" cy="155" rx="3" ry="8" fill="#3a3a3a"/>
+  <ellipse cx="108" cy="155" rx="3" ry="8" fill="#3a3a3a"/>
+
+  <!-- Feet -->
+  <circle cx="90" cy="162" r="2" fill="#2a2a2a"/>
+  <circle cx="94" cy="162" r="2" fill="#2a2a2a"/>
+  <circle cx="106" cy="162" r="2" fill="#2a2a2a"/>
+  <circle cx="110" cy="162" r="2" fill="#2a2a2a"/>
+</svg>
