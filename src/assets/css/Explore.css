@@ -55,17 +55,23 @@
 }
 
 .folder-item {
-  background: linear-gradient(135deg, var(--bg-hero) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 6px 12px var(--shadow-light);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-  cursor: pointer;
-  display: block;
-  min-height: 160px;
-}
+   background: linear-gradient(135deg, var(--bg-hero) 0%, rgba(255, 255, 255, 0.05) 100%);
+   border: 1px solid var(--border-color);
+   border-radius: 10px;
+   padding: 25px;
+   text-align: center;
+   box-shadow: 0 6px 12px var(--shadow-light);
+   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+   cursor: pointer;
+   display: block;
+   min-height: 160px;
+   text-decoration: none;
+ }
+
+ .folder-item-link {
+   text-decoration: none;
+   display: block;
+ }
 
 .folder-item:hover {
   transform: translateY(-8px);

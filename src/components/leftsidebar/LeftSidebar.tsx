@@ -18,6 +18,7 @@ interface Quiz {
   routePrefix: string;
   category: string;
   icon: string;
+  realIcon?: string;
   iconAlt: string;
   active: boolean;
   priority: number;
@@ -54,12 +55,11 @@ const LeftSidebar: React.FC = () => {
               <li key={quiz.id}>
                 <Link to={quiz.route}>
                   <img
-                    src={quiz.icon}
+                    src={quiz.icon || quiz.realIcon}
                     alt={quiz.iconAlt}
                     className="sidebar-icon"
                     onError={(e) => {
                       debug.log('Rendering LeftSidebar quiz.icon', e);
-                      console.error('Rendering Second LeftSidebar quiz.icon', e);
                       const target = e.target as HTMLImageElement;
                       if (target.src !== iconHome) {
                         target.src = iconHome;

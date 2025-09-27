@@ -1,17 +1,18 @@
 import '../assets/css/Home.css';
+import { Link } from 'react-router-dom';
+import quizzesConfig from '../assets/data/quizzes.json';
 
 const DataFolderWidget = () => {
-  // Data folders from the assets/data directory
-  const dataFolders = [
-    { name: 'AI', path: 'ai', icon: '🤖' },
-    { name: 'Animals', path: 'animals', icon: '🐾' },
-    { name: 'Aquatic Life', path: 'aquatic', icon: '🐠' },
-    { name: 'Birds', path: 'birds', icon: '🐦' },
-    { name: 'Computer Science', path: 'computer_science', icon: '💻' },
-    { name: 'Insects', path: 'insects', icon: '🦋' },
-    { name: 'Space', path: 'space', icon: '🚀' },
-    { name: 'Sports', path: 'sports', icon: '⚽' }
-  ];
+  // Get active quiz categories from config
+  const activeQuizzes = (quizzesConfig as { quizzes: any[] }).quizzes.filter(quiz => quiz.active);
+
+  // Map active categories to display format
+  const dataFolders = activeQuizzes.map(quiz => ({
+    name: quiz.displayName || quiz.name,
+    path: quiz.category,
+    icon: quiz.realIcon || '📚', // Default icon since we have individual icons in config
+    route: quiz.route
+  }));
 
   return (
     <div className="data-folder-widget">
@@ -22,11 +23,13 @@ const DataFolderWidget = () => {
 
       <div className="folder-grid">
         {dataFolders.map((folder, index) => (
-          <div key={index} className="folder-item">
-            <div className="folder-icon">{folder.icon}</div>
-            <h3>{folder.name}</h3>
-            <p>Interactive quizzes and educational content</p>
-          </div>
+          <Link key={index} to={`/quiz/${folder.path}`} className="folder-item-link">
+            <div className="folder-item">
+              <div className="folder-icon">{folder.icon}</div>
+              <h3>{folder.name}</h3>
+              <p>Interactive quizzes and educational content</p>
+            </div>
+          </Link>
         ))}
       </div>
 
