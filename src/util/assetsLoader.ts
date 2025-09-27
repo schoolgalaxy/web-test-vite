@@ -186,6 +186,12 @@ export function safeLoadJson<T>(loader: () => Record<string, T>, fallback: Recor
     return loader();
   } catch (error) {
     console.error('JSON loading failed, using fallback:', error);
+    console.error('Error details:', {
+      message: error instanceof Error ? error.message : String(error),
+      stack: error instanceof Error ? error.stack : 'No stack trace available',
+      fallbackType: typeof fallback,
+      fallbackKeys: Object.keys(fallback)
+    });
     return fallback;
   }
 }

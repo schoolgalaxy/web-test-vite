@@ -5,6 +5,8 @@ import '/src/assets/css/Home.css'; // Assuming Home.css will contain sidebar sty
 import iconHome from '/src/assets/img/icon-home.svg';
 import iconFeedback from '/src/assets/img/icon-feedback.svg';
 import iconAbout from '/src/assets/img/icon-about.svg';
+import debug from '../../util/debug';
+
 
 // Define types for the widget data
 interface Quiz {
@@ -38,18 +40,6 @@ const LeftSidebar: React.FC = () => {
 
   return (
     <div className="left-sidebar">
-      {/* <div className="widget">
-        <div className="widget-header">Categories</div>
-          <ul className="widget-list">
-            <li>
-              <Link to="/Explore">
-                <img src={iconHome} alt="Explore" className="sidebar-icon" />
-                Explore
-              </Link>
-            </li>
-          </ul>
-        </div> */}
-
       {/* Render widgets with their headers */}
       {widgetsData.map((widget: WidgetData) => (
         <div key={widget.title || widget.name} className="widget">
@@ -68,7 +58,8 @@ const LeftSidebar: React.FC = () => {
                     alt={quiz.iconAlt}
                     className="sidebar-icon"
                     onError={(e) => {
-                      // Fallback to a default icon if the specified icon fails to load
+                      debug.log('Rendering LeftSidebar quiz.icon', e);
+                      console.error('Rendering Second LeftSidebar quiz.icon', e);
                       const target = e.target as HTMLImageElement;
                       if (target.src !== iconHome) {
                         target.src = iconHome;

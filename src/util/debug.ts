@@ -6,7 +6,7 @@
 // Debug configuration
 const DEBUG_CONFIG = {
   // Set to true to enable debug logging, false to disable
-  DEBUG_ENABLED: false,
+  DEBUG_ENABLED: true,
 
   // Debug prefixes for different types of logs
   PREFIXES: {
