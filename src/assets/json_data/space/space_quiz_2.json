@@ -1,0 +1,280 @@
+{
+  "unique_id": "space_quiz_002_D4G7H2J9K3",
+  "title": "Advanced Space and Astronomy Quiz",
+  "description": "An advanced quiz exploring deeper concepts in space exploration, cosmology, and astronomical phenomena beyond our solar system.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/space_advanced",
+  "type": "MCQ_10_Hint",
+  "version": 1,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is dark matter?",
+      "answerOptions": [
+        {
+          "text": "Matter that emits no light and is invisible",
+          "isCorrect": true,
+          "rationale": "Dark matter doesn't interact with electromagnetic radiation, making it invisible to telescopes."
+        },
+        {
+          "text": "Black holes that have absorbed all nearby stars",
+          "isCorrect": false,
+          "rationale": "Dark matter is not related to black holes in this way."
+        },
+        {
+          "text": "Regions of space with no stars or galaxies",
+          "isCorrect": false,
+          "rationale": "Dark matter exists throughout the universe, including where we see stars and galaxies."
+        },
+        {
+          "text": "A type of anti-matter that destroys normal matter",
+          "isCorrect": false,
+          "rationale": "Dark matter doesn't destroy normal matter; it interacts gravitationally but not electromagnetically."
+        }
+      ],
+      "hint": "This mysterious substance is detected only through its gravitational effects on visible matter."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the observable universe?",
+      "answerOptions": [
+        {
+          "text": "The entire universe as we can possibly know it",
+          "isCorrect": false,
+          "rationale": "The observable universe is limited by the speed of light and the age of the universe."
+        },
+        {
+          "text": "The portion of the universe that we can see from Earth",
+          "isCorrect": true,
+          "rationale": "It's the part of the universe from which light has had time to reach us since the Big Bang."
+        },
+        {
+          "text": "The universe that exists within our galaxy",
+          "isCorrect": false,
+          "rationale": "The observable universe extends far beyond our galaxy."
+        },
+        {
+          "text": "The universe that can be observed with current technology",
+          "isCorrect": false,
+          "rationale": "It's limited by physics (light speed) rather than just technology."
+        }
+      ],
+      "hint": "The boundary is determined by the speed of light and cosmic expansion."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What causes a solar eclipse?",
+      "answerOptions": [
+        {
+          "text": "The Earth passing between the Sun and Moon",
+          "isCorrect": false,
+          "rationale": "This alignment would cause a lunar eclipse."
+        },
+        {
+          "text": "The Moon passing between the Earth and Sun",
+          "isCorrect": true,
+          "rationale": "When the Moon's orbit brings it directly between Earth and the Sun, it casts a shadow on Earth."
+        },
+        {
+          "text": "The Sun, Earth, and Moon forming a right angle",
+          "isCorrect": false,
+          "rationale": "A right angle alignment doesn't cause eclipses."
+        },
+        {
+          "text": "The Moon being on the opposite side of Earth from the Sun",
+          "isCorrect": false,
+          "rationale": "This alignment causes a full moon but not an eclipse."
+        }
+      ],
+      "hint": "The Moon acts like a screen blocking the Sun's light from reaching Earth."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is a supernova?",
+      "answerOptions": [
+        {
+          "text": "A new star forming from cosmic dust",
+          "isCorrect": false,
+          "rationale": "A supernova is the explosive death of a star, not its birth."
+        },
+        {
+          "text": "The explosion of a massive star at the end of its life",
+          "isCorrect": true,
+          "rationale": "When massive stars run out of nuclear fuel, they collapse and explode in a supernova."
+        },
+        {
+          "text": "A collision between two galaxies",
+          "isCorrect": false,
+          "rationale": "Galaxy collisions don't typically cause supernovae."
+        },
+        {
+          "text": "A black hole consuming nearby stars",
+          "isCorrect": false,
+          "rationale": "While black holes can disrupt stars, this isn't called a supernova."
+        }
+      ],
+      "hint": "This catastrophic event marks the dramatic end of a massive star's life cycle."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the heliosphere?",
+      "answerOptions": [
+        {
+          "text": "The Sun's outer atmosphere",
+          "isCorrect": false,
+          "rationale": "The heliosphere extends much farther than the Sun's atmosphere."
+        },
+        {
+          "text": "The bubble created by the solar wind extending to the edge of our solar system",
+          "isCorrect": true,
+          "rationale": "The heliosphere is the vast region of space influenced by the Sun's solar wind and magnetic field."
+        },
+        {
+          "text": "The area around a black hole",
+          "isCorrect": false,
+          "rationale": "This is called an event horizon, not a heliosphere."
+        },
+        {
+          "text": "The region between Mars and Jupiter",
+          "isCorrect": false,
+          "rationale": "This is the asteroid belt, not the heliosphere."
+        }
+      ],
+      "hint": "It's like an enormous bubble that surrounds and protects our solar system."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is cosmic microwave background radiation?",
+      "answerOptions": [
+        {
+          "text": "Radiation from stars in distant galaxies",
+          "isCorrect": false,
+          "rationale": "CMB is much older than stars and galaxies."
+        },
+        {
+          "text": "The afterglow of the Big Bang",
+          "isCorrect": true,
+          "rationale": "CMB is the thermal radiation left over from the hot, dense state of the early universe."
+        },
+        {
+          "text": "Microwaves used to communicate with spacecraft",
+          "isCorrect": false,
+          "rationale": "While we use microwaves for space communication, this is different from CMB."
+        },
+        {
+          "text": "Radiation from the Sun's corona",
+          "isCorrect": false,
+          "rationale": "Solar radiation is much more recent and energetic than CMB."
+        }
+      ],
+      "hint": "This is the oldest light in the universe, dating back to when it was just 380,000 years old."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the main component of the universe?",
+      "answerOptions": [
+        {
+          "text": "Ordinary matter (stars, planets, gas)",
+          "isCorrect": false,
+          "rationale": "Ordinary matter makes up only about 5% of the universe."
+        },
+        {
+          "text": "Dark energy",
+          "isCorrect": true,
+          "rationale": "Dark energy makes up about 68% of the universe and drives its accelerated expansion."
+        },
+        {
+          "text": "Dark matter",
+          "isCorrect": false,
+          "rationale": "Dark matter accounts for about 27% of the universe."
+        },
+        {
+          "text": "Black holes",
+          "isCorrect": false,
+          "rationale": "Black holes are part of ordinary matter and make up a tiny fraction of the universe."
+        }
+      ],
+      "hint": "This mysterious force is causing the universe to expand at an accelerating rate."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is gravitational lensing?",
+      "answerOptions": [
+        {
+          "text": "The bending of light by glass lenses in telescopes",
+          "isCorrect": false,
+          "rationale": "This refers to optical lensing, not gravitational effects."
+        },
+        {
+          "text": "The bending of light by massive objects in space",
+          "isCorrect": true,
+          "rationale": "Massive objects warp spacetime, causing light rays to bend as they pass by."
+        },
+        {
+          "text": "The focusing of sound waves in space",
+          "isCorrect": false,
+          "rationale": "Sound doesn't travel through the vacuum of space."
+        },
+        {
+          "text": "The distortion of radio signals by Earth's atmosphere",
+          "isCorrect": false,
+          "rationale": "This is atmospheric interference, not gravitational lensing."
+        }
+      ],
+      "hint": "Einstein predicted that gravity could bend light, just like it bends space and time."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is a pulsar?",
+      "answerOptions": [
+        {
+          "text": "A rapidly rotating neutron star that emits beams of radiation",
+          "isCorrect": true,
+          "rationale": "Pulsars are highly magnetized, rotating neutron stars that appear to pulse as they rotate."
+        },
+        {
+          "text": "A type of variable star that changes brightness",
+          "isCorrect": false,
+          "rationale": "While pulsars vary in brightness, they are not stars but stellar remnants."
+        },
+        {
+          "text": "A rapidly spinning black hole",
+          "isCorrect": false,
+          "rationale": "Black holes don't emit radiation in the same way pulsars do."
+        },
+        {
+          "text": "A planet with a very short orbital period",
+          "isCorrect": false,
+          "rationale": "Pulsars are stellar remnants, not planets."
+        }
+      ],
+      "hint": "These objects are like cosmic lighthouses, spinning rapidly and sending out beams of energy."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the fate of our universe according to current scientific understanding?",
+      "answerOptions": [
+        {
+          "text": "It will eventually collapse back into a single point",
+          "isCorrect": false,
+          "rationale": "This would be a Big Crunch, but current evidence suggests otherwise."
+        },
+        {
+          "text": "It will expand forever at an accelerating rate",
+          "isCorrect": true,
+          "rationale": "Due to dark energy, the universe's expansion is accelerating, suggesting it will expand forever."
+        },
+        {
+          "text": "It will reach a steady state and stop changing",
+          "isCorrect": false,
+          "rationale": "The universe shows no signs of reaching a steady state."
+        },
+        {
+          "text": "It will eventually start contracting due to gravity",
+          "isCorrect": false,
+          "rationale": "Dark energy appears to be overcoming gravity's attractive force."
+        }
+      ],
+      "hint": "The discovery of dark energy has changed our understanding of the universe's ultimate fate."
+    }
+  ]
+}

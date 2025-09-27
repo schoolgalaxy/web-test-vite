@@ -1,0 +1,280 @@
+{
+  "unique_id": "mars_quiz_001_M4R5P1A2N3",
+  "title": "Mars: The Red Planet Quiz",
+  "description": "A comprehensive quiz exploring the fascinating world of Mars, including its geology, atmosphere, exploration history, and potential for life.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/mars",
+  "type": "MCQ_10_Hint",
+  "version": 1,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Why is Mars called the 'Red Planet'?",
+      "answerOptions": [
+        {
+          "text": "Because of its hot surface temperature",
+          "isCorrect": false,
+          "rationale": "Mars appears red due to iron oxide on its surface, not its temperature."
+        },
+        {
+          "text": "Because of iron oxide (rust) in its soil",
+          "isCorrect": true,
+          "rationale": "The reddish color comes from iron oxide minerals in the Martian soil and dust."
+        },
+        {
+          "text": "Because of its position in the solar system",
+          "isCorrect": false,
+          "rationale": "While Mars is the fourth planet from the Sun, this doesn't cause its red color."
+        },
+        {
+          "text": "Because of its two small moons",
+          "isCorrect": false,
+          "rationale": "The moons Phobos and Deimos don't affect the planet's color."
+        }
+      ],
+      "hint": "The color comes from the same mineral that gives Earth rocks their reddish tint."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the largest volcano in the solar system?",
+      "answerOptions": [
+        {
+          "text": "Mauna Kea on Earth",
+          "isCorrect": false,
+          "rationale": "While Mauna Kea is tall, it's much smaller than Olympus Mons."
+        },
+        {
+          "text": "Olympus Mons on Mars",
+          "isCorrect": true,
+          "rationale": "Olympus Mons is about 13.6 miles (22 km) high and 370 miles (600 km) wide at its base."
+        },
+        {
+          "text": "Maxwell Montes on Venus",
+          "isCorrect": false,
+          "rationale": "Venus has high mountains, but none as large as Olympus Mons."
+        },
+        {
+          "text": "Boösaule Mons on Io",
+          "isCorrect": false,
+          "rationale": "Io's mountains are impressive but much smaller than Martian volcanoes."
+        }
+      ],
+      "hint": "This enormous volcano is located on Mars and is about three times taller than Mount Everest."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the atmosphere of Mars primarily composed of?",
+      "answerOptions": [
+        {
+          "text": "Oxygen and nitrogen (like Earth)",
+          "isCorrect": false,
+          "rationale": "Mars has a very thin atmosphere with different composition than Earth."
+        },
+        {
+          "text": "Carbon dioxide (about 95%)",
+          "isCorrect": true,
+          "rationale": "Mars' atmosphere is 95% carbon dioxide, with traces of nitrogen and argon."
+        },
+        {
+          "text": "Methane and hydrogen",
+          "isCorrect": false,
+          "rationale": "While traces of methane have been detected, it's not the primary component."
+        },
+        {
+          "text": "Sulfur dioxide and carbon monoxide",
+          "isCorrect": false,
+          "rationale": "These gases are not the main components of Mars' atmosphere."
+        }
+      ],
+      "hint": "The primary gas is the same one that causes the greenhouse effect on Venus."
+    },
+    {
+      "questionNumber": 4,
+      "question": "How long does it take Mars to orbit the Sun?",
+      "answerOptions": [
+        {
+          "text": "88 Earth days",
+          "isCorrect": false,
+          "rationale": "This is Mercury's orbital period, not Mars'."
+        },
+        {
+          "text": "365 Earth days",
+          "isCorrect": false,
+          "rationale": "This is Earth's orbital period, not Mars'."
+        },
+        {
+          "text": "687 Earth days",
+          "isCorrect": true,
+          "rationale": "A Martian year is 687 Earth days, almost twice as long as Earth's year."
+        },
+        {
+          "text": "1,650 Earth days",
+          "isCorrect": false,
+          "rationale": "This would be much longer than Mars' actual orbital period."
+        }
+      ],
+      "hint": "Mars is farther from the Sun than Earth, so it takes longer to complete one orbit."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What are the names of Mars' two moons?",
+      "answerOptions": [
+        {
+          "text": "Ganymede and Callisto",
+          "isCorrect": false,
+          "rationale": "These are moons of Jupiter, not Mars."
+        },
+        {
+          "text": "Phobos and Deimos",
+          "isCorrect": true,
+          "rationale": "Phobos (fear) and Deimos (panic) are Mars' two small, irregularly shaped moons."
+        },
+        {
+          "text": "Titan and Enceladus",
+          "isCorrect": false,
+          "rationale": "These are moons of Saturn, not Mars."
+        },
+        {
+          "text": "Triton and Nereid",
+          "isCorrect": false,
+          "rationale": "These are moons of Neptune, not Mars."
+        }
+      ],
+      "hint": "These names come from Greek mythology, representing the sons of the god of war."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What evidence suggests that Mars once had liquid water?",
+      "answerOptions": [
+        {
+          "text": "Current rivers and lakes on the surface",
+          "isCorrect": false,
+          "rationale": "Mars is currently too cold and dry for liquid water on the surface."
+        },
+        {
+          "text": "Ancient riverbeds, lake basins, and mineral deposits",
+          "isCorrect": true,
+          "rationale": "Geological features like dried-up river valleys and minerals that form in water indicate past water activity."
+        },
+        {
+          "text": "Ice caps at the poles",
+          "isCorrect": false,
+          "rationale": "While polar ice caps exist, they don't prove liquid water existed in the past."
+        },
+        {
+          "text": "Cloud formations in the atmosphere",
+          "isCorrect": false,
+          "rationale": "Clouds can form without indicating past liquid water."
+        }
+      ],
+      "hint": "Look for geological features that could only have been formed by flowing water."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the primary reason Mars has such extreme temperature variations?",
+      "answerOptions": [
+        {
+          "text": "Its elliptical orbit",
+          "isCorrect": false,
+          "rationale": "While the orbit affects seasons, it's not the primary reason for temperature extremes."
+        },
+        {
+          "text": "Its thin atmosphere",
+          "isCorrect": true,
+          "rationale": "Mars' thin atmosphere (1% of Earth's pressure) cannot retain heat well, causing extreme temperature swings."
+        },
+        {
+          "text": "Its distance from the Sun",
+          "isCorrect": false,
+          "rationale": "Distance affects average temperature but not daily variations as much as atmospheric thickness."
+        },
+        {
+          "text": "Volcanic activity on the surface",
+          "isCorrect": false,
+          "rationale": "While Mars had volcanoes in the past, current temperature variations aren't caused by active volcanoes."
+        }
+      ],
+      "hint": "The atmosphere acts like a blanket that traps heat - Mars has a very thin blanket."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which spacecraft was the first to successfully land on Mars?",
+      "answerOptions": [
+        {
+          "text": "Viking 1",
+          "isCorrect": true,
+          "rationale": "Viking 1 successfully landed on Mars on July 20, 1976, in the Chryse Planitia region."
+        },
+        {
+          "text": "Mars Pathfinder",
+          "isCorrect": false,
+          "rationale": "Mars Pathfinder landed in 1997, after Viking 1."
+        },
+        {
+          "text": "Spirit rover",
+          "isCorrect": false,
+          "rationale": "Spirit landed in 2004, much later than Viking 1."
+        },
+        {
+          "text": "Curiosity rover",
+          "isCorrect": false,
+          "rationale": "Curiosity landed in 2012, long after Viking 1."
+        }
+      ],
+      "hint": "This historic landing occurred during America's bicentennial year."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the Valles Marineris?",
+      "answerOptions": [
+        {
+          "text": "Mars' largest moon",
+          "isCorrect": false,
+          "rationale": "Valles Marineris is a geological feature on Mars' surface."
+        },
+        {
+          "text": "A massive canyon system on Mars",
+          "isCorrect": true,
+          "rationale": "Valles Marineris is the largest canyon system in the solar system, stretching 2,500 miles long."
+        },
+        {
+          "text": "Mars' polar ice cap",
+          "isCorrect": false,
+          "rationale": "The polar ice caps are different features from Valles Marineris."
+        },
+        {
+          "text": "A dust storm on Mars",
+          "isCorrect": false,
+          "rationale": "Valles Marineris is a permanent geological feature, not a weather phenomenon."
+        }
+      ],
+      "hint": "This enormous feature makes Earth's Grand Canyon look like a small ditch."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the current status of the Mars rover Perseverance?",
+      "answerOptions": [
+        {
+          "text": "It crashed during landing",
+          "isCorrect": false,
+          "rationale": "Perseverance successfully landed on Mars in February 2021."
+        },
+        {
+          "text": "It is currently exploring Jezero Crater on Mars",
+          "isCorrect": true,
+          "rationale": "Perseverance is actively exploring Mars, collecting samples, and operating the Ingenuity helicopter."
+        },
+        {
+          "text": "It completed its mission and returned to Earth",
+          "isCorrect": false,
+          "rationale": "Perseverance is still operational on Mars and its mission is ongoing."
+        },
+        {
+          "text": "It is in transit back to Earth with samples",
+          "isCorrect": false,
+          "rationale": "Perseverance is collecting samples for a future return mission, but hasn't launched them yet."
+        }
+      ],
+      "hint": "This rover is the most advanced Mars mission to date and is still operational."
+    }
+  ]
+}

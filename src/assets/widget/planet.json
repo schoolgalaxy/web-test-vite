@@ -1,4 +1,5 @@
 {
+  "title": "Planet Plaza",
   "quizzes": [
     {
       "id": "ai",
@@ -25,45 +26,6 @@
       "iconAlt": "Computer Science",
       "active": true,
       "priority": 100
-    },
-    {
-      "id": "birds",
-      "name": "Birds Questionaries",
-      "displayName": "Birds Quiz",
-      "description": "Explore the world of birds with our engaging quizzes!",
-      "route": "/quiz/birds",
-      "routePrefix": "/quiz/birds",
-      "category": "birds",
-      "icon": "/src/assets/img/icon-birds.svg",
-      "iconAlt": "Birds",
-      "active": true,
-      "priority": 10
-    },
-    {
-      "id": "animals",
-      "name": "Animals Questionaries",
-      "displayName": "Animals Quiz",
-      "description": "Test your knowledge about various animals!",
-      "route": "/quiz/animals",
-      "routePrefix": "/quiz/animals",
-      "category": "animals",
-      "icon": "/src/assets/img/icon-animals.svg",
-      "iconAlt": "Animals",
-      "active": true,
-      "priority": 20
-    },
-    {
-      "id": "aquatic",
-      "name": "Aquatic Questionaries",
-      "displayName": "Aquatic Quiz",
-      "description": "Dive into aquatic life quizzes!",
-      "route": "/quiz/aquatic",
-      "routePrefix": "/quiz/aquatic",
-      "category": "aquatic",
-      "icon": "/src/assets/img/icon-aquatic.svg",
-      "iconAlt": "Aquatic",
-      "active": true,
-      "priority": 30
     },
     {
       "id": "cars",

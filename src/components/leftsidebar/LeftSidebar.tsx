@@ -6,7 +6,7 @@ import iconHome from '/src/assets/img/icon-home.svg';
 import iconFeedback from '/src/assets/img/icon-feedback.svg';
 import iconAbout from '/src/assets/img/icon-about.svg';
 
-// Define types for the quiz data
+// Define types for the widget data
 interface Quiz {
   id: string;
   name: string;
@@ -21,55 +21,67 @@ interface Quiz {
   priority: number;
 }
 
-interface QuizzesData {
+interface WidgetData {
+  title?: string;
+  name?: string;
   quizzes: Quiz[];
 }
 
-// Import JSON data with proper typing
-import quizzesData from '../../assets/json_data/quizzes.json';
+// Import widget loading utilities
+import { loadWidgetsData } from '../../util/widgetLoader';
 
 const LeftSidebar: React.FC = () => {
   const { user } = useAuthenticator();
 
+  // Load widgets data
+  const widgetsData = loadWidgetsData();
+
   return (
     <div className="left-sidebar">
-      <div className="widget">
+      {/* <div className="widget">
         <div className="widget-header">Categories</div>
-        <ul className="widget-list">
-          <li>
-            <Link to="/Explore">
-              <img src={iconHome} alt="Explore" className="sidebar-icon" />
-              Explore
-            </Link>
-          </li>
-          {/* <li><Link to="/class-1-5">Class 1-5</Link></li>
-          <li><Link to="/class-5-9">Class 5-9</Link></li> */}
-
-          {/* Dynamic quiz links generated from JSON */}
-          {(quizzesData as QuizzesData).quizzes
-            .filter((quiz: Quiz) => quiz.active)
-            .sort((a: Quiz, b: Quiz) => a.priority - b.priority)
-            .map((quiz: Quiz) => (
-            <li key={quiz.id}>
-              <Link to={quiz.route}>
-                <img
-                  src={quiz.icon}
-                  alt={quiz.iconAlt}
-                  className="sidebar-icon"
-                  onError={(e) => {
-                    // Fallback to a default icon if the specified icon fails to load
-                    const target = e.target as HTMLImageElement;
-                    if (target.src !== iconHome) {
-                      target.src = iconHome;
-                    }
-                  }}
-                />
-                {quiz.displayName}
+          <ul className="widget-list">
+            <li>
+              <Link to="/Explore">
+                <img src={iconHome} alt="Explore" className="sidebar-icon" />
+                Explore
               </Link>
             </li>
-          ))}
-        </ul>
-      </div>
+          </ul>
+        </div> */}
+
+      {/* Render widgets with their headers */}
+      {widgetsData.map((widget: WidgetData) => (
+        <div key={widget.title || widget.name} className="widget">
+          <div className="widget-header">
+            {widget.title || widget.name}
+          </div>
+          <ul className="widget-list">
+            {widget.quizzes
+              .filter((quiz: Quiz) => quiz.active)
+              .sort((a: Quiz, b: Quiz) => a.priority - b.priority)
+              .map((quiz: Quiz) => (
+              <li key={quiz.id}>
+                <Link to={quiz.route}>
+                  <img
+                    src={quiz.icon}
+                    alt={quiz.iconAlt}
+                    className="sidebar-icon"
+                    onError={(e) => {
+                      // Fallback to a default icon if the specified icon fails to load
+                      const target = e.target as HTMLImageElement;
+                      if (target.src !== iconHome) {
+                        target.src = iconHome;
+                      }
+                    }}
+                  />
+                  {quiz.displayName}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
 
       {!user && (
         <div className="widget">
@@ -84,7 +96,7 @@ const LeftSidebar: React.FC = () => {
           </ul>
         </div>
       )}
-      
+
       <div className="widget">
         {/* <div className="widget-header">Follow Us</div> */}
         <ul className="widget-list">

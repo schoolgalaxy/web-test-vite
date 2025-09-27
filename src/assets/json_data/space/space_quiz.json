@@ -1,0 +1,280 @@
+{
+  "unique_id": "space_quiz_001_F9E2A5C8B1",
+  "title": "Space Exploration and Astronomy Quiz",
+  "description": "A comprehensive quiz covering fundamental concepts in space exploration, astronomy, and our understanding of the universe beyond Earth.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/space",
+  "type": "MCQ_10_Hint",
+  "version": 1,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the largest celestial object in our solar system?",
+      "answerOptions": [
+        {
+          "text": "The Moon",
+          "isCorrect": false,
+          "rationale": "The Moon is Earth's natural satellite, but it's much smaller than the Sun."
+        },
+        {
+          "text": "The Sun",
+          "isCorrect": true,
+          "rationale": "The Sun contains 99.86% of the Solar System's mass and is by far the largest object."
+        },
+        {
+          "text": "Jupiter",
+          "isCorrect": false,
+          "rationale": "While Jupiter is the largest planet, it's much smaller than the Sun."
+        },
+        {
+          "text": "Saturn",
+          "isCorrect": false,
+          "rationale": "Saturn is less massive than Jupiter and much smaller than the Sun."
+        }
+      ],
+      "hint": "Consider what provides the gravitational force that holds our entire solar system together."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is a black hole?",
+      "answerOptions": [
+        {
+          "text": "A hole in space where stars used to be",
+          "isCorrect": false,
+          "rationale": "Black holes are not literal holes but extremely dense regions of space."
+        },
+        {
+          "text": "A region where gravity is so strong that nothing, not even light, can escape",
+          "isCorrect": true,
+          "rationale": "This is the scientific definition of a black hole - a region with gravitational effects so strong that nothing can escape."
+        },
+        {
+          "text": "A type of dark star that doesn't emit light",
+          "isCorrect": false,
+          "rationale": "While black holes don't emit light, this definition is too simplistic and not entirely accurate."
+        },
+        {
+          "text": "An area of space completely empty of matter",
+          "isCorrect": false,
+          "rationale": "Black holes actually contain highly concentrated matter, not empty space."
+        }
+      ],
+      "hint": "The key characteristic is about escape velocity exceeding the speed of light."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What causes the phases of the Moon?",
+      "answerOptions": [
+        {
+          "text": "The Earth's shadow falling on the Moon",
+          "isCorrect": false,
+          "rationale": "Earth's shadow causes lunar eclipses, not the monthly phases."
+        },
+        {
+          "text": "The Moon's rotation on its axis",
+          "isCorrect": false,
+          "rationale": "The Moon's rotation doesn't cause the phases we observe from Earth."
+        },
+        {
+          "text": "The relative positions of the Sun, Earth, and Moon",
+          "isCorrect": true,
+          "rationale": "Moon phases result from the changing angles between the Sun, Earth, and Moon as they orbit."
+        },
+        {
+          "text": "The Moon's distance from Earth changing",
+          "isCorrect": false,
+          "rationale": "While distance affects apparent size, it doesn't cause the phases."
+        }
+      ],
+      "hint": "Think about how much of the Moon's sunlit side we can see from Earth."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the Big Bang Theory?",
+      "answerOptions": [
+        {
+          "text": "A theory about how the universe will end",
+          "isCorrect": false,
+          "rationale": "The Big Bang Theory explains the universe's beginning, not its end."
+        },
+        {
+          "text": "The prevailing cosmological model explaining the universe's origin",
+          "isCorrect": true,
+          "rationale": "The Big Bang Theory states that the universe began from a hot, dense state approximately 13.8 billion years ago."
+        },
+        {
+          "text": "A theory about black holes and their formation",
+          "isCorrect": false,
+          "rationale": "This relates more to stellar evolution than the Big Bang Theory."
+        },
+        {
+          "text": "An explanation of how galaxies form",
+          "isCorrect": false,
+          "rationale": "While the Big Bang explains the early universe, galaxy formation is a separate process."
+        }
+      ],
+      "hint": "This theory explains the most accepted scientific model for how everything began."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which planet in our solar system has a day longer than its year?",
+      "answerOptions": [
+        {
+          "text": "Mercury",
+          "isCorrect": false,
+          "rationale": "Mercury has the shortest year but its day is shorter than Earth's."
+        },
+        {
+          "text": "Venus",
+          "isCorrect": true,
+          "rationale": "Venus rotates very slowly, taking 243 Earth days for one rotation but only 225 Earth days to orbit the Sun."
+        },
+        {
+          "text": "Mars",
+          "isCorrect": false,
+          "rationale": "Mars has a day very similar to Earth's (about 24.6 hours)."
+        },
+        {
+          "text": "Jupiter",
+          "isCorrect": false,
+          "rationale": "Jupiter has a very short day (about 10 hours) compared to its long year."
+        }
+      ],
+      "hint": "Look for the planet with extremely slow rotation but relatively fast orbit."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is a light-year?",
+      "answerOptions": [
+        {
+          "text": "The time it takes light to travel around Earth",
+          "isCorrect": false,
+          "rationale": "A light-year is a distance, not a time measurement."
+        },
+        {
+          "text": "The distance light travels in one year",
+          "isCorrect": true,
+          "rationale": "A light-year is the distance that light travels through space in one Earth year."
+        },
+        {
+          "text": "The brightness of a star",
+          "isCorrect": false,
+          "rationale": "This would be measured in luminosity or magnitude, not light-years."
+        },
+        {
+          "text": "The age of a star",
+          "isCorrect": false,
+          "rationale": "Light-years measure distance, not time or age."
+        }
+      ],
+      "hint": "It's a unit of distance, not time, and involves the speed of light."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of our galaxy?",
+      "answerOptions": [
+        {
+          "text": "Andromeda Galaxy",
+          "isCorrect": false,
+          "rationale": "Andromeda is the closest major galaxy to the Milky Way."
+        },
+        {
+          "text": "Milky Way Galaxy",
+          "isCorrect": true,
+          "rationale": "The Milky Way is the galaxy that contains our Solar System."
+        },
+        {
+          "text": "Sombrero Galaxy",
+          "isCorrect": false,
+          "rationale": "The Sombrero Galaxy is a different galaxy visible from Earth."
+        },
+        {
+          "text": "Whirlpool Galaxy",
+          "isCorrect": false,
+          "rationale": "The Whirlpool Galaxy is another spiral galaxy in the constellation Canes Venatici."
+        }
+      ],
+      "hint": "The name refers to the hazy band of light we can see across the night sky."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What causes the seasons on Earth?",
+      "answerOptions": [
+        {
+          "text": "Changes in Earth's distance from the Sun",
+          "isCorrect": false,
+          "rationale": "Earth's distance from the Sun varies slightly but doesn't cause seasons."
+        },
+        {
+          "text": "The tilt of Earth's axis",
+          "isCorrect": true,
+          "rationale": "Earth's 23.5-degree axial tilt causes different hemispheres to receive more or less sunlight throughout the year."
+        },
+        {
+          "text": "The Sun's changing brightness",
+          "isCorrect": false,
+          "rationale": "The Sun's output is relatively constant and doesn't cause seasonal changes."
+        },
+        {
+          "text": "Ocean currents and wind patterns",
+          "isCorrect": false,
+          "rationale": "These are effects of seasons, not the primary cause."
+        }
+      ],
+      "hint": "Think about why the Northern and Southern Hemispheres have opposite seasons."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is a constellation?",
+      "answerOptions": [
+        {
+          "text": "A group of stars that form a pattern",
+          "isCorrect": true,
+          "rationale": "Constellations are recognized patterns of stars that have been named and catalogued."
+        },
+        {
+          "text": "A type of telescope",
+          "isCorrect": false,
+          "rationale": "Constellations are star patterns, not instruments for viewing them."
+        },
+        {
+          "text": "A region of space with no stars",
+          "isCorrect": false,
+          "rationale": "Constellations are actually groups of stars that appear close together from Earth."
+        },
+        {
+          "text": "A planet with rings",
+          "isCorrect": false,
+          "rationale": "This describes Saturn, not a constellation."
+        }
+      ],
+      "hint": "It's about how stars appear to be arranged when viewed from Earth."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the primary purpose of the International Space Station?",
+      "answerOptions": [
+        {
+          "text": "To serve as a hotel for space tourists",
+          "isCorrect": false,
+          "rationale": "While some tourists have visited, this is not the primary purpose."
+        },
+        {
+          "text": "To conduct scientific research in microgravity",
+          "isCorrect": true,
+          "rationale": "The ISS is a laboratory for conducting experiments in space that benefit life on Earth."
+        },
+        {
+          "text": "To test weapons in space",
+          "isCorrect": false,
+          "rationale": "The ISS is dedicated to peaceful scientific research and international cooperation."
+        },
+        {
+          "text": "To serve as a military outpost",
+          "isCorrect": false,
+          "rationale": "The ISS is a civilian science platform, not a military installation."
+        }
+      ],
+      "hint": "The ISS orbits Earth to take advantage of conditions not available on the ground."
+    }
+  ]
+}

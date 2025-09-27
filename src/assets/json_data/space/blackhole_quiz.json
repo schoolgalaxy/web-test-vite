@@ -1,0 +1,280 @@
+{
+  "unique_id": "blackhole_quiz_001_B5H7O9L2E4",
+  "title": "Black Holes: The Ultimate Cosmic Mysteries Quiz",
+  "description": "A comprehensive quiz exploring black holes, including their formation, properties, types, effects on spacetime, and their role in the universe.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/blackhole",
+  "type": "MCQ_10_Hint",
+  "version": 1,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the defining characteristic of a black hole?",
+      "answerOptions": [
+        {
+          "text": "It emits Hawking radiation",
+          "isCorrect": false,
+          "rationale": "While black holes do emit Hawking radiation, this isn't their defining characteristic."
+        },
+        {
+          "text": "It has an event horizon beyond which nothing can escape",
+          "isCorrect": true,
+          "rationale": "The event horizon is the boundary where escape velocity exceeds the speed of light."
+        },
+        {
+          "text": "It is completely invisible",
+          "isCorrect": false,
+          "rationale": "Black holes can be detected through their effects on nearby matter and light."
+        },
+        {
+          "text": "It consumes nearby stars",
+          "isCorrect": false,
+          "rationale": "While some black holes do have accretion disks, this isn't their primary characteristic."
+        }
+      ],
+      "hint": "The point of no return is called the event horizon, where gravity's pull becomes inescapable."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the Schwarzschild radius?",
+      "answerOptions": [
+        {
+          "text": "The temperature of a black hole",
+          "isCorrect": false,
+          "rationale": "The Schwarzschild radius is a distance, not a temperature measurement."
+        },
+        {
+          "text": "The radius of the event horizon",
+          "isCorrect": true,
+          "rationale": "It's the radius below which nothing can escape the black hole's gravity."
+        },
+        {
+          "text": "The distance at which a black hole's gravity equals a star's",
+          "isCorrect": false,
+          "rationale": "The Schwarzschild radius is specifically the event horizon radius."
+        },
+        {
+          "text": "The orbital distance of the innermost stable orbit",
+          "isCorrect": false,
+          "rationale": "This is a different distance, closer to the black hole than the Schwarzschild radius."
+        }
+      ],
+      "hint": "This radius marks the boundary between normal space and the black hole's interior."
+    },
+    {
+      "questionNumber": 3,
+      "question": "How do stellar-mass black holes form?",
+      "answerOptions": [
+        {
+          "text": "From the collapse of small stars like our Sun",
+          "isCorrect": false,
+          "rationale": "Stars like our Sun become white dwarfs, not black holes."
+        },
+        {
+          "text": "From the supernova explosion of massive stars",
+          "isCorrect": true,
+          "rationale": "Stars with more than about 20 solar masses end their lives as supernovae, leaving black holes."
+        },
+        {
+          "text": "From the merger of neutron stars",
+          "isCorrect": false,
+          "rationale": "While neutron star mergers can create black holes, stellar-mass black holes form from single massive stars."
+        },
+        {
+          "text": "From the collision of white dwarf stars",
+          "isCorrect": false,
+          "rationale": "White dwarf collisions can cause supernovae but don't typically form black holes."
+        }
+      ],
+      "hint": "Only the most massive stars in the universe meet this dramatic end."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is a supermassive black hole?",
+      "answerOptions": [
+        {
+          "text": "A black hole that has consumed an entire galaxy",
+          "isCorrect": false,
+          "rationale": "Supermassive black holes exist at galactic centers but don't consume entire galaxies."
+        },
+        {
+          "text": "A black hole with millions to billions of solar masses",
+          "isCorrect": true,
+          "rationale": "Supermassive black holes contain millions to billions of times the Sun's mass."
+        },
+        {
+          "text": "The largest type of black hole possible",
+          "isCorrect": false,
+          "rationale": "There may be even larger black holes, like ultramassive ones."
+        },
+        {
+          "text": "A black hole formed from multiple stellar black holes merging",
+          "isCorrect": false,
+          "rationale": "While mergers can create larger black holes, supermassive ones likely formed differently."
+        }
+      ],
+      "hint": "These monsters lurk at the centers of most galaxies, including our own Milky Way."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What evidence suggests there is a supermassive black hole at the center of our galaxy?",
+      "answerOptions": [
+        {
+          "text": "Direct photographs of the black hole",
+          "isCorrect": false,
+          "rationale": "We cannot photograph black holes directly, but we can image their immediate surroundings."
+        },
+        {
+          "text": "The orbital motions of stars around an invisible massive object",
+          "isCorrect": true,
+          "rationale": "Stars near the galactic center orbit at high speeds, indicating a massive invisible object's presence."
+        },
+        {
+          "text": "X-ray emissions from the black hole itself",
+          "isCorrect": false,
+          "rationale": "While the region emits X-rays, this comes from hot gas, not the black hole directly."
+        },
+        {
+          "text": "Gravitational waves detected from the galactic center",
+          "isCorrect": false,
+          "rationale": "No gravitational waves have been detected from the galactic center black hole."
+        }
+      ],
+      "hint": "Astronomers tracked stars orbiting something invisible that must be incredibly massive."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is Hawking radiation?",
+      "answerOptions": [
+        {
+          "text": "Radiation emitted by matter falling into a black hole",
+          "isCorrect": false,
+          "rationale": "This is accretion disk radiation, not Hawking radiation."
+        },
+        {
+          "text": "Quantum radiation predicted to be emitted by black holes",
+          "isCorrect": true,
+          "rationale": "Stephen Hawking predicted that black holes emit tiny amounts of thermal radiation due to quantum effects."
+        },
+        {
+          "text": "Electromagnetic radiation from charged black holes",
+          "isCorrect": false,
+          "rationale": "Black holes are typically electrically neutral."
+        },
+        {
+          "text": "Radiation created by black hole mergers",
+          "isCorrect": false,
+          "rationale": "Black hole mergers produce gravitational waves, not electromagnetic radiation."
+        }
+      ],
+      "hint": "This theoretical radiation suggests that black holes can slowly evaporate over time."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the ergosphere?",
+      "answerOptions": [
+        {
+          "text": "The region inside the event horizon",
+          "isCorrect": false,
+          "rationale": "The ergosphere is outside the event horizon."
+        },
+        {
+          "text": "The region around a rotating black hole where frame-dragging occurs",
+          "isCorrect": true,
+          "rationale": "The ergosphere is the region where space-time is dragged along with the black hole's rotation."
+        },
+        {
+          "text": "The accretion disk around a black hole",
+          "isCorrect": false,
+          "rationale": "The ergosphere is a larger region than the accretion disk."
+        },
+        {
+          "text": "The event horizon of any black hole",
+          "isCorrect": false,
+          "rationale": "The ergosphere only exists for rotating black holes."
+        }
+      ],
+      "hint": "This region demonstrates that rotating black holes have even more complex effects on spacetime."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What happens to time at the event horizon of a black hole?",
+      "answerOptions": [
+        {
+          "text": "Time stops completely",
+          "isCorrect": false,
+          "rationale": "Time doesn't stop, but it does slow down dramatically from an outside observer's perspective."
+        },
+        {
+          "text": "Time dilation becomes extreme (gravitational time dilation)",
+          "isCorrect": true,
+          "rationale": "Intense gravity causes time to pass much slower near the event horizon."
+        },
+        {
+          "text": "Time speeds up dramatically",
+          "isCorrect": false,
+          "rationale": "Strong gravity actually slows down time, it doesn't speed it up."
+        },
+        {
+          "text": "Time flows normally",
+          "isCorrect": false,
+          "rationale": "The intense gravitational field significantly affects the flow of time."
+        }
+      ],
+      "hint": "This is a prediction of Einstein's theory of general relativity."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the information paradox associated with black holes?",
+      "answerOptions": [
+        {
+          "text": "How information about matter is preserved when it falls into a black hole",
+          "isCorrect": true,
+          "rationale": "The paradox questions whether information is lost forever when matter crosses the event horizon."
+        },
+        {
+          "text": "How black holes store information about consumed stars",
+          "isCorrect": false,
+          "rationale": "The paradox is about whether information is destroyed, not stored."
+        },
+        {
+          "text": "How scientists can detect black holes indirectly",
+          "isCorrect": false,
+          "rationale": "Detection methods are well established; the paradox is more fundamental."
+        },
+        {
+          "text": "How black holes communicate with each other",
+          "isCorrect": false,
+          "rationale": "The information paradox is about quantum mechanics and general relativity, not communication."
+        }
+      ],
+      "hint": "This paradox challenges our understanding of quantum mechanics and general relativity."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What would happen if you fell into a black hole?",
+      "answerOptions": [
+        {
+          "text": "You would be instantly crushed by tidal forces",
+          "isCorrect": false,
+          "rationale": "For supermassive black holes, you might not be crushed until much later."
+        },
+        {
+          "text": "You would experience extreme tidal forces (spaghettification)",
+          "isCorrect": true,
+          "rationale": "The difference in gravitational pull on different parts of your body would stretch you dramatically."
+        },
+        {
+          "text": "You would pass through unharmed to another universe",
+          "isCorrect": false,
+          "rationale": "This is science fiction; there's no evidence of wormholes or other universes."
+        },
+        {
+          "text": "You would be vaporized by Hawking radiation",
+          "isCorrect": false,
+          "rationale": "Hawking radiation is far too weak to affect a falling person."
+        }
+      ],
+      "hint": "The technical term for this stretching effect is 'tidal forces' or 'spaghettification'."
+    }
+  ]
+}

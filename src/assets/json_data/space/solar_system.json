@@ -1,0 +1,175 @@
+{
+  "unique_id": "solar_system_quiz",
+  "title": "Our Solar System Planets",
+  "description": "The Solar System consists of the Sun and the astronomical objects bound to it by gravity, including the eight planets and their moons, dwarf planets, asteroids, and comets. Learn about the fascinating worlds that orbit our star.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/planets",
+  "type": "MCQ_QUIZ", 
+  "version": 1,
+  "questions": [
+    {
+      "qnum": 1,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "options": [
+        "Venus",
+        "Mars",
+        "Jupiter",
+        "Saturn"
+      ],
+      "correct_answer": "Mars"
+    },
+    {
+      "qnum": 2,
+      "question": "Which is the largest planet in our solar system?",
+      "options": [
+        "Saturn",
+        "Jupiter",
+        "Neptune",
+        "Uranus"
+      ],
+      "correct_answer": "Jupiter"
+    },
+    {
+      "qnum": 3,
+      "question": "Which planet has a thick atmosphere primarily composed of carbon dioxide and is the hottest planet in our solar system?",
+      "options": [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Mars"
+      ],
+      "correct_answer": "Venus"
+    },
+    {
+      "qnum": 4,
+      "question": "Which planet is known for its prominent ring system?",
+      "options": [
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune"
+      ],
+      "correct_answer": "Saturn"
+    },
+    {
+      "qnum": 5,
+      "question": "Which planet is farthest from the Sun?",
+      "options": [
+        "Uranus",
+        "Neptune",
+        "Saturn",
+        "Jupiter"
+      ],
+      "correct_answer": "Neptune"
+    },
+    {
+      "qnum": 6,
+      "question": "What is the smallest planet in our solar system?",
+      "options": [
+        "Mars",
+        "Venus",
+        "Mercury",
+        "Pluto"
+      ],
+      "correct_answer": "Mercury"
+    },
+    {
+      "qnum": 7,
+      "question": "Which planet has the Great Red Spot, a giant storm that has been raging for centuries?",
+      "options": [
+        "Saturn",
+        "Jupiter",
+        "Neptune",
+        "Uranus"
+      ],
+      "correct_answer": "Jupiter"
+    },
+    {
+      "qnum": 8,
+      "question": "Which planet is known as the 'Ice Giant' and has a blue color due to methane in its atmosphere?",
+      "options": [
+        "Uranus",
+        "Neptune",
+        "Saturn",
+        "Jupiter"
+      ],
+      "correct_answer": "Neptune"
+    },
+    {
+      "qnum": 9,
+      "question": "How many planets in our solar system have rings?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correct_answer": "Four"
+    },
+    {
+      "qnum": 10,
+      "question": "Which planet has the most moons in our solar system?",
+      "options": [
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune"
+      ],
+      "correct_answer": "Saturn"
+    },
+    {
+      "qnum": 11,
+      "question": "What is the only planet in our solar system not named after a Roman god?",
+      "options": [
+        "Mars",
+        "Venus",
+        "Earth",
+        "Mercury"
+      ],
+      "correct_answer": "Earth"
+    },
+    {
+      "qnum": 12,
+      "question": "Which planet rotates on its side, with an axial tilt of about 98 degrees?",
+      "options": [
+        "Uranus",
+        "Neptune",
+        "Saturn",
+        "Jupiter"
+      ],
+      "correct_answer": "Uranus"
+    },
+    {
+      "qnum": 13,
+      "question": "What percentage of the Solar System's mass does the Sun contain?",
+      "options": [
+        "About 90%",
+        "About 95%",
+        "About 99%",
+        "About 99.8%"
+      ],
+      "correct_answer": "About 99.8%"
+    },
+    {
+      "qnum": 14,
+      "question": "Which planet has the shortest day in the solar system?",
+      "options": [
+        "Mercury",
+        "Venus",
+        "Jupiter",
+        "Saturn"
+      ],
+      "correct_answer": "Jupiter"
+    },
+    {
+      "qnum": 15,
+      "question": "What is the name of the dwarf planet that was reclassified from being the ninth planet?",
+      "options": [
+        "Ceres",
+        "Eris",
+        "Haumea",
+        "Pluto"
+      ],
+      "correct_answer": "Pluto"
+    }
+  ]
+}

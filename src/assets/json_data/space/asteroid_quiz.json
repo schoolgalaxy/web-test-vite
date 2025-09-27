@@ -1,0 +1,280 @@
+{
+  "unique_id": "asteroid_quiz_001_A9S8T3E2R1",
+  "title": "Asteroids: Rocky Remnants of the Solar System Quiz",
+  "description": "A comprehensive quiz exploring asteroids, including their composition, locations, significance in solar system formation, and potential threats to Earth.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/asteroid",
+  "type": "MCQ_10_Hint",
+  "version": 1,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the main difference between an asteroid and a comet?",
+      "answerOptions": [
+        {
+          "text": "Asteroids are made of ice, comets are made of rock",
+          "isCorrect": false,
+          "rationale": "Actually, it's the opposite - comets are icy bodies while asteroids are rocky."
+        },
+        {
+          "text": "Asteroids are rocky or metallic bodies, comets are icy bodies with tails",
+          "isCorrect": true,
+          "rationale": "Asteroids are primarily rocky/metallic objects without significant ice content, while comets contain ice that sublimates to form tails."
+        },
+        {
+          "text": "Asteroids orbit the Sun, comets orbit other planets",
+          "isCorrect": false,
+          "rationale": "Both asteroids and comets orbit the Sun, though in different regions."
+        },
+        {
+          "text": "Asteroids are larger than comets",
+          "isCorrect": false,
+          "rationale": "Size varies greatly for both, and there are small asteroids and large comets."
+        }
+      ],
+      "hint": "One leaves a visible trail when approaching the Sun, the other typically does not."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Where is the main asteroid belt located?",
+      "answerOptions": [
+        {
+          "text": "Between Mercury and Venus",
+          "isCorrect": false,
+          "rationale": "The main asteroid belt is located much farther from the Sun."
+        },
+        {
+          "text": "Between Mars and Jupiter",
+          "isCorrect": true,
+          "rationale": "The main asteroid belt orbits between Mars and Jupiter, at about 2-3.5 AU from the Sun."
+        },
+        {
+          "text": "Beyond Neptune in the Kuiper Belt",
+          "isCorrect": false,
+          "rationale": "The Kuiper Belt contains icy objects, not the main asteroid belt."
+        },
+        {
+          "text": "Between Earth and Mars",
+          "isCorrect": false,
+          "rationale": "While some asteroids exist in Earth's vicinity, the main belt is beyond Mars."
+        }
+      ],
+      "hint": "The asteroid belt is located where a planet was expected to form according to Bode's Law."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the largest asteroid in the solar system?",
+      "answerOptions": [
+        {
+          "text": "Vesta",
+          "isCorrect": false,
+          "rationale": "Vesta is the second largest asteroid, after Ceres."
+        },
+        {
+          "text": "Ceres",
+          "isCorrect": true,
+          "rationale": "Ceres is about 590 miles (950 km) across and contains about 25% of the asteroid belt's total mass."
+        },
+        {
+          "text": "Pallas",
+          "isCorrect": false,
+          "rationale": "Pallas is the third largest asteroid."
+        },
+        {
+          "text": "Hygiea",
+          "isCorrect": false,
+          "rationale": "Hygiea is the fourth largest asteroid."
+        }
+      ],
+      "hint": "This asteroid is so large it was originally classified as a planet, and it's also a dwarf planet."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What prevented a planet from forming in the asteroid belt?",
+      "answerOptions": [
+        {
+          "text": "Strong solar winds from the young Sun",
+          "isCorrect": false,
+          "rationale": "Solar winds weren't strong enough to prevent planetary formation."
+        },
+        {
+          "text": "Jupiter's gravitational influence",
+          "isCorrect": true,
+          "rationale": "Jupiter's massive gravity disrupted planetary formation in the asteroid belt through gravitational perturbations."
+        },
+        {
+          "text": "Lack of material in that region",
+          "isCorrect": false,
+          "rationale": "There was plenty of material, but it couldn't coalesce into a planet."
+        },
+        {
+          "text": "Collisions with early planets",
+          "isCorrect": false,
+          "rationale": "While collisions occurred, Jupiter's gravity was the primary factor."
+        }
+      ],
+      "hint": "The gravitational pull from a nearby gas giant prevented proper planetary accretion."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What are Near-Earth Asteroids (NEAs)?",
+      "answerOptions": [
+        {
+          "text": "Asteroids that have been studied by spacecraft",
+          "isCorrect": false,
+          "rationale": "NEAs are defined by their orbit, not by exploration status."
+        },
+        {
+          "text": "Asteroids whose orbits bring them close to Earth",
+          "isCorrect": true,
+          "rationale": "NEAs have orbits that come within 1.3 AU of the Sun and can potentially intersect Earth's orbit."
+        },
+        {
+          "text": "Asteroids located between Earth and Mars",
+          "isCorrect": false,
+          "rationale": "This describes the Hungaria group of asteroids, not NEAs."
+        },
+        {
+          "text": "Small asteroids that are difficult to detect",
+          "isCorrect": false,
+          "rationale": "NEAs can be various sizes, and their significance is their Earth-crossing orbits."
+        }
+      ],
+      "hint": "These are asteroids that could potentially pose an impact threat to Earth."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the composition of most asteroids?",
+      "answerOptions": [
+        {
+          "text": "Primarily ice and frozen gases",
+          "isCorrect": false,
+          "rationale": "Icy objects are typically found in the Kuiper Belt and Oort Cloud."
+        },
+        {
+          "text": "Rock and metal (silicates and iron-nickel)",
+          "isCorrect": true,
+          "rationale": "Most asteroids are composed of rock and metal, remnants from the early solar system."
+        },
+        {
+          "text": "Primarily carbon compounds",
+          "isCorrect": false,
+          "rationale": "While some asteroids are carbon-rich, most are rocky or metallic."
+        },
+        {
+          "text": "Light elements like hydrogen and helium",
+          "isCorrect": false,
+          "rationale": "These light elements are rare in asteroids."
+        }
+      ],
+      "hint": "Asteroids represent the building blocks that never formed into planets."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the Torino Scale used for?",
+      "answerOptions": [
+        {
+          "text": "Measuring asteroid size",
+          "isCorrect": false,
+          "rationale": "The Torino Scale measures impact hazard, not physical size."
+        },
+        {
+          "text": "Assessing the impact threat level of near-Earth asteroids",
+          "isCorrect": true,
+          "rationale": "The Torino Scale rates the potential danger of asteroid impacts from 0 (no threat) to 10 (certain collision)."
+        },
+        {
+          "text": "Classifying asteroid composition",
+          "isCorrect": false,
+          "rationale": "Asteroid composition is classified using different systems."
+        },
+        {
+          "text": "Measuring asteroid rotation speed",
+          "isCorrect": false,
+          "rationale": "The Torino Scale is specifically for impact hazard assessment."
+        }
+      ],
+      "hint": "This scale helps scientists and governments assess which asteroids might require deflection missions."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What was the first asteroid discovered?",
+      "answerOptions": [
+        {
+          "text": "Vesta",
+          "isCorrect": false,
+          "rationale": "Vesta was discovered in 1807, not the first asteroid."
+        },
+        {
+          "text": "Ceres",
+          "isCorrect": true,
+          "rationale": "Ceres was discovered on January 1, 1801, by Giuseppe Piazzi."
+        },
+        {
+          "text": "Pallas",
+          "isCorrect": false,
+          "rationale": "Pallas was discovered in 1802, after Ceres."
+        },
+        {
+          "text": "Juno",
+          "isCorrect": false,
+          "rationale": "Juno was discovered in 1804, later still."
+        }
+      ],
+      "hint": "This discovery on New Year's Day 1801 marked the beginning of asteroid astronomy."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the asteroid belt's total mass compared to Earth's Moon?",
+      "answerOptions": [
+        {
+          "text": "About the same mass as the Moon",
+          "isCorrect": false,
+          "rationale": "The asteroid belt's total mass is much less than the Moon's mass."
+        },
+        {
+          "text": "About 4% of the Moon's mass",
+          "isCorrect": true,
+          "rationale": "The entire asteroid belt has a total mass of only about 4% of the Moon's mass."
+        },
+        {
+          "text": "About half the Moon's mass",
+          "isCorrect": false,
+          "rationale": "The asteroid belt contains much less mass than this."
+        },
+        {
+          "text": "About twice the Moon's mass",
+          "isCorrect": false,
+          "rationale": "The asteroid belt contains far less mass than the Moon."
+        }
+      ],
+      "hint": "Despite containing millions of asteroids, the belt's total mass is surprisingly small."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What valuable resources might asteroids contain?",
+      "answerOptions": [
+        {
+          "text": "Large amounts of fossil fuels",
+          "isCorrect": false,
+          "rationale": "Asteroids don't contain organic compounds in the form of fossil fuels."
+        },
+        {
+          "text": "Precious metals like platinum and rare earth elements",
+          "isCorrect": true,
+          "rationale": "Some asteroids contain higher concentrations of precious metals than Earth's richest mines."
+        },
+        {
+          "text": "Large deposits of coal and oil",
+          "isCorrect": false,
+          "rationale": "Asteroids don't contain hydrocarbon deposits like those on Earth."
+        },
+        {
+          "text": "Abundant soil for agriculture",
+          "isCorrect": false,
+          "rationale": "Asteroid soil (regolith) lacks the organic content needed for Earth's style agriculture."
+        }
+      ],
+      "hint": "These space rocks could be future mining sites for valuable materials."
+    }
+  ]
+}

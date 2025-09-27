@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Authenticator } from '@aws-amplify/ui-react';
 import Navbar from './components/Navbar';
-import { AppRoutes } from './components/routes';
+import { AppRoutes } from './components/AppRoutes';
 import { ThemeProvider } from './util/ThemeContext';
 
 function App() {
