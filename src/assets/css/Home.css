@@ -33,7 +33,6 @@
   padding-left: 5px;
 }
 
-
 .left-sidebar .widget {
    background: var(--bg-secondary);
    border: 1px solid var(--border-color);
@@ -47,7 +46,7 @@
  }
 
 .left-sidebar .widget-header {
-   background: var(--bg-hero);
+   background: linear-gradient(135deg, var(--bg-hero) 0%, var(--shadow-light) 100%);;
    color: var(--primary-blue-dark);
    font-weight: 700;
    padding: 12px 16px;

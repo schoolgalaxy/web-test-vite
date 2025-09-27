@@ -15,7 +15,7 @@ const Navbar = () => {
           Prep Galaxy
         </li>
         <li>
-          <Link to="/">Explore</Link>
+          <Link to="/">Home</Link>
         </li>
         <li className="navbar-auth">
           <Link to="/about">About</Link>

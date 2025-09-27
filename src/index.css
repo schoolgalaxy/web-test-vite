@@ -2,17 +2,17 @@
   /* Light theme colors */
   --bg-primary: #f8f9fa;
   --bg-secondary: #ffffff;
-  --bg-hero: #e9f7fe;
+  --bg-hero: #bce8fc;
   --text-primary: #333333;
   --text-secondary: #000000;
   --text-muted: #888888;
   --border-color: #e0e0e0;
   --primary-blue: #007bff;
   --primary-blue-dark: #0056b3;
-  --navbar-bg: #8ebdec;
+  --navbar-bg: #a7cdf3;
   --navbar-hover: #7fd5f1;
-  --navbar-text: #000000;
-  --shadow-light: rgba(0, 0, 0, 0.08);
+  --navbar-text: #2c5282;
+  --shadow-light: #8ebdec;
   --link-color: #007bff;
   --link-hover: #0056b3;
 }
@@ -31,8 +31,8 @@
   --navbar-bg: #2c5282;
   --navbar-hover: #3d6b9d;
   --navbar-text: #ffffff;
-  --shadow-light: rgba(0, 0, 0, 0.3);
-  --link-color: #4da6ff;
+  --shadow-light: rgba(200, 222, 246, 0.3);
+  --link-color: #e9eff5;
   --link-hover: #0066cc;
 }
 

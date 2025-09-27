@@ -10,7 +10,7 @@ import iconFeedback from '/src/assets/img/icon-feedback.svg';
 import iconAbout from '/src/assets/img/icon-about.svg';
 
 const LeftSidebar: React.FC = () => {
-  const { user, signOut } = useAuthenticator();
+  const { user } = useAuthenticator();
 
   return (
     <div className="left-sidebar">
@@ -18,9 +18,9 @@ const LeftSidebar: React.FC = () => {
         <div className="widget-header">Categories</div>
         <ul className="widget-list">
           <li>
-            <Link to="/home">
-              <img src={iconHome} alt="Home" className="sidebar-icon" />
-              Home
+            <Link to="/Explore">
+              <img src={iconHome} alt="Explore" className="sidebar-icon" />
+              Explore
             </Link>
           </li>
           {/* <li><Link to="/class-1-5">Class 1-5</Link></li>

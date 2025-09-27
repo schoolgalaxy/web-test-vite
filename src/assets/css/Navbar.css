@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(135deg, var(--navbar-bg) 0%, var(--shadow-light) 100%);
+  background: linear-gradient(35deg, var(--navbar-bg) 0%, var(--shadow-light) 100%);
   padding: 0 1rem;
   box-sizing: border-box;
   position: fixed;
@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 8px var(--shadow-light);
+  /* box-shadow: 0 2px 8px var(--shadow-light); */
   height: 56px;
   display: flex;
   align-items: center;
