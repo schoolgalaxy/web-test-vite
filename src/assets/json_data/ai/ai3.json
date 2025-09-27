@@ -3,6 +3,8 @@
   "title": "AI: Applications and Ethics Quiz",
   "description": "A quiz focusing on the real-world applications of Artificial Intelligence and the ethical considerations surrounding its development.",
   "profile_pic_link": "http://googleusercontent.com/image_generation_content/24",
+  "type": "MCQ_10_Hint", 
+  "version": 1,
   "questions": [
     {
       "questionNumber": 1,

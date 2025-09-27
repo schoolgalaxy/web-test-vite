@@ -6,11 +6,24 @@
       "displayName": "AI Quiz",
       "description": "Explore the world of AI with our engaging quizzes!",
       "route": "/quiz/ai",
-      "routePrefix": "/quiz/artificial-intelligence",
+      "routePrefix": "/quiz/ai",
       "category": "ai",
       "icon": "/src/assets/img/ai.svg",
       "iconAlt": "Artificial Intelligence",
-      "active": false,
+      "active": true,
+      "priority": 15
+    },
+    {
+      "id": "computer_science",
+      "name": "Computer Science Questionaries",
+      "displayName": "CS Quiz",
+      "description": "Test your knowledge of fundamental computer science concepts!",
+      "route": "/quiz/computer_science",
+      "routePrefix": "/quiz/computer_science",
+      "category": "computer_science",
+      "icon": "/src/assets/img/icon-about.svg",
+      "iconAlt": "Computer Science",
+      "active": true,
       "priority": 100
     },
     {

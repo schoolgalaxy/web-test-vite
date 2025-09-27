@@ -18,10 +18,21 @@
 
  .mcq-tiles-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+   grid-template-columns: repeat(2, 1fr);
    gap: 25px;
    justify-content: center;
    padding: 0 20px;
+   max-width: 900px;
+   margin: 0 auto;
+ }
+
+ /* Responsive design for smaller screens */
+ @media (max-width: 768px) {
+   .mcq-tiles-grid {
+     grid-template-columns: 1fr;
+     max-width: 400px;
+   }
  }
 
  .mcq-tile-link {

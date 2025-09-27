@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams, Navigate } from 'react-router-dom';
 import '../../assets/css/McqList.css'; // Reusing MCQ list styles
 import birdImg from '/src/assets/img/bird.svg';
 import animalImg from '/src/assets/img/animal.svg';
 import aquaticImg from '/src/assets/img/aquatic.svg';
 import placeholderImg from '/src/assets/img/quiz-placeholder.svg';
+import quizzesConfig from '../../assets/json_data/quizzes.json';
 
 interface QuizMetaData {
   id: string;
@@ -13,14 +14,26 @@ interface QuizMetaData {
   profilePic: string;
 }
 
-interface QuizListProps {
-  quizCategory: string; // e.g., 'birds', 'animals'
-  title: string;
+type QuizConfig = {
+  id: string;
+  name: string;
   description: string;
-  routePrefix: string; // e.g., '/birds-quiz', '/animals-quiz'
-}
+  routePrefix: string;
+  category: string;
+  active: boolean;
+  priority: number;
+};
 
-const QuizList: React.FC<QuizListProps> = ({ quizCategory, title, description, routePrefix }) => {
+const QuizList: React.FC = () => {
+  const { category } = useParams<{ category: string }>();
+  const cfg = (quizzesConfig as { quizzes: QuizConfig[] }).quizzes.find(q => q.category === category);
+
+  // If category not found or not active, redirect to explore
+  if (!cfg || !cfg.active) {
+    return <Navigate to="/explore" replace />;
+  }
+
+  const { category: quizCategory, name: title, description, routePrefix } = cfg;
   const [quizzes, setQuizzes] = useState<QuizMetaData[]>([]);
 
   useEffect(() => {

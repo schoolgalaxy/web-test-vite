@@ -3,6 +3,8 @@
   "title": "Machine Learning Concepts Quiz",
   "description": "A quiz designed to test your knowledge of fundamental, intermediate, and advanced concepts in Machine Learning.",
   "profile_pic_link": "http://googleusercontent.com/image_generation_content/26",
+  "type": "MCQ_10_Hint", 
+  "version": 1,
   "questions": [
     {
       "questionNumber": 1,

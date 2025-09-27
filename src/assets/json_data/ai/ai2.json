@@ -3,6 +3,8 @@
   "title": "Advanced AI Concepts and Subfields",
   "description": "A quiz that delves into more complex topics within Artificial Intelligence, including specialized models and ethical challenges.",
   "profile_pic_link": "http://googleusercontent.com/image_generation_content/25",
+  "type": "MCQ_10_Hint", 
+  "version": 1,
   "questions": [
     {
       "questionNumber": 1,

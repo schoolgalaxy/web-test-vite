@@ -1,0 +1,280 @@
+{
+  "unique_id": "cs_quiz_001_F9E3A5B7C2D8",
+  "title": "Computer Science Fundamentals Quiz",
+  "description": "Test your knowledge of fundamental computer science concepts including algorithms, data structures, programming principles, and computer systems.",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/33",
+  "type": "MCQ_10_Hint",
+  "version": 1,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the time complexity of binary search in a sorted array?",
+      "answerOptions": [
+        {
+          "text": "O(n)",
+          "isCorrect": false,
+          "rationale": "Linear search is O(n), but binary search is more efficient due to its divide-and-conquer approach."
+        },
+        {
+          "text": "O(log n)",
+          "isCorrect": true,
+          "rationale": "Binary search divides the search space in half with each comparison, resulting in logarithmic time complexity."
+        },
+        {
+          "text": "O(n²)",
+          "isCorrect": false,
+          "rationale": "Quadratic time complexity would be much slower than what binary search achieves."
+        },
+        {
+          "text": "O(1)",
+          "isCorrect": false,
+          "rationale": "Constant time would mean the search doesn't depend on input size, which isn't possible for searching."
+        }
+      ],
+      "hint": "Think about how the algorithm repeatedly divides the search space in half."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which data structure follows the Last In, First Out (LIFO) principle?",
+      "answerOptions": [
+        {
+          "text": "Queue",
+          "isCorrect": false,
+          "rationale": "A queue follows First In, First Out (FIFO) principle, like a line at a store."
+        },
+        {
+          "text": "Stack",
+          "isCorrect": true,
+          "rationale": "A stack follows LIFO - the last item added is the first one to be removed, like a stack of plates."
+        },
+        {
+          "text": "Linked List",
+          "isCorrect": false,
+          "rationale": "A linked list can implement both stack and queue behavior depending on the implementation."
+        },
+        {
+          "text": "Array",
+          "isCorrect": false,
+          "rationale": "An array is a basic data structure that doesn't inherently follow LIFO or FIFO principles."
+        }
+      ],
+      "hint": "Consider which data structure is used for function calls and the undo functionality in text editors."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What does 'HTTP' stand for?",
+      "answerOptions": [
+        {
+          "text": "HyperText Transfer Protocol",
+          "isCorrect": true,
+          "rationale": "HTTP is the foundation of data communication on the World Wide Web, defining how messages are formatted and transmitted."
+        },
+        {
+          "text": "High-Tech Transfer Protocol",
+          "isCorrect": false,
+          "rationale": "While HTTP is high-tech, this is not the correct expansion of the acronym."
+        },
+        {
+          "text": "Hyperlink Text Transfer Protocol",
+          "isCorrect": false,
+          "rationale": "HTTP does handle hyperlinks, but this is not the complete or correct meaning."
+        },
+        {
+          "text": "Home Tool Transfer Protocol",
+          "isCorrect": false,
+          "rationale": "This doesn't relate to web communications or file transfers."
+        }
+      ],
+      "hint": "The first word refers to the non-linear way text is connected in web documents."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is NOT a programming paradigm?",
+      "answerOptions": [
+        {
+          "text": "Object-Oriented Programming",
+          "isCorrect": false,
+          "rationale": "OOP is a well-established programming paradigm based on objects and classes."
+        },
+        {
+          "text": "Functional Programming",
+          "isCorrect": false,
+          "rationale": "Functional programming treats computation as mathematical functions and avoids mutable state."
+        },
+        {
+          "text": "Procedural Programming",
+          "isCorrect": false,
+          "rationale": "Procedural programming uses procedures or routines to structure the code."
+        },
+        {
+          "text": "Systematic Programming",
+          "isCorrect": true,
+          "rationale": "Systematic programming is not a recognized programming paradigm in computer science."
+        }
+      ],
+      "hint": "Three of these are well-known programming approaches, but one is not a standard paradigm."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the purpose of an operating system?",
+      "answerOptions": [
+        {
+          "text": "To run web browsers",
+          "isCorrect": false,
+          "rationale": "While it enables web browsers to run, this is too narrow a description of an OS's purpose."
+        },
+        {
+          "text": "To manage hardware and software resources",
+          "isCorrect": true,
+          "rationale": "The OS acts as an intermediary between hardware and software, managing resources like memory, CPU, and I/O devices."
+        },
+        {
+          "text": "To write computer programs",
+          "isCorrect": false,
+          "rationale": "Programming is done using programming languages and development tools, not directly by the OS."
+        },
+        {
+          "text": "To store files permanently",
+          "isCorrect": false,
+          "rationale": "File storage is a service provided by the OS, but it's not the primary purpose."
+        }
+      ],
+      "hint": "Think about what software sits between your applications and the physical computer hardware."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What does 'SQL' stand for?",
+      "answerOptions": [
+        {
+          "text": "Structured Query Language",
+          "isCorrect": true,
+          "rationale": "SQL is a domain-specific language used for managing and querying relational databases."
+        },
+        {
+          "text": "Simple Question Language",
+          "isCorrect": false,
+          "rationale": "While SQL is used for querying, this is not the correct expansion."
+        },
+        {
+          "text": "System Quality Language",
+          "isCorrect": false,
+          "rationale": "SQL doesn't specifically deal with system quality metrics."
+        },
+        {
+          "text": "Standard Query Logic",
+          "isCorrect": false,
+          "rationale": "This is close but not the standard name for the language."
+        }
+      ],
+      "hint": "The 'S' stands for the way data is organized in databases, and 'QL' refers to asking questions of that data."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of these is an example of a high-level programming language?",
+      "answerOptions": [
+        {
+          "text": "Assembly Language",
+          "isCorrect": false,
+          "rationale": "Assembly language is a low-level language that works closely with machine code."
+        },
+        {
+          "text": "Machine Code",
+          "isCorrect": false,
+          "rationale": "Machine code is the lowest level language, consisting of binary instructions."
+        },
+        {
+          "text": "Python",
+          "isCorrect": true,
+          "rationale": "Python is a high-level language that uses English-like syntax and abstracts away hardware details."
+        },
+        {
+          "text": "Binary",
+          "isCorrect": false,
+          "rationale": "Binary is the fundamental language of computers but is not considered a programming language."
+        }
+      ],
+      "hint": "Consider which language is closest to natural human language and farthest from machine instructions."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the main purpose of a compiler?",
+      "answerOptions": [
+        {
+          "text": "To execute programs faster",
+          "isCorrect": false,
+          "rationale": "While compiled programs often run faster, this is a side effect, not the main purpose."
+        },
+        {
+          "text": "To translate high-level code to machine code",
+          "isCorrect": true,
+          "rationale": "A compiler translates entire programs from human-readable code to machine-executable instructions."
+        },
+        {
+          "text": "To find errors in code",
+          "isCorrect": false,
+          "rationale": "Debugging and error checking can be part of compilation, but it's not the primary purpose."
+        },
+        {
+          "text": "To interpret code line by line",
+          "isCorrect": false,
+          "rationale": "Line-by-line interpretation is what interpreters do, not compilers."
+        }
+      ],
+      "hint": "Think about what happens before a program written in a high-level language can actually run on a computer."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is 'bandwidth' in computer networking?",
+      "answerOptions": [
+        {
+          "text": "The physical width of network cables",
+          "isCorrect": false,
+          "rationale": "Bandwidth refers to capacity, not physical dimensions."
+        },
+        {
+          "text": "The maximum data transfer rate of a network connection",
+          "isCorrect": true,
+          "rationale": "Bandwidth measures how much data can be transmitted over a network connection in a given time period."
+        },
+        {
+          "text": "The number of devices connected to a network",
+          "isCorrect": false,
+          "rationale": "This refers to the size or scale of a network, not its bandwidth."
+        },
+        {
+          "text": "The geographical area covered by a network",
+          "isCorrect": false,
+          "rationale": "Network coverage area is different from its data transmission capacity."
+        }
+      ],
+      "hint": "Think about the 'capacity' or 'throughput' of a network connection - how much information can flow through it."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following best describes 'recursion' in programming?",
+      "answerOptions": [
+        {
+          "text": "A programming error that causes infinite loops",
+          "isCorrect": false,
+          "rationale": "While recursion can lead to infinite loops if not implemented carefully, this is not its definition."
+        },
+        {
+          "text": "A technique where a function calls itself",
+          "isCorrect": true,
+          "rationale": "Recursion is a method where a function solves a problem by calling itself with smaller instances of the same problem."
+        },
+        {
+          "text": "A way to organize data in a linear fashion",
+          "isCorrect": false,
+          "rationale": "This describes iteration or sequential processing, not recursion."
+        },
+        {
+          "text": "A method for sorting data alphabetically",
+          "isCorrect": false,
+          "rationale": "Sorting algorithms may or may not use recursion, but recursion itself is not about sorting."
+        }
+      ],
+      "hint": "Consider how some problems can be broken down into smaller versions of themselves, like a Russian nesting doll."
+    }
+  ]
+}

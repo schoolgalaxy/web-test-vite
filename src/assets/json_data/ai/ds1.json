@@ -3,6 +3,8 @@
   "title": "Data Science Concepts Quiz",
   "description": "A quiz designed to test your knowledge of key concepts in data science, from fundamental principles to practical applications.",
   "profile_pic_link": "http://googleusercontent.com/image_generation_content/27",
+  "type": "MCQ_10_Hint", 
+  "version": 1,
   "questions": [
     {
       "questionNumber": 1,

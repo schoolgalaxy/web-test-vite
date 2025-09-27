@@ -3,6 +3,8 @@
   "title": "Artificial Intelligence Quiz",
   "description": "A quiz designed to test your knowledge of fundamental concepts in Artificial Intelligence (AI) and Machine Learning (ML).",
   "profile_pic_link": "http://googleusercontent.com/image_generation_content/22",
+  "type": "MCQ_10_Hint", 
+  "version": 1,
   "questions": [
     {
       "questionNumber": 1,
