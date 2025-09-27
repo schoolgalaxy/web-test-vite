@@ -20,7 +20,7 @@
    background-color: var(--bg-primary);
    padding: 20px;
    border-radius: 8px;
-   box-shadow: 0 2px 8px var(--shadow-light);
+   /* box-shadow: 0 2px 8px var(--shadow-light); */
    transition: background-color 0.3s ease, box-shadow 0.3s ease;
  }
 
@@ -28,6 +28,11 @@
 .left-sidebar {
   padding-right: 5px;
 }
+
+.right-sidebar {
+  padding-left: 5px;
+}
+
 
 .left-sidebar .widget {
    background: var(--bg-secondary);
@@ -37,8 +42,8 @@
    width: 70%;
    margin-left: auto;
    margin-top: 26px;
-   box-shadow: 0 1px 3px var(--shadow-light);
-   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+   /* box-shadow: 0 1px 3px var(--shadow-light); */
+   /* transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; */
  }
 
 .left-sidebar .widget-header {
@@ -131,19 +136,30 @@
 
 
 .right-pane h3 {
-   color: var(--primary-blue-dark);
-   margin-bottom: 15px;
-   transition: color 0.3s ease;
- }
+     color: var(--primary-blue-dark);
+     margin-bottom: 15px;
+     transition: color 0.3s ease;
+     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--navbar-bg) 100%);
+     padding: 8px 12px;
+     border-radius: 6px;
+     border: 1px solid var(--primary-blue);
+     color: white;
+   }
 
  .ad-content {
-    background-color: var(--bg-secondary);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.05) 100%);
     border: 1px solid var(--border-color);
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
     text-align: center;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .ad-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--primary-blue);
+    border-color: var(--primary-blue);
   }
 
  .ad-content p {

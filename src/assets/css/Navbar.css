@@ -1,5 +1,5 @@
 .navbar {
-  background-color: var(--navbar-bg);
+  background: linear-gradient(135deg, var(--navbar-bg) 0%, var(--shadow-light) 100%);
   padding: 0 1rem;
   box-sizing: border-box;
   position: fixed;
