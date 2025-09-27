@@ -181,12 +181,12 @@ export function createAssetErrorHandler<T>(fallbackPath: string, fallbackData: T
 /**
  * Safely loads JSON data with fallback to asset folder error handling
  */
-export function safeLoadJson<T>(loader: () => Record<string, T>, fallback: T = {} as T): Record<string, T> {
+export function safeLoadJson<T>(loader: () => Record<string, T>, fallback: Record<string, T> = {} as Record<string, T>): Record<string, T> {
   try {
     return loader();
   } catch (error) {
     console.error('JSON loading failed, using fallback:', error);
-    return {} as Record<string, T>;
+    return fallback;
   }
 }
 
