@@ -11,7 +11,7 @@
 // Eagerly imports all JSON files under a directory tree and returns a map
 // from absolute module path to parsed JSON value.
 // Example glob pattern (spaces inserted to avoid closing comment token):
-// '/src/assets/json_data/** / *.json' -> remove spaces when using
+// '/src/assets/data/** / *.json' -> remove spaces when using
 export function loadJsonDirectoryEager<T = unknown>(
   globPattern: string
 ): Record<string, T> {

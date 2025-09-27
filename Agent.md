@@ -21,7 +21,7 @@ This document provides a concise operational context for an assistant/agent work
 ## Data Flow & Behavior
 - LeftSidebar emits selections (links, filters) → these update routing/state → Center Panel re-renders appropriate component.
 - RightSidebar content is largely independent of center content and can be updated without affecting primary navigation.
-- Content for quizzes and topics is backed by JSON files under `src/assets/json_data/`.
+- Content for quizzes and topics is backed by JSON files under `src/assets/data/`.
 - AWS Amplify services (Auth/Data/Storage/Functions) live under `amplify/` and integrate into the frontend as needed.
 
 ## Routing
@@ -42,7 +42,7 @@ This document provides a concise operational context for an assistant/agent work
 
 ## Assets and Data (src/assets)
 - Styles: `assets/css/*` for feature-specific styles.
-- JSON content: `assets/json_data/*` for quizzes, animals, birds, and other learning content.
+- JSON content: `assets/data/*` for quizzes, animals, birds, and other learning content.
 
 ## Utilities (src/util)
 - `analytics.ts`: Web analytics helpers.
@@ -64,7 +64,7 @@ This document provides a concise operational context for an assistant/agent work
   src/                   # Frontend application (React + TS + Vite)
     assets/              # CSS and JSON content
       css/
-      json_data/
+      data/
     components/          # UI components and feature modules
       animals/, birds/, mcq/, quizzes/, feedback/
     util/                # Analytics and web vitals
@@ -88,7 +88,7 @@ Use Vite’s glob import to load groups of JSON files or images without manual i
 
 - JSON (eager load into memory):
 ```ts
-const modules = import.meta.glob('/src/assets/json_data/**/*.json', { eager: true });
+const modules = import.meta.glob('/src/assets/data/**/*.json', { eager: true });
 const jsonByPath: Record<string, unknown> = Object.fromEntries(
   Object.entries(modules).map(([path, mod]) => [path, (mod as any).default])
 );
@@ -106,8 +106,8 @@ const imageUrls = import.meta.glob('/src/assets/**/*.{png,jpg,jpeg,svg,gif}', {
 
 - Lazy loading (on demand):
 ```ts
-const lazyJson = import.meta.glob('/src/assets/json_data/**/*.json');
-// await lazyJson['/src/assets/json_data/animals/lion.json']();
+const lazyJson = import.meta.glob('/src/assets/data/**/*.json');
+// await lazyJson['/src/assets/data/animals/lion.json']();
 ```
 
 ## Quick Start (Local)

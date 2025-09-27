@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import QuizTest from './QuizTest';
 import McqHintTest from './McqHintTest';
-import quizzesConfig from '../../assets/json_data/quizzes.json';
+import quizzesConfig from '../../assets/data/quizzes.json';
 import debug from '../../util/debug';
 
 type QuizConfig = {
@@ -23,7 +23,7 @@ const QuizRoute: React.FC = () => {
     const checkQuizType = async () => {
       if (quizId && category) {
         try {
-          const modules = import.meta.glob('/src/assets/json_data/**/*.json', { eager: true });
+          const modules = import.meta.glob('/src/assets/data/**/*.json', { eager: true });
           const targetPathSuffix = `/${category}/${quizId}.json`;
           debug.log('Looking for quiz:', category, quizId);
           debug.log('Target path suffix:', targetPathSuffix);

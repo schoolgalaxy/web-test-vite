@@ -46,7 +46,7 @@ const McqHintTest: React.FC<McqHintTestProps> = ({ quizCategory, routePrefix }) 
   useEffect(() => {
     const loadQuizData = () => {
       try {
-        const modules = import.meta.glob('/src/assets/json_data/**/*.json', { eager: true });
+        const modules = import.meta.glob('/src/assets/data/**/*.json', { eager: true });
         const targetPathSuffix = `/${quizCategory}/${quizId}.json`;
         const matchKey = Object.keys(modules).find((key) => key.endsWith(targetPathSuffix));
 

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import mcqData1 from '../../assets/json_data/ai_10_beginners.json';
-import mcqData2 from '../../assets/json_data/ai_20_beginners.json';
-import mcqData3 from '../../assets/json_data/country_capital.json';
+import mcqData1 from '../../assets/data/ai_10_beginners.json';
+import mcqData2 from '../../assets/data/ai_20_beginners.json';
+import mcqData3 from '../../assets/data/country_capital.json';
 import '../../assets/css/McqTest.css';
 
 const McqTest = () => {

@@ -5,7 +5,7 @@ import birdImg from '/src/assets/img/bird.svg';
 import animalImg from '/src/assets/img/animal.svg';
 import aquaticImg from '/src/assets/img/aquatic.svg';
 import placeholderImg from '/src/assets/img/quiz-placeholder.svg';
-import quizzesConfig from '../../assets/json_data/quizzes.json';
+import quizzesConfig from '../../assets/data/quizzes.json';
 import debug from '../../util/debug';
 
 interface QuizMetaData {
@@ -41,7 +41,7 @@ const QuizList: React.FC = () => {
     const fetchQuizMetaData = async () => {
       try {
         // Dynamically import all JSON files from the specified category
-        const context = import.meta.glob('/src/assets/json_data/**/*.json', { eager: true });
+        const context = import.meta.glob('/src/assets/data/**/*.json', { eager: true });
         const quizFiles = Object.keys(context).filter(path => path.includes(`/${quizCategory}/`));
 
         const allMetaData = quizFiles.map((file) => {
