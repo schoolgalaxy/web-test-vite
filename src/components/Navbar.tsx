@@ -17,6 +17,9 @@ const Navbar = () => {
         <li>
           <Link to="/">Home</Link>
         </li>
+        <li>
+          <Link to="/explore">Explore</Link>
+        </li>
         <li className="navbar-auth">
           <Link to="/about">About</Link>
         </li>

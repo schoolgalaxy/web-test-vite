@@ -1,0 +1,118 @@
+/* Data Folder Widget Styles */
+.data-folder-widget {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.data-folder-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.data-folder-widget h2 {
+  color: var(--primary-blue-dark);
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.widget-description {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 25px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+  .folder-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .folder-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+.folder-item {
+  background: linear-gradient(135deg, var(--bg-hero) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 6px 12px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: block;
+  min-height: 160px;
+}
+
+.folder-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-blue);
+}
+
+.folder-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.folder-item h3 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.folder-item p {
+  color: var(--text-primary);
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.widget-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.widget-footer p {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+/* Center content styling for Explore page */
+.center-content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 76px);
+}
