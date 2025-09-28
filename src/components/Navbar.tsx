@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { useTheme } from '../util/ThemeContext';
 import NavbarCustomizerModal from './NavbarCustomizerModal';
 import '../assets/css/Navbar.css';
 
 const Navbar = () => {
-  const { user, signOut } = useAuthenticator();
+  const { user } = useAuthenticator();
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
   const [showCustomizer, setShowCustomizer] = useState(false);
 
   return (
@@ -58,7 +59,7 @@ const Navbar = () => {
           </li>
           {user ? (
             <li>
-              <button onClick={signOut}>Sign out</button>
+              <button onClick={() => navigate('/signout')}>Sign out</button>
             </li>
           ) : (
             <li>

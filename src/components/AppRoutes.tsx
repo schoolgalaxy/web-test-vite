@@ -6,6 +6,7 @@ const Home = lazy(() => import('./Home'));
 const Explore = lazy(() => import('./Explore'));
 const TestLayout = lazy(() => import('./TestLayout'));
 const LoginScreen = lazy(() => import('./LoginScreen'));
+const SignoutScreen = lazy(() => import('./SignoutScreen'));
 const FeedbackLayout = lazy(() => import('./feedback/FeedbackLayout'));
 const QuizList = lazy(() => import('./quizzes/QuizList'));
 const QuizRoute = lazy(() => import('./quizzes/QuizRoute'));
@@ -50,6 +51,7 @@ export const AppRoutes = () => {
           <Route path="/quiz/:category/:quizId" element={<QuizRoute />} />
         </Route>
         <Route path="/login" element={<LoginScreen />} />
+        <Route path="/signout" element={<SignoutScreen />} />
         <Route path="/feedback" element={<FeedbackLayout />} />
       </Routes>
     </Suspense>
