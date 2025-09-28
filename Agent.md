@@ -83,6 +83,11 @@ This document provides a concise operational context for an assistant/agent work
 - Backend changes under `amplify/` should be deployed via Amplify tooling; keep frontend contracts (types, endpoints) in sync.
 - Prefer `import.meta.glob` for batch importing JSON content and images where applicable.
 
+## UI Development Guidelines
+- Always ensure component styles are synchronized with the site theme (`src/index.css`) and consistent across widgets.
+- LeftSidebar widgets should maintain visual consistency with the overall design system and theme colors.
+- When developing new UI components, reference existing widget patterns and maintain the established design language.
+
 ### Vite imports: `import.meta.glob` (JSON and images)
 Use Vite’s glob import to load groups of JSON files or images without manual import lists.
 

@@ -2,10 +2,10 @@
     display: grid;
     grid-template-columns: 1fr 3fr 1fr; /* Left, Middle, Right panes */
     gap: 0px;
-    padding: 20px 0;
+    padding: 40px 0 20px 0;
     background-color: var(--bg-primary);
     min-height: calc(100vh - 56px);
- }
+  }
 
  .about-layout {
     display: grid;
@@ -168,8 +168,133 @@
  }
 
 .ad-content img {
-   max-width: 100%;
-   height: auto;
-   border-radius: 4px;
-   margin-top: 10px;
- }
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  /* Right Sidebar Widgets Styling */
+  .sidebar-widget {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .sidebar-widget:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    border-color: var(--primary-blue);
+  }
+
+  .widget-header {
+    background: linear-gradient(135deg, var(--bg-hero) 0%, var(--shadow-light) 100%);
+    color: var(--primary-blue-dark);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
+
+  .widget-icon {
+    font-size: 1em;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+  }
+
+  .widget-content {
+    padding: 10px;
+  }
+
+  /* Explore Widget Specific Styling */
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .explore-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+    text-align: center;
+    min-height: 50px;
+  }
+
+  .explore-item:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: scale(1.02);
+  }
+
+  .explore-icon {
+    font-size: 1.2em;
+    margin-bottom: 2px;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+  }
+
+  .explore-name {
+    font-size: 0.7em;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  /* Know About Widget Specific Styling */
+  .know-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .know-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+  }
+
+  .know-item:hover {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    transform: translateX(2px);
+  }
+
+  .know-icon {
+    font-size: 1em;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+  }
+
+  .know-name {
+    font-size: 0.75em;
+    font-weight: 600;
+  }
+
+  /* Fun Activities Section Styling */
+  .right-pane h3 {
+    color: var(--primary-blue-dark);
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--navbar-bg) 100%);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--primary-blue);
+    color: white;
+  }
