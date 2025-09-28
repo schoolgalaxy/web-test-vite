@@ -1,0 +1,47 @@
+{
+  "unique_id": "panda_G7H2I6J1K4",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about the Panda.",
+  "title": "All About the Panda",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/34",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Panda",
+      "content": "The giant panda (Ailuropoda melanoleuca) is a bear species native to south-central China. Easily recognized by its distinctive black-and-white coloring, the giant panda is beloved worldwide as a symbol of conservation and has been China's national animal since the 1960s."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Adult giant pandas typically weigh between 200-300 pounds and measure 4-6 feet in length.",
+        "Their distinctive black-and-white coloration serves as camouflage in their snowy and rocky mountain habitats."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Diet and Feeding Habits",
+      "content": [
+        "Despite being classified as carnivores, 99% of a panda's diet consists of bamboo, consuming 26-84 pounds daily.",
+        "Pandas have evolved a specialized wrist bone that functions like a thumb to help them grip bamboo stalks while eating."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Behavior and Lifestyle",
+      "content": [
+        "Giant pandas are generally solitary animals, with males and females only coming together during the breeding season.",
+        "They spend most of their time eating and resting, with adults sleeping up to 14 hours per day between feeding sessions."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation Status",
+      "content": [
+        "Giant pandas were upgraded from 'endangered' to 'vulnerable' in 2016, representing significant conservation success.",
+        "Habitat loss and fragmentation remain the biggest threats, though captive breeding and habitat protection programs have helped populations recover."
+      ]
+    }
+  ]
+}

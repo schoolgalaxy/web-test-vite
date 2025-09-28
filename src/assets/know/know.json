@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "id": "animals",
+      "name": "Animals Knowledge Base",
+      "displayName": "Animals",
+      "description": "Learn about fascinating animals from around the world with detailed educational content and presentations.",
+      "route": "/know/animal",
+      "category": "animal",
+      "icon": "/src/assets/img/icon-animals.svg",
+      "realIcon": "🦁",
+      "iconAlt": "Animals",
+      "active": true,
+      "priority": 10,
+      "contentCount": 12,
+      "type": "Educational Content"
+    },
+    {
+      "id": "birds",
+      "name": "Birds Knowledge Base",
+      "displayName": "Birds",
+      "description": "Discover amazing bird species and their behaviors with comprehensive educational materials.",
+      "route": "/know/birds",
+      "category": "birds",
+      "icon": "/src/assets/img/icon-birds.svg",
+      "realIcon": "🐦",
+      "iconAlt": "Birds",
+      "active": true,
+      "priority": 20,
+      "contentCount": 13,
+      "type": "Educational Content"
+    },
+    {
+      "id": "sports",
+      "name": "Sports Knowledge Base",
+      "displayName": "Sports",
+      "description": "Explore different sports and athletic activities with engaging educational content.",
+      "route": "/know/sports",
+      "category": "sports",
+      "icon": "/src/assets/img/icon-about.svg",
+      "realIcon": "⚽",
+      "iconAlt": "Sports",
+      "active": true,
+      "priority": 30,
+      "contentCount": 12,
+      "type": "Educational Content"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "unique_id": "dolphin_Q9R4S8T3U7",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about the Dolphin.",
+  "title": "All About the Dolphin",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/36",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Dolphin",
+      "content": "Dolphins are highly intelligent marine mammals belonging to the family Delphinidae. There are over 40 species of dolphins found worldwide in oceans and rivers. They are known for their playful behavior, complex social structures, and remarkable intelligence that rivals that of great apes."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Dolphins have streamlined bodies adapted for swimming, with dorsal fins, flippers, and a horizontal tail fluke for propulsion.",
+        "They can hold their breath underwater for up to 15 minutes and swim at speeds up to 22 mph, with bursts up to 35 mph."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Intelligence and Communication",
+      "content": [
+        "Dolphins have large brains relative to their body size and exhibit self-awareness, problem-solving, and cultural transmission of behaviors.",
+        "They use a complex system of clicks, whistles, and body language for communication, with each dolphin developing a unique signature whistle."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Social Behavior and Hunting",
+      "content": [
+        "Dolphins live in social groups called pods that cooperate in hunting, childcare, and protection from predators.",
+        "They use sophisticated hunting techniques like creating mud nets to trap fish and working together to herd schools of prey."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation and Human Interaction",
+      "content": [
+        "Dolphins face threats from pollution, fishing gear entanglement, habitat degradation, and climate change.",
+        "Many countries have established marine protected areas and regulations to protect dolphin populations and promote responsible tourism."
+      ]
+    }
+  ]
+}

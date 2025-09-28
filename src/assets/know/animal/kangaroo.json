@@ -1,0 +1,47 @@
+{
+  "unique_id": "kangaroo_L8M3N7O2P5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about the Kangaroo.",
+  "title": "All About the Kangaroo",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/35",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Kangaroo",
+      "content": "Kangaroos are marsupials native to Australia and New Guinea, belonging to the family Macropodidae. They are known for their powerful hind legs, large feet adapted for leaping, and strong tails used for balance. The term 'kangaroo' typically refers to the largest species in this family."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Red kangaroos, the largest species, can stand up to 6.9 feet tall and weigh up to 200 pounds.",
+        "They have powerful hind legs that allow them to jump up to 30 feet in a single bound and reach speeds of 40 mph."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Reproductive System",
+      "content": [
+        "Female kangaroos have three vaginas and two uteri, an adaptation that allows them to be permanently pregnant.",
+        "Joeys are born after only 33 days of gestation and complete their development in the mother's pouch, where they nurse for up to a year."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Behavior and Social Structure",
+      "content": [
+        "Kangaroos are mostly active at dawn, dusk, and night, resting in shade during the heat of the day.",
+        "They live in groups called mobs, which provide protection through collective vigilance and can include up to 100 individuals."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Habitat and Conservation",
+      "content": [
+        "Kangaroos inhabit diverse Australian landscapes from deserts and grasslands to woodlands and coastal areas.",
+        "While not currently endangered, they face threats from habitat loss, vehicle collisions, and climate change affecting vegetation patterns."
+      ]
+    }
+  ]
+}

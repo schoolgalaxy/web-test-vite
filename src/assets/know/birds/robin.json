@@ -1,0 +1,47 @@
+{
+  "unique_id": "robin_A1B2C3D4G7",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the American Robin.",
+  "title": "All About the American Robin",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/31",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the American Robin",
+      "content": "The American Robin (Turdus migratorius) is a migratory songbird and one of North America's most familiar and beloved birds. It's often considered a harbinger of spring and is known for its cheerful song and orange breast."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Adult robins have a distinctive orange-red breast, brown back, and white eye ring. They measure about 9-11 inches in length.",
+        "Young robins have spotted breasts and are often mistaken for different species until they mature."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Diet and Foraging Behavior",
+      "content": [
+        "Robins primarily eat earthworms, insects, and berries. They're famous for their 'worm dance' - running and stopping to listen for worms.",
+        "In winter, they switch to berries and fruits, often traveling in large flocks to find food sources."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Migration and Habitat",
+      "content": [
+        "Most robins migrate seasonally, though some northern populations are year-round residents.",
+        "They prefer open woodlands, gardens, parks, and lawns where they can forage easily on the ground."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Cultural Significance",
+      "content": [
+        "The American Robin is the state bird of Connecticut, Michigan, and Wisconsin.",
+        "Their spring arrival is celebrated as a sign of renewal, and they've been featured in literature, poetry, and folk songs."
+      ]
+    }
+  ]
+}

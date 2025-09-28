@@ -1,0 +1,47 @@
+{
+  "unique_id": "flamingo_A1B2C3D4Q7",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the Greater Flamingo.",
+  "title": "All About the Greater Flamingo",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/41",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Greater Flamingo",
+      "content": "The Greater Flamingo (Phoenicopterus roseus) is the largest and most widespread species of flamingo. Famous for its distinctive pink coloration and one-legged stance, it's found across Africa, Asia, and southern Europe in large colonies."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "They stand 3.9-4.7 feet tall and weigh 4.4-9.9 pounds, with the longest neck and legs relative to body size of any bird.",
+        "Their pink coloration comes from pigments in their diet, and they have distinctive downward-bending bills for filter feeding."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Feeding and Filter Mechanism",
+      "content": [
+        "Flamingos feed by holding their bills upside down in water and using their tongues to pump water through lamellae that filter out small organisms.",
+        "They primarily eat algae, crustaceans, and mollusks, consuming 4-5 pounds of food per day to maintain their pink coloration."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Social Behavior and Breeding",
+      "content": [
+        "Greater Flamingos are highly social, living in large colonies that can number in the hundreds of thousands.",
+        "They perform elaborate synchronized courtship dances and build mud nests in shallow water where both parents incubate the eggs."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation and Adaptations",
+      "content": [
+        "Flamingos can drink both fresh and saltwater, excreting excess salt through glands near their eyes.",
+        "While not currently endangered, they face threats from habitat loss, pollution, and human disturbance of breeding colonies."
+      ]
+    }
+  ]
+}

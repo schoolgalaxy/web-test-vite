@@ -1,0 +1,47 @@
+{
+  "unique_id": "tiger_W9X3Y7Z2A5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about the Tiger.",
+  "title": "All About the Tiger",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/32",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Tiger",
+      "content": "The tiger (Panthera tigris) is the largest cat species and a member of the genus Panthera. It is most recognizable for its dark vertical stripes on orange fur with a white underside. Tigers are solitary, territorial predators native to Asia."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Tigers can weigh up to 660 pounds and measure up to 11 feet in length, making them the largest big cats.",
+        "Each tiger has a unique stripe pattern, similar to human fingerprints, which helps researchers identify individuals."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Hunting and Behavior",
+      "content": [
+        "Tigers are ambush predators that rely on stealth and power to hunt deer, wild boar, and other large prey.",
+        "They are mostly nocturnal hunters and can eat up to 40 pounds of meat in a single sitting, then go without food for days."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Habitat and Distribution",
+      "content": [
+        "Tigers historically ranged from eastern Turkey to the Sea of Japan and south to Sumatra, but now occupy only about 7% of their former range.",
+        "They prefer diverse habitats including tropical forests, grasslands, and mangrove swamps across 13 countries in Asia."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation Status",
+      "content": [
+        "Tigers are endangered, with some subspecies like the South China tiger possibly extinct in the wild.",
+        "Major threats include poaching, habitat loss, and depletion of prey species. Conservation efforts focus on anti-poaching and habitat protection."
+      ]
+    }
+  ]
+}

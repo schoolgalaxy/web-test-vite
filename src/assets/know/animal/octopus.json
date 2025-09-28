@@ -1,0 +1,47 @@
+{
+  "unique_id": "octopus_F4G8H3I7J1",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about the Octopus.",
+  "title": "All About the Octopus",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/39",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Octopus",
+      "content": "Octopuses are cephalopod mollusks belonging to the order Octopoda. They are widely regarded as the most intelligent invertebrates, with complex problem-solving abilities, excellent memories, and sophisticated camouflage techniques. There are over 300 species found in oceans worldwide."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Octopuses have eight arms lined with suckers, a soft body, and no internal or external skeleton, allowing them to squeeze through tiny openings.",
+        "They have three hearts, blue copper-based blood, and the ability to regenerate lost arms. Their eyes are highly developed and similar to human eyes."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Camouflage and Defense",
+      "content": [
+        "Octopuses are masters of camouflage, able to change color and texture in seconds using specialized skin cells called chromatophores.",
+        "They can release ink clouds for escape and use tools like coconut shells for shelter. Some species are toxic or venomous."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Intelligence and Behavior",
+      "content": [
+        "Octopuses exhibit remarkable problem-solving abilities, including opening jars, navigating mazes, and using tools in the wild.",
+        "They have individual personalities, can recognize humans, and engage in complex behaviors like play and social interaction with other species."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Life Cycle and Habitat",
+      "content": [
+        "Octopuses inhabit diverse marine environments from shallow coral reefs to deep ocean trenches, with some species living at depths over 13,000 feet.",
+        "They have short lifespans of 1-5 years, during which they reproduce once before dying. Females provide extensive parental care to their eggs."
+      ]
+    }
+  ]
+}

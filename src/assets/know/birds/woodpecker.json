@@ -1,0 +1,47 @@
+{
+  "unique_id": "woodpecker_A1B2C3D4I9",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the Downy Woodpecker.",
+  "title": "All About the Downy Woodpecker",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/33",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Downy Woodpecker",
+      "content": "The Downy Woodpecker (Dryobates pubescens) is North America's smallest and most common woodpecker. Despite its small size, it's a year-round resident across most of the continent and is well-adapted to both forests and urban environments."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "They measure 5.5-6.7 inches in length with a wingspan of 9.8-11.8 inches and weigh only about 1 ounce.",
+        "Black and white plumage with white backs and spotted wings. Males have a small red patch on the back of their heads."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Drumming and Communication",
+      "content": [
+        "Downy Woodpeckers communicate through distinctive drumming patterns on trees and other resonant surfaces.",
+        "They drum to establish territory and attract mates, with each individual having a unique rhythm and pattern."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Feeding Behavior",
+      "content": [
+        "They forage primarily on insects and larvae found in trees, using their specialized bills to probe and peck.",
+        "In winter, they supplement their diet with seeds and berries from feeders, often being the most frequent visitors."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Habitat and Nesting",
+      "content": [
+        "Downy Woodpeckers inhabit woodlands, orchards, parks, and suburban areas with mature trees.",
+        "They excavate nest cavities in dead trees or branches, providing homes that are later used by other cavity-nesting birds."
+      ]
+    }
+  ]
+}

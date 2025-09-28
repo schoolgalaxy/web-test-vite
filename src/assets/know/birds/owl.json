@@ -1,0 +1,47 @@
+{
+  "unique_id": "owl_A1B2C3D4N4",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the Great Horned Owl.",
+  "title": "All About the Great Horned Owl",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/38",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Great Horned Owl",
+      "content": "The Great Horned Owl (Bubo virginianus) is one of North America's most powerful and adaptable predators. Known for its distinctive ear tufts and deep hooting call, it's often called the 'tiger of the sky' due to its hunting prowess."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "They have prominent ear tufts, yellow eyes, and a white throat patch with horizontal barring on their chests.",
+        "Measuring 18-25 inches in length with a wingspan of 3-5 feet, they are among the largest owls in North America."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Hunting and Sensory Abilities",
+      "content": [
+        "Great Horned Owls have exceptional night vision and can hear sounds that humans cannot detect, locating prey in complete darkness.",
+        "They hunt a wide variety of animals including rabbits, rodents, birds, reptiles, and even other owls and hawks."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Adaptation and Territory",
+      "content": [
+        "They are found in diverse habitats from Arctic tundra to tropical rainforests and can rotate their heads up to 270 degrees.",
+        "Great Horned Owls are territorial and will defend large hunting ranges, often using the same nest sites for many years."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Cultural Significance",
+      "content": [
+        "Great Horned Owls appear in mythology and folklore worldwide, often representing wisdom, mystery, and the supernatural.",
+        "Their populations are stable and they are not considered threatened, though they face habitat loss and pesticide exposure."
+      ]
+    }
+  ]
+}

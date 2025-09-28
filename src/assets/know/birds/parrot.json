@@ -1,0 +1,47 @@
+{
+  "unique_id": "parrot_A1B2C3D4L2",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the African Grey Parrot.",
+  "title": "All About the African Grey Parrot",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/36",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the African Grey Parrot",
+      "content": "The African Grey Parrot (Psittacus erithacus) is renowned worldwide for its exceptional intelligence and remarkable ability to mimic human speech. Native to the rainforests of West and Central Africa, it's one of the most popular avian pets globally."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "They have distinctive grey plumage with white eye patches and bright red tails, measuring 12-14 inches in length.",
+        "Their beaks are powerful and curved, perfect for cracking nuts and seeds, and they have zygodactyl feet (two toes forward, two back)."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Intelligence and Communication",
+      "content": [
+        "African Greys are considered the most intelligent of all parrot species, capable of understanding concepts and using words contextually.",
+        "They can learn hundreds of words and phrases and are known for their ability to understand and use human language meaningfully."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Social Behavior and Bonding",
+      "content": [
+        "In the wild, they form strong pair bonds and live in flocks, communicating with a variety of squawks, whistles, and screams.",
+        "As pets, they form deep emotional bonds with their owners and require extensive social interaction and mental stimulation."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation and Threats",
+      "content": [
+        "African Grey Parrots are endangered in the wild due to habitat loss and the illegal wildlife trade.",
+        "Conservation efforts include breeding programs, habitat protection, and international trade regulations to protect wild populations."
+      ]
+    }
+  ]
+}

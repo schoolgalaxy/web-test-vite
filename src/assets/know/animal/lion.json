@@ -1,0 +1,47 @@
+{
+  "unique_id": "lion_K9M2N7P3Q8",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about the Lion.",
+  "title": "All About the Lion",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/30",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Lion",
+      "content": "The lion (Panthera leo) is one of the five big cats in the genus Panthera and a member of the Felidae family. Known as the 'King of the Jungle,' lions are the only cats that live in large social groups called prides."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Adult male lions can weigh up to 420 pounds and measure up to 10 feet in length including their tail.",
+        "They are sexually dimorphic, with males having prominent manes that grow with age and testosterone levels."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Social Structure and Behavior",
+      "content": [
+        "Lions live in groups called prides, typically consisting of related females, their cubs, and a small number of adult males.",
+        "Female lions do most of the hunting, working together to bring down large prey like zebras, wildebeest, and antelopes."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Habitat and Distribution",
+      "content": [
+        "Lions once roamed most of Africa and parts of Asia and Europe, but now they are found mainly in sub-Saharan Africa.",
+        "They prefer grasslands, savannas, and open woodlands where they can hunt effectively and find shelter."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation Status",
+      "content": [
+        "Lions are classified as vulnerable by the IUCN, with populations declining due to habitat loss, human-wildlife conflict, and poaching.",
+        "Conservation efforts include protected areas, anti-poaching initiatives, and community-based conservation programs."
+      ]
+    }
+  ]
+}

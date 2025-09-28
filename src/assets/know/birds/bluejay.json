@@ -1,0 +1,47 @@
+{
+  "unique_id": "blue_jay_A1B2C3D4E5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about the Blue Jay.",
+  "title": "All About the Blue Jay",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/29",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Blue Jay",
+      "content": "The Blue Jay (Cyanocitta cristata) is a striking bird native to eastern North America. Its name is derived from its loud call and its brilliant blue plumage. They are known for their intelligence and complex social systems."
+    },
+    {
+      "slide_number": 2,
+      "title": "Diet and Feeding Habits",
+      "content": [
+        "Blue Jays have a diverse diet that includes nuts, seeds, fruits, and insects. They are particularly fond of acorns.",
+        "They are known for their habit of storing food in hidden caches for later consumption, which helps to disperse trees like oaks."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Calls and Communication",
+      "content": [
+        "Blue Jays are highly vocal and have a wide range of calls, including a loud 'jay-jay' sound.",
+        "They are also excellent mimics and can imitate the calls of other birds, especially hawks, which they use to warn of predators or to intimidate other animals."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Intelligence and Behavior",
+      "content": [
+        "Blue Jays are considered one of the most intelligent birds. They can solve puzzles and are capable of using tools.",
+        "They form strong social bonds and live in small family groups, often staying together through the winter."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Habitat and Conservation",
+      "content": [
+        "Blue Jays inhabit a wide range of habitats, from dense forests to suburban yards and parks.",
+        "Their population is considered stable, but they are vulnerable to habitat loss and deforestation. Protecting their natural habitats is crucial for their survival."
+      ]
+    }
+  ]
+}

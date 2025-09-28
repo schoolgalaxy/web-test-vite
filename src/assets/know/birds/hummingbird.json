@@ -1,0 +1,47 @@
+{
+  "unique_id": "hummingbird_A1B2C3D4J0",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the Ruby-throated Hummingbird.",
+  "title": "All About the Ruby-throated Hummingbird",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/34",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Ruby-throated Hummingbird",
+      "content": "The Ruby-throated Hummingbird (Archilochus colubris) is a tiny migratory bird and the most common hummingbird species in eastern North America. Despite weighing only about as much as a penny, it undertakes remarkable long-distance migrations."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Males have a brilliant iridescent red throat (gorget) and emerald green back, while females lack the red throat.",
+        "They measure 2.8-3.5 inches in length with a wingspan of 3.1-4.3 inches and weigh only 2-6 grams."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Flight and Feeding",
+      "content": [
+        "Hummingbirds can hover in mid-air and fly backwards, forwards, and even upside down using figure-eight wing motions.",
+        "They feed primarily on nectar from flowers using their long, specialized tongues and supplement with insects and spiders."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Migration and Navigation",
+      "content": [
+        "Ruby-throated Hummingbirds migrate across the Gulf of Mexico in spring and fall, flying up to 500 miles non-stop.",
+        "They use the Earth's magnetic field, sun position, and visual landmarks to navigate during migration."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Metabolism and Survival",
+      "content": [
+        "Hummingbirds have the highest metabolism of any animal, with heart rates up to 1,260 beats per minute.",
+        "They enter a state called torpor at night to conserve energy, lowering their body temperature and metabolic rate significantly."
+      ]
+    }
+  ]
+}

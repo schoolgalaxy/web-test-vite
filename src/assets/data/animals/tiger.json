@@ -1,0 +1,57 @@
+{
+  "title": "The Majestic Tiger",
+  "description": "The tiger is the largest cat species and among the most recognizable and popular of the world's charismatic megafauna. They are known for their distinctive orange coat with black stripes.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/tiger_001",
+  "questions": [
+    {
+      "question": "What is the scientific name for the tiger?",
+      "options": [
+        "Panthera leo",
+        "Panthera tigris",
+        "Felis tigris",
+        "Tigris panthera"
+      ],
+      "correct_answer": "Panthera tigris"
+    },
+    {
+      "question": "Which subspecies of tiger is known as the largest tiger?",
+      "options": [
+        "Bengal Tiger",
+        "Siberian Tiger",
+        "Sumatran Tiger",
+        "Indochinese Tiger"
+      ],
+      "correct_answer": "Siberian Tiger"
+    },
+    {
+      "question": "How many subspecies of tigers are there currently?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "correct_answer": "5"
+    },
+    {
+      "question": "What is unique about a tiger's stripe pattern?",
+      "options": [
+        "All tigers have identical stripes",
+        "Stripes are the same on both sides",
+        "No two tigers have the same stripe pattern",
+        "Stripes change color with age"
+      ],
+      "correct_answer": "No two tigers have the same stripe pattern"
+    },
+    {
+      "question": "What is the primary hunting method used by tigers?",
+      "options": [
+        "Pack hunting",
+        "Ambush predation",
+        "Group stalking",
+        "Daytime hunting"
+      ],
+      "correct_answer": "Ambush predation"
+    }
+  ]
+}

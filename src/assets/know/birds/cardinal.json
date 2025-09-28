@@ -1,0 +1,47 @@
+{
+  "unique_id": "cardinal_A1B2C3D4F6",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the Northern Cardinal.",
+  "title": "All About the Northern Cardinal",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/30",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Northern Cardinal",
+      "content": "The Northern Cardinal (Cardinalis cardinalis) is a striking songbird native to North America. Famous for its bright red plumage in males and the distinctive crest on its head, it's also known as the redbird or Virginia nightingale."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Males are vibrant red with a black mask around their eyes and a prominent crest, while females are olive-brown with red tinges.",
+        "They have strong, conical beaks perfect for cracking seeds and a wingspan of about 10-12 inches."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Song and Communication",
+      "content": [
+        "Northern Cardinals have a distinctive whistle-like song that sounds like 'cheer-cheer-cheer' or 'birdie-birdie-birdie'.",
+        "Both males and females sing, which is unusual among songbirds, and they use songs to mark territory and attract mates."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Habitat and Behavior",
+      "content": [
+        "They prefer dense shrubbery, woodlands, gardens, and wetlands across eastern and central North America.",
+        "Cardinals are non-migratory and often form lifelong pair bonds, with males feeding females during courtship."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation and Symbolism",
+      "content": [
+        "Northern Cardinals are common and their populations are stable, making them a species of least concern.",
+        "They are the state bird of seven U.S. states and are popular in bird feeding, often being the first birds to visit feeders in winter."
+      ]
+    }
+  ]
+}

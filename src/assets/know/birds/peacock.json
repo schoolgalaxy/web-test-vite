@@ -1,0 +1,47 @@
+{
+  "unique_id": "peacock_A1B2C3D4P6",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the Indian Peafowl.",
+  "title": "All About the Indian Peafowl",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/40",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Indian Peafowl",
+      "content": "The Indian Peafowl (Pavo cristatus), commonly known as the peacock, is famous for its spectacular tail feathers and iridescent plumage. Native to South Asia, it has been domesticated and introduced worldwide as an ornamental bird."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Males (peacocks) have long, colorful tail feathers with eye spots that can span up to 6 feet when displayed.",
+        "Females (peahens) are smaller and duller brown in color, measuring about 3 feet in length compared to males' 7-8 feet including tail."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Courtship and Display",
+      "content": [
+        "Male peacocks perform elaborate courtship displays, fanning their tails and vibrating them to create a mesmerizing visual and auditory show.",
+        "The eye spots on their feathers are thought to deter predators and attract mates by appearing as many 'false heads'."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Habitat and Behavior",
+      "content": [
+        "Peafowl prefer open forests, grasslands, and areas near human habitation where they can forage for food.",
+        "They are omnivorous, eating insects, seeds, fruits, and small reptiles, and often live in small family groups."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Cultural Significance",
+      "content": [
+        "Peacocks are India's national bird and feature prominently in Hindu mythology, art, and architecture.",
+        "They have been symbols of beauty, pride, and immortality in cultures worldwide for thousands of years."
+      ]
+    }
+  ]
+}

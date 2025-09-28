@@ -1,0 +1,57 @@
+{
+  "title": "The Gentle Giant Panda",
+  "description": "Giant pandas are bear species native to China, easily recognized by their distinctive black-and-white coloring. They are herbivores, spending most of their time eating bamboo.",
+  "profile_pic_link": "http://googleusercontent.com/image_collection/image_retrieval/panda_001",
+  "questions": [
+    {
+      "question": "What is the primary food source for giant pandas?",
+      "options": [
+        "Meat and fish",
+        "Bamboo",
+        "Fruits and berries",
+        "Small mammals"
+      ],
+      "correct_answer": "Bamboo"
+    },
+    {
+      "question": "How many hours per day do pandas typically spend eating?",
+      "options": [
+        "2-4 hours",
+        "6-8 hours",
+        "10-12 hours",
+        "14-16 hours"
+      ],
+      "correct_answer": "10-12 hours"
+    },
+    {
+      "question": "What is unique about a panda's wrist bone?",
+      "options": [
+        "It's made of cartilage",
+        "It acts like a thumb",
+        "It can bend in all directions",
+        "It grows throughout their life"
+      ],
+      "correct_answer": "It acts like a thumb"
+    },
+    {
+      "question": "In which country are giant pandas native to?",
+      "options": [
+        "Japan",
+        "China",
+        "India",
+        "Thailand"
+      ],
+      "correct_answer": "China"
+    },
+    {
+      "question": "What is the conservation status of giant pandas?",
+      "options": [
+        "Extinct",
+        "Critically Endangered",
+        "Vulnerable",
+        "Least Concern"
+      ],
+      "correct_answer": "Vulnerable"
+    }
+  ]
+}

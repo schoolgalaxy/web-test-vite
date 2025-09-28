@@ -1,0 +1,47 @@
+{
+  "unique_id": "swan_A1B2C3D4O5",
+  "format_type": "general",
+  "description": "A five-slide presentation with key information about the Mute Swan.",
+  "title": "All About the Mute Swan",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/39",
+  "version": "1.0",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Mute Swan",
+      "content": "The Mute Swan (Cygnus olor) is one of the world's largest and most elegant waterfowl. Despite its name, it's not actually mute but relatively quiet compared to other swan species. Native to Europe and Asia, it has been introduced to many parts of the world."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "They have pure white plumage, long curved necks, and orange bills with a distinctive black knob at the base.",
+        "Adults can measure up to 5 feet in length with a wingspan of 7-8 feet and weigh 20-30 pounds."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Behavior and Communication",
+      "content": [
+        "Mute Swans are less vocal than other swans, making grunts, hisses, and snorts rather than loud trumpeting calls.",
+        "They are known for their dramatic courtship displays, including synchronized swimming and head movements with their mates."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Habitat and Migration",
+      "content": [
+        "They prefer shallow lakes, ponds, rivers, and coastal areas with abundant aquatic vegetation.",
+        "Most Mute Swans are non-migratory, though northern populations may move south during harsh winters."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation and Human Interaction",
+      "content": [
+        "Mute Swans were symbols of purity and grace in European folklore and are often featured in ballets like Swan Lake.",
+        "While protected in many areas, they can become overpopulated and are considered invasive species in some regions where introduced."
+      ]
+    }
+  ]
+}

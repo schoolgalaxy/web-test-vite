@@ -1,0 +1,47 @@
+{
+  "unique_id": "giraffe_B6C1D5E9F3",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about the Giraffe.",
+  "title": "All About the Giraffe",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/33",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to the Giraffe",
+      "content": "The giraffe (Giraffa camelopardalis) is the tallest living terrestrial animal and the largest ruminant. Native to Africa, giraffes are known for their extremely long neck and legs, which give them a distinctive silhouette and the ability to reach vegetation inaccessible to other herbivores."
+    },
+    {
+      "slide_number": 2,
+      "title": "Physical Characteristics",
+      "content": [
+        "Giraffes can reach heights of up to 18 feet and weigh up to 2,800 pounds, with males being larger than females.",
+        "Their neck alone can be 6-7 feet long and contains the same number of vertebrae as most mammals (seven), but each is greatly elongated."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Feeding and Behavior",
+      "content": [
+        "Giraffes are herbivores that feed mainly on leaves, flowers, and fruits from the tops of trees, particularly acacia trees.",
+        "They have a specialized tongue that can be up to 18-20 inches long, colored blue-black to protect against sunburn while feeding."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Social Structure and Communication",
+      "content": [
+        "Giraffes live in loose social groups that are constantly changing, with no fixed leadership or territorial behavior.",
+        "They communicate using infrasound (low-frequency sounds below human hearing range) and through various body postures and movements."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Conservation and Habitat",
+      "content": [
+        "Giraffes inhabit savannas, grasslands, and open woodlands across sub-Saharan Africa, though their populations have declined significantly.",
+        "They are vulnerable to extinction due to habitat loss, poaching, and civil unrest in some regions where they live."
+      ]
+    }
+  ]
+}
