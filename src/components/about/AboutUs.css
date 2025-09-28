@@ -7,13 +7,21 @@
 }
 
 .presentation-wrapper {
-  background: var(--bg-secondary);
-  border: 2px solid var(--border-color);
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, var(--bg-hero) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 12px var(--shadow-light);
   max-width: 900px;
   width: 100%;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.presentation-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-blue);
 }
 
 .slide-header {
@@ -23,6 +31,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
 }
 
 .slide-header h1 {
@@ -40,12 +49,14 @@
 }
 
 .slide-container {
-  background: var(--bg-secondary);
+  background: transparent;
   min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 30px;
+  border:#94a3b8 1px solid;
+  border-radius: 10px;
 }
 
 .slide-content {
@@ -62,6 +73,7 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  
 }
 
 .slide-text h2 {
@@ -83,8 +95,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
+  background: transparent;
+  border: 1px solid #94a3b8;
+  border-radius: 10px;
 }
 
 .nav-button {
