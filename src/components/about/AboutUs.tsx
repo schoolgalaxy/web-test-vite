@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTheme } from '../../util/ThemeContext';
 import './AboutUs.css';
 
 interface Slide {
@@ -9,6 +10,7 @@ interface Slide {
 }
 
 const KnowAbout = () => {
+  const { theme } = useTheme();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
@@ -58,7 +60,7 @@ const KnowAbout = () => {
   };
 
   return (
-    <div className="know-about-container">
+    <div className="know-about-container" data-theme={theme}>
       <div className="presentation-wrapper">
         <div className="slide-header">
           <h1>Know About Us</h1>
