@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link to="/explore">Explore</Link>
         </li>
         <li>
-          <Link to="/know">Know About</Link>
+          <Link to="/know-widget">Know About</Link>
         </li>
         <li className="navbar-auth">
           <Link to="/about-us">About</Link>
