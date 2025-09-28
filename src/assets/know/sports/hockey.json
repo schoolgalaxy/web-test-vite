@@ -1,0 +1,55 @@
+{
+  "unique_id": "hockey_H1O2C3K4E5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Hockey.",
+  "title": "All About Hockey",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/41",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Hockey",
+      "content": "Hockey encompasses several sports where players use sticks to shoot a puck or ball into the opponent's goal. The two main variants are ice hockey (played on ice with skates) and field hockey (played on grass or turf with no skates). Both require speed, skill, strategy, and physical contact. Hockey is known for its fast pace, exciting plays, and passionate fanbase worldwide."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "The modern game of ice hockey evolved in Canada in the mid-19th century, with the first organized game played in Montreal in 1875.",
+        "The National Hockey League (NHL) was founded in 1917, initially with four Canadian teams.",
+        "Field hockey originated in England in the 19th century and became an Olympic sport for men in 1908 and women in 1980.",
+        "The International Ice Hockey Federation (IIHF) was founded in 1908 and governs international ice hockey competitions."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Ice Hockey Rules and Gameplay",
+      "content": [
+        "Ice hockey is played with 6 players per team (5 skaters + 1 goalie) on a rink measuring 200ft x 85ft.",
+        "Games consist of 3 periods of 20 minutes each, with teams changing ends after each period.",
+        "Players use curved sticks to shoot a vulcanized rubber puck, aiming to score by getting it past the opposing goaltender.",
+        "Body checking is allowed in professional ice hockey, making physical contact a key defensive strategy."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Players and Records",
+      "content": [
+        "Wayne Gretzky (Canada) is 'The Great One,' holding 61 NHL records including most goals (894) and points (2,857).",
+        "Gordie Howe (Canada) played professionally for 32 seasons and had 801 goals in 1,767 NHL games.",
+        "Mario Lemieux (Canada) won 3 MVP awards despite serious health issues and is considered one of the most skilled players ever.",
+        "In field hockey, Jamie Dwyer (Australia) is a 5-time world player of the year and Olympic gold medalist."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Global Impact and Competitions",
+      "content": [
+        "Ice hockey is most popular in Canada, Russia, United States, Sweden, Finland, and Czech Republic.",
+        "The Stanley Cup is the oldest professional sports trophy, awarded annually to the NHL playoff champion.",
+        "Both ice hockey and field hockey are Olympic sports, with the Winter and Summer Olympics respectively.",
+        "Hockey has produced legendary rivalries and cultural impact, inspiring movies like 'Miracle' about the 1980 U.S. Olympic team."
+      ]
+    }
+  ]
+}

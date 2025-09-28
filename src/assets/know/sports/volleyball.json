@@ -1,0 +1,55 @@
+{
+  "unique_id": "volleyball_V1O2L3L4E5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Volleyball.",
+  "title": "All About Volleyball",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/39",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Volleyball",
+      "content": "Volleyball is a team sport played by two teams of six players each, separated by a net. The objective is to ground the ball on the opponent's court while preventing the opposing team from doing the same. Players use their hands to bat the ball back and forth over the net, with each team allowed up to three touches before sending the ball over. Points are scored when the ball hits the ground or when the opposing team commits a fault."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Volleyball was invented in 1895 by William G. Morgan, a YMCA physical education director in Holyoke, Massachusetts.",
+        "Originally called 'Mintonette,' the name was changed to volleyball in 1896 due to the volleying nature of the game.",
+        "The first official volleyball rules were published in 1897, and the first tournament was held in 1896.",
+        "Volleyball became an Olympic sport for both men and women at the 1964 Tokyo Olympic Games."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Rules and Gameplay",
+      "content": [
+        "Indoor volleyball is played on a 18m x 9m court with a net height of 2.43m for men and 2.24m for women.",
+        "Teams can touch the ball up to 3 times before sending it over the net, with no player touching it twice consecutively.",
+        "Points are scored on every serve (rally scoring), and matches are typically best of 5 sets, with sets won by the first to 25 points.",
+        "Common skills include serving, passing, setting, attacking (spiking), blocking, and digging (defensive saves)."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Variations and Famous Players",
+      "content": [
+        "Beach volleyball (2-on-2) became an Olympic sport in 1996 and is played on sand with different rules and court dimensions.",
+        "Karch Kiraly (USA) is the only player to win Olympic gold in both indoor (1984, 1988) and beach volleyball (1996).",
+        "Misty May-Treanor and Kerri Walsh Jennings (USA) won 3 consecutive Olympic gold medals in beach volleyball (2004, 2008, 2012).",
+        "Lang Ping (China) is a legendary player and coach who led China to Olympic gold as both player (1984) and coach (2016)."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Global Impact and Competitions",
+      "content": [
+        "The FIVB (Fédération Internationale de Volleyball) governs international volleyball with over 220 member countries.",
+        "Major competitions include the Olympic Games, World Championships, and World Cup for both indoor and beach volleyball.",
+        "Professional leagues exist worldwide, with strong followings in Brazil, Italy, Russia, and the United States.",
+        "Volleyball emphasizes teamwork, athleticism, and strategy, making it popular for both players and spectators globally."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "unique_id": "basketball_B1A2S3K4E5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Basketball.",
+  "title": "All About Basketball",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/31",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Basketball",
+      "content": "Basketball is a team sport played by two teams of five players each on a rectangular court. The objective is to shoot a ball through a hoop elevated 10 feet above the ground. Points are scored by making field goals (2 points) or three-pointers (3 points), with free throws worth 1 point each."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Basketball was invented in 1891 by Dr. James Naismith, a Canadian physical education instructor in Springfield, Massachusetts.",
+        "Naismith created 13 basic rules and used a soccer ball and two peach baskets as the first hoops.",
+        "The first professional league was formed in 1898, but the NBA (National Basketball Association) was established in 1946.",
+        "The sport became an Olympic event in 1936 at the Berlin Games, with the United States winning the gold medal."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Rules and Gameplay",
+      "content": [
+        "Games consist of four 12-minute quarters in the NBA, with a 15-minute halftime break.",
+        "Players advance the ball by bouncing it (dribbling) while walking or running, or by passing it to teammates.",
+        "Defensive players can steal the ball, block shots, or force turnovers through various fouls.",
+        "The shot clock (24 seconds in NBA) requires teams to attempt a shot within the time limit to prevent stalling."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Players and Records",
+      "content": [
+        "Michael Jordan won 6 NBA championships with the Chicago Bulls and is widely considered the greatest basketball player ever.",
+        "Kareem Abdul-Jabbar holds the record for most points scored in NBA history with 38,387 points.",
+        "Stephen Curry revolutionized the game with his three-point shooting, leading the Golden State Warriors to multiple championships.",
+        "Lisa Leslie was the first player to dunk in a WNBA game and won 4 Olympic gold medals with Team USA."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Global Impact and Evolution",
+      "content": [
+        "Basketball is played in over 200 countries worldwide, with the NBA being the most popular basketball league globally.",
+        "The sport has evolved significantly with rule changes, advanced analytics, and increased athleticism.",
+        "International competitions include the FIBA World Cup and Olympic Games basketball tournament.",
+        "Basketball culture has influenced fashion, music, and entertainment, with NBA players becoming global icons."
+      ]
+    }
+  ]
+}

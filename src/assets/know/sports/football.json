@@ -1,0 +1,54 @@
+{
+  "unique_id": "football_S1P2O3R4T5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Football (Soccer).",
+  "title": "All About Football (Soccer)",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/30",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Football",
+      "content": "Football, commonly known as soccer in North America, is the world's most popular sport. It's played by two teams of 11 players each, using a spherical ball on a rectangular field with goals at each end. The objective is to score more goals than the opponent within 90 minutes of play."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Modern football originated in England in the 19th century, with the first set of rules established in 1863.",
+        "The world's oldest football competition is the FA Cup, founded in 1871. The sport spread globally through British influence during the colonial era.",
+        "The first World Cup was held in 1930 in Uruguay, with only 13 teams participating. Today, FIFA organizes the tournament every four years."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Rules and Gameplay",
+      "content": [
+        "Each match lasts 90 minutes, divided into two 45-minute halves with a 15-minute break.",
+        "Players cannot use their hands or arms except for the goalkeeper within their penalty area.",
+        "Key fouls include tripping, pushing, and dangerous tackles. Yellow and red cards are used for discipline.",
+        "Offside rule prevents 'cherry-picking' - players cannot be in an advanced position when the ball is played forward unless they're behind the ball."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Players and Records",
+      "content": [
+        "Pelé (Brazil) won three World Cups (1958, 1962, 1970) and is widely considered one of the greatest players ever.",
+        "Lionel Messi (Argentina) has won a record 8 Ballon d'Or awards and holds numerous scoring records.",
+        "Cristiano Ronaldo (Portugal) is the all-time leading goalscorer in international football with over 120 goals.",
+        "The fastest goal in World Cup history was scored by Hakan Şükür of Turkey in 2002, just 11 seconds into the match."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Global Impact and Culture",
+      "content": [
+        "Football is played in every country worldwide, with FIFA recognizing 211 national associations.",
+        "The sport generates billions in revenue through broadcasting rights, sponsorships, and merchandise.",
+        "Major club competitions include the UEFA Champions League in Europe and Copa Libertadores in South America.",
+        "Football promotes unity and cultural exchange, with the World Cup being the most watched sporting event globally."
+      ]
+    }
+  ]
+}

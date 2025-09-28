@@ -1,0 +1,55 @@
+{
+  "unique_id": "rugby_R1U2G3B4Y5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Rugby.",
+  "title": "All About Rugby",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/40",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Rugby",
+      "content": "Rugby is a contact team sport that originated in England in the 19th century. There are two main codes: rugby union and rugby league. In both versions, points are scored by carrying or kicking an oval ball over the opponent's goal line to score a try, or by kicking the ball through goal posts. The sport is known for its physicality, requiring strength, speed, strategy, and teamwork."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Rugby originated at Rugby School in England in 1823 when William Webb Ellis picked up the ball during a football game.",
+        "The Rugby Football Union was formed in 1871, establishing the laws of rugby union and banning professionalism.",
+        "Rugby league split from rugby union in 1895 in Northern England due to disputes over player payments.",
+        "Rugby union became professional globally in 1995, leading to the formation of the Tri Nations (now Rugby Championship)."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Rules and Gameplay",
+      "content": [
+        "Rugby union teams have 15 players, rugby league has 13 players on the field at a time.",
+        "The ball can be passed sideways or backward, but forward passes are not allowed. Kicking is permitted in various forms.",
+        "A try (5 points) is scored by grounding the ball in the opponent's in-goal area. Conversions and penalties add extra points.",
+        "Tackling is a key defensive skill, but must be below shoulder height with the tackler wrapping their arms around the opponent."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Players and Records",
+      "content": [
+        "Jonah Lomu (New Zealand) revolutionized wing play with his size and speed, starring in the 1995 World Cup.",
+        "Richie McCaw (New Zealand) is rugby's most capped captain with 110 wins and led the All Blacks to two World Cup victories.",
+        "Dan Carter (New Zealand) is the highest points scorer in test rugby with 1,598 points and is considered one of the greatest fly-halves.",
+        "Wales' Shane Williams is the highest try scorer in international rugby with 60 tries in his career."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Global Impact and Competitions",
+      "content": [
+        "The Rugby World Cup is held every four years and is one of the largest sporting events in the world.",
+        "The Six Nations Championship (Europe) and Rugby Championship (Southern Hemisphere) are major annual tournaments.",
+        "Rugby sevens, a faster 7-a-side version, became an Olympic sport in 2016 and has grown rapidly in popularity.",
+        "Rugby is particularly popular in New Zealand, South Africa, Australia, England, Wales, Ireland, France, and Argentina."
+      ]
+    }
+  ]
+}

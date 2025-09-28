@@ -1,0 +1,55 @@
+{
+  "unique_id": "swimming_S1W2I3M4M5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Swimming.",
+  "title": "All About Swimming",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/36",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Swimming",
+      "content": "Swimming is an individual or team sport involving various strokes and techniques to move through water. Competitive swimming includes specific events and distances in pools or open water. It requires strength, endurance, technique, and breathing control. Swimming is both a recreational activity and a competitive Olympic sport with a rich history and global appeal."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Swimming has been practiced since prehistoric times, with evidence of swimming races in ancient Egypt around 2500 BC.",
+        "The first modern swimming races were held in Europe in the early 19th century, with the first indoor swimming pool built in England in 1828.",
+        "Swimming became an Olympic sport at the 1896 Athens Games, with events for men in freestyle, breaststroke, and backstroke.",
+        "Women's swimming events were introduced at the 1912 Stockholm Olympics, with the first female gold medalist being Fanny Durack of Australia."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Strokes and Techniques",
+      "content": [
+        "Four main competitive strokes are: freestyle (front crawl), breaststroke, backstroke, and butterfly.",
+        "Individual Medley (IM) combines all four strokes in one race: butterfly, backstroke, breaststroke, and freestyle.",
+        "Starts and turns are crucial, with racing dives from blocks and tumble turns or flip turns to maintain speed.",
+        "Open water swimming involves races in oceans, lakes, or rivers, requiring navigation and endurance over longer distances."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Swimmers and Records",
+      "content": [
+        "Michael Phelps (USA) is the most decorated Olympian ever with 28 medals (23 gold) across five Olympic Games.",
+        "Katie Ledecky (USA) holds multiple world records and has won 7 Olympic gold medals, dominating distance freestyle events.",
+        "Ian Thorpe (Australia) won 5 Olympic gold medals and was known as the 'Thorpedo' for his powerful swimming style.",
+        "Mark Spitz won 7 gold medals at the 1972 Munich Olympics, setting world records in all 7 events."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Competitions and Benefits",
+      "content": [
+        "The Olympics feature swimming events in 50m pools with races from 50m to 1500m in various strokes.",
+        "World Championships are held every two years, with the FINA organization governing international swimming.",
+        "Swimming provides excellent cardiovascular exercise, full-body workout, and is low-impact on joints.",
+        "Masters swimming allows competitive swimming for all ages, promoting lifelong fitness and community."
+      ]
+    }
+  ]
+}

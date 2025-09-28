@@ -1,0 +1,55 @@
+{
+  "unique_id": "tennis_T1E2N3N4I5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Tennis.",
+  "title": "All About Tennis",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/32",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Tennis",
+      "content": "Tennis is a racket sport played individually against a single opponent (singles) or between two teams of two players each (doubles). Players use a strung racket to strike a hollow rubber ball covered with felt over a net into the opponent's court. The objective is to hit the ball in such a way that the opponent cannot play a valid return."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Tennis originated in 12th century France as 'jeu de paume' (game of the palm), played with bare hands.",
+        "The modern game evolved in England in the 1870s with the establishment of the first tennis club in Leamington Spa.",
+        "Major Walter Clopton Wingfield patented the game in 1874, calling it 'Sphairistikè' before it became known as lawn tennis.",
+        "The first Wimbledon Championship was held in 1877, making it the oldest tennis tournament in the world."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Rules and Scoring",
+      "content": [
+        "A standard match consists of the best of three or five sets, with each set won by the first player to win 6 games with a 2-game advantage.",
+        "Scoring system is unique: 0 (love), 15, 30, 40, game. To win a game, a player must win at least 4 points with a 2-point advantage.",
+        "The court is divided by a net, with service boxes on each side. Players serve alternately from behind the baseline.",
+        "The ball must land within the court boundaries, and players lose a point if they fail to return the ball properly."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Players and Records",
+      "content": [
+        "Roger Federer (Switzerland) has won 20 Grand Slam singles titles, including 8 Wimbledon championships.",
+        "Serena Williams (USA) is considered one of the greatest female players ever, with 23 Grand Slam singles titles.",
+        "Rafael Nadal (Spain) holds the record for most French Open titles (14) and is known for his dominance on clay courts.",
+        "Martina Navratilova won 18 Grand Slam singles titles and is regarded as one of the best female players in tennis history."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Tournaments and Impact",
+      "content": [
+        "The four Grand Slam tournaments are: Australian Open, French Open, Wimbledon, and US Open.",
+        "Tennis is played at the Olympic Games, with singles and doubles events for both men and women.",
+        "Professional tours include ATP (men's) and WTA (women's) with year-end championships for top players.",
+        "Tennis has become a global sport with millions of recreational players and professional prize money exceeding $200 million annually."
+      ]
+    }
+  ]
+}

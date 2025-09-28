@@ -1,0 +1,55 @@
+{
+  "unique_id": "golf_G1O2L3F4G5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Golf.",
+  "title": "All About Golf",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/35",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Golf",
+      "content": "Golf is a club-and-ball sport in which players use various clubs to hit balls into a series of holes on a course in as few strokes as possible. It is played on courses consisting of either 9 or 18 holes, with the objective being to complete the course with the lowest number of strokes. Golf is unique among ball games as the course is the main obstacle rather than an opposing team."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Golf originated in Scotland in the 15th century, with the earliest reference to golf being James II's ban on the game in 1457.",
+        "The Old Course at St Andrews, established in 1552, is considered the 'Home of Golf' and the oldest golf course in the world.",
+        "The first 18-hole golf course was constructed at St Andrews in 1764, establishing the standard that became global.",
+        "Professional golf tours began in the early 20th century, with the PGA Tour founded in 1916 and the European Tour in 1972."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Rules and Equipment",
+      "content": [
+        "Players use up to 14 different clubs including woods, irons, wedges, and a putter, each designed for different distances and situations.",
+        "The game follows strict rules of etiquette, including playing in turn, not disturbing other players, and repairing divots and ball marks.",
+        "Scoring is based on par, the number of strokes an expert golfer should take to complete a hole.",
+        "Handicaps allow players of different skill levels to compete fairly by adjusting scores based on ability."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Players and Records",
+      "content": [
+        "Tiger Woods has won 15 major championships and 82 PGA Tour events, revolutionizing golf with his athleticism and dominance.",
+        "Jack Nicklaus holds the record for most major championship wins with 18, earning him the nickname 'The Golden Bear'.",
+        "Annika Sörenstam is considered the greatest female golfer ever, winning 10 major championships and 72 LPGA Tour events.",
+        "The longest recorded drive in professional golf is 515 yards by Mike Austin in 1974 during a long-drive competition."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Tournaments and Impact",
+      "content": [
+        "The four major championships are: The Masters, PGA Championship, U.S. Open, and The Open Championship (British Open).",
+        "The Ryder Cup is a biennial team competition between Europe and the United States, dating back to 1927.",
+        "Golf is played in over 200 countries with more than 60 million golfers worldwide.",
+        "Professional golf offers massive prize funds, with the total PGA Tour purse exceeding $400 million annually."
+      ]
+    }
+  ]
+}

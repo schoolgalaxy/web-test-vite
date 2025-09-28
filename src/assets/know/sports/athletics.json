@@ -1,0 +1,55 @@
+{
+  "unique_id": "athletics_A1T2H3L4E5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Athletics (Track & Field).",
+  "title": "All About Athletics",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/37",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Athletics",
+      "content": "Athletics, also known as track and field, is a collection of sporting events that involve running, jumping, and throwing. It is one of the oldest forms of organized sport, dating back to the ancient Olympic Games. Athletics includes track events (sprints, middle-distance, long-distance running), field events (jumps and throws), and combined events like the decathlon and heptathlon."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Athletics has its roots in ancient Greece, where the first Olympic Games were held in 776 BC with a single event: the stadium foot race.",
+        "The modern Olympic Games, revived in 1896, featured athletics as a major component with 12 track and field events.",
+        "The International Association of Athletics Federations (IAAF, now World Athletics) was founded in 1912.",
+        "Professional athletics emerged in the 1970s and 1980s, with significant prize money and sponsorship deals."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Track Events",
+      "content": [
+        "Sprints (100m, 200m, 400m) test speed and power, with the 100m being considered the blue-ribbon event.",
+        "Middle-distance (800m, 1500m) and long-distance (5000m, 10000m, marathon) require endurance and pacing strategy.",
+        "Hurdles (100m, 110m, 400m) combine speed with technique, requiring athletes to clear barriers while maintaining momentum.",
+        "Relay races (4x100m, 4x400m) involve teamwork and precise baton passing between team members."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Field Events and Records",
+      "content": [
+        "Jumping events include long jump, triple jump, high jump, and pole vault, requiring speed, technique, and explosive power.",
+        "Throwing events consist of shot put, discus, javelin, and hammer throw, focusing on strength and technique.",
+        "Usain Bolt (Jamaica) holds the 100m world record at 9.58 seconds and 200m at 19.19 seconds.",
+        "Sergey Bubka (Ukraine) set 35 world records in pole vault, reaching 6.14m in 1994."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Major Competitions and Impact",
+      "content": [
+        "The Olympic Games and World Championships are the pinnacle of athletics, held every four and two years respectively.",
+        "The Diamond League is a series of elite track and field meetings with the largest prize money in the sport.",
+        "Athletics promotes physical fitness, discipline, and international cooperation through global competitions.",
+        "The sport has produced legendary athletes who have become cultural icons and inspired millions worldwide."
+      ]
+    }
+  ]
+}

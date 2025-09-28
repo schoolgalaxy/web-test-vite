@@ -1,0 +1,55 @@
+{
+  "unique_id": "cricket_C1R2I3C4K5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Cricket.",
+  "title": "All About Cricket",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/33",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Cricket",
+      "content": "Cricket is a bat-and-ball game played between two teams of 11 players each on a field with a 22-yard pitch in the center. One team bats while the other bowls and fields. The batting team scores runs by striking the ball and running between wickets, while the bowling team tries to dismiss the batsmen and limit the runs scored."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Cricket originated in England during the 16th century, with the earliest known reference dating back to 1598.",
+        "The Marylebone Cricket Club (MCC) was founded in 1787 and became the guardian of cricket's laws and regulations.",
+        "International cricket began in 1844 with matches between the USA and Canada, but England vs Australia in 1877 marked the start of Test cricket.",
+        "The Imperial Cricket Conference (now ICC) was formed in 1909 to govern international cricket worldwide."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Formats and Gameplay",
+      "content": [
+        "Test cricket is the traditional format lasting up to 5 days, with each team having two innings.",
+        "One Day Internationals (ODIs) are limited to 50 overs per side, typically completed in one day.",
+        "Twenty20 (T20) cricket is the shortest format with 20 overs per side, designed for fast-paced entertainment.",
+        "Key skills include batting, bowling (fast, spin, swing), fielding, and wicketkeeping. The objective is to score more runs than the opposition."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Players and Records",
+      "content": [
+        "Sir Donald Bradman (Australia) is widely regarded as the greatest batsman ever, with a Test average of 99.94.",
+        "Sachin Tendulkar (India) holds the record for most Test runs (15,921) and ODI centuries (49).",
+        "Muttiah Muralitharan (Sri Lanka) is the highest wicket-taker in Test cricket with 800 wickets.",
+        "The fastest Test century was scored by Brendon McCullum (New Zealand) in just 54 balls against Australia."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Global Impact and Tournaments",
+      "content": [
+        "Cricket is most popular in the Commonwealth nations, especially India, Australia, England, Pakistan, and South Africa.",
+        "The ICC Cricket World Cup is held every four years and is one of the world's most-watched sporting events.",
+        "The Indian Premier League (IPL) is the world's most valuable cricket league with franchise-based T20 teams.",
+        "Cricket has grown globally with new formats like T20 making it more accessible to new audiences and markets."
+      ]
+    }
+  ]
+}

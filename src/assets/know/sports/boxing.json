@@ -1,0 +1,55 @@
+{
+  "unique_id": "boxing_B1O2X3I4N5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Boxing.",
+  "title": "All About Boxing",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/38",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Boxing",
+      "content": "Boxing is a combat sport in which two people engage in a contest of strength, speed, reflexes, endurance, and will by throwing punches at each other, usually with gloved hands. The objective is to score more points than the opponent or to knock out the opponent. Professional boxing is divided into weight classes to ensure fair competition among fighters of similar size and weight."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Boxing dates back to ancient civilizations, with evidence of fist-fighting contests in Egypt around 3000 BC.",
+        "The ancient Greeks included boxing in the Olympic Games as early as 688 BC, fought without gloves until the fall of the Roman Empire.",
+        "Modern boxing emerged in 17th century England, with James Figg becoming the first recognized boxing champion in 1719.",
+        "The Marquess of Queensberry Rules, established in 1867, introduced gloves, rounds, and other safety measures that form the basis of modern boxing."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Rules and Equipment",
+      "content": [
+        "Professional fights consist of 4-12 rounds of 3 minutes each, with 1-minute rest periods between rounds.",
+        "Boxers wear padded gloves (8-10 oz for professionals) to protect hands and reduce injuries to opponents.",
+        "Points are awarded for clean punches landed on legal target areas (above the waist, front and sides of the head and body).",
+        "A knockout (KO) occurs when a fighter cannot continue, while a technical knockout (TKO) is called by the referee to protect a fighter."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Boxers and Records",
+      "content": [
+        "Muhammad Ali, known as 'The Greatest,' won the heavyweight championship three times and was famous for his charisma and social activism.",
+        "Mike Tyson became the youngest heavyweight champion at age 20 and was known for his devastating knockout power.",
+        "Sugar Ray Robinson is considered by many as the greatest pound-for-pound fighter ever, with a professional record of 173-19-6.",
+        "Manny Pacquiao is the only boxer to win world titles in 8 different weight divisions, from flyweight to light middleweight."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Global Impact and Styles",
+      "content": [
+        "Boxing is popular worldwide with major organizations including WBA, WBC, IBF, and WBO sanctioning world championships.",
+        "Different styles include out-boxing (technical, defensive), infighting (close-range, aggressive), and counter-punching.",
+        "Major boxing events like championship fights generate millions in pay-per-view revenue and global media attention.",
+        "Boxing has influenced popular culture through movies like 'Rocky' and has produced legendary rivalries and memorable moments."
+      ]
+    }
+  ]
+}

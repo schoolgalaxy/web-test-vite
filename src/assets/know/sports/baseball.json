@@ -1,0 +1,55 @@
+{
+  "unique_id": "baseball_B1A2S3E4B5",
+  "format_type": "general",
+  "version": "1.0",
+  "description": "A five-slide presentation with key information about Baseball.",
+  "title": "All About Baseball",
+  "profile_pic_link": "http://googleusercontent.com/image_generation_content/34",
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Introduction to Baseball",
+      "content": "Baseball is a bat-and-ball sport played between two teams of nine players each, taking turns batting and fielding. The game is played on a diamond-shaped field with four bases. The objective is to score runs by hitting a thrown ball and running around the bases, while the fielding team tries to prevent runs and get batters out."
+    },
+    {
+      "slide_number": 2,
+      "title": "History and Origins",
+      "content": [
+        "Baseball evolved from older bat-and-ball games like rounders and cricket in England, with the first recorded game in North America in 1791.",
+        "Alexander Cartwright formalized the modern rules in 1845, establishing the diamond-shaped field and 90-foot base paths.",
+        "The National League was founded in 1876, followed by the American League in 1901, leading to the World Series.",
+        "Jackie Robinson broke the color barrier in 1947 when he joined the Brooklyn Dodgers, becoming the first African American in MLB."
+      ]
+    },
+    {
+      "slide_number": 3,
+      "title": "Rules and Gameplay",
+      "content": [
+        "A standard game consists of 9 innings, with each team getting a turn to bat (offense) and field (defense).",
+        "The pitcher throws the ball toward home plate, and the batter tries to hit it into fair territory.",
+        "Players advance by running counterclockwise around the four bases: first, second, third, and home plate.",
+        "The fielding team can get batters out by striking them out (3 strikes), catching fly balls, or tagging runners or bases."
+      ]
+    },
+    {
+      "slide_number": 4,
+      "title": "Famous Players and Records",
+      "content": [
+        "Babe Ruth hit 714 home runs and revolutionized the game with his power hitting in the early 20th century.",
+        "Hank Aaron holds the record for most career home runs with 755, breaking Babe Ruth's record in 1974.",
+        "Cy Young won 511 games, the most in MLB history, and the Cy Young Award for pitching excellence is named after him.",
+        "Nolan Ryan threw a record 7 no-hitters and holds the record for most strikeouts with 5,714 in his career."
+      ]
+    },
+    {
+      "slide_number": 5,
+      "title": "Global Impact and Leagues",
+      "content": [
+        "Major League Baseball (MLB) is the highest level of professional baseball, with 30 teams across the United States and Canada.",
+        "The World Series is the championship series of MLB, played annually between the American and National League champions.",
+        "Baseball has spread globally with professional leagues in Japan, South Korea, Taiwan, and several Latin American countries.",
+        "The World Baseball Classic is an international tournament featuring national teams from around the world."
+      ]
+    }
+  ]
+}
