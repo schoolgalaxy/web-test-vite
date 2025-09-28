@@ -1,22 +1,132 @@
-import { Authenticator } from '@aws-amplify/ui-react';
+import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const LoginScreen = () => {
+  const { user } = useAuthenticator();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate('/home');
+    }
+  }, [user, navigate]);
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', alignItems: 'center', justifyContent: 'center', background: '#f0f2f5' }}>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
-        {/* Left side: Quiz related content */}
-        <div style={{ textAlign: 'center' }}>
-          <h1 style={{ color: '#333', fontSize: '3em' }}>Subject Quiz</h1>
-          <p style={{ color: '#555', fontSize: '1.2em' }}>Test your knowledge and learn something new!</p>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style={{ width: '150px', height: '150px', color: '#007bff', marginTop: '20px' }}>
-            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.09L19 6.47v4.53c0 4.27-2.69 8.2-7 9.83-4.31-1.63-7-5.56-7-9.83V6.47L12 3.09zM12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
-          </svg>
+    <div style={{
+      display: 'flex',
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #737a9aff 0%, #06528cff 30%)',
+      fontFamily: "'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Arial, sans-serif",
+      WebkitFontSmoothing: 'antialiased',
+      MozOsxFontSmoothing: 'grayscale'
+    }}>
+      {/* Left side: Enhanced content */}
+      <div style={{
+        flex: 1,
+        padding: '60px 40px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        color: 'white'
+      }}>
+        <div style={{ marginBottom: '35px' }}>
+          <img
+            src="/src/assets/img/galaxy.png"
+            alt="AI-Powered Learning"
+            style={{ 
+              width: '200px', 
+              height: '200px', 
+              marginTop: '20px',
+              borderRadius: '5%',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
+            }}
+          />
+        </div>
+        
+        <p style={{
+          fontSize: '1.3em',
+          lineHeight: '1.7',
+          marginBottom: '50px',
+          maxWidth: '450px',
+          textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+          fontWeight: '400',
+          color: '#ffffff',
+          opacity: '0.95'
+        }}>
+          Transform your study experience with interactive slides, engaging quizzes, and AI-powered summaries that make learning fun and effective.
+        </p>
+
+        {/* Feature highlights */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '30px',
+          flexWrap: 'wrap'
+        }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '12px 20px',
+            borderRadius: '25px',
+            background: 'rgba(255,255,255,0.2)',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255,255,255,0.3)'
+          }}>
+            <span style={{ fontSize: '1.2em' }}>🧠</span>
+            <span style={{ fontWeight: '500' }}>AI-Powered</span>
+          </div>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '12px 20px',
+            borderRadius: '25px',
+            background: 'rgba(255,255,255,0.2)',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255,255,255,0.3)'
+          }}>
+            <span style={{ fontSize: '1.2em' }}>🎯</span>
+            <span style={{ fontWeight: '500' }}>Interactive</span>
+          </div>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '12px 20px',
+            borderRadius: '25px',
+            background: 'rgba(255,255,255,0.2)',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255,255,255,0.3)'
+          }}>
+            <span style={{ fontSize: '1.2em' }}>⚡</span>
+            <span style={{ fontWeight: '500' }}>Engaging</span>
+          </div>
         </div>
       </div>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
-        {/* Right side: Sign-in dialog box */}
-        <div style={{ background: '#fff', padding: '40px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.15)', maxWidth: '400px', width: '100%' }}>
+
+      {/* Right side: Compact Sign-in */}
+      <div style={{
+        flex: 1,
+        display: 'flex',
+        justifyContent: 'left',
+        alignItems: 'center',
+        padding: '40px 20px'
+      }}>
+        <div style={{
+          background: '#fff',
+          padding: '40px 30px',
+          borderRadius: '15px',
+          boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+          width: '100%',
+          maxWidth: '380px'
+        }}>
+          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+            <h3 style={{ color: '#555', fontSize: '1.1em', fontWeight: '500', margin: '0' }}>Access your learning journey</h3>
+          </div>
           <Authenticator />
         </div>
       </div>
