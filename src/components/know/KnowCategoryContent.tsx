@@ -37,7 +37,7 @@ const KnowCategoryContent = () => {
           path.includes(`/know/${category}/`)
         );
 
-        const items: ContentItem[] = categoryModules.map(([path, module]: [string, any]) => {
+        const items: ContentItem[] = categoryModules.map(([, module]: [string, any]) => {
           const data = module.default;
           return {
             title: data.title,
