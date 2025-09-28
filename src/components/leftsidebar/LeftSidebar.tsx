@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import '/src/assets/css/Home.css'; // Assuming Home.css will contain sidebar styles
-import iconHome from '/src/assets/img/icon-home.svg';
 import iconFeedback from '/src/assets/img/icon-feedback.svg';
 import iconAbout from '/src/assets/img/icon-about.svg';
-import debug from '../../util/debug';
 
 
 // Define types for the widget data
@@ -54,7 +52,8 @@ const LeftSidebar: React.FC = () => {
               .map((quiz: Quiz) => (
               <li key={quiz.id}>
                 <Link to={quiz.route}>
-                  <img
+                  <span className="explore-icon">{quiz.realIcon || '📚'}</span>
+                  {/* <Image
                     src={quiz.icon || quiz.realIcon}
                     alt={quiz.iconAlt}
                     className="sidebar-icon"
@@ -65,7 +64,7 @@ const LeftSidebar: React.FC = () => {
                         target.src = iconHome;
                       }
                     }}
-                  />
+                  /> */}
                   {quiz.displayName}
                 </Link>
               </li>

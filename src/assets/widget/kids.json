@@ -10,6 +10,7 @@
       "routePrefix": "/quiz/birds",
       "category": "birds",
       "icon": "/src/assets/img/icon-birds.svg",
+      "realIcon": "🐦",
       "iconAlt": "Birds",
       "active": true,
       "priority": 10
@@ -23,6 +24,7 @@
       "routePrefix": "/quiz/animals",
       "category": "animals",
       "icon": "/src/assets/img/icon-animals.svg",
+      "realIcon": "🐾",
       "iconAlt": "Animals",
       "active": true,
       "priority": 20
@@ -36,6 +38,7 @@
       "routePrefix": "/quiz/aquatic",
       "category": "aquatic",
       "icon": "/src/assets/img/icon-aquatic.svg",
+      "realIcon": "🐠",
       "iconAlt": "Aquatic",
       "active": true,
       "priority": 30
@@ -49,6 +52,7 @@
       "routePrefix": "/quiz/insects",
       "category": "insects",
       "icon": "/src/assets/img/icon-insects.svg",
+      "realIcon": "🦋",
       "iconAlt": "Insects",
       "active": true,
       "priority": 40

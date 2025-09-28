@@ -10,6 +10,7 @@
       "routePrefix": "/quiz/ai",
       "category": "ai",
       "icon": "/src/assets/img/ai.svg",
+      "realIcon": "🤖",      
       "iconAlt": "Artificial Intelligence",
       "active": true,
       "priority": 15
@@ -23,6 +24,7 @@
       "routePrefix": "/quiz/computer_science",
       "category": "computer_science",
       "icon": "/src/assets/img/icon-about.svg",
+      "realIcon": "💻",
       "iconAlt": "Computer Science",
       "active": true,
       "priority": 100
@@ -36,6 +38,7 @@
       "routePrefix": "/quiz/cars",
       "category": "cars",
       "icon": "/src/assets/img/icon-animals.svg",
+      "realIcon": "🤖",
       "iconAlt": "Cars",
       "active": false,
       "priority": 999
@@ -49,6 +52,7 @@
       "routePrefix": "/quiz/movies",
       "category": "movies",
       "icon": "/src/assets/img/icon-animals.svg",
+      "realIcon": "🤖",
       "iconAlt": "Movies",
       "active": false,
       "priority": 999
@@ -62,9 +66,10 @@
       "routePrefix": "/quiz/sports",
       "category": "sports",
       "icon": "/src/assets/img/icon-animals.svg",
+      "realIcon": "🏅",
       "iconAlt": "Sports",
       "active": true,
-      "priority": 999
+      "priority": 10
     },
     {
       "id": "space",
@@ -75,6 +80,7 @@
       "routePrefix": "/quiz/space",
       "category": "space",
       "icon": "/src/assets/img/icon-about.svg",
+      "realIcon": "🚀",
       "iconAlt": "Space",
       "active": true,
       "priority": 200
@@ -88,6 +94,7 @@
       "routePrefix": "/quiz/technology",
       "category": "technology",
       "icon": "/src/assets/img/icon-about.svg",
+      "realIcon": "🤖",
       "iconAlt": "Technology",
       "active": false,
       "priority": 300
@@ -101,6 +108,7 @@
       "routePrefix": "/quiz/history",
       "category": "history",
       "icon": "/src/assets/img/icon-about.svg",
+      "realIcon": "🤖",
       "iconAlt": "History",
       "active": false,
       "priority": 400
