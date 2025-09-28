@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './KnowAbout.css';
+import './AboutUs.css';
 
 interface Slide {
   id: number;

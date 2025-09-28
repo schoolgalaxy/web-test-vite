@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(35deg, var(--navbar-bg) 0%, var(--shadow-light) 100%);
+  background: linear-gradient(35deg, var(--navbar-bg-custom, var(--navbar-bg)) 0%, var(--shadow-light) 100%);
   padding: 0 1rem;
   box-sizing: border-box;
   position: fixed;
@@ -35,7 +35,7 @@
   padding-left: 100px;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--navbar-text);
+  color: var(--navbar-text-custom, var(--navbar-text));
   transition: color 0.3s ease;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .navbar a, .navbar button {
-  color: var(--navbar-text);
+  color: var(--navbar-text-custom, var(--navbar-text));
   text-decoration: none;
   background-color: transparent;
   border: none;
@@ -81,7 +81,7 @@
 }
 
 .navbar a:hover, .navbar button:hover {
-  background-color: var(--navbar-hover);
+  background-color: var(--navbar-hover-custom, var(--navbar-hover));
 }
 
 .navbar a.active, .navbar button.active {

@@ -10,7 +10,8 @@ const FeedbackLayout = lazy(() => import('./feedback/FeedbackLayout'));
 const QuizList = lazy(() => import('./quizzes/QuizList'));
 const QuizRoute = lazy(() => import('./quizzes/QuizRoute'));
 const MainLayout = lazy(() => import('./MainLayout'));
-const About = lazy(() => import('./about/KnowAbout'));
+const About = lazy(() => import('./about/AboutUs'));
+const NavbarCustomizer = lazy(() => import('./NavbarCustomizer'));
 const KnowMenu = lazy(() => import('./know/KnowMenu'));
 const KnowWidget = lazy(() => import('./know/KnowWidget'));
 const KnowCategoryContent = lazy(() => import('./know/KnowCategoryContent'));
@@ -39,6 +40,7 @@ export const AppRoutes = () => {
           <Route path="/explore" element={<Explore />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/navbar-customizer" element={<NavbarCustomizer />} />
           <Route path="/know" element={<KnowMenu />} />
           <Route path="/know-widget" element={<KnowWidget />} />
           <Route path="/know/:category" element={<KnowCategoryContent />} />
