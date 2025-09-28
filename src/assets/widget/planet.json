@@ -22,7 +22,7 @@
       "route": "/quiz/computer_science",
       "routePrefix": "/quiz/computer_science",
       "category": "computer_science",
-      "icon": "/src/assets/img/icon-about.svg",
+      "icon": "/icons/icon-about.svg",
       "iconAlt": "Computer Science",
       "active": true,
       "priority": 100
@@ -74,7 +74,7 @@
       "route": "/quiz/space",
       "routePrefix": "/quiz/space",
       "category": "space",
-      "icon": "/src/assets/img/icon-about.svg",
+      "icon": "/icons/icon-about.svg",
       "iconAlt": "Space",
       "active": true,
       "priority": 200
@@ -87,7 +87,7 @@
       "route": "/quiz/technology",
       "routePrefix": "/quiz/technology",
       "category": "technology",
-      "icon": "/src/assets/img/icon-about.svg",
+      "icon": "/icons/icon-about.svg",
       "iconAlt": "Technology",
       "active": false,
       "priority": 300
@@ -100,7 +100,7 @@
       "route": "/quiz/history",
       "routePrefix": "/quiz/history",
       "category": "history",
-      "icon": "/src/assets/img/icon-about.svg",
+      "icon": "/icons/icon-about.svg",
       "iconAlt": "History",
       "active": false,
       "priority": 400
