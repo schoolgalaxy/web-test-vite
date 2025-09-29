@@ -31,6 +31,7 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState<boolean | null>(null);
   const [answered, setAnswered] = useState(false);
+  const [firstTimeCorrect, setFirstTimeCorrect] = useState(false);
 
   useEffect(() => {
     const loadQuizData = () => {
@@ -62,7 +63,8 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
   }
 
   const handleAnswerOptionClick = (option: string) => {
-    if (selectedAnswer === option && !isCorrectAnswer) {
+    // Prevent action if already answered correctly (first time)
+    if (firstTimeCorrect && selectedAnswer === option) {
       return;
     }
 
@@ -71,10 +73,16 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
     setIsCorrectAnswer(correct);
 
     if (correct) {
-      setScore(score + 1);
+      // Only count score on first correct selection for this question
+      if (!firstTimeCorrect) {
+        setScore(score + 1);
+      }
+      setFirstTimeCorrect(true);
       setAnswered(true);
     } else {
       setAnswered(false);
+      setFirstTimeCorrect(true);
+      // Don't reset firstTimeCorrect here - keep it as true if it was the first correct answer
     }
   };
 
@@ -85,6 +93,7 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
       setSelectedAnswer(null);
       setIsCorrectAnswer(null);
       setAnswered(false);
+      setFirstTimeCorrect(false);
     } else {
       setShowScore(true);
     }
@@ -141,6 +150,8 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
                     Next Question
                   </button>
                 </>
+              ) : isCorrectAnswer ? (
+                <p className="feedback-correct">Correct! (Already answered)</p>
               ) : (
                 <p className="feedback-incorrect">Incorrect. Please try again.</p>
               )}
