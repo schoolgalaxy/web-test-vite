@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../../assets/css/McqTest.css'; // Reusing MCQ test styles
 import debug from '../../util/debug';
+import QuizScoreSection from './QuizScoreSection';
 
 interface Question {
   question: string;
@@ -99,15 +100,27 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
     }
   };
 
+  const handleRetakeQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setShowScore(false);
+    setSelectedAnswer(null);
+    setIsCorrectAnswer(null);
+    setAnswered(false);
+    setFirstTimeCorrect(false);
+  };
+
   return (
     <div className="mcq-test-container">
       <button onClick={() => navigate(routePrefix)} className="back-button">Back to {quizData.title} Quizzes</button>
       {showScore ? (
-        <div className="score-section">
-          <h2>Congratulations! You've completed the {quizData.title} quiz.</h2>
-          <p>You scored {score} out of {quizData.questions.length}</p>
-          <button onClick={() => navigate(routePrefix)}>Take Another Quiz</button>
-        </div>
+        <QuizScoreSection
+          title={quizData.title}
+          score={score}
+          totalQuestions={quizData.questions.length}
+          routePrefix={routePrefix}
+          onRetake={handleRetakeQuiz}
+        />
       ) : (
         <>
           <div className="question-section">

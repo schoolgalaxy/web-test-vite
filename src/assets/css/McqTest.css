@@ -146,9 +146,9 @@
 }
 
 .score-section button {
-  background-color: var(--primary-blue);
-  color: white;
-  border: none;
+  background-color: transparent;
+  color: var(--primary-blue-dark);
+  border: 2px solid var(--primary-blue-dark);
   padding: 12px 25px;
   border-radius: 8px;
   font-size: 1em;
@@ -218,4 +218,29 @@
 
 .next-question-button:hover {
   background-color: var(--primary-blue-dark);
+}
+
+/* Simple button styling for score section */
+.simple-button {
+  background-color: var(--primary-blue);
+  color: white;
+  border: var(--primary-blue);
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+}
+
+.simple-button:hover {
+  background-color: var(--primary-blue-dark);
+}
+
+.simple-button:first-child {
+  margin-left: 0;
+}
+
+.simple-button:last-child {
+  margin-right: 0;
 }
