@@ -105,16 +105,16 @@ const KnowAbout = () => {
 
           <button
             onClick={nextSlide}
-            className="nav-button next-button"
+            className="about-nav-button next-button"
             disabled={currentSlide === slides.length - 1}
           >
             Next →
           </button>
         </div>
 
-        <div className="slide-progress">
+        <div className="about-slide-progress">
           <div
-            className="progress-bar"
+            className="about-progress-bar"
             style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
           />
         </div>

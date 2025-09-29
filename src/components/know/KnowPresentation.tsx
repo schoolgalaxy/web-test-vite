@@ -203,7 +203,8 @@ const KnowPresentation = () => {
                       e.currentTarget.style.color = '#4A90E2';
                     }}
                   >
-                    ← See more of {category}
+                    {/* ←  */}
+                    See more of {category}
                   </Link>
                  
                 </div>

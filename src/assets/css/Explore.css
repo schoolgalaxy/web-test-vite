@@ -359,7 +359,7 @@
 .slide-header h2 {
   color: var(--text-primary);
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .slide-counter {
@@ -372,7 +372,7 @@
 }
 
 .slide-content {
-  font-size: 1.1em;
+  font-size: 1.2em;
   line-height: 1.7;
   color: var(--text-primary);
 }
