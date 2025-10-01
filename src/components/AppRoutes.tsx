@@ -17,6 +17,7 @@ const KnowMenu = lazy(() => import('./know/KnowMenu'));
 const KnowWidget = lazy(() => import('./know/KnowWidget'));
 const KnowCategoryContent = lazy(() => import('./know/KnowCategoryContent'));
 const KnowPresentation = lazy(() => import('./know/KnowPresentation'));
+const Games = lazy(() => import('./games/Games.tsx'));
 
 // Loading component for Suspense fallback
 const LoadingSpinner = () => (
@@ -49,6 +50,7 @@ export const AppRoutes = () => {
           <Route path="/test/:testId" element={<TestLayout />} />
           <Route path="/quiz/:category" element={<QuizList />} />
           <Route path="/quiz/:category/:quizId" element={<QuizRoute />} />
+          <Route path="/games/:gameId" element={<Games />} />
         </Route>
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/signout" element={<SignoutScreen />} />

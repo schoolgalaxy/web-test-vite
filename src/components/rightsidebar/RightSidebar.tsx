@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import quizzesConfig from '../../assets/data/quizzes.json';
 import knowConfig from '../../assets/know/know.json';
+import GamesWidget from '../games/GamesWidget';
 import '/src/assets/css/Home.css'; // Assuming Home.css will contain sidebar styles
 
 const RightSidebar: React.FC = () => {
@@ -51,11 +52,14 @@ const RightSidebar: React.FC = () => {
         </div>
       </div>
 
+      {/* Games Widget */}
+      <GamesWidget />
+
       {/* Fun Activities Section */}
-      <div className="sidebar-widget">
+      {/* <div className="sidebar-widget">
         <div className="widget-header">
-          <div className="widget-icon">🎯</div>
-          <h4>Fun Activities</h4>
+          <div className="widget-icon">🎮</div>
+          <h4>Learn with fun</h4>
         </div>
         <div className="widget-content">
           <div className="ad-content">
@@ -75,7 +79,7 @@ const RightSidebar: React.FC = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Titans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0f0c29;
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        #game-area {
+            height: 60vh;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="rgba(255,255,255,0.05)"><circle cx="10" cy="10" r="1"/><circle cx="30" cy="30" r="1"/><circle cx="50" cy="50" r="1"/><circle cx="70" cy="70" r="1"/><circle cx="90" cy="90" r="1"/><circle cx="10" cy="50" r="1"/><circle cx="50"  cy="10" r="1"/><circle cx="90" cy="50" r="1"/><circle cx="50" cy="90" r="1"/></g></svg>');
+        }
+        
+        .falling-word {
+            position: absolute;
+            background-color: #f97316; /* orange-500 */
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            transition: top 0.5s linear;
+        }
+
+        #typing-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.5);
+            border-color: #f97316;
+        }
+        
+        .explode {
+            animation: explode-animation 0.3s forwards;
+        }
+        
+        @keyframes explode-animation {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        
+        .shake {
+            animation: screen-shake 0.4s;
+        }
+        
+        @keyframes screen-shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="gameContainer" class="w-full max-w-2xl mx-auto p-4">
+        <div id="startScreen" class="text-center">
+            <div class="card p-8 rounded-2xl shadow-2xl">
+                <h1 class="text-5xl font-bold mb-4 tracking-wider">Typing Titans</h1>
+                <p class="text-lg mb-6 text-gray-300">Type the words before they hit the bottom!</p>
+                <div class="grid grid-cols-1 gap-4">
+                    <button onclick="startGame(1)" class="text-xl bg-green-500 hover:bg-green-600 font-bold py-4 px-6 rounded-xl transition duration-300">Easy</button>
+                    <button onclick="startGame(2)" class="text-xl bg-yellow-500 hover:bg-yellow-600 font-bold py-4 px-6 rounded-xl transition duration-300">Medium</button>
+                    <button onclick="startGame(3)" class="text-xl bg-red-500 hover:bg-red-600 font-bold py-4 px-6 rounded-xl transition duration-300">Hard</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="gameScreen" class="hidden">
+            <div class="card p-4 rounded-2xl shadow-2xl">
+                 <div class="flex justify-between items-center mb-4 px-2">
+                    <div class="text-xl font-bold">Score: <span id="score">0</span></div>
+                    <div class="text-xl font-bold">Lives: <span id="lives">❤️❤️❤️</span></div>
+                </div>
+                <div id="game-area" class="w-full rounded-lg"></div>
+                <div class="mt-4">
+                    <input type="text" id="typing-input" class="w-full p-4 text-2xl text-center rounded-lg border-2 border-gray-500 bg-gray-800 text-white transition" placeholder="Start typing...">
+                </div>
+            </div>
+        </div>
+
+        <div id="endScreen" class="hidden text-center">
+             <div class="card p-8 rounded-2xl shadow-2xl">
+                <h2 class="text-4xl font-bold mb-2">Game Over!</h2>
+                <p class="text-2xl text-gray-300 mb-4">Your final score is:</p>
+                <p id="finalScore" class="text-6xl font-bold text-orange-400 mb-8"></p>
+                <button onclick="restartGame()" class="w-full text-2xl bg-blue-500 hover:bg-blue-600 font-bold py-4 px-8 rounded-xl transition duration-300">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const startScreen = document.getElementById('startScreen');
+        const gameScreen = document.getElementById('gameScreen');
+        const endScreen = document.getElementById('endScreen');
+        const gameArea = document.getElementById('game-area');
+        const typingInput = document.getElementById('typing-input');
+        const scoreElement = document.getElementById('score');
+        const livesElement = document.getElementById('lives');
+        const finalScoreElement = document.getElementById('finalScore');
+        const gameContainer = document.getElementById('gameContainer');
+
+        const wordLists = {
+            1: ['cat', 'dog', 'sun', 'run', 'big', 'red', 'cup', 'hat', 'pen', 'bed', 'car', 'key', 'bus', 'ant', 'fun', 'joy'],
+            2: ['apple', 'happy', 'water', 'green', 'dream', 'smile', 'house', 'light', 'earth', 'music', 'story', 'magic', 'plant', 'friend'],
+            3: ['science', 'computer', 'adventure', 'beautiful', 'knowledge', 'wonderful', 'question', 'creative', 'language', 'important']
+        };
+        
+        const gameSettings = {
+            1: { speed: 1, spawnRate: 2000 },
+            2: { speed: 1.5, spawnRate: 1500 },
+            3: { speed: 2, spawnRate: 1200 }
+        };
+
+        let score, lives, difficulty, gameInterval, spawnInterval;
+        let activeWords = [];
+
+        typingInput.addEventListener('input', checkInput);
+
+        function startGame(level) {
+            difficulty = level;
+            score = 0;
+            lives = 3;
+            activeWords = [];
+            gameArea.innerHTML = '';
+            
+            updateUI();
+
+            startScreen.classList.add('hidden');
+            gameScreen.classList.remove('hidden');
+            endScreen.classList.add('hidden');
+            
+            typingInput.value = '';
+            typingInput.focus();
+
+            gameInterval = setInterval(gameLoop, 50);
+            spawnInterval = setInterval(spawnWord, gameSettings[difficulty].spawnRate);
+        }
+
+        function spawnWord() {
+            const wordList = wordLists[difficulty];
+            const wordText = wordList[Math.floor(Math.random() * wordList.length)];
+            
+            const wordElement = document.createElement('div');
+            wordElement.textContent = wordText;
+            wordElement.className = 'falling-word';
+            wordElement.style.top = `-40px`;
+            
+            const gameAreaWidth = gameArea.offsetWidth;
+            const wordElementWidth = wordText.length * 16; // Approximate width
+            const maxLeft = gameAreaWidth - wordElementWidth - 10;
+            wordElement.style.left = `${Math.max(5, Math.random() * maxLeft)}px`;
+            
+            const wordObj = {
+                element: wordElement,
+                text: wordText,
+                y: -40
+            };
+            
+            activeWords.push(wordObj);
+            gameArea.appendChild(wordElement);
+        }
+
+        function gameLoop() {
+            for (let i = activeWords.length - 1; i >= 0; i--) {
+                const word = activeWords[i];
+                word.y += gameSettings[difficulty].speed;
+                word.element.style.top = `${word.y}px`;
+                
+                if (word.y > gameArea.offsetHeight) {
+                    lives--;
+                    gameArea.removeChild(word.element);
+                    activeWords.splice(i, 1);
+                    gameContainer.classList.add('shake');
+                    setTimeout(() => gameContainer.classList.remove('shake'), 400);
+                    updateUI();
+                    
+                    if (lives <= 0) {
+                        endGame();
+                        return;
+                    }
+                }
+            }
+        }
+
+        function checkInput() {
+            const typedText = typingInput.value.trim().toLowerCase();
+            if (!typedText) return;
+
+            for (let i = activeWords.length - 1; i >= 0; i--) {
+                if (activeWords[i].text === typedText) {
+                    const word = activeWords[i];
+                    score += word.text.length;
+                    
+                    word.element.classList.add('explode');
+                    setTimeout(() => {
+                        if (word.element.parentNode === gameArea) {
+                            gameArea.removeChild(word.element);
+                        }
+                    }, 300);
+
+                    activeWords.splice(i, 1);
+                    typingInput.value = '';
+                    updateUI();
+                    return; // Exit after finding a match
+                }
+            }
+        }
+
+        function updateUI() {
+            scoreElement.textContent = score;
+            livesElement.textContent = '❤️'.repeat(lives);
+        }
+        
+        function endGame() {
+            clearInterval(gameInterval);
+            clearInterval(spawnInterval);
+            gameScreen.classList.add('hidden');
+            endScreen.classList.remove('hidden');
+            finalScoreElement.textContent = score;
+        }
+
+        function restartGame() {
+            endScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        }
+
+    </script>
+</body>
+</html>

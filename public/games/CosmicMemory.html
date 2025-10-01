@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Memory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Audiowide', cursive;
+            background: #000000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+                radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+            animation: move-background 150s linear infinite;
+        }
+        
+        @keyframes move-background {
+            from { background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; }
+            to { background-position: 1000px 500px, 1040px 560px, 1130px 770px, 1070px 600px; }
+        }
+
+        .card-container {
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .game-board {
+            display: grid;
+            gap: 1rem;
+            perspective: 1000px;
+        }
+
+        .memory-card {
+            width: 100%;
+            aspect-ratio: 1/1;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        .memory-card.flip {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .card-front {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-back {
+            background: linear-gradient(135deg, #21D4FD 0%, #B721FF 100%);
+            transform: rotateY(180deg);
+        }
+        
+        .matched {
+            border: 4px solid #34d399; /* emerald-400 */
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer" class="w-full max-w-xl mx-auto p-4">
+        <div id="startScreen" class="text-center">
+            <div class="card-container p-8 rounded-2xl">
+                <h1 class="text-5xl font-bold mb-4 tracking-wider">Cosmic Memory</h1>
+                <p class="text-lg mb-6 text-gray-300">Match the pairs of cosmic cards!</p>
+                <div class="grid grid-cols-1 gap-4">
+                    <button onclick="startGame(6)" class="text-xl bg-green-500 hover:bg-green-600 font-bold py-4 px-6 rounded-xl transition duration-300">Easy (6 Pairs)</button>
+                    <button onclick="startGame(8)" class="text-xl bg-yellow-500 hover:bg-yellow-600 font-bold py-4 px-6 rounded-xl transition duration-300">Medium (8 Pairs)</button>
+                    <button onclick="startGame(10)" class="text-xl bg-red-500 hover:bg-red-600 font-bold py-4 px-6 rounded-xl transition duration-300">Hard (10 Pairs)</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="gameScreen" class="hidden">
+            <div class="card-container p-4 rounded-2xl">
+                 <div class="flex justify-between items-center mb-4 px-2">
+                    <div class="text-2xl font-bold">Moves: <span id="moves">0</span></div>
+                    <button onclick="restartGame(true)" class="text-lg bg-purple-600 hover:bg-purple-700 font-bold py-2 px-4 rounded-lg transition">Restart</button>
+                </div>
+                <div id="game-board" class="game-board"></div>
+            </div>
+        </div>
+
+        <div id="endScreen" class="hidden text-center">
+             <div class="card-container p-8 rounded-2xl">
+                <h2 class="text-4xl font-bold mb-2">You Won!</h2>
+                <p class="text-2xl text-gray-300 mb-4">You found all the pairs in <span id="finalMoves" class="font-bold text-green-400"></span> moves!</p>
+                <button onclick="restartGame(false)" class="w-full text-2xl bg-blue-500 hover:bg-blue-600 font-bold py-4 px-8 rounded-xl transition duration-300 mt-6">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const startScreen = document.getElementById('startScreen');
+        const gameScreen = document.getElementById('gameScreen');
+        const endScreen = document.getElementById('endScreen');
+        const gameBoard = document.getElementById('game-board');
+        const movesElement = document.getElementById('moves');
+        const finalMovesElement = document.getElementById('finalMoves');
+
+        const emojis = ['🚀', '👽', '🪐', '🌟', '☄️', '🛸', '🛰️', '🌕', '🌌', '🔭'];
+        let cards = [];
+        let hasFlippedCard = false;
+        let lockBoard = false;
+        let firstCard, secondCard;
+        let moves = 0;
+        let pairsToMatch = 0;
+        let matchedPairs = 0;
+
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+        }
+
+        function startGame(pairCount) {
+            pairsToMatch = pairCount;
+            matchedPairs = 0;
+            moves = 0;
+            movesElement.textContent = moves;
+            
+            let cardEmojis = emojis.slice(0, pairCount);
+            let gameEmojis = [...cardEmojis, ...cardEmojis];
+            shuffle(gameEmojis);
+            
+            setupBoard(gameEmojis);
+
+            startScreen.classList.add('hidden');
+            endScreen.classList.add('hidden');
+            gameScreen.classList.remove('hidden');
+        }
+
+        function setupBoard(emojis) {
+            let columns = 4;
+            if (pairsToMatch === 6) columns = 4; // 4x3
+            if (pairsToMatch === 10) columns = 5; // 5x4
+            gameBoard.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+            gameBoard.innerHTML = '';
+
+            emojis.forEach(emoji => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('memory-card');
+                cardElement.dataset.emoji = emoji;
+
+                cardElement.innerHTML = `
+                    <div class="card-face card-front">?</div>
+                    <div class="card-face card-back">${emoji}</div>
+                `;
+
+                cardElement.addEventListener('click', flipCard);
+                gameBoard.appendChild(cardElement);
+            });
+        }
+
+        function flipCard() {
+            if (lockBoard) return;
+            if (this === firstCard) return;
+
+            this.classList.add('flip');
+
+            if (!hasFlippedCard) {
+                hasFlippedCard = true;
+                firstCard = this;
+                return;
+            }
+
+            secondCard = this;
+            moves++;
+            movesElement.textContent = moves;
+            checkForMatch();
+        }
+
+        function checkForMatch() {
+            let isMatch = firstCard.dataset.emoji === secondCard.dataset.emoji;
+            isMatch ? disableCards() : unflipCards();
+        }
+
+        function disableCards() {
+            firstCard.removeEventListener('click', flipCard);
+            secondCard.removeEventListener('click', flipCard);
+            
+            firstCard.querySelector('.card-back').classList.add('matched');
+            secondCard.querySelector('.card-back').classList.add('matched');
+            
+            matchedPairs++;
+            if(matchedPairs === pairsToMatch) {
+                setTimeout(endGame, 1000);
+            }
+
+            resetBoard();
+        }
+
+        function unflipCards() {
+            lockBoard = true;
+            setTimeout(() => {
+                firstCard.classList.remove('flip');
+                secondCard.classList.remove('flip');
+                resetBoard();
+            }, 1200);
+        }
+
+        function resetBoard() {
+            [hasFlippedCard, lockBoard] = [false, false];
+            [firstCard, secondCard] = [null, null];
+        }
+        
+        function endGame() {
+            gameScreen.classList.add('hidden');
+            endScreen.classList.remove('hidden');
+            finalMovesElement.textContent = moves;
+        }
+
+        function restartGame(isIngame) {
+            if (isIngame) {
+                // To prevent accidental clicks, add a confirmation later if needed.
+                // For now, it just goes back to the main menu.
+            }
+            gameScreen.classList.add('hidden');
+            endScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Wizards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: linear-gradient(to right top, #8e2de2, #4a00e0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: rise 10s infinite ease-in;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #answer-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(74, 0, 224, 0.4);
+            border-color: #8e2de2;
+        }
+        
+        .feedback-correct {
+            color: #22c55e; /* green-500 */
+            animation: pop-in 0.5s;
+        }
+        
+        .feedback-incorrect {
+            color: #ef4444; /* red-500 */
+            animation: shake-horizontal 0.5s;
+        }
+
+        @keyframes pop-in {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes shake-horizontal {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Background Bubbles -->
+    <script>
+        for (let i = 0; i < 20; i++) {
+            const bubble = document.createElement('div');
+            const size = Math.random() * 60 + 20;
+            bubble.className = 'bubble';
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${Math.random() * 100}%`;
+            bubble.style.bottom = `-${size}px`;
+            bubble.style.animationDelay = `${Math.random() * 10}s`;
+            bubble.style.animationDuration = `${5 + Math.random() * 10}s`;
+            document.body.appendChild(bubble);
+        }
+    </script>
+    
+    <div id="gameContainer" class="w-full max-w-lg mx-auto p-4 md:p-6">
+        <div id="startScreen" class="text-center">
+            <div class="card p-8 rounded-2xl shadow-2xl">
+                <h1 class="text-5xl font-bold text-gray-800 mb-4">Word Wizards</h1>
+                <p class="text-gray-600 text-lg mb-6">Unscramble the letters to form a word!</p>
+                <div class="grid grid-cols-1 gap-4">
+                    <button onclick="startGame(1)" class="text-xl bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-xl transition duration-300">Easy (1st-2nd Grade)</button>
+                    <button onclick="startGame(2)" class="text-xl bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl transition duration-300">Medium (3rd-4th Grade)</button>
+                    <button onclick="startGame(3)" class="text-xl bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-6 rounded-xl transition duration-300">Hard (5th Grade)</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="gameScreen" class="hidden">
+            <div class="card p-6 rounded-2xl shadow-2xl">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="text-lg font-bold text-gray-700">Score: <span id="score">0</span></div>
+                    <div class="text-lg font-bold text-gray-700">Word: <span id="word-count">1</span>/10</div>
+                </div>
+                <div id="scrambled-word" class="text-6xl tracking-widest font-bold text-center text-gray-800 my-10 bg-gray-100 p-6 rounded-lg"></div>
+                <div class="mt-6">
+                    <input type="text" id="answer-input" class="w-full p-4 text-2xl text-center rounded-lg border-2 border-gray-300 transition" placeholder="Your guess...">
+                    <button onclick="checkAnswer()" class="mt-4 w-full text-2xl bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-xl transition duration-300">Submit</button>
+                </div>
+                <div id="feedback" class="text-center text-2xl font-bold mt-4 h-8"></div>
+            </div>
+        </div>
+
+        <div id="endScreen" class="hidden text-center">
+             <div class="card p-8 rounded-2xl shadow-2xl">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">Well Done!</h2>
+                <p class="text-2xl text-gray-600 mb-4">Your final score is:</p>
+                <p id="finalScore" class="text-6xl font-bold text-purple-600 mb-8"></p>
+                <button onclick="restartGame()" class="w-full text-2xl bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-xl transition duration-300">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const startScreen = document.getElementById('startScreen');
+        const gameScreen = document.getElementById('gameScreen');
+        const endScreen = document.getElementById('endScreen');
+        
+        const scoreElement = document.getElementById('score');
+        const wordCountElement = document.getElementById('word-count');
+        const scrambledWordElement = document.getElementById('scrambled-word');
+        const answerInputElement = document.getElementById('answer-input');
+        const feedbackElement = document.getElementById('feedback');
+        const finalScoreElement = document.getElementById('finalScore');
+
+        const wordLists = {
+            1: ['cat', 'dog', 'sun', 'run', 'big', 'red', 'cup', 'hat', 'pen', 'bed', 'car', 'key', 'bus', 'ant'],
+            2: ['apple', 'happy', 'water', 'green', 'dream', 'smile', 'house', 'light', 'earth', 'music', 'story', 'magic', 'plant', 'friend'],
+            3: ['science', 'computer', 'adventure', 'beautiful', 'knowledge', 'wonderful', 'question', 'creative', 'language', 'important', 'fantastic', 'celebrate']
+        };
+
+        let score = 0;
+        let currentWordIndex = 0;
+        let words = [];
+        let difficulty = 1;
+        
+        answerInputElement.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                checkAnswer();
+            }
+        });
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function scrambleWord(word) {
+            let scrambled = word.split('').sort(() => 0.5 - Math.random()).join('');
+            return scrambled === word ? scrambleWord(word) : scrambled;
+        }
+
+        function startGame(level) {
+            difficulty = level;
+            score = 0;
+            currentWordIndex = 0;
+            words = shuffleArray([...wordLists[level]]).slice(0, 10);
+
+            startScreen.classList.add('hidden');
+            gameScreen.classList.remove('hidden');
+            endScreen.classList.add('hidden');
+            
+            displayWord();
+        }
+
+        function displayWord() {
+            if (currentWordIndex < words.length) {
+                const currentWord = words[currentWordIndex];
+                scrambledWordElement.textContent = scrambleWord(currentWord);
+                answerInputElement.value = '';
+                answerInputElement.focus();
+                feedbackElement.textContent = '';
+                feedbackElement.className = 'text-center text-2xl font-bold mt-4 h-8';
+                scoreElement.textContent = score;
+                wordCountElement.textContent = `${currentWordIndex + 1}/10`;
+            } else {
+                showEndScreen();
+            }
+        }
+        
+        function checkAnswer() {
+            const userAnswer = answerInputElement.value.trim().toLowerCase();
+            const correctAnswer = words[currentWordIndex];
+            
+            if (userAnswer === correctAnswer) {
+                score++;
+                feedbackElement.textContent = "Correct! ✨";
+                feedbackElement.className += ' feedback-correct';
+                currentWordIndex++;
+                setTimeout(displayWord, 1000);
+            } else {
+                feedbackElement.textContent = "Try again!";
+                feedbackElement.className += ' feedback-incorrect';
+                answerInputElement.value = '';
+            }
+        }
+
+        function showEndScreen() {
+            gameScreen.classList.add('hidden');
+            endScreen.classList.remove('hidden');
+            finalScoreElement.textContent = score;
+        }
+
+        function restartGame() {
+            endScreen.classList.add('hidden');
+            startScreen.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

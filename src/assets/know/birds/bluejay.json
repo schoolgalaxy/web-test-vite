@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "A five-slide presentation with key information about the Blue Jay.",
   "title": "All About the Blue Jay",
-  "profile_pic_link": "http://googleusercontent.com/image_generation_content/29",
+  "profile_pic_link": "https://images.pexels.com/photos/2317904/pexels-photo-2317904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "slides": [
     {
       "slide_number": 1,
