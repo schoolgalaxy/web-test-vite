@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 interface Game {
@@ -55,8 +55,33 @@ const games: Game[] = [
 
 const Games: React.FC = () => {
   const { gameId } = useParams<{ gameId: string }>();
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const game = games.find(g => g.id === gameId);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = async () => {
+    if (!iframeRef.current) return;
+
+    try {
+      if (!document.fullscreenElement) {
+        await iframeRef.current.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch (error) {
+      console.error('Error toggling fullscreen:', error);
+    }
+  };
 
   if (!game) {
     return (
@@ -77,6 +102,7 @@ const Games: React.FC = () => {
       </div>
       <div className="game-iframe-container">
         <iframe
+          ref={iframeRef}
           src={game.file}
           title={game.name}
           className="game-iframe"
@@ -84,6 +110,13 @@ const Games: React.FC = () => {
           scrolling="auto"
           allowFullScreen
         />
+        <button
+          className="fullscreen-toggle-btn"
+          onClick={toggleFullscreen}
+          title={isFullscreen ? "Exit Fullscreen" : "Enter Fullscreen"}
+        >
+          {isFullscreen ? "🪟" : "🔳"}
+        </button>
       </div>
     </div>
   );
