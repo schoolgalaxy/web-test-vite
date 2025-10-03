@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Scribe's Quest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            touch-action: none; /* Prevents scrolling on touch devices when drawing */
+        }
+        .font-scribe {
+            font-family: 'Lora', serif;
+        }
+        #handwriting-canvas {
+            background-image:
+                linear-gradient(rgba(224, 231, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(224, 231, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(224, 231, 255, 0.05) 40px, transparent 40px);
+            background-size: 1px 100%, 100% 1px, 100% 40px;
+            background-color: #1f2937; /* bg-gray-800 */
+            border-radius: 0.5rem;
+            cursor: crosshair;
+        }
+        #results-modal {
+            background-color: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl text-center">
+        <h1 class="text-4xl md:text-5xl font-scribe font-bold text-indigo-300">The Scribe's Quest</h1>
+        <p class="mt-2 text-lg text-gray-400">Your handwriting is magic. Restore the world of Papyrus!</p>
+
+        <!-- Game Area -->
+        <div id="game-container" class="mt-8 p-6 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl">
+            <p class="text-gray-300 mb-2">Rewrite the fading words to restore their power:</p>
+            <div id="prompt-text" class="text-3xl md:text-4xl font-scribe font-bold text-amber-300 h-12 mb-4"></div>
+            
+            <canvas id="handwriting-canvas" class="w-full h-48 md:h-64 border-2 border-gray-600"></canvas>
+
+            <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button id="done-button" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg">
+                    Done! Check My Power
+                </button>
+                <button id="clear-button" class="w-full sm:w-auto bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
+                    Clear Canvas
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="results-modal" class="fixed inset-0 flex items-center justify-center p-4 hidden">
+        <div class="bg-gray-800 border border-indigo-500 rounded-xl shadow-2xl text-center p-8 max-w-md w-full">
+            <h2 id="results-title" class="text-3xl font-scribe font-bold text-amber-300">Scroll Restored!</h2>
+            <p id="results-feedback" class="mt-2 text-gray-300">Your magic is powerful.</p>
+            <div class="mt-6 grid grid-cols-2 gap-4 text-left">
+                <div class="bg-gray-700 p-3 rounded-lg">
+                    <p class="text-sm text-gray-400">Time Taken</p>
+                    <p id="time-stat" class="text-xl font-semibold">0s</p>
+                </div>
+                <div class="bg-gray-700 p-3 rounded-lg">
+                    <p class="text-sm text-gray-400">Pen Lifts (Strokes)</p>
+                    <p id="strokes-stat" class="text-xl font-semibold">0</p>
+                </div>
+            </div>
+            <div class="mt-4 bg-gray-700 p-3 rounded-lg">
+                <p class="text-sm text-gray-400">Magic Power Score</p>
+                <p id="score-stat" class="text-4xl font-bold text-indigo-300">0</p>
+            </div>
+
+            <button id="next-prompt-button" class="mt-8 w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-lg">
+                Next Challenge
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('handwriting-canvas');
+        const ctx = canvas.getContext('2d');
+        const doneButton = document.getElementById('done-button');
+        const clearButton = document.getElementById('clear-button');
+        const nextPromptButton = document.getElementById('next-prompt-button');
+        const promptText = document.getElementById('prompt-text');
+        
+        // Results Modal Elements
+        const resultsModal = document.getElementById('results-modal');
+        const resultsTitle = document.getElementById('results-title');
+        const resultsFeedback = document.getElementById('results-feedback');
+        const timeStat = document.getElementById('time-stat');
+        const strokesStat = document.getElementById('strokes-stat');
+        const scoreStat = document.getElementById('score-stat');
+
+        // Game State
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+        
+        let strokeCount = 0;
+        let startTime = 0;
+        let points = [];
+        let currentPromptIndex = 0;
+
+        const prompts = [
+            "Magic", "Quest", "Scribe", "Ancient Scroll", "Forgotten Words", "Power of the Pen", "Restore the World"
+        ];
+
+        function initializeCanvas() {
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+            
+            ctx.strokeStyle = '#fefce8'; // almost white
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            
+            clearCanvas(false); // Clear without resetting state for the first time
+        }
+        
+        function getCoords(e) {
+            const rect = canvas.getBoundingClientRect();
+            if (e.touches && e.touches.length > 0) {
+                return [e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top];
+            }
+            return [e.clientX - rect.left, e.clientY - rect.top];
+        }
+
+        function startDrawing(e) {
+            e.preventDefault();
+            isDrawing = true;
+            [lastX, lastY] = getCoords(e);
+            
+            if (strokeCount === 0) { // First stroke
+                startTime = Date.now();
+            }
+            strokeCount++;
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            e.preventDefault();
+            
+            const [x, y] = getCoords(e);
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            
+            points.push({x, y});
+            [lastX, lastY] = [x, y];
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        function clearCanvas(resetState = true) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if(resetState) {
+                strokeCount = 0;
+                startTime = 0;
+                points = [];
+            }
+        }
+
+        function analyzeHandwriting() {
+            if (points.length < 10) { // Not enough written to analyze
+                alert("Please write the words before checking your power!");
+                return;
+            }
+
+            // --- Analysis ---
+            const timeTaken = (Date.now() - startTime) / 1000;
+            
+            // --- Scoring ---
+            // A simple scoring algorithm for demonstration
+            const baseScore = 1000;
+            const timePenalty = Math.max(0, (timeTaken - prompts[currentPromptIndex].length * 0.5)) * 20; // Penalty for being slow
+            const strokePenalty = Math.max(0, (strokeCount - prompts[currentPromptIndex].split(' ').length)) * 30; // Penalty for too many pen lifts
+            
+            let finalScore = Math.max(0, baseScore - timePenalty - strokePenalty);
+            finalScore = Math.round(finalScore);
+
+            // --- Display Results ---
+            timeStat.textContent = `${timeTaken.toFixed(1)}s`;
+            strokesStat.textContent = strokeCount;
+            scoreStat.textContent = finalScore;
+            
+            if (finalScore > 800) {
+                resultsTitle.textContent = "Master Scribe!";
+                resultsFeedback.textContent = "Your handwriting flows with incredible power!";
+            } else if (finalScore > 500) {
+                resultsTitle.textContent = "Scroll Restored!";
+                resultsFeedback.textContent = "Well done! The magic is returning.";
+            } else {
+                resultsTitle.textContent = "A Faint Glow...";
+                resultsFeedback.textContent = "The words are visible, but the magic is weak. Keep practicing!";
+            }
+            
+            resultsModal.classList.remove('hidden');
+        }
+        
+        function loadNextPrompt() {
+            currentPromptIndex = (currentPromptIndex + 1) % prompts.length;
+            promptText.textContent = prompts[currentPromptIndex];
+            resultsModal.classList.add('hidden');
+            clearCanvas(true);
+        }
+
+        // --- Event Listeners ---
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseout', stopDrawing);
+
+        canvas.addEventListener('touchstart', startDrawing);
+        canvas.addEventListener('touchmove', draw);
+        canvas.addEventListener('touchend', stopDrawing);
+        canvas.addEventListener('touchcancel', stopDrawing);
+
+        doneButton.addEventListener('click', analyzeHandwriting);
+        clearButton.addEventListener('click', () => clearCanvas(true));
+        nextPromptButton.addEventListener('click', loadNextPrompt);
+        
+        window.addEventListener('resize', initializeCanvas);
+
+        // --- Initial Load ---
+        promptText.textContent = prompts[currentPromptIndex];
+        initializeCanvas();
+    </script>
+</body>
+</html>

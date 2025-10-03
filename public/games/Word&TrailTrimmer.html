@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Weaver & Tale Trimmer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-title {
+            font-family: 'Merriweather', serif;
+        }
+        .word-bank, .sentence-drop-zone {
+            min-height: 5rem;
+            border: 2px dashed #4b5563;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .word-bank.drag-over, .sentence-drop-zone.drag-over {
+            background-color: #374151;
+            border-color: #6366f1;
+        }
+        .word-item {
+            cursor: grab;
+            user-select: none;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .word-item:active {
+            cursor: grabbing;
+            transform: scale(1.1);
+        }
+        .dragging {
+            opacity: 0.5;
+        }
+        #feedback-toast {
+            transition: transform 0.5s, opacity 0.5s;
+            transform: translateY(200%);
+            opacity: 0;
+        }
+        #feedback-toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-title font-bold text-indigo-300">Word Weaver & Tale Trimmer</h1>
+            <p class="mt-2 text-lg text-gray-400">Master English Sentences and Summaries</p>
+        </header>
+
+        <!-- Mode Switcher -->
+        <div class="flex justify-center gap-4 mb-6">
+            <button id="mode-weaver" class="mode-btn bg-indigo-600 font-bold py-2 px-6 rounded-lg">Sentence Construction</button>
+            <button id="mode-trimmer" class="mode-btn bg-gray-700 font-bold py-2 px-6 rounded-lg">Summarization</button>
+        </div>
+        
+        <!-- Game Area -->
+        <main id="game-area" class="p-6 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl">
+            <!-- Word Weaver Game -->
+            <div id="weaver-game">
+                <h2 class="text-2xl font-bold font-title text-amber-300">Word Weaver</h2>
+                <p class="text-gray-300 mb-4">Drag the words into the box below to form a correct sentence.</p>
+                <div class="word-bank flex flex-wrap items-center justify-center gap-3 bg-gray-900/50 mb-4"></div>
+                <div class="sentence-drop-zone flex flex-wrap items-center justify-center gap-3 bg-gray-900/50"></div>
+                <div class="mt-6 flex justify-center">
+                    <button id="check-sentence-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg">Check Sentence</button>
+                </div>
+            </div>
+
+            <!-- Tale Trimmer Game -->
+            <div id="trimmer-game" class="hidden">
+                 <h2 class="text-2xl font-bold font-title text-amber-300">Tale Trimmer</h2>
+                <p class="text-gray-300 mb-4">Read the paragraph below and summarize it in a single sentence.</p>
+                <div id="paragraph-display" class="p-4 bg-gray-900/50 rounded-lg text-gray-300 leading-relaxed mb-4"></div>
+                <textarea id="summary-input" class="w-full h-24 p-3 bg-gray-700 text-white rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Write your one-sentence summary here..."></textarea>
+                <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
+                     <button id="submit-summary-btn" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg">Submit Summary</button>
+                     <button id="next-paragraph-btn" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg hidden">Next Paragraph</button>
+                </div>
+                <div id="model-summary-display" class="mt-4 p-4 bg-indigo-900/50 rounded-lg hidden">
+                    <h4 class="font-bold text-indigo-300">Model Summary:</h4>
+                    <p id="model-summary-text"></p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Score -->
+        <div class="text-center mt-6 text-xl font-semibold">
+            Score: <span id="score" class="text-amber-300">0</span>
+        </div>
+    </div>
+    
+    <!-- Feedback Toast -->
+    <div id="feedback-toast" class="fixed bottom-5 right-5 p-4 rounded-lg text-white font-bold shadow-2xl">
+        <span id="feedback-text"></span>
+    </div>
+
+    <script>
+        // --- DOM Elements ---
+        const modeWeaverBtn = document.getElementById('mode-weaver');
+        const modeTrimmerBtn = document.getElementById('mode-trimmer');
+        const weaverGame = document.getElementById('weaver-game');
+        const trimmerGame = document.getElementById('trimmer-game');
+        const scoreEl = document.getElementById('score');
+        const feedbackToast = document.getElementById('feedback-toast');
+        const feedbackText = document.getElementById('feedback-text');
+
+        // Weaver Elements
+        const wordBank = weaverGame.querySelector('.word-bank');
+        const dropZone = weaverGame.querySelector('.sentence-drop-zone');
+        const checkSentenceBtn = document.getElementById('check-sentence-btn');
+        
+        // Trimmer Elements
+        const paragraphDisplay = document.getElementById('paragraph-display');
+        const summaryInput = document.getElementById('summary-input');
+        const submitSummaryBtn = document.getElementById('submit-summary-btn');
+        const nextParagraphBtn = document.getElementById('next-paragraph-btn');
+        const modelSummaryDisplay = document.getElementById('model-summary-display');
+        const modelSummaryText = document.getElementById('model-summary-text');
+
+        // --- Game State ---
+        let currentMode = 'weaver';
+        let score = 0;
+        let weaverLevel = 0;
+        let trimmerLevel = 0;
+        let draggedItem = null;
+
+        // --- Game Data ---
+        const weaverData = [
+            "the quick brown fox jumps",
+            "she sells seashells by the seashore",
+            "a happy dog wags its tail",
+            "the sun rises in the east every morning",
+            "learning new things is an exciting adventure"
+        ];
+        
+        const trimmerData = [
+            { 
+                paragraph: "The lion is often called the 'king of the jungle'. It is a large cat that lives in parts of Africa and India. Lions are the only cats that live in groups, which are called prides. They are powerful predators and hunt large animals like zebras and wildebeest.",
+                summary: "Lions are large, social cats from Africa and India that live in prides and hunt big animals."
+            },
+            {
+                paragraph: "Photosynthesis is the process plants use to turn sunlight into food. They use chlorophyll, the green pigment in their leaves, to capture energy from the sun. This process is vital for life on Earth as it produces oxygen, which animals and humans need to breathe.",
+                summary: "Plants use photosynthesis and chlorophyll to convert sunlight into food, releasing essential oxygen."
+            },
+            {
+                paragraph: "The Roman Empire was one of the most powerful empires in world history. It lasted for over 1,000 years and controlled vast territories around the Mediterranean Sea. The Romans were known for their incredible engineering, such as aqueducts and roads, and their system of law, which still influences legal systems today.",
+                summary: "The powerful Roman Empire, known for its engineering and legal systems, dominated the Mediterranean for a millennium."
+            }
+        ];
+
+        // --- Core Functions ---
+        function switchMode(mode) {
+            currentMode = mode;
+            if (mode === 'weaver') {
+                weaverGame.classList.remove('hidden');
+                trimmerGame.classList.add('hidden');
+                modeWeaverBtn.classList.replace('bg-gray-700', 'bg-indigo-600');
+                modeTrimmerBtn.classList.replace('bg-indigo-600', 'bg-gray-700');
+                initWeaver();
+            } else {
+                weaverGame.classList.add('hidden');
+                trimmerGame.classList.remove('hidden');
+                modeTrimmerBtn.classList.replace('bg-gray-700', 'bg-indigo-600');
+                modeWeaverBtn.classList.replace('bg-indigo-600', 'bg-gray-700');
+                initTrimmer();
+            }
+        }
+
+        function updateScore(points) {
+            score += points;
+            scoreEl.textContent = score;
+        }
+        
+        function showFeedback(message, isSuccess) {
+            feedbackText.textContent = message;
+            feedbackToast.className = `fixed bottom-5 right-5 p-4 rounded-lg text-white font-bold shadow-2xl ${isSuccess ? 'bg-emerald-600' : 'bg-red-600'}`;
+            feedbackToast.classList.add('show');
+            setTimeout(() => feedbackToast.classList.remove('show'), 2000);
+        }
+
+        // --- Word Weaver Logic ---
+        function createWordItem(text) {
+            const word = document.createElement('div');
+            word.textContent = text;
+            word.className = 'word-item bg-indigo-500 p-2 px-4 rounded-md';
+            word.draggable = true;
+            return word;
+        }
+
+        function initWeaver() {
+            wordBank.innerHTML = '';
+            dropZone.innerHTML = '';
+            const sentence = weaverData[weaverLevel % weaverData.length];
+            const words = sentence.split(' ');
+            words.sort(() => Math.random() - 0.5); // Shuffle words
+            words.forEach(text => {
+                wordBank.appendChild(createWordItem(text));
+            });
+        }
+        
+        function checkSentence() {
+            const wordsInDropZone = Array.from(dropZone.children).map(el => el.textContent);
+            const constructedSentence = wordsInDropZone.join(' ');
+            const correctSentence = weaverData[weaverLevel % weaverData.length];
+            
+            if (constructedSentence === correctSentence) {
+                showFeedback("Correct! +10 points", true);
+                updateScore(10);
+                weaverLevel++;
+                setTimeout(initWeaver, 1000);
+            } else {
+                showFeedback("Not quite, try again!", false);
+            }
+        }
+        
+        // --- Tale Trimmer Logic ---
+        function initTrimmer() {
+            summaryInput.value = '';
+            modelSummaryDisplay.classList.add('hidden');
+            submitSummaryBtn.classList.remove('hidden');
+            nextParagraphBtn.classList.add('hidden');
+            summaryInput.disabled = false;
+            
+            const data = trimmerData[trimmerLevel % trimmerData.length];
+            paragraphDisplay.textContent = data.paragraph;
+            modelSummaryText.textContent = data.summary;
+        }
+        
+        function submitSummary() {
+            if (summaryInput.value.trim().length < 5) {
+                showFeedback("Please write a summary first.", false);
+                return;
+            }
+            showFeedback("Good work! Compare with the model. +15 points", true);
+            updateScore(15);
+            modelSummaryDisplay.classList.remove('hidden');
+            submitSummaryBtn.classList.add('hidden');
+            nextParagraphBtn.classList.remove('hidden');
+            summaryInput.disabled = true;
+        }
+        
+        function nextParagraph() {
+            trimmerLevel++;
+            initTrimmer();
+        }
+
+        // --- Drag & Drop Handlers ---
+        function handleDragStart(e) {
+            if (e.target.classList.contains('word-item')) {
+                draggedItem = e.target;
+                setTimeout(() => e.target.classList.add('dragging'), 0);
+            }
+        }
+
+        function handleDragEnd(e) {
+            if (draggedItem) {
+                draggedItem.classList.remove('dragging');
+                draggedItem = null;
+            }
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            if (e.target.classList.contains('word-bank') || e.target.classList.contains('sentence-drop-zone')) {
+                e.target.classList.add('drag-over');
+            }
+        }
+
+        function handleDragLeave(e) {
+            if (e.target.classList.contains('word-bank') || e.target.classList.contains('sentence-drop-zone')) {
+                e.target.classList.remove('drag-over');
+            }
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            const dropTarget = e.target.closest('.word-bank, .sentence-drop-zone');
+            if (dropTarget && draggedItem) {
+                // Find the element being hovered over to insert before it
+                const afterElement = getDragAfterElement(dropTarget, e.clientY);
+                if (afterElement == null) {
+                    dropTarget.appendChild(draggedItem);
+                } else {
+                    dropTarget.insertBefore(draggedItem, afterElement);
+                }
+                dropTarget.classList.remove('drag-over');
+            }
+        }
+        
+        function getDragAfterElement(container, y) {
+            const draggableElements = [...container.querySelectorAll('.word-item:not(.dragging)')];
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+        // --- Event Listeners ---
+        modeWeaverBtn.addEventListener('click', () => switchMode('weaver'));
+        modeTrimmerBtn.addEventListener('click', () => switchMode('trimmer'));
+        
+        // Weaver Listeners
+        checkSentenceBtn.addEventListener('click', checkSentence);
+        
+        // Trimmer Listeners
+        submitSummaryBtn.addEventListener('click', submitSummary);
+        nextParagraphBtn.addEventListener('click', nextParagraph);
+        
+        // Drag-Drop Global Listeners
+        document.addEventListener('dragstart', handleDragStart);
+        document.addEventListener('dragend', handleDragEnd);
+        wordBank.addEventListener('dragover', handleDragOver);
+        wordBank.addEventListener('dragleave', handleDragLeave);
+        wordBank.addEventListener('drop', handleDrop);
+        dropZone.addEventListener('dragover', handleDragOver);
+        dropZone.addEventListener('dragleave', handleDragLeave);
+        dropZone.addEventListener('drop', handleDrop);
+
+
+        // --- Initial Load ---
+        switchMode('weaver');
+    </script>
+</body>
+</html>

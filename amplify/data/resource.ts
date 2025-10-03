@@ -41,6 +41,11 @@ export const data = defineData({
       expiresInDays: 180,
     },
   },
+  // logging: {
+  //   excludeVerboseContent: true,
+  //   fieldLogLevel: 'none',
+  //   retention: '1 week'
+  // }
 });
 
 /*== STEP 2 ===============================================================

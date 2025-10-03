@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Chain Match-Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-title {
+            font-family: 'Kalam', cursive;
+        }
+        .match-item {
+            cursor: grab;
+            user-select: none;
+            transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .match-item:active {
+            cursor: grabbing;
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .dragging {
+            opacity: 0.5;
+            box-shadow: none;
+        }
+        .drop-zone {
+            transition: background-color 0.3s;
+        }
+        .drop-zone.drag-over {
+            background-color: #374151;
+        }
+        .matched {
+            background-color: #166534 !important; /* Green-800 */
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+        .matched-correctly {
+             border: 3px solid #22c55e; /* Green-500 */
+        }
+        .shake {
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-title font-bold text-amber-300">Food Chain Match-Up</h1>
+            <p class="mt-2 text-lg text-gray-400">Match the animal to its food or role!</p>
+        </header>
+
+        <main class="p-6 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl">
+            <div id="instructions" class="text-center text-xl mb-4 text-indigo-300 font-semibold"></div>
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Column 1: Animals -->
+                <div id="animals-col" class="flex flex-col gap-4"></div>
+                <!-- Column 2: Food/Roles -->
+                <div id="food-col" class="flex flex-col gap-4 drop-zone"></div>
+            </div>
+            <div class="mt-6 text-center">
+                <button id="next-level-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition-transform transform hover:scale-105 shadow-lg hidden">Next Level</button>
+            </div>
+        </main>
+        
+        <div class="text-center mt-6 text-xl font-semibold">
+            Score: <span id="score" class="text-amber-300">0</span>
+        </div>
+    </div>
+
+    <script>
+        // --- DOM Elements ---
+        const animalsCol = document.getElementById('animals-col');
+        const foodCol = document.getElementById('food-col');
+        const instructionsEl = document.getElementById('instructions');
+        const scoreEl = document.getElementById('score');
+        const nextLevelBtn = document.getElementById('next-level-btn');
+
+        // --- Game State ---
+        let score = 0;
+        let currentLevel = 0;
+        let draggedItem = null;
+        let matchesMade = 0;
+
+        // --- Game Data ---
+        const levels = [
+            {
+                instruction: "Match the animal to what it eats!",
+                pairs: [
+                    { item1: '🦁 Lion', item2: '🦓 Zebra' },
+                    { item1: '🐰 Rabbit', item2: '🥕 Carrot' },
+                    { item1: '🐸 Frog', item2: '🪰 Fly' },
+                    { item1: '🐼 Panda', item2: '🎍 Bamboo' }
+                ]
+            },
+            {
+                instruction: "Match the animal to its type!",
+                pairs: [
+                    { item1: '🐮 Cow', item2: '🌿 Herbivore' },
+                    { item1: '🐻 Bear', item2: ' omnivore' },
+                    { item1: '🦈 Shark', item2: '🥩 Carnivore' },
+                    { item1: '🌳 Tree', item2: '☀️ Producer' }
+                ]
+            },
+            {
+                instruction: "A tougher food chain!",
+                pairs: [
+                    { item1: '🦅 Eagle', item2: '🐍 Snake' },
+                    { item1: '🐍 Snake', item2: '🐁 Mouse' },
+                    { item1: '🐁 Mouse', item2: '🌾 Grain' },
+                    { item1: '🦉 Owl', item2: '🐁 Mouse' } // Note: Mouse is used twice
+                ]
+            }
+        ];
+        
+        // --- Core Functions ---
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function createMatchItem(text, type, pairId) {
+            const item = document.createElement('div');
+            item.innerHTML = `<span class="text-2xl">${text}</span>`;
+            item.className = 'match-item bg-gray-700 p-4 rounded-lg text-center';
+            item.dataset.text = text;
+            item.dataset.type = type;
+            item.dataset.pairId = pairId;
+            if (type === 'animal') {
+                item.draggable = true;
+            }
+            return item;
+        }
+
+        function initLevel() {
+            animalsCol.innerHTML = '';
+            foodCol.innerHTML = '';
+            nextLevelBtn.classList.add('hidden');
+            matchesMade = 0;
+
+            const levelData = levels[currentLevel % levels.length];
+            instructionsEl.textContent = levelData.instruction;
+
+            const animals = [];
+            const foods = [];
+            
+            levelData.pairs.forEach((pair, index) => {
+                 // To handle duplicates like the 'Mouse'
+                const uniquePairId = `${pair.item1}-${pair.item2}-${index}`;
+                animals.push({ text: pair.item1, pairId: uniquePairId });
+                foods.push({ text: pair.item2, pairId: uniquePairId });
+            });
+
+            shuffle(animals).forEach(animal => {
+                animalsCol.appendChild(createMatchItem(animal.text, 'animal', animal.pairId));
+            });
+            shuffle(foods).forEach(food => {
+                foodCol.appendChild(createMatchItem(food.text, 'food', food.pairId));
+            });
+        }
+        
+        function updateScore(points) {
+            score += points;
+            scoreEl.textContent = score;
+        }
+        
+        function checkWin() {
+            if (matchesMade === levels[currentLevel % levels.length].pairs.length) {
+                nextLevelBtn.classList.remove('hidden');
+                instructionsEl.textContent = "Great job! Level complete!";
+            }
+        }
+
+        // --- Drag & Drop Handlers ---
+        function handleDragStart(e) {
+            if (e.target.classList.contains('match-item') && !e.target.classList.contains('matched')) {
+                draggedItem = e.target;
+                setTimeout(() => e.target.classList.add('dragging'), 0);
+            } else {
+                e.preventDefault();
+            }
+        }
+
+        function handleDragEnd(e) {
+            if (draggedItem) {
+                draggedItem.classList.remove('dragging');
+                draggedItem = null;
+            }
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            const dropTarget = e.target.closest('.drop-zone');
+            if (dropTarget) {
+                dropTarget.classList.add('drag-over');
+            }
+        }
+
+        function handleDragLeave(e) {
+            const dropTarget = e.target.closest('.drop-zone');
+            if (dropTarget) {
+                dropTarget.classList.remove('drag-over');
+            }
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            const dropItem = e.target.closest('.match-item[data-type="food"]');
+            foodCol.classList.remove('drag-over');
+            
+            if (draggedItem && dropItem && !dropItem.classList.contains('matched')) {
+                const draggedPairId = draggedItem.dataset.pairId;
+                const droppedPairId = dropItem.dataset.pairId;
+
+                if (draggedPairId === droppedPairId) {
+                    // Correct Match
+                    draggedItem.classList.add('matched');
+                    dropItem.classList.add('matched');
+                    draggedItem.classList.add('matched-correctly');
+                    dropItem.classList.add('matched-correctly');
+                    
+                    draggedItem.draggable = false;
+                    
+                    updateScore(10);
+                    matchesMade++;
+                    checkWin();
+                } else {
+                    // Incorrect Match
+                    draggedItem.classList.add('shake');
+                    setTimeout(() => draggedItem.classList.remove('shake'), 500);
+                }
+            }
+        }
+
+        // --- Event Listeners ---
+        document.addEventListener('dragstart', handleDragStart);
+        document.addEventListener('dragend', handleDragEnd);
+        
+        foodCol.addEventListener('dragover', handleDragOver);
+        foodCol.addEventListener('dragleave', handleDragLeave);
+        foodCol.addEventListener('drop', handleDrop);
+        
+        nextLevelBtn.addEventListener('click', () => {
+            currentLevel++;
+            initLevel();
+        });
+
+        // --- Initial Load ---
+        initLevel();
+    </script>
+</body>
+</html>

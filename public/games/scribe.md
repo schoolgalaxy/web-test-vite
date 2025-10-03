@@ -1,0 +1,1 @@
+This single HTML file contains everything needed to run the game. It features a stylish, dark-themed interface, a canvas for writing, and a results screen that provides feedback on your performance. You can now try it out by opening the file in a web browser. Let me know if you'd like to explore different game mechanics or add new features!

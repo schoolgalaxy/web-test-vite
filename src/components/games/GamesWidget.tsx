@@ -50,6 +50,30 @@ const games: Game[] = [
     file: '/games/WordWizards.html',
     icon: '🔤',
     description: 'Master vocabulary with magic!'
+  },
+  {
+    id: 'food-chain-match',
+    name: 'Food Chain Match',
+    displayName: 'Food Chain Match',
+    file: '/games/FoodChainMatch.html',
+    icon: '🍎',
+    description: 'Learn about food chains and ecosystems!'
+  },
+  {
+    id: 'scribe',
+    name: 'Scribe',
+    displayName: 'Scribe',
+    file: '/games/scribe.html',
+    icon: '✍️',
+    description: 'Practice writing and transcription skills!'
+  },
+  {
+    id: 'word-trail-trimmer',
+    name: 'Word & Trail Trimmer',
+    displayName: 'Word & Trail Trimmer',
+    file: '/games/Word&TrailTrimmer.html',
+    icon: '✂️',
+    description: 'Trim and organize word trails!'
   }
 ];
 
