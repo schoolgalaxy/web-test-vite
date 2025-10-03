@@ -12,6 +12,12 @@ interface CategoryItem {
 }
 
 const KnowWidget = () => {
+  // const navigate = useNavigate();
+  // const location = useLocation();
+
+  // Search navigation is now handled directly by SearchComponent
+  // This component just displays the category overview
+
   // Get active know categories from config
   const activeCategories = (knowConfig as { categories: any[] }).categories.filter(category => category.active);
 
@@ -19,7 +25,7 @@ const KnowWidget = () => {
   const knowCategories: CategoryItem[] = activeCategories.map(category => {
     const getItemCount = (categoryPath: string) => {
       const itemCounts: Record<string, number> = {
-        'animal': 12,
+        'animals': 12,
         'birds': 13,
         'sports': 12
       };

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { useTheme } from '../util/ThemeContext';
 import NavbarCustomizerModal from './NavbarCustomizerModal';
+import SearchComponent from './SearchComponent';
 import '../assets/css/Navbar.css';
 
 const Navbar = () => {
@@ -26,7 +27,10 @@ const Navbar = () => {
             <Link to="/explore">Explore</Link>
           </li>
           <li>
-            <Link to="/know-widget">Know About</Link>
+            <Link to="/know-widget">Know More</Link>
+          </li>
+          <li className="navbar-search">
+            <SearchComponent />
           </li>
           <li className="navbar-auth">
             <Link to="/about-us">About</Link>

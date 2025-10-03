@@ -262,3 +262,130 @@ export function extractQuizMetadata(jsonData: Record<string, any>): any[] {
     return [];
   }
 }
+
+// ------------------------------
+// Search helpers
+// ------------------------------
+
+/**
+ * Search interface for all data categories
+ */
+export interface SearchResult {
+  id: string;
+  title: string;
+  description: string;
+  type: 'animals' | 'birds' | 'animal' | 'aquatic' | 'insects' | 'space' | 'sports' | 'ai' | 'computer_science';
+  profilePic?: string;
+  path: string;
+  uniqueId?: string; // For know files navigation
+}
+
+/**
+ * Searches through animals and birds data based on search term
+ */
+export function searchAnimalsAndBirds(searchTerm: string): SearchResult[] {
+  try {
+    if (!searchTerm.trim()) {
+      return [];
+    }
+
+    const results: SearchResult[] = [];
+    const searchTermLower = searchTerm.toLowerCase();
+
+    // Search in data files (src/assets/data/)
+    const dataModules = import.meta.glob('/src/assets/data/**/*.json', { eager: true });
+    // Search in know files (src/assets/know/)
+    const knowModules = import.meta.glob('/src/assets/know/**/*.json', { eager: true });
+
+    // Search data files
+    Object.entries(dataModules).forEach(([path, mod]) => {
+      const itemData = (mod as any).default;
+
+      const title = itemData.title || '';
+      const description = itemData.description || '';
+
+      // Check if search term matches title or description
+      if (title.toLowerCase().includes(searchTermLower) ||
+          description.toLowerCase().includes(searchTermLower)) {
+
+        const pathParts = path.split('/');
+        const category = pathParts[pathParts.length - 2]; // Get parent directory name
+        const id = path.split('/').pop()?.replace('.json', '') || '';
+
+        // Map category names to types for navigation
+        let type: 'animals' | 'birds' | 'animal' | 'aquatic' | 'insects' | 'space' | 'sports' | 'ai' | 'computer_science';
+        if (category === 'animals' || category === 'animal') {
+          type = 'animals';
+        } else if (category === 'birds') {
+          type = 'birds';
+        } else {
+          type = category as any;
+        }
+
+        console.log('Found data file:', {
+          path,
+          title,
+          id,
+          type: category,
+          searchTerm: searchTermLower
+        });
+
+        results.push({
+          id,
+          title,
+          description,
+          type,
+          profilePic: itemData.profile_pic_link || '',
+          path
+        });
+      }
+    });
+
+    // Search know files to get unique_id for navigation
+    Object.entries(knowModules).forEach(([path, mod]) => {
+      const itemData = (mod as any).default;
+
+      // Check if path contains animals or birds
+      const isAnimal = path.includes('/animal/');
+      const isBird = path.includes('/birds/');
+
+      if (!isAnimal && !isBird) return;
+
+      const title = itemData.title || '';
+      const description = itemData.description || '';
+
+      // Check if search term matches title or description
+      if (title.toLowerCase().includes(searchTermLower) ||
+          description.toLowerCase().includes(searchTermLower)) {
+
+        const id = path.split('/').pop()?.replace('.json', '') || '';
+        const type = isAnimal ? 'animal' as const : 'birds' as const;
+        const uniqueId = itemData.unique_id || '';
+
+        console.log('Found know file:', {
+          path,
+          title,
+          id,
+          type,
+          uniqueId,
+          searchTerm: searchTermLower
+        });
+
+        results.push({
+          id,
+          title,
+          description,
+          type,
+          profilePic: itemData.profile_pic_link || '',
+          path,
+          uniqueId
+        });
+      }
+    });
+
+    return results;
+  } catch (error) {
+    console.error('Error searching animals and birds:', error);
+    return [];
+  }
+}

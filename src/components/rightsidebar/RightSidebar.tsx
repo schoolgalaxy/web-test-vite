@@ -38,7 +38,7 @@ const RightSidebar: React.FC = () => {
       <div className="sidebar-widget">
         <div className="widget-header">
           <div className="widget-icon">📖</div>
-          <h4>Know About</h4>
+          <h4>Know More</h4>
         </div>
         <div className="widget-content">
           <div className="know-grid">
