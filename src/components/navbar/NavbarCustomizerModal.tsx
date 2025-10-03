@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTheme } from '../util/ThemeContext';
+import { useTheme } from '../../util/ThemeContext';
 
 interface NavbarCustomizerModalProps {
   isOpen: boolean;

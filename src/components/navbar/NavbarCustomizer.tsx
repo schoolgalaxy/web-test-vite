@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useTheme } from '../util/ThemeContext';
-import '../assets/css/Home.css'; // Import the new Home CSS
+import { useTheme } from '../../util/ThemeContext';
+import '../../assets/css/Home.css'; // Import the new Home CSS
 
 const NavbarCustomizer = () => {
   const { navbarColors, setNavbarColors, resetNavbarColors } = useTheme();

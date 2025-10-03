@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { searchAnimalsAndBirds, SearchResult } from '../util/assetsLoader';
-import '../assets/css/SearchComponent.css';
+import { searchAnimalsAndBirds, SearchResult } from '../../util/assetsLoader';
+import '../../assets/css/SearchComponent.css';
 
 interface SearchComponentProps {
   className?: string;

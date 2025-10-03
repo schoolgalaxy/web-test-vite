@@ -12,7 +12,7 @@ const QuizList = lazy(() => import('./quizzes/QuizList'));
 const QuizRoute = lazy(() => import('./quizzes/QuizRoute'));
 const MainLayout = lazy(() => import('./MainLayout'));
 const About = lazy(() => import('./about/AboutUs'));
-const NavbarCustomizer = lazy(() => import('./NavbarCustomizer'));
+const NavbarCustomizer = lazy(() => import('./navbar/NavbarCustomizer'));
 const KnowMenu = lazy(() => import('./know/KnowMenu'));
 const KnowWidget = lazy(() => import('./know/KnowWidget'));
 const KnowCategoryContent = lazy(() => import('./know/KnowCategoryContent'));

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { useTheme } from '../util/ThemeContext';
+import { useTheme } from '../../util/ThemeContext';
 import NavbarCustomizerModal from './NavbarCustomizerModal';
 import SearchComponent from './SearchComponent';
-import '../assets/css/Navbar.css';
+import './Navbar.css';
 
 const Navbar = () => {
   const { user } = useAuthenticator();
