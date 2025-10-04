@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams, Navigate, useNavigate } from 'react-router-dom';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import '../../assets/css/McqList.css'; // Reusing MCQ list styles
 import birdImg from '/src/assets/img/bird.svg';
 import animalImg from '/src/assets/img/animal.svg';
