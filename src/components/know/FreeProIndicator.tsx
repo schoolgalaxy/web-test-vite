@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import './FreeProIndicator.css';
 
 interface FreeProIndicatorProps {
@@ -6,6 +7,7 @@ interface FreeProIndicatorProps {
 }
 
 const FreeProIndicator = ({ playType = 'pro', className = '' }: FreeProIndicatorProps) => {
+  const navigate = useNavigate();
   if (playType === 'free') {
     return (
       <div className={`free-icon ${className}`}>
@@ -17,8 +19,12 @@ const FreeProIndicator = ({ playType = 'pro', className = '' }: FreeProIndicator
     );
   }
 
+  const handleUpgradeClick = () => {
+    navigate('/upgrade');
+  };
+
   return (
-    <button className={`upgrade-button ${className}`}>
+    <button className={`upgrade-button ${className}`} onClick={handleUpgradeClick}>
       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
         <path d="M7 14l5-5 5 5z"/>
       </svg>

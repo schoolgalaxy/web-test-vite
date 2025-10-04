@@ -1,0 +1,340 @@
+.upgrade-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.upgrade-form-content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.upgrade-form-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+  border-color: var(--primary-blue);
+}
+
+.upgrade-header {
+  background: linear-gradient(135deg, var(--bg-hero) 0%, var(--shadow-light) 100%);
+  color: var(--primary-blue-dark);
+  margin: 0;
+  padding: 20px 30px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.upgrade-header h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.upgrade-subtitle {
+  font-size: 0.95em;
+  margin: 0;
+  opacity: 0.8;
+  color: var(--text-primary);
+}
+
+.upgrade-form {
+  padding: 30px;
+}
+
+.upgrade-benefits-section {
+  margin-bottom: 30px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  border-color: var(--primary-blue);
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+.benefit-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.benefit-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.benefit-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.pricing-section {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.pricing-card {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  border-radius: 12px;
+  padding: 24px;
+  color: white;
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.pricing-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.currency {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.period {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.pricing-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin: 0 0 20px 0;
+}
+
+.upgrade-pro-button {
+  background: white;
+  color: var(--primary-blue);
+  border: none;
+  border-radius: 6px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+  max-width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upgrade-button:hover {
+  background: var(--bg-hero);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-features {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.pricing-features p {
+  margin: 6px 0;
+}
+
+.stats-section {
+  margin-top: 30px;
+}
+
+.stats-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-blue-dark);
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  border-color: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin: 0;
+  opacity: 0.8;
+}
+
+.security-info {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--bg-hero) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+.security-info p {
+  margin: 6px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .upgrade-wrapper {
+    padding: 16px;
+  }
+
+  .upgrade-form-content {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .upgrade-form {
+    padding: 20px;
+  }
+
+  .benefit-item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .benefit-content h3 {
+    font-size: 1rem;
+  }
+
+  .benefit-content p {
+    font-size: 0.85rem;
+  }
+
+  .pricing-card {
+    padding: 20px;
+  }
+
+  .amount {
+    font-size: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-item {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upgrade-wrapper {
+    padding: 8px;
+  }
+
+  .upgrade-form-content {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .upgrade-header {
+    padding: 16px 20px;
+  }
+
+  .upgrade-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .upgrade-form {
+    padding: 16px;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .benefit-icon {
+    margin-bottom: 8px;
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .upgrade-form-content {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+[data-theme="dark"] .benefit-item {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+[data-theme="dark"] .stat-item {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.02) 100%);
+}

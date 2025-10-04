@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import '../../assets/css/Explore.css';
 import FreeProIndicator from './FreeProIndicator';
@@ -13,6 +13,7 @@ interface ContentItem {
 
 const KnowCategoryContent = () => {
   const { category } = useParams<{ category: string }>();
+  const navigate = useNavigate();
   const [contentItems, setContentItems] = useState<ContentItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [categoryTitle, setCategoryTitle] = useState('');
@@ -62,6 +63,14 @@ const KnowCategoryContent = () => {
     loadCategoryContent();
   }, [category]);
 
+  const handleContentClick = (item: ContentItem) => {
+    if (item.play_type !== 'free') {
+      navigate('/upgrade');
+    } else {
+      navigate(`/know/${category}/${item.unique_id}`);
+    }
+  };
+
   if (loading) {
     return (
       <div className="data-folder-widget">
@@ -82,16 +91,21 @@ const KnowCategoryContent = () => {
 
       <div className="content-items-grid">
         {contentItems.map((item, index) => (
-          <div key={item.unique_id || index} className="content-item">
+          <div
+            key={item.unique_id || index}
+            className="content-item"
+            onClick={() => handleContentClick(item)}
+            style={{ cursor: 'pointer' }}
+          >
             <div className="content-item-header">
               <h3>{item.title}</h3>
               <FreeProIndicator playType={item.play_type} />
             </div>
             <p className="content-description">{item.description}</p>
             <div className="content-actions">
-              <Link to={`/know/${category}/${item.unique_id}`} className="content-link">
+              <span className="content-link">
                 Show Slides
-              </Link>
+              </span>
             </div>
           </div>
         ))}

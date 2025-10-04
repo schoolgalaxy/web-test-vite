@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams, Navigate } from 'react-router-dom';
+import { Link, useParams, Navigate, useNavigate } from 'react-router-dom';
 import '../../assets/css/McqList.css'; // Reusing MCQ list styles
 import birdImg from '/src/assets/img/bird.svg';
 import animalImg from '/src/assets/img/animal.svg';
@@ -30,6 +30,7 @@ type QuizConfig = {
 
 const QuizList: React.FC = () => {
   const { category } = useParams<{ category: string }>();
+  const navigate = useNavigate();
   const cfg = (quizzesConfig as { quizzes: QuizConfig[] }).quizzes.find(q => q.category === category);
 
   // If category not found or not active, redirect to explore
@@ -57,13 +58,26 @@ const QuizList: React.FC = () => {
     fetchQuizMetaData();
   }, [quizCategory]);
 
+  const handleQuizClick = (quiz: QuizMetaData) => {
+    if (quiz.play_type !== 'free') {
+      navigate('/upgrade');
+    } else {
+      navigate(`${routePrefix}/${quiz.id}`);
+    }
+  };
+
   return (
     <div className="mcq-list-container">
       <h2 className="mcq-list-title">{title}</h2>
       <p>{description}</p>
       <div className="mcq-tiles-grid">
         {quizzes.map((quiz, index) => (
-          <Link to={`${routePrefix}/${quiz.id}`} key={quiz.id} className="mcq-tile-link">
+          <div
+            key={quiz.id}
+            className="mcq-tile-link"
+            onClick={() => handleQuizClick(quiz)}
+            style={{ cursor: 'pointer' }}
+          >
             <div className={`mcq-tile ${index % 2 === 0 ? 'left-image' : 'right-image'}`}>
               <FreeProIndicator playType={quiz.play_type} />
               <img
@@ -79,7 +93,7 @@ const QuizList: React.FC = () => {
               <h3 className="mcq-tile-name">{quiz.name}</h3>
               <p className="mcq-tile-description">{quiz.description}</p>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
