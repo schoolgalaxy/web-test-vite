@@ -1,0 +1,63 @@
+.free-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.75em;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  z-index: 10;
+  box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.free-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.free-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.upgrade-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(135deg, #ffc107, #fd7e14);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.75em;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 3px 8px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.upgrade-button:hover {
+  background: linear-gradient(135deg, #e0a800, #e8590c);
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}
+
+.upgrade-button svg {
+  width: 12px;
+  height: 12px;
+}

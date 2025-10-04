@@ -63,9 +63,9 @@ const KnowWidget = () => {
                 <div className="folder-icon">{category.icon}</div>
                 <h3>{category.name}</h3>
                 <p>{category.description}</p>
-                <div className="item-count">
+                {/* <div className="item-count">
                   {category.itemCount} items
-                </div>
+                </div> */}
               </div>
             </Link>
           ))}
@@ -79,9 +79,9 @@ const KnowWidget = () => {
                 <div className="folder-icon">{category.icon}</div>
                 <h3>{category.name}</h3>
                 <p>{category.description}</p>
-                <div className="item-count">
+                {/* <div className="item-count">
                   {category.itemCount} items
-                </div>
+                </div> */}
               </div>
             </Link>
           ))}

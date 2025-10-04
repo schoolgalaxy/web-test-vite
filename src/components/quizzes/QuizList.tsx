@@ -8,12 +8,14 @@ import placeholderImg from '/src/assets/img/quiz-placeholder.svg';
 import quizzesConfig from '../../assets/data/quizzes.json';
 import debug from '../../util/debug';
 import { loadQuizDataByCategory, extractQuizMetadata } from '../../util/assetsLoader';
+import FreeProIndicator from '../know/FreeProIndicator';
 
 interface QuizMetaData {
   id: string;
   name: string;
   description: string;
   profilePic: string;
+  play_type?: string;
 }
 
 type QuizConfig = {
@@ -63,6 +65,7 @@ const QuizList: React.FC = () => {
         {quizzes.map((quiz, index) => (
           <Link to={`${routePrefix}/${quiz.id}`} key={quiz.id} className="mcq-tile-link">
             <div className={`mcq-tile ${index % 2 === 0 ? 'left-image' : 'right-image'}`}>
+              <FreeProIndicator playType={quiz.play_type} />
               <img
                 src={quiz.profilePic || (quizCategory === 'birds' ? birdImg : quizCategory === 'animals' ? animalImg : quizCategory === 'aquatic' ? aquaticImg : placeholderImg)}
                 alt={quiz.name}

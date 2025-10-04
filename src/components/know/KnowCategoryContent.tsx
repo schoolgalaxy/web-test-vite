@@ -1,13 +1,15 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import '../../assets/css/Explore.css';
+import FreeProIndicator from './FreeProIndicator';
 
 interface ContentItem {
-  title: string;
-  description: string;
-  slides: number;
-  unique_id: string;
-}
+   title: string;
+   description: string;
+   slides: number;
+   unique_id: string;
+   play_type?: string;
+ }
 
 const KnowCategoryContent = () => {
   const { category } = useParams<{ category: string }>();
@@ -43,7 +45,8 @@ const KnowCategoryContent = () => {
             title: data.title,
             description: data.description,
             slides: data.slides?.length || 0,
-            unique_id: data.unique_id
+            unique_id: data.unique_id,
+            play_type: data.play_type || 'pro'
           };
         });
 
@@ -82,9 +85,7 @@ const KnowCategoryContent = () => {
           <div key={item.unique_id || index} className="content-item">
             <div className="content-item-header">
               <h3>{item.title}</h3>
-              <div className="slide-count">
-                {item.slides} slides
-              </div>
+              <FreeProIndicator playType={item.play_type} />
             </div>
             <p className="content-description">{item.description}</p>
             <div className="content-actions">

@@ -2,6 +2,7 @@
   "title": "The Intelligent Blue Jay",
   "description": "The Blue Jay is a crested, blue, black, and white bird native to eastern North America. It is known for its intelligence, complex social systems, and loud calls.",
   "profile_pic_link": "https://images.pexels.com/photos/2317904/pexels-photo-2317904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "play_type": "free",
   "questions": [
     {
       "question": "What is a unique behavior of Blue Jays regarding their nests?",

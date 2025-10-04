@@ -4,6 +4,7 @@
   "version": "1.0",
   "description": "A five-slide presentation with key information about the Elephant.",
   "title": "All About the Elephant",
+  "play_type": "free",
   "profile_pic_link": "http://googleusercontent.com/image_generation_content/31",
   "slides": [
     {

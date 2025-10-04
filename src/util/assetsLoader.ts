@@ -254,6 +254,7 @@ export function extractQuizMetadata(jsonData: Record<string, any>): any[] {
         name: data.title || 'Unknown Quiz',
         description: data.description || 'No description available',
         profilePic: data.profile_pic_link || '',
+        play_type: data.play_type, // Only set if explicitly defined in JSON
         path
       };
     });

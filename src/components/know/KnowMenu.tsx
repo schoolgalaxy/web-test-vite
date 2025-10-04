@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../../assets/css/Explore.css';
 import knowConfig from '../../assets/know/know.json';
+import FreeProIndicator from './FreeProIndicator';
 
 const KnowMenu = () => {
   // Get active know categories from config
@@ -12,7 +13,8 @@ const KnowMenu = () => {
     path: category.category,
     icon: category.realIcon || '📚',
     description: category.description,
-    route: category.route
+    route: category.route,
+    play_type: category.play_type || 'pro' // Default to 'pro' if not specified
   }));
 
   return (
@@ -26,6 +28,9 @@ const KnowMenu = () => {
         {knowCategories.map((category, index) => (
           <Link key={index} to={category.route} className="folder-item-link">
             <div className="folder-item">
+              <div className="know-item-footer">
+                <FreeProIndicator playType={category.play_type} />
+              </div>
               <div className="folder-icon">{category.icon}</div>
               <h3>{category.name}</h3>
               <p>{category.description}</p>

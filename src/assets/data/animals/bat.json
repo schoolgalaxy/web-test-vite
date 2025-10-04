@@ -2,6 +2,7 @@
   "title": "The Mysterious Bat",
   "description": "Bats are the only mammals capable of sustained flight. They are nocturnal and use echolocation to navigate and hunt in the dark.",
   "profile_pic_link": "/src/assets/img/bat.svg",
+  "play_type": "free",
   "questions": [
     {
       "question": "What is the primary purpose of a bat's echolocation?",

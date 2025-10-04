@@ -2,6 +2,7 @@
   "title": "The Bald Eagle",
   "description": "The Bald Eagle is a bird of prey found in North America. It is the national bird and national animal of the United States and is known for its distinctive white head and tail.",
   "profile_pic_link": "https://images.pexels.com/photos/73825/osprey-adler-bird-of-prey-raptor-73825.jpeg?auto=compress%5Cu0026cs=tinysrgb%5Cu0026h=130",
+  "play_type": "free",
   "questions": [
     {
       "question": "What is the Bald Eagle's primary food source?",
