@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Upgrade.css';
 
 const Upgrade: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleUpgradeClick = () => {
-    // This could integrate with payment processing or redirect to subscription page
-    alert('Upgrade functionality would be implemented here!');
+    // Navigate to login page when upgrade button is clicked
+    navigate('/login');
   };
 
   return (

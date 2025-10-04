@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { searchAnimalsAndBirds, SearchResult } from '../../util/assetsLoader';
+import { useAuth } from '../../hook/useAuth';
 import '../../assets/css/SearchComponent.css';
 
 interface SearchComponentProps {
@@ -13,6 +14,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ className = '' }) => 
   const [showResults, setShowResults] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const { isLoggedIn } = useAuth();
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -59,6 +61,13 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ className = '' }) => 
     setSearchTerm('');
     setShowResults(false);
     inputRef.current?.blur();
+
+    // Check if user is logged in
+    if (!isLoggedIn) {
+      console.log('User not logged in, redirecting to upgrade page');
+      navigate('/upgrade', { replace: true });
+      return;
+    }
 
     // Navigate directly to the final destination
     // Use uniqueId if available (from know files), otherwise use regular id
