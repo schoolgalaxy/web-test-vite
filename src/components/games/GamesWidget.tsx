@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import FreeProIndicator from '../know/FreeProIndicator';
 
 interface Game {
   id: string;
@@ -8,6 +9,7 @@ interface Game {
   file: string;
   icon: string;
   description: string;
+  play_type: string;
 }
 
 const games: Game[] = [
@@ -17,7 +19,8 @@ const games: Game[] = [
     displayName: 'Cosmic Memory',
     file: '/games/CosmicMemory.html',
     icon: '🧠',
-    description: 'Test your memory with cosmic cards!'
+    description: 'Test your memory with cosmic cards!',
+    play_type: 'free'
   },
   {
     id: 'math-whiz-jr',
@@ -25,7 +28,8 @@ const games: Game[] = [
     displayName: 'Math Whiz Jr',
     file: '/games/MathWhizJr.html',
     icon: '🧮',
-    description: 'Fun math challenges for young minds!'
+    description: 'Fun math challenges for young minds!',
+    play_type: 'pro'
   },
   {
     id: 'solar-system',
@@ -33,7 +37,8 @@ const games: Game[] = [
     displayName: 'Solar System Explorer',
     file: '/games/SolarSystem.html',
     icon: '🪐',
-    description: 'Explore our solar system!'
+    description: 'Explore our solar system!',
+    play_type: 'free'
   },
   {
     id: 'typing-titans',
@@ -41,7 +46,8 @@ const games: Game[] = [
     displayName: 'Typing Titans',
     file: '/games/TypingTitans.html',
     icon: '⌨️',
-    description: 'Improve your typing speed!'
+    description: 'Improve your typing speed!',
+    play_type: 'pro'
   },
   {
     id: 'word-wizards',
@@ -49,7 +55,8 @@ const games: Game[] = [
     displayName: 'Word Wizards',
     file: '/games/WordWizards.html',
     icon: '🔤',
-    description: 'Master vocabulary with magic!'
+    description: 'Master vocabulary with magic!',
+    play_type: 'pro'
   },
   {
     id: 'food-chain-match',
@@ -57,7 +64,8 @@ const games: Game[] = [
     displayName: 'Food Chain Match',
     file: '/games/FoodChainMatch.html',
     icon: '🍎',
-    description: 'Learn about food chains and ecosystems!'
+    description: 'Learn about food chains and ecosystems!',
+    play_type: 'pro'
   },
   {
     id: 'scribe',
@@ -65,7 +73,8 @@ const games: Game[] = [
     displayName: 'Scribe',
     file: '/games/scribe.html',
     icon: '✍️',
-    description: 'Practice writing and transcription skills!'
+    description: 'Practice writing and transcription skills!',
+    play_type: 'pro'
   },
   {
     id: 'word-trail-trimmer',
@@ -73,11 +82,22 @@ const games: Game[] = [
     displayName: 'Word & Trail Trimmer',
     file: '/games/Word&TrailTrimmer.html',
     icon: '✂️',
-    description: 'Trim and organize word trails!'
+    description: 'Trim and organize word trails!',
+    play_type: 'pro'
   }
 ];
 
 const GamesWidget: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleGameClick = (game: Game) => {
+    if (game.play_type !== 'free') {
+      navigate('/upgrade');
+    } else {
+      navigate(`/games/${game.id}`);
+    }
+  };
+
   return (
     <div className="sidebar-widget">
       <div className="widget-header">
@@ -87,13 +107,19 @@ const GamesWidget: React.FC = () => {
       <div className="widget-content">
         <div className="games-grid">
           {games.map((game) => (
-            <Link key={game.id} to={`/games/${game.id}`} className="game-item">
+            <div
+              key={game.id}
+              className="game-item"
+              onClick={() => handleGameClick(game)}
+              style={{ cursor: 'pointer' }}
+            >
               <span className="game-icon">{game.icon}</span>
               <div className="game-info">
                 <span className="game-name">{game.displayName}</span>
+                { game.play_type === 'pro' && <FreeProIndicator playType={game.play_type} /> }
                 {/* <span className="game-description">{game.description}</span> */}
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

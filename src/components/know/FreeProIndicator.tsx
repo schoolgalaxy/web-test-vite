@@ -14,7 +14,7 @@ const FreeProIndicator = ({ playType = 'pro', className = '' }: FreeProIndicator
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
         </svg>
-        <span>FREE</span>
+        <span>Free</span>
       </div>
     );
   }
@@ -26,9 +26,8 @@ const FreeProIndicator = ({ playType = 'pro', className = '' }: FreeProIndicator
   return (
     <button className={`upgrade-button ${className}`} onClick={handleUpgradeClick}>
       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M7 14l5-5 5 5z"/>
+        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM8.9 6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2H8.9V6zM16 10v10H8V10h8z"/>
       </svg>
-      Pro
     </button>
   );
 };

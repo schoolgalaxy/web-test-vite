@@ -51,6 +51,23 @@
   gap: 4px;
 }
 
+/* Special positioning for game items */
+.game-item .upgrade-button {
+  top: auto;
+  bottom: 8px;
+  right: 8px;
+  font-size: 0.65em;
+  padding: 4px 8px;
+}
+
+.game-item .free-icon {
+  top: auto;
+  bottom: 8px;
+  right: 8px;
+  font-size: 0.65em;
+  padding: 4px 8px;
+}
+
 .upgrade-button:hover {
   background: linear-gradient(135deg, #e0a800, #e8590c);
   transform: translateY(-1px) scale(1.05);
