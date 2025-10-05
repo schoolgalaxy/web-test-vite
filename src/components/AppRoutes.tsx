@@ -39,7 +39,7 @@ export const AppRoutes = () => {
     <Suspense fallback={<LoadingSpinner />}>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Explore />} />
           <Route path="/upgrade" element={<Upgrade />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/home" element={<Home />} />

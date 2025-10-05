@@ -1,34 +1,6 @@
 {
   "quizzes": [
     {
-      "id": "ai",
-      "name": "Artificial Intelligence Pioneers",
-      "displayName": "AI Pioneers",
-      "description": "Uncover the building blocks of artificial intelligence and how robots think.",
-      "route": "/quiz/ai",
-      "routePrefix": "/quiz/ai",
-      "category": "ai",
-      "icon": "/src/assets/img/ai.svg",
-      "realIcon": "🤖",      
-      "iconAlt": "Artificial Intelligence",
-      "active": true,
-      "priority": 15
-    },
-    {
-      "id": "computer_science",
-      "name": "Computer Science Questionaries",
-      "displayName": "CS Quiz",
-      "description": "Test your knowledge of fundamental computer science concepts!",
-      "route": "/quiz/computer_science",
-      "routePrefix": "/quiz/computer_science",
-      "category": "computer_science",
-      "icon": "/src/assets/img/icon-about.svg",
-      "realIcon": "💻",
-      "iconAlt": "Computer Science",
-      "active": true,
-      "priority": 100
-    },
-    {
       "id": "birds",
       "name": "Feathered Friends",
       "displayName": "Feathered Friends",
@@ -167,6 +139,34 @@
       "iconAlt": "Insects",
       "active": true,
       "priority": 40
+    },
+    {
+      "id": "ai",
+      "name": "Artificial Intelligence Pioneers",
+      "displayName": "AI Pioneers",
+      "description": "Uncover the building blocks of artificial intelligence and how robots think.",
+      "route": "/quiz/ai",
+      "routePrefix": "/quiz/ai",
+      "category": "ai",
+      "icon": "/src/assets/img/ai.svg",
+      "realIcon": "🤖",      
+      "iconAlt": "Artificial Intelligence",
+      "active": true,
+      "priority": 15
+    },
+    {
+      "id": "computer_science",
+      "name": "Computer Science Questionaries",
+      "displayName": "CS Quiz",
+      "description": "Test your knowledge of fundamental computer science concepts!",
+      "route": "/quiz/computer_science",
+      "routePrefix": "/quiz/computer_science",
+      "category": "computer_science",
+      "icon": "/src/assets/img/icon-about.svg",
+      "realIcon": "💻",
+      "iconAlt": "Computer Science",
+      "active": true,
+      "priority": 100
     }
   ]
 }

@@ -20,9 +20,9 @@ const Navbar = () => {
             <img src="/icons/galaxy.png" alt="Prep Galaxy" className="navbar-logo" />
             WonderScope
           </li>
-          <li>
+          {/* <li>
             <Link to="/">Home</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/explore">Explore</Link>
           </li>
