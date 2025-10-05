@@ -1,5 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useAuth } from '../../hook/useAuth';
 import '../../assets/css/Explore.css';
 import FreeProIndicator from './FreeProIndicator';
 
@@ -14,6 +15,7 @@ interface ContentItem {
 const KnowCategoryContent = () => {
   const { category } = useParams<{ category: string }>();
   const navigate = useNavigate();
+  const { isLoggedIn } = useAuth();
   const [contentItems, setContentItems] = useState<ContentItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [categoryTitle, setCategoryTitle] = useState('');
@@ -64,7 +66,7 @@ const KnowCategoryContent = () => {
   }, [category]);
 
   const handleContentClick = (item: ContentItem) => {
-    if (item.play_type !== 'free') {
+    if (item.play_type !== 'free' && !isLoggedIn) {
       navigate('/upgrade');
     } else {
       navigate(`/know/${category}/${item.unique_id}`);

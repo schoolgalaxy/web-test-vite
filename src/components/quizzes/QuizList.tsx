@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hook/useAuth';
 import '../../assets/css/McqList.css'; // Reusing MCQ list styles
 import birdImg from '/src/assets/img/bird.svg';
 import animalImg from '/src/assets/img/animal.svg';
@@ -31,6 +32,7 @@ type QuizConfig = {
 const QuizList: React.FC = () => {
   const { category } = useParams<{ category: string }>();
   const navigate = useNavigate();
+  const { isLoggedIn } = useAuth();
   const cfg = (quizzesConfig as { quizzes: QuizConfig[] }).quizzes.find(q => q.category === category);
 
   // If category not found or not active, redirect to explore
@@ -59,7 +61,7 @@ const QuizList: React.FC = () => {
   }, [quizCategory]);
 
   const handleQuizClick = (quiz: QuizMetaData) => {
-    if (quiz.play_type !== 'free') {
+    if (quiz.play_type !== 'free' && !isLoggedIn) {
       navigate('/upgrade');
     } else {
       navigate(`${routePrefix}/${quiz.id}`);

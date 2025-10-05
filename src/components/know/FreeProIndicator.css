@@ -2,7 +2,7 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  background: linear-gradient(135deg, #28a745, #20c997);
+  /* background: linear-gradient(135deg, #28a745, #20c997); */
   color: white;
   border: none;
   border-radius: 20px;
@@ -16,7 +16,7 @@
   box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3);
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .free-icon:hover {
@@ -27,6 +27,19 @@
 .free-icon svg {
   width: 12px;
   height: 12px;
+}
+
+.pro-unlocked-icon {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  /* background: linear-gradient(135deg, #6f42c1, #6610f2); */
+  color: var(--text-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
 }
 
 .upgrade-button {
