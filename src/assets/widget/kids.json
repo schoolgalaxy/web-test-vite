@@ -1,9 +1,9 @@
 {
-  "title": "Kids Plaza",
+  "title": "Discovery Set",
   "quizzes": [
     {
       "id": "birds",
-      "name": "Birds Questionaries",
+      "name": "Feathered Friends",
       "displayName": "Feathered Friends",
       "description": "Explore the world of birds with our engaging quizzes!",
       "route": "/quiz/birds",
@@ -17,7 +17,7 @@
     },
     {
       "id": "animals",
-      "name": "Animals Questionaries",
+      "name": "Jungle Giants",
       "displayName": "Jungle Giants",
       "description": "Test your knowledge about various animals!",
       "route": "/quiz/animals",
@@ -31,9 +31,9 @@
     },
     {
       "id": "aquatic",
-      "name": "Aquatic Questionaries",
-      "displayName": "Aquatic Zone",
-      "description": "Dive into aquatic life quizzes!",
+      "name": "Aquatic Wonders",
+      "displayName": "Aquatic Wonders",
+      "description": "Dive deep to explore the colorful and mysterious world of ocean life.",
       "route": "/quiz/aquatic",
       "routePrefix": "/quiz/aquatic",
       "category": "aquatic",
@@ -45,7 +45,7 @@
     },
     {
       "id": "insects",
-      "name": "Insects Questionaries",
+      "name": "Incredible Insects",
       "displayName": "Incredible Insects",
       "description": "Learn about fascinating insects with our quizzes!",
       "route": "/quiz/insects",

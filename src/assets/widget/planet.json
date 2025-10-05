@@ -3,7 +3,7 @@
   "quizzes": [
     {
       "id": "ai",
-      "name": "Artificial Intelligence Questionaries",
+      "name": "Artificial Intelligence Pioneers",
       "displayName": "AI Pioneers",
       "description": "Explore the world of AI with our engaging quizzes!",
       "route": "/quiz/ai",
@@ -31,9 +31,9 @@
     },
     {
       "id": "cars",
-      "name": "Cars Questionaries",
-      "displayName": "Cars Quiz",
-      "description": "Rev up your engines with our car quizzes!",
+      "name": "Amazing Cars",
+      "displayName": "Amazing Cars",
+      "description": "Get behind the wheel to learn about the fastest, strongest, and coolest cars ever made.",
       "route": "/quiz/cars",
       "routePrefix": "/quiz/cars",
       "category": "cars",
@@ -45,9 +45,9 @@
     },
     {
       "id": "movies",
-      "name": "Movies Questionaries",
-      "displayName": "Movies Quiz",
-      "description": "Test your movie knowledge with our fun quizzes!",
+      "name": "Movie Magic",
+      "displayName": "Movie Magic",
+      "description": "Go behind the scenes to discover the secrets of how your favorite movies are created.",
       "route": "/quiz/movies",
       "routePrefix": "/quiz/movies",
       "category": "movies",
@@ -59,7 +59,7 @@
     },
     {
       "id": "sports",
-      "name": "Sports Quiz",
+      "name": "Sports Legends",
       "displayName": "Sports Legends",
       "description": "Get in the game with our sports quizzes!",
       "route": "/quiz/sports",
@@ -73,7 +73,7 @@
     },
     {
       "id": "space",
-      "name": "Space Questionaries",
+      "name": "Space Explorers",
       "displayName": "Space Explorers",
       "description": "Test your knowledge about the cosmos!",
       "route": "/quiz/space",
@@ -87,9 +87,9 @@
     },
     {
       "id": "technology",
-      "name": "Technology Questionaries",
-      "displayName": "Tech Quiz",
-      "description": "Stay updated with the latest in technology!",
+      "name": "Technology Titans",
+      "displayName": "Technology Titans",
+      "description": "Uncover the building blocks of the technology that shapes our modern world.",
       "route": "/quiz/technology",
       "routePrefix": "/quiz/technology",
       "category": "technology",
@@ -101,9 +101,9 @@
     },
     {
       "id": "history",
-      "name": "History Questionaries",
-      "displayName": "History Quiz",
-      "description": "Travel back in time with our history quizzes!",
+      "name": "History's Mysteries",
+      "displayName": "History's Mysteries",
+      "description": "Travel back in time to explore ancient civilizations and solve puzzles of the past.",
       "route": "/quiz/history",
       "routePrefix": "/quiz/history",
       "category": "history",
