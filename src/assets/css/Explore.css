@@ -9,10 +9,10 @@
   /* transition: all 0.3s ease; */
 }
 
-.data-folder-widget:hover {
+/* .data-folder-widget:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .data-folder-widget h2 {
   color: var(--primary-blue-dark);
