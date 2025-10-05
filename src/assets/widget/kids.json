@@ -4,13 +4,13 @@
     {
       "id": "birds",
       "name": "Birds Questionaries",
-      "displayName": "Birds Quiz",
+      "displayName": "Feathered Friends",
       "description": "Explore the world of birds with our engaging quizzes!",
       "route": "/quiz/birds",
       "routePrefix": "/quiz/birds",
       "category": "birds",
       "icon": "/src/assets/img/icon-birds.svg",
-      "realIcon": "🐦",
+      "realIcon": "🦅",
       "iconAlt": "Birds",
       "active": true,
       "priority": 10
@@ -18,13 +18,13 @@
     {
       "id": "animals",
       "name": "Animals Questionaries",
-      "displayName": "Animals Quiz",
+      "displayName": "Jungle Giants",
       "description": "Test your knowledge about various animals!",
       "route": "/quiz/animals",
       "routePrefix": "/quiz/animals",
       "category": "animals",
       "icon": "/src/assets/img/icon-animals.svg",
-      "realIcon": "🐾",
+      "realIcon": "🐘",
       "iconAlt": "Animals",
       "active": true,
       "priority": 20
@@ -32,7 +32,7 @@
     {
       "id": "aquatic",
       "name": "Aquatic Questionaries",
-      "displayName": "Aquatic Quiz",
+      "displayName": "Aquatic Zone",
       "description": "Dive into aquatic life quizzes!",
       "route": "/quiz/aquatic",
       "routePrefix": "/quiz/aquatic",
@@ -46,7 +46,7 @@
     {
       "id": "insects",
       "name": "Insects Questionaries",
-      "displayName": "Insects Quiz",
+      "displayName": "Incredible Insects",
       "description": "Learn about fascinating insects with our quizzes!",
       "route": "/quiz/insects",
       "routePrefix": "/quiz/insects",

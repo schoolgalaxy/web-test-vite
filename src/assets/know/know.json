@@ -23,7 +23,7 @@
       "route": "/know/birds",
       "category": "birds",
       "icon": "/src/assets/img/icon-birds.svg",
-      "realIcon": "🐦",
+      "realIcon": "🦅",
       "iconAlt": "Birds",
       "active": true,
       "priority": 20,

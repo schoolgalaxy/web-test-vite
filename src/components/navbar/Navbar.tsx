@@ -18,7 +18,7 @@ const Navbar = () => {
         <ul>
           <li className="navbar-brand">
             <img src="/icons/galaxy.png" alt="Prep Galaxy" className="navbar-logo" />
-            Learning Galaxy
+            WonderScope
           </li>
           <li>
             <Link to="/">Home</Link>

@@ -32,12 +32,12 @@
       "id": "birds",
       "name": "Birds Questionaries",
       "displayName": "Birds Quiz",
-      "description": "Explore the world of birds with our engaging quizzes!",
+      "description": "Soar through the skies and discover the secrets of the most majestic birds!",
       "route": "/quiz/birds",
       "routePrefix": "/quiz/birds",
       "category": "birds",
       "icon": "/src/assets/img/icon-birds.svg",
-      "realIcon": "🐦",
+      "realIcon": "🦅",
       "iconAlt": "Birds",
       "active": true,
       "priority": 10
@@ -51,7 +51,7 @@
       "routePrefix": "/quiz/animals",
       "category": "animals",
       "icon": "/src/assets/img/icon-animals.svg",
-      "realIcon": "🐾",
+      "realIcon": "🐘",
       "iconAlt": "Animals",
       "active": true,
       "priority": 20
@@ -107,7 +107,7 @@
       "routePrefix": "/quiz/sports",
       "category": "sports",
       "icon": "/src/assets/img/icon-animals.svg",
-      "realIcon": "🏅",
+      "realIcon": "🏆",
       "iconAlt": "Sports",
       "active": true,
       "priority": 10

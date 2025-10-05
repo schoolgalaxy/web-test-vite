@@ -1,10 +1,9 @@
 {
-  "title": "Planet Plaza",
   "quizzes": [
     {
       "id": "ai",
       "name": "Artificial Intelligence Questionaries",
-      "displayName": "AI Pioneers",
+      "displayName": "AI Quiz",
       "description": "Explore the world of AI with our engaging quizzes!",
       "route": "/quiz/ai",
       "routePrefix": "/quiz/ai",
@@ -18,7 +17,7 @@
     {
       "id": "computer_science",
       "name": "Computer Science Questionaries",
-      "displayName": "Computers",
+      "displayName": "CS Quiz",
       "description": "Test your knowledge of fundamental computer science concepts!",
       "route": "/quiz/computer_science",
       "routePrefix": "/quiz/computer_science",
@@ -28,6 +27,48 @@
       "iconAlt": "Computer Science",
       "active": true,
       "priority": 100
+    },
+    {
+      "id": "birds",
+      "name": "Birds Questionaries",
+      "displayName": "Birds Quiz",
+      "description": "Soar through the skies and discover the secrets of the most majestic birds!",
+      "route": "/quiz/birds",
+      "routePrefix": "/quiz/birds",
+      "category": "birds",
+      "icon": "/src/assets/img/icon-birds.svg",
+      "realIcon": "🐦",
+      "iconAlt": "Birds",
+      "active": true,
+      "priority": 10
+    },
+    {
+      "id": "animals",
+      "name": "Animals Questionaries",
+      "displayName": "Animals Quiz",
+      "description": "Test your knowledge about various animals!",
+      "route": "/quiz/animals",
+      "routePrefix": "/quiz/animals",
+      "category": "animals",
+      "icon": "/src/assets/img/icon-animals.svg",
+      "realIcon": "🐾",
+      "iconAlt": "Animals",
+      "active": true,
+      "priority": 20
+    },
+    {
+      "id": "aquatic",
+      "name": "Aquatic Questionaries",
+      "displayName": "Aquatic Quiz",
+      "description": "Dive into aquatic life quizzes!",
+      "route": "/quiz/aquatic",
+      "routePrefix": "/quiz/aquatic",
+      "category": "aquatic",
+      "icon": "/src/assets/img/icon-aquatic.svg",
+      "realIcon": "🐠",
+      "iconAlt": "Aquatic",
+      "active": true,
+      "priority": 30
     },
     {
       "id": "cars",
@@ -60,13 +101,13 @@
     {
       "id": "sports",
       "name": "Sports Quiz",
-      "displayName": "Sports Legends",
+      "displayName": "Sports Quiz",
       "description": "Get in the game with our sports quizzes!",
       "route": "/quiz/sports",
       "routePrefix": "/quiz/sports",
       "category": "sports",
       "icon": "/src/assets/img/icon-animals.svg",
-      "realIcon": "🏆",
+      "realIcon": "🏅",
       "iconAlt": "Sports",
       "active": true,
       "priority": 10
@@ -74,7 +115,7 @@
     {
       "id": "space",
       "name": "Space Questionaries",
-      "displayName": "Space Explorers",
+      "displayName": "Space Quiz",
       "description": "Test your knowledge about the cosmos!",
       "route": "/quiz/space",
       "routePrefix": "/quiz/space",
@@ -112,6 +153,20 @@
       "iconAlt": "History",
       "active": false,
       "priority": 400
+    },
+    {
+      "id": "insects",
+      "name": "Insects Questionaries",
+      "displayName": "Insects Quiz",
+      "description": "Learn about fascinating insects with our quizzes!",
+      "route": "/quiz/insects",
+      "routePrefix": "/quiz/insects",
+      "category": "insects",
+      "icon": "/src/assets/img/icon-insects.svg",
+      "realIcon": "🦋",
+      "iconAlt": "Insects",
+      "active": true,
+      "priority": 40
     }
   ]
 }
