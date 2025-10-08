@@ -21,8 +21,9 @@ const LoginPromo: React.FC = () => {
         {/* Left side: Encouraging content */}
         <div className="promo-content-section">
           <div className="promo-header">
-            <h2>🚀 Unlock Your True Potential</h2>
-            <p className="promo-subtitle">Join thousands discovering their capabilities through our comprehensive assessment platform</p>
+            <h2>🚀 Wonderscope</h2>
+            {/* <p className="promo-subtitle">Join thousands discovering their capabilities through our comprehensive assessment platform</p> */}
+            <p className="promo-subtitle">Wonderscope helps you discover and unlock your potential through comprehensive assessments</p>
           </div>
 
           {/* <div className="promo-benefits-section">
@@ -100,7 +101,7 @@ const LoginPromo: React.FC = () => {
           <div className="cta-section">
             <div className="cta-content">
               {/* <h3>✨ Ready to Discover Your True Self?</h3> */}
-              <p>Start your journey of self-discovery with our comprehensive assessment platform. Completely free!</p>
+              {/* <p>Start your journey of self-discovery with our comprehensive assessment platform. Completely free!</p> */}
               <div className="cta-features">
                 <span>✓ No Credit Card Required</span>
                 <span>✓ Instant Access</span>
@@ -114,7 +115,7 @@ const LoginPromo: React.FC = () => {
         <div className="promo-form-section">
           <div className="promo-form-container">
             <div className="form-header">
-              <h3>🚀 Start Your Journey</h3>
+              {/* <h3>🚀 Start Your Journey</h3> */}
               <p>Get instant access to all assessments and track your personal growth</p>
             </div>
             <Authenticator />
