@@ -21,7 +21,7 @@ const QuizScoreSection: React.FC<QuizScoreSectionProps> = ({
   const { isLoggedIn } = useAuth();
 
   const handleSignIn = () => {
-    navigate('/login');
+    navigate('/login-promo');
   };
 
   return (
