@@ -111,7 +111,7 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
   };
 
   return (
-    <div className="mcq-test-container">
+    <div className="mcq-test-container-final">
       <button onClick={() => navigate(routePrefix)} className="back-button">Back to {quizData.title} Quizzes</button>
       {showScore ? (
         <QuizScoreSection

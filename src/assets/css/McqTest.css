@@ -13,6 +13,20 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
+.mcq-test-container-final {
+  margin: 50px 80px;
+  padding: 40px;
+  padding-bottom: 10px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px var(--shadow-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+
 /* Question section styling */
 .question-section {
   margin-bottom: 30px;

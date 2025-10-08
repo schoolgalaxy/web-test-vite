@@ -1,0 +1,124 @@
+/* Action Buttons Container */
+.action-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  z-index: 100;
+}
+
+/* Individual Action Button Styles */
+.action-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Active states for different button types */
+.action-btn.active {
+  color: white;
+  border-color: transparent;
+}
+
+.action-btn.fav-btn.active {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.action-btn.like-btn.active {
+  background-color: #51cf66;
+  color: white;
+}
+
+.action-btn.dislike-btn.active {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.action-btn.comment-btn:hover {
+  background-color: var(--accent-orange);
+  border-color: var(--accent-orange);
+  color: white;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .action-buttons {
+    bottom: 15px;
+    right: 15px;
+    gap: 12px;
+  }
+
+  .action-btn {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .action-btn {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: var(--primary-blue);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Animation for button press */
+.action-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+/* Focus styles for accessibility */
+.action-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Tooltip styles (optional enhancement) */
+.action-btn::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.action-btn:hover::before {
+  opacity: 1;
+}
