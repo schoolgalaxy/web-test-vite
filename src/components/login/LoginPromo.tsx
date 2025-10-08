@@ -116,7 +116,7 @@ const LoginPromo: React.FC = () => {
           <div className="promo-form-container">
             <div className="form-header">
               {/* <h3>🚀 Start Your Journey</h3> */}
-              <p>Get instant access to all assessments and track your personal growth</p>
+              <p>Take assessments and track your personal growth</p>
             </div>
             <Authenticator />
           </div>
