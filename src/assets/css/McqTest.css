@@ -1,14 +1,15 @@
 /* Basic styling for the MCQ test container */
 .mcq-test-container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 30px;
+  /* max-width: 800px; */
+  margin: 50px 80px;
+  padding: 40px;
+  padding-bottom: 10px;
   background-color: var(--bg-secondary);
   border-radius: 12px;
   box-shadow: 0 6px 20px var(--shadow-light);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-primary);
-  text-align: center;
+  text-align: left;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
@@ -18,9 +19,10 @@
 }
 
 .question-count {
+  text-align: center;
   font-size: 1.1em;
   color: var(--text-muted);
-  margin-bottom: 10px;
+  margin: 15px;
   transition: color 0.3s ease;
 }
 
@@ -84,7 +86,7 @@
 .answer-options {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .answer-button {
@@ -174,12 +176,13 @@
 }
 
 .back-button:hover {
-  background-color: var(--text-primary);
+  background-color: var(--primary-blue-dark);
 }
 
 /* Feedback section styling */
 .feedback-section {
-  margin-top: 25px;
+  text-align: center;
+  margin-top: 20px;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--bg-primary);
@@ -243,4 +246,13 @@
 
 .simple-button:last-child {
   margin-right: 0;
+}
+
+/* Button row styling for horizontal button layout */
+.button-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
