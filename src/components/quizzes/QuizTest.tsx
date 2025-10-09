@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import '../../assets/css/McqTest.css'; // Reusing MCQ test styles
+import '../../assets/css/QuizTest.css';
 import debug from '../../util/debug';
 import QuizScoreSection from './QuizScoreSection';
+import { useAuth } from '../../hook/useAuth';
 
 interface Question {
   question: string;
@@ -14,6 +15,7 @@ interface QuizData {
   title: string;
   description: string;
   profilePic: string;
+  play_type?: string;
   questions: Question[];
 }
 
@@ -25,7 +27,9 @@ interface QuizTestProps {
 const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
   const { quizId } = useParams<{ quizId: string }>();
   const navigate = useNavigate();
+  const { isLoggedIn } = useAuth();
   const [quizData, setQuizData] = useState<QuizData | null>(null);
+  const [showLoginPrompt, setShowLoginPrompt] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -48,6 +52,11 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
         const module: any = modules[matchKey as keyof typeof modules];
         const data: QuizData = module.default ?? module;
         setQuizData(data);
+
+        // Check if we should show login prompt for login_free content
+        if (data.play_type === 'free' && !isLoggedIn) {
+          setShowLoginPrompt(true);
+        }
       } catch (error) {
         debug.error(`Error loading ${quizCategory} quiz data:`, error);
         navigate('/error');
@@ -61,6 +70,62 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
 
   if (!quizData) {
     return <div>Loading quiz...</div>;
+  }
+
+  // Handle login prompt for login_free content
+  if (showLoginPrompt) {
+    return (
+      <div className="mcq-test-container-final">
+        <button onClick={() => navigate(routePrefix)} className="back-button">Back to {quizData.title} Quizzes</button>
+
+        <div className="login-prompt-section">
+          <div className="login-prompt-header">
+            <h2>🚀 Ready to Start Your Quiz?</h2>
+          </div>
+
+          
+
+          <div className="promo-benefits-grid">
+            <p className="login-prompt-subtitle">Login to unlock better features and track your progress!</p>
+
+            <div className="benefit-card">
+              <div className="benefit-icon">📊</div>
+              <h4>Track Progress</h4>
+              <p>Save your scores and monitor improvement over time</p>
+            </div>
+            <div className="benefit-card">
+              <div className="benefit-icon">📈</div>
+              <h4>Detailed Analytics</h4>
+              <p>Get insights into your learning patterns</p>
+            </div>
+            <div className="benefit-card">
+              <div className="benefit-icon">🏆</div>
+              <h4>Achievement Badges</h4>
+              <p>Earn rewards for completing quizzes</p>
+            </div>
+            {/* <div className="benefit-card">
+              <div className="benefit-icon">📚</div>
+              <h4>Maintain History</h4>
+              <p>Keep a complete record of all your quiz attempts and results</p>
+            </div> */}
+            <div className="login-prompt-actions">
+              <button
+                className="secondary-button"
+                onClick={() => setShowLoginPrompt(false)}
+              >
+                Skip for Now
+              </button>
+              <button
+                className="primary-button"
+                onClick={() => navigate('/login')}
+              >
+                Login to Start Quiz
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   const handleAnswerOptionClick = (option: string) => {

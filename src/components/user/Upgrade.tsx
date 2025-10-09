@@ -74,7 +74,7 @@ const Upgrade: React.FC = () => {
             <h3>Pro Plan</h3>
             <div className="price-display">
               <span className="currency">₹</span>
-              <span className="amount">299</span>
+              <span className="amount">199</span>
               <span className="period">/year</span>
             </div>
             {/* <p className="pricing-subtitle">Cancel anytime • 30-day money-back guarantee</p> */}
@@ -88,7 +88,7 @@ const Upgrade: React.FC = () => {
 
             <div className="pricing-features">
               <p>✓ All premium features included</p>
-              <p>✓ No setup fees</p>
+              {/* <p>✓ No setup fees</p> */}
               <p>✓ Secure payment processing</p>
             </div>
           </div>

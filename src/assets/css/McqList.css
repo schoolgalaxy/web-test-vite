@@ -132,7 +132,7 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  background: linear-gradient(135deg, #ffc107, #fd7e14);
+  /* background: linear-gradient(135deg, #ffc107, #fd7e14); */
   color: white;
   border: none;
   border-radius: 20px;

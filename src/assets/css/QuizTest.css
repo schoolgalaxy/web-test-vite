@@ -1,0 +1,401 @@
+/* Basic styling for the Quiz test container */
+.mcq-test-container {
+   /* max-width: 800px; */
+   margin: 50px 80px;
+   padding: 40px;
+   padding-bottom: 10px;
+   background-color: var(--bg-secondary);
+   border-radius: 12px;
+   box-shadow: 0 6px 20px var(--shadow-light);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: var(--text-primary);
+   text-align: left;
+   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+ }
+
+.mcq-test-container-final {
+   margin: 50px 80px;
+   padding: 40px;
+   padding-bottom: 10px;
+   background-color: var(--bg-secondary);
+   border-radius: 12px;
+   box-shadow: 0 6px 20px var(--shadow-light);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: var(--text-primary);
+   text-align: center;
+   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+ }
+
+
+/* Question section styling */
+.question-section {
+   margin-bottom: 30px;
+ }
+
+.question-count {
+   text-align: center;
+   font-size: 1.1em;
+   color: var(--text-muted);
+   margin: 15px;
+   transition: color 0.3s ease;
+ }
+
+.question-text {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+  }
+
+.hint-section {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+.hint-button {
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+.hint-button:hover {
+    background-color: var(--accent-orange-dark);
+  }
+
+.hint-text {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+.rationale {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-top: 15px;
+    text-align: left;
+    line-height: 1.5;
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+.rationale strong {
+    color: var(--primary-blue);
+  }
+
+/* Answer options styling */
+.answer-options {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+ }
+
+.answer-button {
+   background-color: var(--bg-primary);
+   color: var(--text-primary);
+   border: 2px solid var(--border-color);
+   padding: 15px 25px;
+   border-radius: 8px;
+   font-size: 1.1em;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   text-align: left;
+   width: 100%;
+   outline: none;
+ }
+
+.answer-button:hover {
+   background-color: var(--bg-secondary);
+   border-color: var(--primary-blue);
+ }
+
+.answer-button:active {
+   transform: translateY(1px);
+ }
+
+/* Feedback styling */
+.answer-button.selected {
+   border-color: var(--primary-blue);
+   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+ }
+
+.answer-button.correct {
+   background-color: #d4edda;
+   border-color: #28a745;
+   color: #155724;
+   font-weight: 600;
+ }
+
+.answer-button.incorrect {
+   background-color: #f8d7da;
+   border-color: #dc3545;
+   color: #721c24;
+   font-weight: 600;
+ }
+
+/* Score section styling */
+.score-section {
+   font-size: 1.2em;
+   color: #28a745;
+   font-weight: 700;
+   margin-top: 50px;
+   transition: color 0.3s ease;
+ }
+
+.score-section p {
+   margin-bottom: 20px;
+   color: var(--text-primary);
+   transition: color 0.3s ease;
+ }
+
+.score-section button {
+   background-color: transparent;
+   color: var(--primary-blue-dark);
+   border: 2px solid var(--primary-blue-dark);
+   padding: 12px 25px;
+   border-radius: 8px;
+   font-size: 1em;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+
+.score-section button:hover {
+   background-color: var(--primary-blue-dark);
+ }
+/* Back button styling */
+.back-button {
+   background-color: var(--text-muted);
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 8px;
+   font-size: 0.9em;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   margin-bottom: 20px;
+   align-self: flex-start;
+ }
+
+.back-button:hover {
+   background-color: var(--primary-blue-dark);
+ }
+
+/* Feedback section styling */
+.feedback-section {
+   text-align: center;
+   margin-top: 20px;
+   padding: 20px;
+   border-radius: 8px;
+   background-color: var(--bg-primary);
+   box-shadow: 0 2px 10px var(--shadow-light);
+   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+ }
+
+.feedback-section p {
+   font-size: 1.2em;
+   margin-bottom: 15px;
+   font-weight: 500;
+   color: var(--text-primary);
+   transition: color 0.3s ease;
+ }
+
+.feedback-correct {
+   color: #28a745;
+ }
+
+.feedback-incorrect {
+   color: #dc3545;
+ }
+
+/* Next Question Button Styling */
+.next-question-button {
+   background-color: var(--primary-blue);
+   color: white;
+   border: none;
+   padding: 12px 25px;
+   border-radius: 8px;
+   font-size: 1em;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   margin-top: 10px;
+ }
+
+.next-question-button:hover {
+   background-color: var(--primary-blue-dark);
+ }
+
+/* Simple button styling for score section */
+.simple-button {
+   background-color: var(--primary-blue);
+   color: white;
+   border: var(--primary-blue);
+   padding: 12px 25px;
+   border-radius: 8px;
+   font-size: 1em;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   margin: 0 5px;
+ }
+
+.simple-button:hover {
+   background-color: var(--primary-blue-dark);
+ }
+
+.simple-button:first-child {
+   margin-left: 0;
+ }
+
+.simple-button:last-child {
+   margin-right: 0;
+ }
+
+/* Button row styling for horizontal button layout */
+.button-row {
+   display: flex;
+   justify-content: flex-start;
+   gap: 15px;
+   margin-top: 20px;
+   flex-wrap: wrap;
+ }
+
+/* Login prompt section styles */
+.login-prompt-section {
+   background-color:  var(--navbar-bg);
+   border-radius: 12px;
+   padding: 40px;
+   margin: 20px 0;
+   border: 2px solid var(--border-color);
+   transition: background-color 0.3s ease, border-color 0.3s ease;
+ }
+
+.login-prompt-header {
+   text-align: center;
+   margin-bottom: 30px;
+ }
+
+.login-prompt-header h2 {
+   color: var(--bg-secondary);
+   margin-bottom: 10px;
+   font-size: 2em;
+   font-weight: 700;
+ }
+
+.login-prompt-subtitle {
+   color: var(--primary-blue-dark);
+   font-size: 1.5em;
+   font-weight: 600;
+   margin: 0;
+   line-height: 1.4;
+ }
+
+.promo-benefits-grid {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   margin: 30px 0;
+   padding: 20px;
+   background-color: var(--bg-secondary);
+   border-radius: 8px;
+   border: 1px solid var(--border-color);
+ }
+
+.benefit-card {
+   background-color: transparent;
+   padding: 12px 15px;
+   border-radius: 6px;
+   text-align: left;
+   border: none;
+   border-left: 3px solid transparent;
+   transition: all 0.3s ease;
+   position: relative;
+ }
+
+.benefit-card:hover {
+   background-color: var(--bg-secondary);
+   border-left-color: var(--primary-blue);
+   transform: translateX(5px);
+ }
+
+.benefit-card .benefit-icon {
+   display: inline-block;
+   font-size: 1.3em;
+   margin-right: 12px;
+   margin-bottom: 0;
+   vertical-align: middle;
+ }
+
+.benefit-card h4 {
+   color: var(--text-primary);
+   margin: 0;
+   font-size: 1.05em;
+   font-weight: 400;
+   display: inline-block;
+   vertical-align: middle;
+ }
+
+.benefit-card p {
+   color: var(--text-muted);
+   margin: 2px 0 0 0;
+   font-size: 0.9em;
+   line-height: 1.4;
+   display: block;
+   margin-left: 45px;
+ }
+
+.login-prompt-actions {
+   display: flex;
+   gap: 20px;
+   justify-content: center;
+   margin-top: 40px;
+   flex-wrap: wrap;
+ }
+
+.primary-button {
+   background-color: var(--primary-blue);
+   color: white;
+   border: none;
+   padding: 15px 40px;
+   border-radius: 8px;
+   font-size: 1.1em;
+   font-weight: 600;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   min-width: 180px;
+ }
+
+.primary-button:hover {
+   background-color: var(--primary-blue-dark);
+   transform: translateY(-1px);
+ }
+
+.secondary-button {
+   background-color: transparent;
+   color: var(--text-muted);
+   border: 2px solid var(--border-color);
+   padding: 15px 40px;
+   border-radius: 8px;
+   font-size: 1.1em;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   min-width: 180px;
+ }
+
+.secondary-button:hover {
+   background-color: var(--bg-secondary);
+   border-color: var(--primary-blue);
+   color: var(--primary-blue);
+   transform: translateY(-1px);
+ }
