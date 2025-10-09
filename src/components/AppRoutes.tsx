@@ -5,7 +5,6 @@ import { lazy, Suspense } from 'react';
 const Home = lazy(() => import('./Home'));
 const Explore = lazy(() => import('./Explore'));
 const TestLayout = lazy(() => import('./TestLayout'));
-const LoginScreen = lazy(() => import('./login/LoginScreen'));
 const LoginPromo = lazy(() => import('./login/LoginPromo'));
 const SignoutScreen = lazy(() => import('./login/SignoutScreen'));
 const FeedbackLayout = lazy(() => import('./feedback/FeedbackLayout'));

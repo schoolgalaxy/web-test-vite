@@ -76,7 +76,7 @@ const QuizTest: React.FC<QuizTestProps> = ({ quizCategory, routePrefix }) => {
   if (showLoginPrompt) {
     return (
       <div className="mcq-test-container-final">
-        <button onClick={() => navigate(routePrefix)} className="back-button">Back to {quizData.title} Quizzes</button>
+        {/* <button onClick={() => navigate(routePrefix)} className="back-button">Back to {quizData.title} Quizzes</button> */}
 
         <div className="login-prompt-section">
           <div className="login-prompt-header">
