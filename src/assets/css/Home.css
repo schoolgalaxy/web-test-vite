@@ -179,7 +179,7 @@
     background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.05) 100%);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    margin-bottom: 12px;
+    margin: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -194,12 +194,12 @@
   .widget-header {
     background: linear-gradient(135deg, var(--bg-hero) 0%, var(--shadow-light) 100%);
     color: var(--primary-blue-dark);
-    padding: 8px 12px;
+    padding: 0px 12px;
     display: flex;
     align-items: center;
     gap: 6px;
-    font-weight: 600;
-    font-size: 0.9em;
+    font-weight: 400;
+    font-size: 1.1em;
   }
 
   .widget-icon {
