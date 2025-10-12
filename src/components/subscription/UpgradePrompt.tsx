@@ -11,7 +11,7 @@ interface UpgradePromptProps {
 }
 
 const UpgradePrompt: React.FC<UpgradePromptProps> = ({
-  feature = "premium features",
+  // feature = "premium features",
   title = "Upgrade to Pro",
   description = "Unlock this feature and many more with our Pro subscription!",
   className = ""
