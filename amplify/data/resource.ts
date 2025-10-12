@@ -28,6 +28,31 @@ const schema = a.schema({
       timestamp: a.datetime().required(),
     })
     .authorization((allow) => [allow.publicApiKey().to(["create"])]),
+  UserSubscription: a
+    .model({
+      userId: a.string().required(),
+      userEmail: a.string().required(),
+      userName: a.string(),
+      subscriptionId: a.string().required(),
+      planId: a.string().required(),
+      planName: a.string().required(),
+      amount: a.float().required(),
+      currency: a.string().required(),
+      interval: a.string().required(), // monthly, yearly, etc.
+      period: a.integer().required(),
+      status: a.string().required(), // active, cancelled, expired
+      razorpayPaymentId: a.string().required(),
+      razorpaySubscriptionId: a.string(),
+      startDate: a.datetime().required(),
+      endDate: a.datetime(),
+      isActive: a.boolean().required(),
+      features: a.string().array(), // Array of feature strings
+      notes: a.string(),
+    })
+    .authorization((allow) => [
+      allow.owner("userPools").to(['read', 'update']),
+      allow.publicApiKey().to(['create'])
+    ]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

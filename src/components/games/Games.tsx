@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useSubscription } from '../../hook/useSubscription';
+import UpgradePrompt from '../subscription/UpgradePrompt';
 
 interface Game {
   id: string;
@@ -81,6 +83,7 @@ const Games: React.FC = () => {
   const { gameId } = useParams<{ gameId: string }>();
   const [isFullscreen, setIsFullscreen] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const { hasActiveSubscription, isLoading } = useSubscription();
 
   const game = games.find(g => g.id === gameId);
 
@@ -106,6 +109,31 @@ const Games: React.FC = () => {
       console.error('Error toggling fullscreen:', error);
     }
   };
+
+  // Show loading state while checking subscription
+  if (isLoading) {
+    return (
+      <div className="games-container">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show upgrade prompt for non-subscribed users
+  if (!hasActiveSubscription) {
+    return (
+      <div className="games-container">
+        <UpgradePrompt
+          feature="games"
+          title="Unlock Fun Games!"
+          description="Subscribe to Pro to access our collection of educational games and activities!"
+        />
+      </div>
+    );
+  }
 
   if (!game) {
     return (

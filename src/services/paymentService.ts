@@ -5,6 +5,8 @@ import {
   UpgradePlan
 } from '../types/payment';
 import { RAZORPAY_CONFIG, PAYMENT_MESSAGES } from '../config/payment';
+import { generateClient } from 'aws-amplify/data';
+import type { Schema } from '../../amplify/data/resource';
 
 // Load Razorpay script dynamically
 const loadRazorpayScript = (): Promise<boolean> => {
@@ -74,12 +76,38 @@ const createSubscription = async (plan: UpgradePlan): Promise<any> => {
 
 export class PaymentService {
   private static instance: PaymentService;
+  private client = generateClient<Schema>();
 
   public static getInstance(): PaymentService {
     if (!PaymentService.instance) {
       PaymentService.instance = new PaymentService();
     }
     return PaymentService.instance;
+  }
+
+  // Helper method to calculate subscription end date
+  private calculateEndDate(startDate: Date, interval: string, period: number): Date {
+    const endDate = new Date(startDate);
+
+    switch (interval.toLowerCase()) {
+      case 'yearly':
+        endDate.setFullYear(endDate.getFullYear() + period);
+        break;
+      case 'monthly':
+        endDate.setMonth(endDate.getMonth() + period);
+        break;
+      case 'weekly':
+        endDate.setDate(endDate.getDate() + (period * 7));
+        break;
+      case 'daily':
+        endDate.setDate(endDate.getDate() + period);
+        break;
+      default:
+        // Default to yearly if interval is unknown
+        endDate.setFullYear(endDate.getFullYear() + period);
+    }
+
+    return endDate;
   }
 
   // Initialize payment for a plan (using subscriptions for yearly plans)
@@ -136,7 +164,7 @@ export class PaymentService {
         name: RAZORPAY_CONFIG.name,
         description: `${plan.name} - ${plan.interval} subscription`,
         handler: async (response: RazorpayResponse) => {
-          await this.handlePaymentSuccess(response, subscriptionData.id);
+          await this.handlePaymentSuccess(response, subscriptionData.id, plan, userDetails);
         },
         prefill: {
           name: userDetails?.name,
@@ -213,7 +241,12 @@ export class PaymentService {
   }
 
   // Handle successful payment
-  private async handlePaymentSuccess(response: RazorpayResponse, subscriptionId: string): Promise<void> {
+  private async handlePaymentSuccess(
+    response: RazorpayResponse,
+    subscriptionId: string,
+    plan: UpgradePlan,
+    userDetails?: { name?: string; email?: string; contact?: string }
+  ): Promise<void> {
     try {
       const verificationPayload: PaymentVerificationPayload = {
         razorpay_payment_id: response.razorpay_payment_id,
@@ -227,6 +260,9 @@ export class PaymentService {
       const isValid = await verifyPayment(verificationPayload);
 
       if (isValid) {
+        // Save subscription data to backend
+        await this.saveSubscriptionToBackend(response.razorpay_payment_id, subscriptionId, plan, userDetails);
+
         // Show success message and handle post-payment logic
         this.showSuccessMessage('Subscription activated successfully! Welcome to Pro!');
         this.handlePostPaymentSuccess(response.razorpay_payment_id, subscriptionId);
@@ -258,6 +294,67 @@ export class PaymentService {
   // Show info message
   private showInfoMessage(message: string): void {
     alert(message);
+  }
+
+  // Save subscription data to backend
+  private async saveSubscriptionToBackend(
+    razorpayPaymentId: string,
+    subscriptionId: string,
+    plan: UpgradePlan,
+    userDetails?: { name?: string; email?: string; contact?: string }
+  ): Promise<void> {
+    try {
+      // Get current user information from Amplify Auth
+      const { getCurrentUser } = await import('aws-amplify/auth');
+
+      const currentUser = await getCurrentUser();
+      const userId = currentUser.userId || currentUser.username;
+
+      if (!userId) {
+        throw new Error('User ID not found. User must be authenticated to create subscription.');
+      }
+
+      // Calculate subscription dates
+      const startDate = new Date();
+      const endDate = this.calculateEndDate(startDate, plan.interval, plan.period);
+
+      // Create subscription record in backend
+      const subscriptionData = {
+        userId,
+        userEmail: userDetails?.email || '',
+        userName: userDetails?.name || '',
+        subscriptionId,
+        planId: plan.id,
+        planName: plan.name,
+        amount: plan.amount,
+        currency: plan.currency,
+        interval: plan.interval,
+        period: plan.period,
+        status: 'active',
+        razorpayPaymentId,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        isActive: true,
+        features: plan.features,
+        notes: `Created via Razorpay payment: ${razorpayPaymentId}`
+      };
+
+      console.log('💾 Saving subscription data to backend:', subscriptionData);
+
+      const result = await this.client.models.UserSubscription.create(subscriptionData);
+
+      if (result.data) {
+        console.log('✅ Subscription saved successfully:', result.data.id);
+      } else {
+        console.error('❌ Failed to save subscription - no data returned');
+        throw new Error('Failed to save subscription data');
+      }
+
+    } catch (error) {
+      console.error('❌ Failed to save subscription to backend:', error);
+      // Don't throw here - payment was successful, just logging failed
+      // In production, you might want to implement retry logic or manual sync
+    }
   }
 
   // Handle post-payment success logic
