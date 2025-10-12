@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hook/useAuth';
+import { useSubscription } from '../../hook/useSubscription';
 import FreeProIndicator from '../know/FreeProIndicator';
 
 interface Game {
@@ -91,9 +92,10 @@ const games: Game[] = [
 const GamesWidget: React.FC = () => {
   const navigate = useNavigate();
   const { isLoggedIn } = useAuth();
+  const { hasActiveSubscription } = useSubscription();
 
   const handleGameClick = (game: Game) => {
-    if (game.play_type !== 'free' && !isLoggedIn) {
+    if (game.play_type !== 'free' && !isLoggedIn && !hasActiveSubscription) {
       navigate('/upgrade');
     } else {
       navigate(`/games/${game.id}`);
