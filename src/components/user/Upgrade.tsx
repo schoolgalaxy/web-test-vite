@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { paymentService } from '../../services/paymentService';
+import { PaymentStatus, UpgradePlan } from '../../types/payment';
+import { RAZORPAY_CONFIG } from '../../config/payment';
 import './Upgrade.css';
 
 const Upgrade: React.FC = () => {
   const navigate = useNavigate();
+  const [paymentStatus, setPaymentStatus] = useState<PaymentStatus>('idle');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleUpgradeClick = () => {
-    // Navigate to login page when upgrade button is clicked
-    navigate('/login');
+  const handleUpgradeClick = async () => {
+    setIsLoading(true);
+    setPaymentStatus('processing');
+
+    try {
+      const proPlan: UpgradePlan = RAZORPAY_CONFIG.plans.pro;
+
+      // In a real app, you would get user details from authentication context
+      const userDetails = {
+        name: 'Test User', // Replace with actual user name
+        email: 'test@example.com', // Replace with actual user email
+        contact: '+919876543210' // Replace with actual user contact
+      };
+
+      await paymentService.initiatePayment(proPlan, userDetails);
+      setPaymentStatus('idle');
+    } catch (error) {
+      console.error('Payment initiation failed:', error);
+      setPaymentStatus('failed');
+      alert('Payment initiation failed. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -80,10 +105,20 @@ const Upgrade: React.FC = () => {
             {/* <p className="pricing-subtitle">Cancel anytime • 30-day money-back guarantee</p> */}
 
             <button
-              className="upgrade-pro-button"
+              className={`upgrade-pro-button ${isLoading ? 'loading' : ''}`}
               onClick={handleUpgradeClick}
+              disabled={isLoading}
             >
-              🚀 Upgrade to Pro
+              {isLoading ? (
+                <>
+                  <span className="loading-spinner">⏳</span>
+                  Processing Payment...
+                </>
+              ) : (
+                <>
+                  🚀 Upgrade to Pro
+                </>
+              )}
             </button>
 
             <div className="pricing-features">
@@ -120,6 +155,30 @@ const Upgrade: React.FC = () => {
           <p>🔒 Your payment is secured with industry-standard encryption</p>
           {/* <p>💳 We accept all major credit cards and PayPal</p> */}
         </div>
+
+        {paymentStatus === 'failed' && (
+          <div className="payment-status error">
+            <p>❌ Payment failed. Please try again or contact support if the issue persists.</p>
+            <button
+              className="retry-button"
+              onClick={() => setPaymentStatus('idle')}
+            >
+              Try Again
+            </button>
+          </div>
+        )}
+
+        {paymentStatus === 'success' && (
+          <div className="payment-status success">
+            <p>✅ Payment successful! Welcome to Pro! You now have access to all premium features.</p>
+            <button
+              className="continue-button"
+              onClick={() => navigate('/')}
+            >
+              Continue to Dashboard
+            </button>
+          </div>
+        )}
       </div>
     </div>
     </div>
