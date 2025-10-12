@@ -90,7 +90,7 @@ const games: Game[] = [
 
 const GamesWidget: React.FC = () => {
   const navigate = useNavigate();
-  const { hasActiveSubscription } = useSubscription();
+  const { hasActiveSubscription, isLoading, refreshSubscription } = useSubscription();
 
   const handleGameClick = (game: Game) => {
     if (game.play_type !== 'free' && !hasActiveSubscription) {
@@ -100,13 +100,62 @@ const GamesWidget: React.FC = () => {
     }
   };
 
+  const handleRefreshSubscription = () => {
+    console.log('🔄 Manually refreshing subscription status...');
+    refreshSubscription();
+  };
+
+  const handleDebugCheck = async () => {
+    try {
+      const subscriptionService = (await import('../../services/subscriptionService')).subscriptionService;
+      const hasActive = await subscriptionService.hasActiveSubscription();
+      console.log('🔍 Debug subscription check result:', hasActive);
+
+      // Also check the raw subscription data
+      const subscription = await subscriptionService.getActiveSubscription();
+      console.log('🔍 Debug subscription data:', subscription);
+
+      if (hasActive) {
+        alert('✅ Subscription found! You should have access to pro games.');
+      } else {
+        alert('❌ No active subscription found. Please check your subscription status.');
+      }
+    } catch (error) {
+      console.error('❌ Debug check failed:', error);
+      alert('❌ Error checking subscription. Check console for details.');
+    }
+  };
+
   return (
     <div className="sidebar-widget">
       <div className="widget-header">
         <div className="widget-icon">🎯</div>
         <h4>Fun Activities</h4>
+        {!isLoading && (
+          <div className="widget-actions">
+            <button
+              className="subscription-refresh-btn"
+              onClick={handleRefreshSubscription}
+              title="Refresh subscription status"
+            >
+              🔄
+            </button>
+            <button
+              className="debug-check-btn"
+              onClick={handleDebugCheck}
+              title="Debug subscription check"
+            >
+              🔍
+            </button>
+          </div>
+        )}
       </div>
       <div className="widget-content">
+        {isLoading && (
+          <div className="loading-state">
+            <span>⏳ Checking subscription...</span>
+          </div>
+        )}
         <div className="games-grid">
           {games.map((game) => (
             <div
@@ -119,11 +168,16 @@ const GamesWidget: React.FC = () => {
               <div className="game-info">
                 <span className="game-name">{game.displayName}</span>
                 {/* <span className="game-description">{game.description}</span> */}
-                { game.play_type !== 'free' && !hasActiveSubscription && <FreeProIndicator playType={game.play_type} /> }
+                { game.play_type !== 'free' && !hasActiveSubscription && !isLoading && <FreeProIndicator playType={game.play_type} /> }
               </div>
             </div>
           ))}
         </div>
+        {!isLoading && !hasActiveSubscription && (
+          <div className="subscription-status">
+            <p>💡 Upgrade to Pro to unlock premium games</p>
+          </div>
+        )}
       </div>
     </div>
   );

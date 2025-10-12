@@ -65,10 +65,12 @@ export class SubscriptionService {
     try {
       const currentUser = await getCurrentUser();
       if (!currentUser) {
+        console.log('🔐 No authenticated user found for subscription check');
         return false;
       }
 
       const userId = currentUser.userId || currentUser.username;
+      console.log('🔍 Checking subscription for user:', userId);
 
       const { data: subscriptions } = await this.client.models.UserSubscription.list({
         filter: {
@@ -79,20 +81,30 @@ export class SubscriptionService {
       });
 
       if (!subscriptions || subscriptions.length === 0) {
+        console.log('❌ No active subscriptions found for user:', userId);
         return false;
       }
+
+      console.log('📋 Found subscriptions:', subscriptions.length);
 
       // Check if any subscription is still valid (not expired)
       const now = new Date();
       const activeSubscription = subscriptions.find(sub => {
-        if (!sub.endDate) return true; // No end date means lifetime
-        return new Date(sub.endDate) > now;
+        if (!sub.endDate) {
+          console.log('✅ Lifetime subscription found');
+          return true; // No end date means lifetime
+        }
+        const isValid = new Date(sub.endDate) > now;
+        console.log('📅 Subscription expiry check:', sub.endDate, 'Valid:', isValid);
+        return isValid;
       });
 
-      return !!activeSubscription;
+      const result = !!activeSubscription;
+      console.log('🎯 Final subscription status:', result);
+      return result;
 
     } catch (error) {
-      console.error('Error checking subscription status:', error);
+      console.error('❌ Error checking subscription status:', error);
       return false;
     }
   }

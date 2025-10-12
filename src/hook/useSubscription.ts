@@ -70,8 +70,17 @@ export const useSubscription = () => {
   };
 
   useEffect(() => {
+    // Initial check when component mounts
     checkSubscriptionStatus();
   }, []);
+
+  // Force refresh subscription status when dependencies change
+  useEffect(() => {
+    if (globalRefreshTrigger > 0) {
+      console.log('🔄 Global subscription refresh triggered:', globalRefreshTrigger);
+      checkSubscriptionStatus();
+    }
+  }, [globalRefreshTrigger]);
 
   // Listen for global subscription refresh events
   useEffect(() => {

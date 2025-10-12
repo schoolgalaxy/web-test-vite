@@ -264,11 +264,28 @@ export class PaymentService {
         // Save subscription data to backend
         await this.saveSubscriptionToBackend(response.razorpay_payment_id, subscriptionId, plan, userDetails);
 
-        // Small delay to ensure backend save is complete before triggering UI refresh
+        // Increased delay to ensure backend save is complete before triggering UI refresh
         setTimeout(() => {
           // Trigger global subscription refresh to update UI state
           triggerSubscriptionRefresh();
-        }, 100);
+
+          // Additional retry mechanism for subscription verification
+          setTimeout(async () => {
+            try {
+              const subscriptionService = (await import('./subscriptionService')).subscriptionService;
+              const hasActive = await subscriptionService.hasActiveSubscription();
+              console.log('🔄 Subscription verification after payment:', hasActive);
+
+              if (!hasActive) {
+                console.warn('⚠️ Subscription not found after payment, retrying...');
+                // Trigger another refresh if subscription not found
+                triggerSubscriptionRefresh();
+              }
+            } catch (error) {
+              console.error('❌ Error verifying subscription after payment:', error);
+            }
+          }, 500);
+        }, 300);
 
         // Show success message and handle post-payment logic
         this.showSuccessMessage('Subscription activated successfully! Welcome to Pro!');
