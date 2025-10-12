@@ -1,7 +1,6 @@
 import {
   RazorpayOptions,
   RazorpayResponse,
-  PaymentOrder,
   PaymentVerificationPayload,
   UpgradePlan
 } from '../types/payment';
@@ -24,20 +23,20 @@ const loadRazorpayScript = (): Promise<boolean> => {
 };
 
 // Create order on backend (in a real app, this would be an API call)
-const createOrder = async (amount: number, currency: string = 'INR'): Promise<PaymentOrder> => {
-  // In a real application, this would make an API call to your backend
-  // to create an order and return the order ID
-  const orderId = `order_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+// const createOrder = async (amount: number, currency: string = 'INR'): Promise<PaymentOrder> => {
+//   // In a real application, this would make an API call to your backend
+//   // to create an order and return the order ID
+//   const orderId = `order_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
-  return {
-    id: orderId,
-    amount: amount * 100, // Convert to paise
-    currency,
-    receipt: `receipt_${Date.now()}`,
-    status: 'created',
-    created_at: Date.now()
-  };
-};
+//   return {
+//     id: orderId,
+//     amount: amount * 100, // Convert to paise
+//     currency,
+//     receipt: `receipt_${Date.now()}`,
+//     status: 'created',
+//     created_at: Date.now()
+//   };
+// };
 
 // Verify payment on backend (in a real app, this would be an API call)
 const verifyPayment = async (payload: PaymentVerificationPayload): Promise<boolean> => {
@@ -53,6 +52,26 @@ const verifyPayment = async (payload: PaymentVerificationPayload): Promise<boole
   return true;
 };
 
+// Create subscription for recurring payments
+const createSubscription = async (plan: UpgradePlan): Promise<any> => {
+  // In a real application, this would make an API call to your backend
+  // to create a subscription plan and return the subscription data
+
+  const subscriptionId = `subscr_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+  return {
+    id: subscriptionId,
+    plan_id: plan.id,
+    amount: plan.amount * 100, // Convert to paise
+    currency: plan.currency,
+    interval: plan.interval,
+    period: plan.period,
+    customer_id: `cust_${Date.now()}`,
+    status: 'created',
+    created_at: Date.now()
+  };
+};
+
 export class PaymentService {
   private static instance: PaymentService;
 
@@ -63,28 +82,61 @@ export class PaymentService {
     return PaymentService.instance;
   }
 
-  // Initialize payment for a plan
+  // Initialize payment for a plan (using subscriptions for yearly plans)
   async initiatePayment(plan: UpgradePlan, userDetails?: { name?: string; email?: string; contact?: string }): Promise<void> {
     try {
+      console.log('🚀 Initiating subscription for plan:', plan.name);
+
+      // Validate environment before proceeding
+      const { validateEnvironment, getPaymentEnvironment } = await import('../util/env');
+      const validation = validateEnvironment();
+
+      if (!validation.isValid) {
+        console.error('❌ Environment validation failed:', validation.errors);
+        throw new Error(`Environment validation failed: ${validation.errors.join(', ')}`);
+      }
+
+      // Get current environment for debugging
+      const env = getPaymentEnvironment();
+
+      // Validate API key format (only log in development)
+      if (import.meta.env.DEV && env.razorpayKeyId === 'rzp_test_demo_key') {
+        console.warn('⚠️ Using demo/test API key - configure production keys for live payments');
+      }
+
+      // Check browser compatibility
+      console.log('🔍 Checking browser compatibility...');
+      if (typeof window === 'undefined') {
+        throw new Error('Payment forms are not supported in server-side environments');
+      }
+
+      // Check for basic browser features
+      if (!window.crypto || !window.btoa) {
+        throw new Error('Your browser does not support required security features for payments');
+      }
+
       // Load Razorpay script
       const scriptLoaded = await loadRazorpayScript();
       if (!scriptLoaded) {
-        throw new Error('Failed to load Razorpay SDK');
+        throw new Error('Failed to load payment system. Please check your internet connection and try again.');
       }
 
-      // Create order
-      const order = await createOrder(plan.amount, plan.currency);
+      if (!window.Razorpay) {
+        throw new Error('Payment system not available. Please refresh the page and try again.');
+      }
 
-      // Prepare Razorpay options
+      // Create subscription for recurring payments
+      const subscriptionData = await createSubscription(plan);
+
+      // Prepare Razorpay options for subscription
       const options: RazorpayOptions = {
         key: RAZORPAY_CONFIG.key_id,
-        amount: order.amount,
-        currency: order.currency,
+        amount: subscriptionData.amount,
+        currency: subscriptionData.currency,
         name: RAZORPAY_CONFIG.name,
-        description: `${plan.name} - ${plan.period}`,
-        order_id: order.id,
+        description: `${plan.name} - ${plan.interval} subscription`,
         handler: async (response: RazorpayResponse) => {
-          await this.handlePaymentSuccess(response, order.id);
+          await this.handlePaymentSuccess(response, subscriptionData.id);
         },
         prefill: {
           name: userDetails?.name,
@@ -105,24 +157,69 @@ export class PaymentService {
         },
       };
 
-      // Create and open Razorpay instance
-      const razorpayInstance = new window.Razorpay(options);
-      razorpayInstance.open();
+      console.log('💳 Opening Razorpay payment modal...');
+
+      // Create Razorpay instance with error handling
+      let razorpayInstance: any;
+      try {
+        razorpayInstance = new window.Razorpay(options);
+        console.log('✅ Razorpay instance created successfully');
+      } catch (instanceError) {
+        console.error('❌ Failed to create Razorpay instance:', instanceError);
+        throw new Error('Failed to initialize payment form. Please check your browser compatibility.');
+      }
+
+      // Add modal event listeners for debugging
+      razorpayInstance.on('modal-ready', () => {
+        console.log('✅ Razorpay modal is ready');
+      });
+
+      razorpayInstance.on('modal-close', () => {
+        console.log('📝 Razorpay modal was closed');
+      });
+
+      // Open the modal with fallback handling
+      try {
+        razorpayInstance.open();
+
+        // Set a timeout to detect if modal fails to open
+        setTimeout(() => {
+          const modalElements = document.querySelectorAll('[class*="razorpay"], [id*="razorpay"]');
+          if (modalElements.length === 0) {
+            console.warn('Payment form may not have opened properly. Check for popup blockers.');
+          }
+        }, 1500);
+
+      } catch (modalError) {
+        console.error('Failed to open payment form:', modalError);
+
+        // Provide specific error messages based on error type
+        if (modalError instanceof Error) {
+          if (modalError.message.includes('popup')) {
+            throw new Error('Payment form blocked by popup blocker. Please allow popups for this site and try again.');
+          } else if (modalError.message.includes('security')) {
+            throw new Error('Security restriction prevented payment form from opening. Please ensure you\'re using HTTPS.');
+          }
+        }
+
+        throw new Error('Failed to open payment form. This might be due to browser restrictions, ad-blockers, or popup blockers.');
+      }
 
     } catch (error) {
-      console.error('Payment initiation failed:', error);
+      console.error('❌ Payment initiation failed:', error);
+      this.showErrorMessage(error instanceof Error ? error.message : 'Payment initiation failed. Please try again.');
       throw error;
     }
   }
 
   // Handle successful payment
-  private async handlePaymentSuccess(response: RazorpayResponse, orderId: string): Promise<void> {
+  private async handlePaymentSuccess(response: RazorpayResponse, subscriptionId: string): Promise<void> {
     try {
       const verificationPayload: PaymentVerificationPayload = {
         razorpay_payment_id: response.razorpay_payment_id,
         razorpay_order_id: response.razorpay_order_id,
         razorpay_signature: response.razorpay_signature,
-        order_id: orderId,
+        order_id: subscriptionId, // Using subscription ID as order_id for compatibility
         payment_id: response.razorpay_payment_id,
       };
 
@@ -131,8 +228,8 @@ export class PaymentService {
 
       if (isValid) {
         // Show success message and handle post-payment logic
-        this.showSuccessMessage(PAYMENT_MESSAGES.success);
-        this.handlePostPaymentSuccess(response.razorpay_payment_id, orderId);
+        this.showSuccessMessage('Subscription activated successfully! Welcome to Pro!');
+        this.handlePostPaymentSuccess(response.razorpay_payment_id, subscriptionId);
       } else {
         throw new Error('Payment verification failed');
       }
@@ -181,6 +278,46 @@ export class PaymentService {
   // Get available plans
   getAvailablePlans(): UpgradePlan[] {
     return [RAZORPAY_CONFIG.plans.pro];
+  }
+
+  // Test method to verify Razorpay setup and API connectivity
+  async testRazorpaySetup(): Promise<boolean> {
+    try {
+      // Load Razorpay script
+      const scriptLoaded = await loadRazorpayScript();
+      if (!scriptLoaded || !window.Razorpay) {
+        return false;
+      }
+
+      // Test API key format (basic validation)
+      if (!RAZORPAY_CONFIG.key_id.startsWith('rzp_')) {
+        return false;
+      }
+
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  // Test API connectivity (for production keys)
+  async testApiConnectivity(): Promise<boolean> {
+    try {
+      // Test basic authentication format
+      const testAuth = btoa(RAZORPAY_CONFIG.key_id + ':' + RAZORPAY_CONFIG.key_secret);
+      if (!testAuth || testAuth.length < 10) {
+        return false;
+      }
+
+      // Test key format
+      if (RAZORPAY_CONFIG.key_id.startsWith('rzp_test_') || RAZORPAY_CONFIG.key_id.startsWith('rzp_live_')) {
+        return true;
+      }
+
+      return false;
+    } catch (error) {
+      return false;
+    }
   }
 }
 

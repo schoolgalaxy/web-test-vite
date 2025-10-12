@@ -49,6 +49,24 @@ export interface PaymentOrder {
   created_at: number;
 }
 
+export interface SubscriptionRequest {
+  plan_id: string;
+  total_count: number; // Number of billing cycles
+  quantity?: number;
+  customer_notify?: boolean;
+  notes?: Record<string, string>;
+}
+
+export interface SubscriptionPlan {
+  id: string;
+  name: string;
+  amount: number;
+  currency: string;
+  interval: 'monthly' | 'yearly' | 'weekly' | 'daily';
+  period: number; // Interval period (e.g., 1 for yearly)
+  features: string[];
+}
+
 export interface PaymentVerificationPayload {
   razorpay_payment_id: string;
   razorpay_order_id: string;
@@ -71,6 +89,7 @@ export interface UpgradePlan {
   name: string;
   amount: number;
   currency: string;
-  period: string;
+  interval: 'monthly' | 'yearly' | 'weekly' | 'daily';
+  period: number; // Number of intervals (e.g., 1 for yearly)
   features: string[];
 }

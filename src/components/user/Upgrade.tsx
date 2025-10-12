@@ -102,6 +102,7 @@ const Upgrade: React.FC = () => {
               <span className="amount">199</span>
               <span className="period">/year</span>
             </div>
+            {/* <div className="subscription-badge">🔄 Auto-renewing subscription</div> */}
             {/* <p className="pricing-subtitle">Cancel anytime • 30-day money-back guarantee</p> */}
 
             <button
@@ -112,7 +113,7 @@ const Upgrade: React.FC = () => {
               {isLoading ? (
                 <>
                   <span className="loading-spinner">⏳</span>
-                  Processing Payment...
+                  Activating Subscription...
                 </>
               ) : (
                 <>
@@ -123,8 +124,9 @@ const Upgrade: React.FC = () => {
 
             <div className="pricing-features">
               <p>✓ All premium features included</p>
-              {/* <p>✓ No setup fees</p> */}
               <p>✓ Secure payment processing</p>
+              <p>🔄 Auto-renewing subscription</p>
+              {/* <p>✓ No setup fees</p> */}
             </div>
           </div>
         </div>
@@ -170,7 +172,7 @@ const Upgrade: React.FC = () => {
 
         {paymentStatus === 'success' && (
           <div className="payment-status success">
-            <p>✅ Payment successful! Welcome to Pro! You now have access to all premium features.</p>
+            <p>✅ Subscription activated successfully! Welcome to Pro! Your subscription will auto-renew yearly.</p>
             <button
               className="continue-button"
               onClick={() => navigate('/')}
