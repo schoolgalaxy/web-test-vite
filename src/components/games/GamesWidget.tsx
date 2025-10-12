@@ -121,7 +121,7 @@ const GamesWidget: React.FC = () => {
               <div className="game-info">
                 <span className="game-name">{game.displayName}</span>
                 {/* <span className="game-description">{game.description}</span> */}
-                { game.play_type === 'pro' && !isLoggedIn && <FreeProIndicator playType={game.play_type} /> }
+                { !isLoggedIn && !hasActiveSubscription && <FreeProIndicator playType={game.play_type} /> }
               </div>
             </div>
           ))}
