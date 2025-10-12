@@ -1,7 +1,7 @@
 import React from 'react';
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import './LoginPromo.css';
 
@@ -119,6 +119,36 @@ const LoginPromo: React.FC = () => {
               <p>Take assessments and track your personal growth</p>
             </div>
             <Authenticator />
+
+            {/* Home link */}
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+              <Link
+                to="/home"
+                style={{
+                  color: '#06528c',
+                  textDecoration: 'none',
+                  fontSize: '0.9em',
+                  fontWeight: '500',
+                  padding: '8px 16px',
+                  borderRadius: '6px',
+                  border: '1px solid #06528c',
+                  transition: 'all 0.2s ease',
+                  display: 'inline-block'
+                }}
+                onMouseOver={(e) => {
+                  const target = e.target as HTMLAnchorElement;
+                  target.style.backgroundColor = '#06528c';
+                  target.style.color = 'white';
+                }}
+                onMouseOut={(e) => {
+                  const target = e.target as HTMLAnchorElement;
+                  target.style.backgroundColor = 'transparent';
+                  target.style.color = '#06528c';
+                }}
+              >
+                ← Back to Home
+              </Link>
+            </div>
           </div>
         </div>
       </div>
