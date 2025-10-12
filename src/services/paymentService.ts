@@ -7,6 +7,7 @@ import {
 import { RAZORPAY_CONFIG, PAYMENT_MESSAGES } from '../config/payment';
 import { generateClient } from 'aws-amplify/data';
 import type { Schema } from '../../amplify/data/resource';
+import { triggerSubscriptionRefresh } from '../hook/useSubscription';
 
 // Load Razorpay script dynamically
 const loadRazorpayScript = (): Promise<boolean> => {
@@ -262,6 +263,12 @@ export class PaymentService {
       if (isValid) {
         // Save subscription data to backend
         await this.saveSubscriptionToBackend(response.razorpay_payment_id, subscriptionId, plan, userDetails);
+
+        // Small delay to ensure backend save is complete before triggering UI refresh
+        setTimeout(() => {
+          // Trigger global subscription refresh to update UI state
+          triggerSubscriptionRefresh();
+        }, 100);
 
         // Show success message and handle post-payment logic
         this.showSuccessMessage('Subscription activated successfully! Welcome to Pro!');

@@ -10,6 +10,15 @@ export interface SubscriptionState {
   isAuthenticated: boolean;
 }
 
+// Global refresh trigger for subscription status
+let globalRefreshTrigger = 0;
+
+export const triggerSubscriptionRefresh = () => {
+  globalRefreshTrigger += 1;
+  // Trigger a custom event that components can listen to
+  window.dispatchEvent(new CustomEvent('subscription-refresh', { detail: globalRefreshTrigger }));
+};
+
 export const useSubscription = () => {
   const { isLoggedIn } = useAuth();
   const [state, setState] = useState<SubscriptionState>({
@@ -63,6 +72,18 @@ export const useSubscription = () => {
   useEffect(() => {
     checkSubscriptionStatus();
   }, []);
+
+  // Listen for global subscription refresh events
+  useEffect(() => {
+    const handleSubscriptionRefresh = () => {
+      if (isLoggedIn) {
+        checkSubscriptionStatus();
+      }
+    };
+
+    window.addEventListener('subscription-refresh', handleSubscriptionRefresh);
+    return () => window.removeEventListener('subscription-refresh', handleSubscriptionRefresh);
+  }, [isLoggedIn]);
 
   // Update authentication state when login status changes
   useEffect(() => {
