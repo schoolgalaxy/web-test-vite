@@ -3,27 +3,35 @@ import { useNavigate } from 'react-router-dom';
 import { paymentService } from '../../services/paymentService';
 import { PaymentStatus, UpgradePlan } from '../../types/payment';
 import { RAZORPAY_CONFIG } from '../../config/payment';
+import { useAuth, UserDetails } from '../../hook/useAuth';
 import './Upgrade.css';
 
 const Upgrade: React.FC = () => {
   const navigate = useNavigate();
+  const { isLoggedIn, userDetails } = useAuth();
   const [paymentStatus, setPaymentStatus] = useState<PaymentStatus>('idle');
   const [isLoading, setIsLoading] = useState(false);
+  const [showUserDetailsForm, setShowUserDetailsForm] = useState(false);
+  const [tempUserDetails, setTempUserDetails] = useState<UserDetails>({
+    name: '',
+    email: '',
+    contact: ''
+  });
 
   const handleUpgradeClick = async () => {
+    // Check if we have complete user details
+    const hasCompleteDetails = userDetails.name && userDetails.email && userDetails.contact;
+
+    if (!isLoggedIn || !hasCompleteDetails) {
+      setShowUserDetailsForm(true);
+      return;
+    }
+
     setIsLoading(true);
     setPaymentStatus('processing');
 
     try {
       const proPlan: UpgradePlan = RAZORPAY_CONFIG.plans.pro;
-
-      // In a real app, you would get user details from authentication context
-      const userDetails = {
-        name: 'Test User', // Replace with actual user name
-        email: 'test@example.com', // Replace with actual user email
-        contact: '+919876543210' // Replace with actual user contact
-      };
-
       await paymentService.initiatePayment(proPlan, userDetails);
       setPaymentStatus('idle');
     } catch (error) {
@@ -33,6 +41,28 @@ const Upgrade: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleUserDetailsSubmit = () => {
+    // Validate that all required fields are filled
+    if (!tempUserDetails.name || !tempUserDetails.email || !tempUserDetails.contact) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    // Update user details with the form data
+    Object.assign(userDetails, tempUserDetails);
+    setShowUserDetailsForm(false);
+
+    // Now proceed with payment
+    handleUpgradeClick();
+  };
+
+  const handleUserDetailsChange = (field: keyof UserDetails, value: string) => {
+    setTempUserDetails(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
 
   return (
@@ -179,6 +209,66 @@ const Upgrade: React.FC = () => {
             >
               Continue to Dashboard
             </button>
+          </div>
+        )}
+
+        {showUserDetailsForm && (
+          <div className="user-details-form-overlay">
+            <div className="user-details-form">
+              <h3>Complete Your Details</h3>
+              <p>We need your information to process the payment securely.</p>
+
+              <div className="form-group">
+                <label htmlFor="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  value={tempUserDetails.name || ''}
+                  onChange={(e) => handleUserDetailsChange('name', e.target.value)}
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={tempUserDetails.email || ''}
+                  onChange={(e) => handleUserDetailsChange('email', e.target.value)}
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="contact">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="contact"
+                  value={tempUserDetails.contact || ''}
+                  onChange={(e) => handleUserDetailsChange('contact', e.target.value)}
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+
+              <div className="form-actions">
+                <button
+                  className="cancel-button"
+                  onClick={() => setShowUserDetailsForm(false)}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="submit-button"
+                  onClick={handleUserDetailsSubmit}
+                >
+                  Continue to Payment
+                </button>
+              </div>
+            </div>
           </div>
         )}
       </div>

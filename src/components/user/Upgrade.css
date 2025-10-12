@@ -338,3 +338,168 @@
 [data-theme="dark"] .stat-item {
   background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
+
+/* User Details Form Styles */
+.user-details-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.user-details-form {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: fadeInScale 0.3s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.user-details-form h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-blue-dark);
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.user-details-form p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 24px 0;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(255, 255, 255, 0.05) 100%);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  background: var(--bg-primary);
+}
+
+.form-group input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.cancel-button {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--primary-blue);
+}
+
+.submit-button {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.submit-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Dark theme adjustments for user details form */
+[data-theme="dark"] .user-details-form {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+[data-theme="dark"] .form-group input {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* Mobile responsiveness for user details form */
+@media (max-width: 480px) {
+  .user-details-form {
+    padding: 20px;
+    width: 95%;
+    margin: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-button,
+  .submit-button {
+    width: 100%;
+  }
+}
