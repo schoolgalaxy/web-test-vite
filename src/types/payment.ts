@@ -77,6 +77,8 @@ export interface PaymentVerificationPayload {
 
 export type PaymentStatus = 'idle' | 'processing' | 'success' | 'failed' | 'cancelled';
 
+export type SubscriptionStatus = 'active' | 'cancelled' | 'expired';
+
 export interface PaymentState {
   status: PaymentStatus;
   error?: string;

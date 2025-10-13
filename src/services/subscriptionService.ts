@@ -1,6 +1,7 @@
 import { generateClient } from 'aws-amplify/data';
 import type { Schema } from '../../amplify/data/resource';
 import { getCurrentUser } from 'aws-amplify/auth';
+import { SubscriptionStatus } from '../types/payment';
 
 export interface UserSubscription {
   id: string;
@@ -14,7 +15,7 @@ export interface UserSubscription {
   currency: string;
   interval: string;
   period: number;
-  status: string;
+  status: SubscriptionStatus;
   razorpayPaymentId: string;
   razorpaySubscriptionId?: string;
   startDate: string;
@@ -119,32 +120,25 @@ export class SubscriptionService {
 
       const userId = currentUser.userId || currentUser.username;
 
-      const { data: subscriptions } = await this.client.models.UserSubscription.list({
-        filter: {
-          userId: { eq: userId },
-          isActive: { eq: true },
-          status: { eq: 'active' }
-        }
-      });
+       const { data: subscription } = await this.client.models.UserSubscription.get({
+         userId: userId
+       });
 
-      if (!subscriptions || subscriptions.length === 0) {
-        return null;
-      }
+       if (!subscription) {
+         return null;
+       }
 
-      // Return the most recent active subscription
-      const now = new Date();
-      const validSubscriptions = subscriptions.filter(sub => {
-        if (!sub.endDate) return true; // No end date means lifetime
-        return new Date(sub.endDate) > now;
-      });
+       // Check if subscription is still valid
+       const now = new Date();
+       if (subscription.endDate && new Date(subscription.endDate) <= now) {
+         return null; // Subscription expired
+       }
 
-      if (validSubscriptions.length === 0) {
-        return null;
-      }
+       if (!subscription.isActive || subscription.status !== 'active') {
+         return null; // Subscription not active
+       }
 
-      // Sort by start date (most recent first) and return the first one
-      validSubscriptions.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
-      return this.transformAmplifySubscription(validSubscriptions[0]);
+       return this.transformAmplifySubscription(subscription);
 
     } catch (error) {
       console.error('Error getting active subscription:', error);

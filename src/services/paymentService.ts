@@ -354,7 +354,7 @@ export class PaymentService {
         currency: plan.currency,
         interval: plan.interval,
         period: plan.period,
-        status: 'active',
+        status: "active" as "active",
         razorpayPaymentId,
         startDate: startDate.toISOString(),
         endDate: endDate.toISOString(),
@@ -368,7 +368,7 @@ export class PaymentService {
       const result = await this.client.models.UserSubscription.create(subscriptionData);
 
       if (result.data) {
-        console.log('✅ Subscription saved successfully:', result.data.id);
+        console.log('✅ Subscription saved successfully:', result.data.subscriptionId);
       } else {
         console.error('❌ Failed to save subscription - no data returned');
         throw new Error('Failed to save subscription data');
