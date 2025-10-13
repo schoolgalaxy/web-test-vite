@@ -160,8 +160,31 @@ export class SubscriptionService {
   // Cancel user's subscription
   async cancelSubscription(subscriptionId: string): Promise<boolean> {
     try {
+      // Get the current user to get their userId (which is the primary key for UserSubscription)
+      const currentUser = await getCurrentUser();
+      if (!currentUser) {
+        throw new Error('User must be authenticated to cancel subscription');
+      }
+
+      const userId = currentUser.userId || currentUser.username;
+
+      // Find the specific subscription by both userId and subscriptionId
+      const { data: subscriptions } = await this.client.models.UserSubscription.list({
+        filter: {
+          userId: { eq: userId },
+          subscriptionId: { eq: subscriptionId }
+        }
+      });
+
+      if (!subscriptions || subscriptions.length === 0) {
+        throw new Error('Subscription not found');
+      }
+
+      const subscriptionToCancel = subscriptions[0];
+
+      // Update using userId as the identifier (since it's the primary key per schema)
       const result = await this.client.models.UserSubscription.update({
-        id: subscriptionId,
+        userId: subscriptionToCancel.userId,
         status: 'cancelled',
         isActive: false
       });

@@ -30,7 +30,7 @@ const schema = a.schema({
     .authorization((allow) => [allow.publicApiKey().to(["create"])]),
   UserSubscription: a
     .model({
-      userId: a.string().required(),
+      userId: a.id().required(),
       userEmail: a.string().required(),
       userName: a.string(),
       subscriptionId: a.string().required(),
