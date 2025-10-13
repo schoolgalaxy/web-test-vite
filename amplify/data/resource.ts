@@ -40,7 +40,7 @@ const schema = a.schema({
       currency: a.string().required(),
       interval: a.string().required(), // monthly, yearly, etc.
       period: a.integer().required(),
-      status: a.string().required(), // active, cancelled, expired
+      status: a.enum(["active", "cancelled", "expired"]), // active, cancelled, expired
       razorpayPaymentId: a.string().required(),
       razorpaySubscriptionId: a.string(),
       startDate: a.datetime().required(),
@@ -49,9 +49,11 @@ const schema = a.schema({
       features: a.string().array(), // Array of feature strings
       notes: a.string(),
     })
-    .authorization((allow) => [
+    .identifier(["userId"])
+    .secondaryIndexes((index) => [index("userEmail")])
+    .authorization((allow: any) => [
       allow.owner("userPools").to(['read', 'update']),
-      allow.publicApiKey().to(['create'])
+      allow.publicApiKey().to(['create']),
     ]),
 });
 

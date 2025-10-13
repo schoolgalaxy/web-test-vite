@@ -24,4 +24,10 @@ export const auth = defineAuth({
       },
     },
   },
+  senders: {
+    email: {
+      // configure using the email registered and verified in Amazon SES
+      fromEmail: "schoolgalaxy40@gmail.com",
+    },
+  },
 })

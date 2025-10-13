@@ -54,8 +54,7 @@ export const AppRoutes = () => {
           <Route path="/quiz/:category/:quizId" element={<QuizRoute />} />
           <Route path="/games/:gameId" element={<Games />} />
         </Route>
-        {/* <Route path="/login" element={<LoginScreen />} /> */}
-        <Route path="/login-promo" element={<LoginPromo />} />
+        <Route path="/login" element={<LoginPromo />} />
         <Route path="/signout" element={<SignoutScreen />} />
         <Route path="/feedback" element={<FeedbackLayout />} />
       </Routes>
