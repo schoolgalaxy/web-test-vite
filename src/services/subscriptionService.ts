@@ -3,6 +3,35 @@ import type { Schema } from '../../amplify/data/resource';
 import { getCurrentUser } from 'aws-amplify/auth';
 import { SubscriptionStatus } from '../types/payment';
 
+// Debug function to check authentication and authorization
+export const debugAuthStatus = async (): Promise<void> => {
+  console.log('🔍 Debugging authentication status...');
+
+  try {
+    // Check if user is authenticated
+    const currentUser = await getCurrentUser();
+    console.log('👤 Current user:', currentUser ? {
+      userId: currentUser.userId,
+      username: currentUser.username,
+      signInDetails: currentUser.signInDetails
+    } : 'Not authenticated');
+
+    // Check client configuration
+    const client = generateClient<Schema>();
+    console.log('🔧 Client configured:', !!client);
+
+    // Try a simple query to test authorization
+    console.log('🧪 Testing authorization with a simple query...');
+    const testResult = await client.models.UserSubscription.list({
+      filter: { userId: { eq: 'test' } }
+    });
+    console.log('✅ Test query successful', testResult);
+
+  } catch (error) {
+    console.error('❌ Debug check failed:', error);
+  }
+};
+
 export interface UserSubscription {
   id: string;
   userId: string;
@@ -70,42 +99,55 @@ export class SubscriptionService {
         return false;
       }
 
-      const userId = currentUser.userId || currentUser.username;
+      const userId = currentUser.username; // Use username to match cognito:username identity claim
       console.log('🔍 Checking subscription for user:', userId);
 
-      const { data: subscriptions } = await this.client.models.UserSubscription.list({
-        filter: {
-          userId: { eq: userId },
-          isActive: { eq: true },
-          status: { eq: 'active' }
-        }
-      });
+      try {
+        const { data: subscriptions } = await this.client.models.UserSubscription.list({
+          filter: {
+            userId: { eq: userId },
+            isActive: { eq: true },
+            status: { eq: 'active' }
+          }
+        });
 
-      if (!subscriptions || subscriptions.length === 0) {
-        console.log('❌ No active subscriptions found for user:', userId);
-        return false;
+        if (!subscriptions || subscriptions.length === 0) {
+          console.log('❌ No active subscriptions found for user:', userId);
+          return false;
+        }
+
+        console.log('📋 Found subscriptions:', subscriptions.length);
+
+        // Check if any subscription is still valid (not expired)
+        const now = new Date();
+        const activeSubscription = subscriptions.find(sub => {
+          if (!sub.endDate) {
+            console.log('✅ Lifetime subscription found');
+            return true; // No end date means lifetime
+          }
+          const isValid = new Date(sub.endDate) > now;
+          console.log('📅 Subscription expiry check:', sub.endDate, 'Valid:', isValid);
+          return isValid;
+        });
+
+        const result = !!activeSubscription;
+        console.log('🎯 Final subscription status:', result);
+        return result;
+
+      } catch (apiError: any) {
+        console.error('🚨 API Error checking subscription status:', apiError);
+
+        // Check if it's an authorization error
+        if (apiError.message && apiError.message.includes('Not Authorized')) {
+          console.error('🔒 Authorization failed - user may not be properly authenticated');
+          return false;
+        }
+
+        throw apiError; // Re-throw other errors
       }
 
-      console.log('📋 Found subscriptions:', subscriptions.length);
-
-      // Check if any subscription is still valid (not expired)
-      const now = new Date();
-      const activeSubscription = subscriptions.find(sub => {
-        if (!sub.endDate) {
-          console.log('✅ Lifetime subscription found');
-          return true; // No end date means lifetime
-        }
-        const isValid = new Date(sub.endDate) > now;
-        console.log('📅 Subscription expiry check:', sub.endDate, 'Valid:', isValid);
-        return isValid;
-      });
-
-      const result = !!activeSubscription;
-      console.log('🎯 Final subscription status:', result);
-      return result;
-
     } catch (error) {
-      console.error('❌ Error checking subscription status:', error);
+      console.error('❌ General error checking subscription status:', error);
       return false;
     }
   }
@@ -115,33 +157,57 @@ export class SubscriptionService {
     try {
       const currentUser = await getCurrentUser();
       if (!currentUser) {
+        console.log('🔐 No authenticated user found');
         return null;
       }
 
-      const userId = currentUser.userId || currentUser.username;
+      const userId = currentUser.username; // Use username to match cognito:username identity claim
+      console.log('🔍 Fetching subscription for userId:', userId);
+      console.log('👤 User details:', {
+        userId: currentUser.userId,
+        username: currentUser.username
+      });
 
-       const { data: subscription } = await this.client.models.UserSubscription.get({
-         userId: userId
-       });
+      try {
+        const { data: subscription } = await this.client.models.UserSubscription.get({
+          userId: userId
+        });
 
-       if (!subscription) {
-         return null;
-       }
+        if (!subscription) {
+          console.log('❌ No subscription found for userId:', userId);
+          return null;
+        }
 
-       // Check if subscription is still valid
-       const now = new Date();
-       if (subscription.endDate && new Date(subscription.endDate) <= now) {
-         return null; // Subscription expired
-       }
+        console.log('✅ Found subscription:', subscription.subscriptionId);
 
-       if (!subscription.isActive || subscription.status !== 'active') {
-         return null; // Subscription not active
-       }
+        // Check if subscription is still valid
+        const now = new Date();
+        if (subscription.endDate && new Date(subscription.endDate) <= now) {
+          console.log('⏰ Subscription expired');
+          return null; // Subscription expired
+        }
 
-       return this.transformAmplifySubscription(subscription);
+        if (!subscription.isActive || subscription.status !== 'active') {
+          console.log('🚫 Subscription not active');
+          return null; // Subscription not active
+        }
+
+        return this.transformAmplifySubscription(subscription);
+
+      } catch (apiError: any) {
+        console.error('🚨 API Error getting subscription:', apiError);
+
+        // Check if it's an authorization error
+        if (apiError.message && apiError.message.includes('Not Authorized')) {
+          console.error('🔒 Authorization failed - user may not be properly authenticated');
+          return null;
+        }
+
+        throw apiError; // Re-throw other errors
+      }
 
     } catch (error) {
-      console.error('Error getting active subscription:', error);
+      console.error('❌ General error getting active subscription:', error);
       return null;
     }
   }
@@ -160,7 +226,7 @@ export class SubscriptionService {
         throw new Error('User must be authenticated to cancel subscription');
       }
 
-      const userId = currentUser.userId || currentUser.username;
+      const userId = currentUser.username; // Use username to match cognito:username identity claim
 
       // Find the specific subscription by both userId and subscriptionId
       const { data: subscriptions } = await this.client.models.UserSubscription.list({
@@ -193,3 +259,28 @@ export class SubscriptionService {
 
 // Export singleton instance
 export const subscriptionService = SubscriptionService.getInstance();
+
+// Test function to verify the subscription service works
+export const testSubscriptionService = async (): Promise<void> => {
+  console.log('🧪 Testing Subscription Service...');
+
+  try {
+    // First debug auth status
+    await debugAuthStatus();
+
+    // Test if user has active subscription
+    console.log('\n🔍 Testing hasActiveSubscription...');
+    const hasActive = await subscriptionService.hasActiveSubscription();
+    console.log('📊 Has active subscription:', hasActive);
+
+    // Test getting active subscription
+    console.log('\n🔍 Testing getActiveSubscription...');
+    const subscription = await subscriptionService.getActiveSubscription();
+    console.log('📋 Active subscription:', subscription);
+
+    console.log('\n✅ All tests completed successfully');
+
+  } catch (error) {
+    console.error('\n❌ Test failed:', error);
+  }
+};

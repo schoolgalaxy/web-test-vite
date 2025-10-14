@@ -48,12 +48,14 @@ const schema = a.schema({
       isActive: a.boolean().required(),
       features: a.string().array(), // Array of feature strings
       notes: a.string(),
+      owner: a.string()
     })
     .identifier(["userId"])
     .secondaryIndexes((index) => [index("userEmail")])
-    .authorization((allow: any) => [
-      allow.owner("userPools").to(['read', 'update']),
-      allow.publicApiKey().to(['create']),
+    .authorization((allow) => [
+      allow.publicApiKey().to(['read', 'create']),
+      allow.authenticated().to(['read']),
+      allow.owner().to(['read', 'create', 'update', 'delete'])
     ]),
 });
 
@@ -103,3 +105,4 @@ Fetch records from the database and use them in your frontend component.
 // const { data: todos } = await client.models.Todo.list()
 
 // return <ul>{todos.map(todo => <li key={todo.id}>{todo.content}</li>)}</ul>
+

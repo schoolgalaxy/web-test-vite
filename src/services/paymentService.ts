@@ -360,7 +360,8 @@ export class PaymentService {
         endDate: endDate.toISOString(),
         isActive: true,
         features: plan.features,
-        notes: `Created via Razorpay payment: ${razorpayPaymentId}`
+        notes: `Created via Razorpay payment: ${razorpayPaymentId}`,
+        owner: currentUser.username // Add owner field for authorization
       };
 
       console.log('💾 Saving subscription data to backend:', subscriptionData);
