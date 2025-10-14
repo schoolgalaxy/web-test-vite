@@ -131,7 +131,7 @@ const GamesWidget: React.FC = () => {
       <div className="widget-header">
         <div className="widget-icon">🎯</div>
         <h4>Fun Activities</h4>
-        {!isLoading && (
+        {/* {!isLoading && (
           <div className="widget-actions">
             <button
               className="subscription-refresh-btn"
@@ -148,7 +148,7 @@ const GamesWidget: React.FC = () => {
               🔍
             </button>
           </div>
-        )}
+        )} */}
       </div>
       <div className="widget-content">
         {isLoading && (
@@ -175,7 +175,7 @@ const GamesWidget: React.FC = () => {
         </div>
         {!isLoading && !hasActiveSubscription && (
           <div className="subscription-status">
-            <p>💡 Upgrade to Pro to unlock premium games</p>
+            <p>💡 Upgrade to Pro to unlock premium activities</p>
           </div>
         )}
       </div>
