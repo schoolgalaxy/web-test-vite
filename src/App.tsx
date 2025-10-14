@@ -3,6 +3,7 @@ import { Authenticator } from '@aws-amplify/ui-react';
 import Navbar from './components/navbar/Navbar';
 import { AppRoutes } from './components/AppRoutes';
 import { ThemeProvider } from './util/ThemeContext';
+import { SubscriptionProvider } from './hook/SubscriptionContext';
 import LoginPromo from './components/login/LoginPromo';
 
 function AppContent() {
@@ -30,9 +31,11 @@ function App() {
   return (
     <ThemeProvider>
       <Authenticator.Provider>
-        <Router>
-          <AppContent />
-        </Router>
+        <SubscriptionProvider>
+          <Router>
+            <AppContent />
+          </Router>
+        </SubscriptionProvider>
       </Authenticator.Provider>
     </ThemeProvider>
   );
