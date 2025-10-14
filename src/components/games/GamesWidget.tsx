@@ -90,7 +90,11 @@ const games: Game[] = [
 
 const GamesWidget: React.FC = () => {
   const navigate = useNavigate();
-  const { hasActiveSubscription, isLoading, refreshSubscription } = useSubscription();
+  const { 
+          hasActiveSubscription, 
+          // refreshSubscription,
+          isLoading, 
+        } = useSubscription();
 
   const handleGameClick = (game: Game) => {
     if (game.play_type !== 'free' && !hasActiveSubscription) {
@@ -100,31 +104,31 @@ const GamesWidget: React.FC = () => {
     }
   };
 
-  const handleRefreshSubscription = () => {
-    console.log('🔄 Manually refreshing subscription status...');
-    refreshSubscription();
-  };
+  // const handleRefreshSubscription = () => {
+  //   console.log('🔄 Manually refreshing subscription status...');
+  //   refreshSubscription();
+  // };
 
-  const handleDebugCheck = async () => {
-    try {
-      const subscriptionService = (await import('../../services/subscriptionService')).subscriptionService;
-      const hasActive = await subscriptionService.hasActiveSubscription();
-      console.log('🔍 Debug subscription check result:', hasActive);
+  // const handleDebugCheck = async () => {
+  //   try {
+  //     const subscriptionService = (await import('../../services/subscriptionService')).subscriptionService;
+  //     const hasActive = await subscriptionService.hasActiveSubscription();
+  //     console.log('🔍 Debug subscription check result:', hasActive);
 
-      // Also check the raw subscription data
-      const subscription = await subscriptionService.getActiveSubscription();
-      console.log('🔍 Debug subscription data:', subscription);
+  //     // Also check the raw subscription data
+  //     const subscription = await subscriptionService.getActiveSubscription();
+  //     console.log('🔍 Debug subscription data:', subscription);
 
-      if (hasActive) {
-        alert('✅ Subscription found! You should have access to pro games.');
-      } else {
-        alert('❌ No active subscription found. Please check your subscription status.');
-      }
-    } catch (error) {
-      console.error('❌ Debug check failed:', error);
-      alert('❌ Error checking subscription. Check console for details.');
-    }
-  };
+  //     if (hasActive) {
+  //       alert('✅ Subscription found! You should have access to pro games.');
+  //     } else {
+  //       alert('❌ No active subscription found. Please check your subscription status.');
+  //     }
+  //   } catch (error) {
+  //     console.error('❌ Debug check failed:', error);
+  //     alert('❌ Error checking subscription. Check console for details.');
+  //   }
+  // };
 
   return (
     <div className="sidebar-widget">
