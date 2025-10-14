@@ -45,10 +45,7 @@ export const useSubscription = () => {
     try {
       setState(prev => ({ ...prev, isLoading: true, error: null }));
 
-      const [hasActive, subscription] = await Promise.all([
-        subscriptionService.hasActiveSubscription(),
-        subscriptionService.getActiveSubscription()
-      ]);
+      const { hasActive, subscription } = await subscriptionService.getSubscriptionStatus();
 
       setState({
         hasActiveSubscription: hasActive,

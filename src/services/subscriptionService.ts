@@ -97,9 +97,7 @@ export class SubscriptionService {
       try {
         const { data: subscriptions } = await this.client.models.UserSubscription.list({
           filter: {
-            userId: { eq: userId },
-            isActive: { eq: true },
-            status: { eq: 'active' }
+            userId: { eq: userId }
           }
         });
 
@@ -144,58 +142,76 @@ export class SubscriptionService {
     }
   }
 
-  // Get current user's active subscription details
-  async getActiveSubscription(): Promise<UserSubscription | null> {
+  // Get current user's subscription status and details in a single call
+  async getSubscriptionStatus(): Promise<{ hasActive: boolean; subscription: UserSubscription | null }> {
     try {
       const currentUser = await getCurrentUser();
       if (!currentUser) {
         console.log('🔐 No authenticated user found');
-        return null;
+        return { hasActive: false, subscription: null };
       }
 
       const userId = currentUser.username; // Use username to match cognito:username identity claim
 
       try {
-        const { data: subscription } = await this.client.models.UserSubscription.get({
-          userId: userId
+        const { data: subscriptions } = await this.client.models.UserSubscription.list({
+          filter: {
+            userId: { eq: userId }
+          }
         });
 
-        if (!subscription) {
-          return null;
+        if (!subscriptions || subscriptions.length === 0) {
+          console.log('❌ No subscriptions found for user:', userId);
+          return { hasActive: false, subscription: null };
         }
 
-        console.log('✅ Found subscription:', subscription.subscriptionId);
+        console.log('📋 Found subscriptions:', subscriptions.length);
 
-        // Check if subscription is still valid
+        // Check if any subscription is still valid (not expired)
         const now = new Date();
-        if (subscription.endDate && new Date(subscription.endDate) <= now) {
-          console.log('⏰ Subscription expired');
-          return null; // Subscription expired
-        }
+        const activeSubscription = subscriptions.find(sub => {
+          if (!sub.endDate) {
+            console.log('✅ Lifetime subscription found');
+            return true; // No end date means lifetime
+          }
+          const isValid = new Date(sub.endDate) > now;
+          console.log('📅 Subscription expiry check:', sub.endDate, 'Valid:', isValid);
+          return isValid;
+        });
 
-        if (!subscription.isActive || subscription.status !== 'active') {
-          console.log('🚫 Subscription not active');
-          return null; // Subscription not active
+        if (activeSubscription) {
+          console.log('🎯 Active subscription found:', activeSubscription.subscriptionId);
+          return {
+            hasActive: true,
+            subscription: this.transformAmplifySubscription(activeSubscription)
+          };
+        } else {
+          console.log('❌ No active subscriptions found');
+          return { hasActive: false, subscription: null };
         }
-
-        return this.transformAmplifySubscription(subscription);
 
       } catch (apiError: any) {
-        console.error('🚨 API Error getting subscription:', apiError);
+        console.error('🚨 API Error checking subscription status:', apiError);
 
         // Check if it's an authorization error
         if (apiError.message && apiError.message.includes('Not Authorized')) {
           console.error('🔒 Authorization failed - user may not be properly authenticated');
-          return null;
+          return { hasActive: false, subscription: null };
         }
 
         throw apiError; // Re-throw other errors
       }
 
     } catch (error) {
-      console.error('❌ General error getting active subscription:', error);
-      return null;
+      console.error('❌ General error checking subscription status:', error);
+      return { hasActive: false, subscription: null };
     }
+  }
+
+  // Get current user's active subscription details
+  async getActiveSubscription(): Promise<UserSubscription | null> {
+    const { subscription } = await this.getSubscriptionStatus();
+    return subscription;
   }
 
   // Check if user has access to premium features
