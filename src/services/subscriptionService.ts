@@ -20,13 +20,6 @@ export const debugAuthStatus = async (): Promise<void> => {
     const client = generateClient<Schema>();
     console.log('🔧 Client configured:', !!client);
 
-    // Try a simple query to test authorization
-    console.log('🧪 Testing authorization with a simple query...');
-    const testResult = await client.models.UserSubscription.list({
-      filter: { userId: { eq: 'test' } }
-    });
-    console.log('✅ Test query successful', testResult);
-
   } catch (error) {
     console.error('❌ Debug check failed:', error);
   }
@@ -100,7 +93,6 @@ export class SubscriptionService {
       }
 
       const userId = currentUser.username; // Use username to match cognito:username identity claim
-      console.log('🔍 Checking subscription for user:', userId);
 
       try {
         const { data: subscriptions } = await this.client.models.UserSubscription.list({
@@ -112,7 +104,7 @@ export class SubscriptionService {
         });
 
         if (!subscriptions || subscriptions.length === 0) {
-          console.log('❌ No active subscriptions found for user:', userId);
+          // console.log('❌ No active subscriptions found for user:', userId);
           return false;
         }
 
@@ -162,11 +154,6 @@ export class SubscriptionService {
       }
 
       const userId = currentUser.username; // Use username to match cognito:username identity claim
-      console.log('🔍 Fetching subscription for userId:', userId);
-      console.log('👤 User details:', {
-        userId: currentUser.userId,
-        username: currentUser.username
-      });
 
       try {
         const { data: subscription } = await this.client.models.UserSubscription.get({
@@ -174,7 +161,6 @@ export class SubscriptionService {
         });
 
         if (!subscription) {
-          console.log('❌ No subscription found for userId:', userId);
           return null;
         }
 

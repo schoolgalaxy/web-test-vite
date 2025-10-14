@@ -30,7 +30,7 @@ const games: Game[] = [
     file: '/games/MathWhizJr.html',
     icon: '🧮',
     description: 'Fun math challenges for young minds!',
-    play_type: 'pro'
+    play_type: 'pro-upgrade'
   },
   {
     id: 'solar-system',
@@ -48,7 +48,7 @@ const games: Game[] = [
     file: '/games/TypingTitans.html',
     icon: '⌨️',
     description: 'Improve your typing speed!',
-    play_type: 'pro'
+    play_type: 'pro-upgrade'
   },
   {
     id: 'word-wizards',
@@ -57,7 +57,7 @@ const games: Game[] = [
     file: '/games/WordWizards.html',
     icon: '🔤',
     description: 'Master vocabulary with magic!',
-    play_type: 'pro'
+    play_type: 'pro-upgrade'
   },
   {
     id: 'food-chain-match',
@@ -66,7 +66,7 @@ const games: Game[] = [
     file: '/games/FoodChainMatch.html',
     icon: '🍎',
     description: 'Learn about food chains and ecosystems!',
-    play_type: 'pro'
+    play_type: 'pro-upgrade'
   },
   {
     id: 'scribe',
@@ -75,7 +75,7 @@ const games: Game[] = [
     file: '/games/scribe.html',
     icon: '✍️',
     description: 'Practice writing and transcription skills!',
-    play_type: 'pro'
+    play_type: 'pro-upgrade'
   },
   {
     id: 'word-trail-trimmer',
@@ -84,7 +84,7 @@ const games: Game[] = [
     file: '/games/Word&TrailTrimmer.html',
     icon: '✂️',
     description: 'Trim and organize word trails!',
-    play_type: 'pro'
+    play_type: 'pro-upgrade'
   }
 ];
 
@@ -168,7 +168,7 @@ const GamesWidget: React.FC = () => {
               <div className="game-info">
                 <span className="game-name">{game.displayName}</span>
                 {/* <span className="game-description">{game.description}</span> */}
-                { game.play_type !== 'free' && !hasActiveSubscription && !isLoading && <FreeProIndicator playType={game.play_type} /> }
+                { game.play_type !== 'free' && !isLoading && <FreeProIndicator playType={game.play_type} /> }
               </div>
             </div>
           ))}

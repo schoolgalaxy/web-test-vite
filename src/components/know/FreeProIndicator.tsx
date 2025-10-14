@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hook/useAuth';
+import { useSubscription } from '../../hook/useSubscription';
 import './FreeProIndicator.css';
 
 interface FreeProIndicatorProps {
@@ -10,6 +11,8 @@ interface FreeProIndicatorProps {
 const FreeProIndicator = ({ playType = 'pro', className = '' }: FreeProIndicatorProps) => {
   const navigate = useNavigate();
   const { isLoggedIn } = useAuth();
+  const { hasActiveSubscription } = useSubscription();
+  
 
   if (playType === 'free') {
     return (
@@ -23,7 +26,7 @@ const FreeProIndicator = ({ playType = 'pro', className = '' }: FreeProIndicator
   }
 
   // If user is logged in, show unlocked state for pro features
-  if (isLoggedIn) {
+  if (isLoggedIn && hasActiveSubscription && playType !== 'pro-upgrade') {
     return (
       <div className={`pro-unlocked-icon ${className}`}>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
