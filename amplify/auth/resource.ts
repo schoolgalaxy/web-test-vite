@@ -23,21 +23,21 @@ export const auth = defineAuth({
           `We're happy to have you! You can now login with username ${user()} and temporary password ${code()}`,
       },
     },
-    externalProviders: {
-      google: {
-        clientId: secret("GOOGLE_CLIENT_ID"),
-        clientSecret: secret("GOOGLE_CLIENT_SECRET"),
-        scopes: ["aws.cognito.signin.user.admin", "email", "phone", "profile", "openid"],
-      },
-      callbackUrls: [
-        process.env.WEB_CALLBACK_URL || "https://testgalaxy.org/",
-        "http://localhost:5173/",
-      ],
-      logoutUrls: [
-        process.env.WEB_LOGOUT_URL || "https://testgalaxy.org/",
-        "http://localhost:5173/"
-      ],
-    },
+    // externalProviders: {
+    //   google: {
+    //     clientId: secret("GOOGLE_CLIENT_ID"),
+    //     clientSecret: secret("GOOGLE_CLIENT_SECRET"),
+    //     scopes: ["aws.cognito.signin.user.admin", "email", "phone", "profile", "openid"],
+    //   },
+    //   callbackUrls: [
+    //     process.env.WEB_CALLBACK_URL || "https://testgalaxy.org/",
+    //     "http://localhost:5173/",
+    //   ],
+    //   logoutUrls: [
+    //     process.env.WEB_LOGOUT_URL || "https://testgalaxy.org/",
+    //     "http://localhost:5173/"
+    //   ],
+    // },
   },
   senders: {
     email: {
