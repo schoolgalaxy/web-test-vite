@@ -118,7 +118,7 @@ const LoginPromo: React.FC = () => {
               {/* <h3>🚀 Start Your Journey</h3> */}
               <p>Take assessments and track your personal growth</p>
             </div>
-            <Authenticator />
+            <Authenticator socialProviders={['google']} />
 
             {/* Home link */}
             <div style={{ textAlign: 'center', marginTop: '20px' }}>
