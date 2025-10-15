@@ -127,7 +127,7 @@ const LoginScreen = () => {
           <div style={{ textAlign: 'center', marginBottom: '30px' }}>
             <h3 style={{ color: '#555', fontSize: '1.1em', fontWeight: '500', margin: '0' }}>Access your learning journey</h3>
           </div>
-          <Authenticator socialProviders={['google']} />
+          <Authenticator  />
         </div>
       </div>
     </div>

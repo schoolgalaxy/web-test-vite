@@ -29,8 +29,8 @@ export const auth = defineAuth({
         clientSecret: secret("GOOGLE_CLIENT_SECRET"),
         scopes: ["aws.cognito.signin.user.admin", "email", "phone", "profile", "openid"],
       },
-      callbackUrls: [process.env.WEB_CALLBACK_URL || "http://localhost:5173/"],
-      logoutUrls: [process.env.WEB_LOGOUT_URL || "http://localhost:5173/"],
+      callbackUrls: [process.env.WEB_CALLBACK_URL || "https://testgalaxy.org/"],
+      logoutUrls: [process.env.WEB_LOGOUT_URL || "https://testgalaxy.org/"],
     },
   },
   senders: {
