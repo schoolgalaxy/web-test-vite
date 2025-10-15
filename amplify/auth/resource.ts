@@ -27,10 +27,10 @@ export const auth = defineAuth({
       google: {
         clientId: secret("GOOGLE_CLIENT_ID"),
         clientSecret: secret("GOOGLE_CLIENT_SECRET"),
-        scopes: ["email", "profile", "openid"],
+        scopes: ["aws.cognito.signin.user.admin", "email", "phone", "profile", "openid"],
       },
-      callbackUrls: ["http://localhost:5173/", "https://www.testgalaxy.org/"],
-      logoutUrls: ["http://localhost:5173/", "https://www.testgalaxy.org/login"],
+      callbackUrls: ["http://localhost:5173/", import.meta.env.WEB_CALLBACK_URL],
+      logoutUrls: ["http://localhost:5173/", import.meta.env.WEB_LOGOUT_URL],
     },
   },
   senders: {
